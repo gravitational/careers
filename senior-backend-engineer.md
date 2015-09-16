@@ -1,4 +1,4 @@
-Gravitational, an early stage systems & cloud startup in San Francisco is looking for ambitious and talented people. We are well-funded by fantastic Silicon Valley investors. We are an experienced team: we built Mailgun which was acquired Rackspace, we created Vulcand and we have great connections in the cloud industry.
+Gravitational, an early stage systems & cloud startup in San Francisco, is looking for ambitious and talented people. We are well-funded by fantastic Silicon Valley investors. We are an experienced team: we built Mailgun which was acquired Rackspace, we created Vulcand and we have great connections in the cloud industry.
 
 We are hackers. We love Linux and low level systems programming and we love helping open source communities and other engineers to get things done.
 
