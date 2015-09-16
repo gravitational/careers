@@ -25,7 +25,5 @@ Location
 
 US residents only (bad timing for H1b). We would prefer everyone to be in San Francisco and we can relocate you. We will consider remote option for experienced candidates with a history of getting things done.
 
-Contact
-
-jobs@gravitational.com
+Contact: jobs@gravitational.com
 
