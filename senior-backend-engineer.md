@@ -21,7 +21,7 @@ If you are this kind of person, here is what you will be working on:
 * Talk to customers and convert complex requirements into simple and elegant solutions.
 * Daily code reviews.
 
-Location
+## Location
 
 US residents only (bad timing for H1b). We would prefer everyone to be in San Francisco and we can relocate you. We will consider remote option for experienced candidates with a history of getting things done.
 
