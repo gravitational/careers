@@ -1,6 +1,6 @@
-# About us
+## About us
 
-Gravitational, an early stage systems & cloud startup in San Francisco, is looking for ambitious and talented people. We are well-funded by fantastic Silicon Valley investors. We are an experienced team: we built Mailgun which was acquired Rackspace, we created Vulcand and we have great connections in the cloud industry.
+Gravitational, an early stage systems & cloud startup in San Francisco, is looking for ambitious and talented people. We are well-funded by fantastic Silicon Valley investors. We are an experienced team: we founded [Mailgun](http://mailgun.com) which was acquired by [Rackspace](http://rackspace.com), we created [Vulcand](http://vulcand.io) and some other [cool stuff](http://www.rackspace.com/blog/onmetal-the-right-way-to-scale/) at Rackspace. 
 
 We are hackers. We love Linux and low level systems programming and we love helping open source communities and other engineers to get things done.
 
@@ -8,7 +8,7 @@ We are also husbands, fathers and we have hobbies. Our past experiences building
 
 If this resonates, we want to talk to you.
 
-# About you
+## About you
 
 You should be naturally curious and passionate about seeking new ways for humans and computers to interact with each other. We want you to take the lead, define the end user experience and own the roadmap for it.
 
@@ -23,7 +23,7 @@ Own the website, our blog, our corporate style.
 Lead a small team of front end and full-stack engineers.
 Talk to customers and convert complex requirements into simple and elegant solutions.
 
-# Location
+## Location
 
 We prefer for our UX team to be in San Francisco and we can relocate you if you are already eligible to work in the U.S.
 
