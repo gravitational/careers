@@ -18,10 +18,11 @@ You should also be comfortable joining an early stage company with a dynamic fut
 
 If you are this kind of person, here is the menu of what you can be doing with us:
 
-Design wireframes of the user-facing parts of our product.
-Own the website, our blog, our corporate style.
-Lead a small team of front end and full-stack engineers.
-Talk to customers and convert complex requirements into simple and elegant solutions.
+* Design wireframes of the user-facing parts of our product.
+* Own the website, our blog, our corporate style.
+* Provide design direction to a small team of front-end and full-stack engineers.
+* Help implement website, control panel and other front-end development when bottlenecks occur.
+* Talk to customers and convert complex requirements into simple and elegant solutions.
 
 ## Location
 
