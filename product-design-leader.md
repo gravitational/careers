@@ -26,6 +26,6 @@ If you are this kind of person, here is the menu of what you can be doing with u
 
 ## Location
 
-We prefer for our UX team to be in San Francisco and we can relocate you if you are already eligible to work in the U.S.
+We prefer for our product team to be in San Francisco and we can relocate you if you are already eligible to work in the U.S.
 
 Contact: jobs@gravitational.com
