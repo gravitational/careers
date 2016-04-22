@@ -10,7 +10,7 @@ If this resonates, we want to talk to you.
 
 ## About you
 
-You should have a broad knowledge of digital marketing channels and techniques and have the technical aptitude to execute on them. We want you to have the freedom to create strategies based on your previous knowledge and test and optimize them based on data-driven results. You will be working with the founders of the company to understand the product and market and then its up to you to run the marketing efforts at the company.
+You should have a broad knowledge of digital marketing channels and techniques and have the technical aptitude to execute on them. We want you to have the freedom to create strategies based on your previous knowledge and test and optimize them based on data-driven results. You will be working with the founders of the company to understand the product and market and then it's up to you to run the marketing efforts at the company.
 
 Not only you should be a leader, you should also be a creator. Can you create thousands of landing page templates to test a theory, optimize complicated SEM/SEO strategies or summon an army of bots to get competitive intelligence? You will work with our other engineers but you should be ready to get your hands dirty. Someone with a passion for marketing and experience in programming is ideal.
 
