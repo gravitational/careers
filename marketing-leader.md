@@ -29,6 +29,6 @@ If you are this kind of person, here is the menu of what you will be doing with 
 
 ## Location
 
-We prefer for our product team to be in San Francisco and we can relocate you if you are already eligible to work in the U.S.
+We prefer for this role to be in San Francisco and we can relocate you if you are already eligible to work in the U.S.
 
 Contact: jobs@gravitational.com
