@@ -16,7 +16,7 @@ Not only a leader, you should also be technical and a maker. Can you create thou
 
 You should also be comfortable joining an early stage company with a dynamic future. You should be comfortable with a significant portion of your compensation in equity and in return we will be very transparent with you about the company finances and outlook. You are joining a founding team and we want you to enjoy the ride.
 
-If you are this kind of person, here is the menu of what you will be doing with us (TL/DR everything marketing related):
+If you are this kind of person, here is the menu of what you will be doing with us (TL/DR everything growth related):
 
 * Test various channels, measure and double down on the most effective ones.
 * Help with branding, tone and company image.
