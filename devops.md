@@ -1,10 +1,12 @@
+# Implementation Services / DevOps Engineer
+
 ## About us
 
 Gravitational, an early stage systems & cloud startup in San Francisco, is looking for ambitious and talented people. We are well-funded by fantastic Silicon Valley investors. We are an experienced team: we founded [Mailgun](http://mailgun.com) which was acquired by [Rackspace](http://rackspace.com), we created [Vulcand](https://github.com/vulcand/vulcand) and some other [cool stuff](http://www.rackspace.com/blog/onmetal-the-right-way-to-scale/) at Rackspace and are authors of [Teleport](https://github.com/gravitational/teleport) and [Telekube](https://gravitational.com/telekube)
 
 We are hackers. We love Linux and low level systems programming and we love helping open source communities and other engineers to get things done.
 
-We also have families, friends and hobbies. Our past experiences building companies taught us about the importance of life and work balance. It matters even more when you are building a huge and lasting company, like Gravitational.
+We are also dedicated to our friends, families, and hobbies outside of work. Our past experiences building companies taught us about the importance of life and work balance. It matters even more when you are building a huge and lasting company, like Gravitational.
 
 If this resonates, we want to talk to you.
 
