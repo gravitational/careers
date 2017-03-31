@@ -12,7 +12,7 @@ If this resonates, we want to talk to you.
 
 ## About you
 
-You understand how computers work and what role an operating system plays. You know why the Linux kernel is written in C and not any other language. You have a favorite file system, you know what a syscall is and you are comfortable exploring `/proc` and `/sys`. You like using Go, Python, Terraform and Ansible every day, are not afraid of Makefiles and you enjoy when thousands of servers bend to your will. You understand networking very well and know what `ip netns`, `StrongSwarm` and VXLAN mean and are excited to use them daily.
+You understand how computers work and what role an operating system plays. You know why the Linux kernel is written in C and not any other language. You have a favorite file system, you know what a syscall is and you are comfortable exploring `/proc` and `/sys`. You like the idea of using Go, Python, Terraform and Ansible every day, are not afraid of Makefiles and you enjoy setting up secrets management, CI/CD automation, networks and clusters deployment. You understand networking very well and know what `ip netns`, `StrongSwarm` and VXLAN mean and are excited to use them daily.
 
 You should also be comfortable joining an early stage company with a dynamic future. We offer a great salary, but expect you to value the equity as well. In return we will be very transparent with you about the company finances and outlook. You are joining a founding team and we want you to enjoy the ride.
 
