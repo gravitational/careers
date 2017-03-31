@@ -4,7 +4,7 @@ Gravitational, an early stage systems & cloud startup in San Francisco, is looki
 
 We are hackers. We love Linux and low level systems programming and we love helping open source communities and other engineers to get things done.
 
-We are also husbands, fathers and we have hobbies. Our past experiences building companies taught us about the importance of life and work balance. It matters even more when you are building a huge and lasting company, like Gravitational.
+We also have families, friends and hobbies. Our past experiences building companies taught us about the importance of life and work balance. It matters even more when you are building a huge and lasting company, like Gravitational.
 
 If this resonates, we want to talk to you.
 
