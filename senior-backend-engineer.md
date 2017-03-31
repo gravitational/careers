@@ -23,7 +23,7 @@ If you are this kind of person, here is what you will be working on:
 
 ## Location
 
-We would prefer everyone to be in San Francisco and we can relocate you. We will consider remote option for experienced candidates with a history of getting things done.
+We would prefer everyone to be in San Francisco or Germany and we can relocate you. We will consider remote option for experienced candidates with a history of getting things done.
 
 Contact: jobs@gravitational.com
 
