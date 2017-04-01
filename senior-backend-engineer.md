@@ -18,7 +18,7 @@ You should also be comfortable joining an early stage company with a dynamic fut
 
 If you are this kind of person, here is what you will be working on:
 
-* Hack on technologies like systemd and libcontainer
+* Build solutions using Go, systemd and runc and Kubernetes
 * Design and build new open source products like [teleport](https://github.com/gravitational/teleport) you can be proud of
 * Talk to customers and convert complex requirements into simple and elegant solutions
 * Daily code reviews
