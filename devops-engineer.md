@@ -24,6 +24,15 @@ If you are this kind of person, here is what you will be working on:
 * Build deployment automation tools with Go, Terraform, Kubernetes and containers.
 * Tweak, setup and configure networking automation, write CNI plugins and contribute to open source automation tools.
 
+## Tech
+
+You don't have to be an expert in these things, but you should be ready and excited to become one:
+
+* Kubernetes and containers
+* Ansible
+* AWS management, Terraform
+* Linux administration, Linux networking
+
 ## Location
 
 We would prefer everyone to be in San Francisco or Berlin and we can relocate you. We will consider remote option for experienced candidates with a history of getting things done.
