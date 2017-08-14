@@ -21,7 +21,7 @@ Now we need help taking the business to the next level. We plan on starting by h
 * You have a technical background, with hands on Ops / SRE / Devops experience preferred. We are selling to Engineering and IT professionals, so you need to be on their level, technically.
 * You have some experience in sales, sales engineering, account management or customer support / success with technical offerings.
 * You are ready to get your hands dirty. We are _NOT_ looking for a VP of Sales to build and manage a team in the near term. We are looking for people that are ready to hustle, develop leads and learn to sell the products side by side with the founding team. Of course, becoming a VP of Sales is a natural career progression opportunity.
-* There is a lot of work to be done so you don't mind pitching in across go-to-market activities, including marketing collateral, product marketing / sales strategy, brand evangelism, traveling to conferences / events, etc.
+* There is a lot of work to be done - so you don't mind helping out across various go-to-market activities, including marketing collateral, product marketing / sales strategy, brand evangelism, traveling to conferences / events, etc.
 * You are excited about the opportunity and would prefer a commision heavy comp structure.
 
 ## Location
