@@ -28,7 +28,7 @@ Now we need help taking the business to the next level. We plan on starting by h
 
 We are located in Oakland (Jack London Square).  Our office has great views of the marina, a gym, pool, free parking and is a close walk from the Lake Merritt Bart station.
 
-We also offer competitive compensation and benefits (including a founder shares equity grant, platinum level healthcare insurance, 401k, commuter benefits and a stocked kitchen).
+We offer competitive compensation and benefits (including a founder shares equity grant, platinum level healthcare insurance, 401k, commuter benefits and a stocked kitchen).
 
 Contact: jobs@gravitational.com
 
