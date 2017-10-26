@@ -37,8 +37,8 @@ You don't have to be an expert in these things, but you should be ready and exci
 
 This is not a remote position, you'll be working out of one of our fantastic offices. 
 
-* Bay Area
-* Tornonto.
+* Oakland, California
+* Toronto, Canada
 
 ## Contact
 
