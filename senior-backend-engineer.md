@@ -27,7 +27,6 @@ If you are this kind of person, here is what you will be working on:
 
 This is not a remote position, you'll be working out of one of our fantastic offices.
 
-* Oakland, California
 * Toronto, Canada
 
 ## Contact
