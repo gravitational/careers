@@ -35,7 +35,7 @@ You don't have to be an expert in these things, but you should be ready and exci
 
 ## Locations
 
-This is not a remote position, you'll be working out of one of our fantastic offices. 
+We would prefer everyone to be in Oakland or Missisauga and we can relocate you. We will consider remote option for experienced candidates with a history of getting things done.
 
 * Oakland, California
 * Mississauga, Canada
