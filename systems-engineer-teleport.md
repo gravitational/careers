@@ -7,7 +7,7 @@ We are well-funded by fantastic Silicon Valley investors.
 We are an experienced team: we founded [Mailgun](http://mailgun.com) which was acquired by [Rackspace](http://rackspace.com), 
 we created [Vulcand](https://github.com/vulcand/vulcand) and some other 
 [cool stuff](http://www.rackspace.com/blog/onmetal-the-right-way-to-scale/) at Rackspace and are authors of 
-[Teleport](https://github.com/gravitational/teleport) and [Telekube](https://gravitational.com/telekube)
+[Teleport](https://github.com/gravitational/teleport) and [Gravity](https://gravitational.com/gravity)
 
 We are hackers. We love Linux and low level systems programming and we love helping open source communities and other 
 engineers to get things done.
