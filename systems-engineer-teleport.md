@@ -56,7 +56,8 @@ If you join the Teleport team, there is a wide range of projects you would be wo
 * Adding additional SSO providers support to Teleport enterprise code-base and improving existing integrations.
 * Improving Kubernetes proxy support in Teleport, adding new protocols
 * Improving Teleport's scalability on 10k+ nodes
-* Adding quick configuration improvements and writing deployment examples
+* Adding quick configuration improvements and writing deployment examples.
+* Troubleshooting networking and code issues affecting teleport reliability and performance.
 
 You should be comfortable changing the area of focus and working with customers, as this is a nature of a startup engineering.
 
