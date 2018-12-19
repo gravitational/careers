@@ -22,44 +22,54 @@ If this resonates, we want to talk to you.
 
 You understand how computers work and what role an operating system plays. 
 
-You know why the Linux kernel is written in C and not any other language. You have a favorite file system, 
-you know what a syscall is and you are comfortable exploring `/proc` and `/sys`. 
+You know why the Linux kernel is written in C and not any other language. You
+have a favorite file system, you know what a syscall is and you are comfortable
+exploring `/proc` and `/sys`. 
 
-You like using Go every day, are not afraid of Makefiles and you enjoy when thousands of servers bend to your will.
-You have solid understanding of key aspects of systems engineering - caching, distributed systems, know
-fundamentals of cryptography engineering and understand aspects of building secure systems.
+You like using Go every day, you are not afraid of Makefiles and you enjoy
+when thousands of servers bend to your will. You have a solid understanding of
+the key aspects of systems engineering like caching, distributed systems.
+You are familiar with the fundamentals of cryptography engineering have experience
+building secure systems.
 
-You should also be comfortable joining an early stage company with a dynamic future. 
-We offer a great salary, but expect you to value the equity as well. 
-In return we will be very transparent with you about the company finances and outlook. 
-You are joining a founding team and we want you to enjoy the ride.
+You should also be comfortable joining an early stage company with a dynamic
+future. We offer a great salary, but expect you to value the equity as well.
+In return we offer full transparency regarding the company performance.
+You will be joining the founding team, we want you to enjoy the ride!
 
-## About this job
+## About the job
 
-You will be focusing on open-core and private codebases of [Teleport](https://github.com/gravitational/teleport), our distributed
-access management system used by the [best companies in the world](https://gravitational.com/).
+You will be focusing on open-core and private codebases of [Teleport](https://github.com/gravitational/teleport), 
+our privileged access management system used by the [best companies in the world](https://gravitational.com/).
 
-Here is why we love this job and think you will enjoy it too:
+Here is why we love this job and hope you will enjoy it too:
 
-* Teleport is written in Go and C, there is a lot of systems engineering covering networking, performance, security and integrations with existing systems.
-* Build and test cycles in teleport are measured in seconds, integration tests are running in minutes.
+* Teleport is written in Go and C. 
+* The range of problem solving includes networking, performance, security and
+  integrations with existing systems.
+* Build and test cycles in teleport are measured in seconds, integration tests
+  are running in minutes.
 * Most of the code you will write will be open source.
-* People [love using teleport](https://tech.decisiv.com/gravitationals-teleport-at-devops-dc-a05abf3a290), and if you like speaking at a conferences about teleport, you will find interested audience
+* People [love using teleport](https://tech.decisiv.com/gravitationals-teleport-at-devops-dc-a05abf3a290), and if you like public speaking, you will find an audience who'll be happy to listen.
 * Teleport undergoes [regular](https://cure53.de/pentest-report_teleport.pdf) [security audits](https://cure53.de/pentest-report_teleport_2.pdf), and you will be part of the team interacting
 with security experts. 
-* We have direct connection with key customers and enjoy helping them right away on the spot.
-* We talk to customers and convert complex requirements into simple and elegant solutions.
-* We have [thorough code reviews](https://github.com/gravitational/teleport/pull/2349) and [open design](https://github.com/gravitational/teleport/issues/1510) [process](https://github.com/gravitational/teleport/issues/1986) that you can participate in early on.
+* We have a direct connection with the key customers and enjoy helping them on the spot.
+* We practice [thorough code reviews](https://github.com/gravitational/teleport/pull/2349) 
+  and have an [open design](https://github.com/gravitational/teleport/issues/1510) [process](https://github.com/gravitational/teleport/issues/1986).
 
-If you join the Teleport team, there is a wide range of projects you would be working on:
+If you join the Teleport team, here are some of the projects you will be working on:
 
-* Adding additional SSO providers support to Teleport enterprise code-base and improving existing integrations.
-* Improving Kubernetes proxy support in Teleport, adding new protocols
-* Improving Teleport's scalability on 10k+ nodes
-* Adding quick configuration improvements and writing deployment examples.
-* Troubleshooting networking and code issues affecting teleport reliability and performance.
+* Adding additional SSO providers support to Teleport enterprise code base and
+  improving existing integrations.
+* Improving Kubernetes proxy support in Teleport and adding support for new
+  protocols.
+* Improving Teleport's scalability on 10k+ nodes.
+* Simplifying cluster configuration and creating deployment examples.
+* Troubleshooting networking and performance issues affecting Teleport
+  reliability at scale.
 
-You should be comfortable changing the area of focus and working with customers, as this is a nature of a startup engineering.
+You should be comfortable changing the area of focus and working directly with
+customers.
 
 ## Locations
 
