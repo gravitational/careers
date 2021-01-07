@@ -1,6 +1,6 @@
 # Summary
 
-The on-call sysadmin challenge is a simulated troubleshooting session where several faults have been created in a
+The Solutions and Support Engineer sysadmin challenge is a simulated troubleshooting session where several faults have been created in a
 sample environment requiring the candidate to investigate and solve the problems. 
 
 
@@ -61,5 +61,13 @@ While this is a simulated environment, the candidate should treat the challenge 
 It's OK to ask the interview team questions; we'll do our best to provide hints or help steer the investigation if the investigation is going in the wrong direction.
 
 
+## Results
 
+Each member of the interview panel will privately submit a +1/-2 score along with comments to the hiring manager based on how well they believe the interview went for the experience level. After the private submission of feedback, the interview panel will also meet to discuss the results, any problems with the interview process itself, and any significant concerns noted in the private submission.
+
+In case of a positive result, we will connect you to our HR team who will collect one-two references and will work out other details. You can start the reference collection process in parallel if you would like to speed up the process.
+
+After reference collection, our ops team will send you an offer.
+
+In case of a negative score result, hiring manager will contact you and share a list of the key observations from the team that affected the result.
 
