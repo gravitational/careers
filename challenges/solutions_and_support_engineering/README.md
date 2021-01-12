@@ -18,7 +18,7 @@ We believe this technique is better and is more fun compared to whiteboard/quiz 
 We appreciate your time and are looking forward to hacking on this challenge together.
 
 # Requirements
-The challenge is set up as a remote troubleshooting session. The candidate and gravitational engineers in similar roles will join a live troubleshooting session via zoom screen sharing. The candidate will be required to solve several faults created in a simulated customer environment. 
+The challenge is set up as a remote troubleshooting session. The candidate and Teleport engineers in similar roles will join a live troubleshooting session via zoom screen sharing. The candidate will be required to solve several faults created in a simulated customer environment. 
 
 Because the hardest troubleshooting we have to do in customer environments is using remote hands without direct access to the system, this challenge is set up to simulate that worst-case experience of walking remote hands by troubleshooting the problems in the environment with only a shared screen.
 
@@ -34,9 +34,11 @@ The interview team and candidate will join a scheduled zoom call for the trouble
 
 After the session, the interview panel will privately/anonymously submit +1/-2 to the hiring manager, after which the panel will meet to discuss how the session went.
 
-In the case of a positive result, we will connect you to our HR team, collect one-two references, and work out other details.  You can start the reference collection process in parallel if you would like to speed up the process. After reference collection, our ops team will send you an offer. In case of a negative score result, the hiring manager will contact you and share a list of the team's key observations that affected the result.
+In the case of a positive result, we will connect you to our HR team, collect one-two references, and work out other details.  You can start the reference collection process in parallel if you would like to speed up the process. After reference collection, our ops team will send you an offer. 
 
-## Area's of Focus
+In case of a negative score result, the hiring manager will contact you and share a list of the team's key observations that affected the result.
+
+## Areas of Focus
 We are not looking for any specific application knowledge. The test is designed to troubleshoot generic configuration or system faults on any software deployed to a generic Linux host. While this does not require any deployed application knowledge, some familiarity with collecting logs or investigating unfamiliar software is part of the process.
 
 The faults are present in:
@@ -44,12 +46,13 @@ The faults are present in:
 - filesystem or volumes
 - networking
 - SELinux
-- TLS
+- TLS connectivity
 
 We use the following software to represent applications on the host, which are experiencing faults:
 - nginx
 - etcd
 - docker
+- ipvs
 
 As this is meant to test the way we normally work, you may use any resource you would normally use when troubleshooting a system; for example, using google as a reference is normal and expected.
 
@@ -60,14 +63,4 @@ While this is a simulated environment, the candidate should treat the challenge 
 
 It's OK to ask the interview team questions; we'll do our best to provide hints or help steer the investigation if the investigation is going in the wrong direction.
 
-
-## Results
-
-Each member of the interview panel will privately submit a +1/-2 score along with comments to the hiring manager based on how well they believe the interview went for the experience level. After the private submission of feedback, the interview panel will also meet to discuss the results, any problems with the interview process itself, and any significant concerns noted in the private submission.
-
-In case of a positive result, we will connect you to our HR team who will collect one-two references and will work out other details. You can start the reference collection process in parallel if you would like to speed up the process.
-
-After reference collection, our ops team will send you an offer.
-
-In case of a negative score result, hiring manager will contact you and share a list of the key observations from the team that affected the result.
 
