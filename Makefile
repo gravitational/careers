@@ -1,6 +1,6 @@
 export TEXINPUTS := $(TEXINPUTS):$(abspath styles)
 
-all: challenges/systems/worker.pdf challenges/fullstack/dashboard.pdf levels.pdf
+all: challenges/systems-intern/worker-library.pdf challenges/systems/worker.pdf challenges/fullstack/dashboard.pdf levels.pdf
 
 %.pdf: %.tex
 	cd $(@D) && pdflatex $(abspath $<)
