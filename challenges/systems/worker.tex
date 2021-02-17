@@ -127,6 +127,26 @@ After reference collection, our ops team will send you an offer.
 
 In case of a negative score result, hiring manager will contact you and share a list of the key observations from the team that affected the result.
 
+\subsection{Design doc guidance}
+
+Please include the following information in your design document.
+
+  \begin{itemize}
+    \item High-level design overview. What components the system will have and how they will interact with each other, how the job will be represented, etc.
+    \item Security. How authentication and authorization will work, how mTLS will be setup (if applicable).
+    \item Server API reference. For GRPC servers include .proto spec.
+    \item Client UX reference.
+    \item Design trade-offs.
+  \end{itemize}
+
+Please do not spend your time on things like:
+
+  \begin{itemize}
+    \item Tables of contents and other extra formatting like headers/footers, keep it clean and simple.
+    \item Graphics/diagrams are not necessary.
+    \item Too in-depth implementation details such as specific methods or types you will use, packages/modules layouts, etc. It's ok to document 3rd party dependencies/libraries you intend on using.
+  \end{itemize}
+
 \subsection{Code and project ownership}
 
 This is a test challenge and we have no intent of using the code you've submitted in production.
