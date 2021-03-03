@@ -22,4 +22,4 @@ if the reports are not always shiny.
 Everyone deserves strong security and privacy.
 
 That is why all security features in Teleport are free and our software does not spy on our customers.
-When we want your data, we ask [for permission first](https://github.com/gravitational/teleport/pull/550).
+When we want your data, we ask [for permission first](https://github.com/gravitational/teleport/pull/5505).
