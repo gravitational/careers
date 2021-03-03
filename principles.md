@@ -2,7 +2,7 @@
 
 **Simpler always wins in the end**
 
-We choose simpler designs whenever possible. Having less confiugration knobs
+We choose simpler designs whenever possible. Having less configuration knobs
 is better for security. Complex products are easier to hack and harder
 to use. Security feature is only good, when it's easy to use.
 
