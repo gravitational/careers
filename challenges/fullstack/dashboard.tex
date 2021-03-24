@@ -7,18 +7,18 @@
 \hypersetup{
     colorlinks=true,
     linkcolor=blue,
-    filecolor=magenta,      
+    filecolor=magenta,
     urlcolor=cyan,
 }
 \lstset{basicstyle=\sffamily}
 \usepackage{array}
 \usepackage[table]{xcolor}
 
-\begin{document} 
+\begin{document}
 \title{Admin Dashboard}
 
 \section{Summary}
- 
+
 Implement a prototype admin dashboard that collects and displays usage metrics submitted
 by fake IOT clients.
 
@@ -62,7 +62,7 @@ We appreciate your time and are looking forward to hack on this project together
   \end{tabular}
 \end{center}
 
-\section{Requirements} 
+\section{Requirements}
 
   There are 6 engineering levels at Teleport. It's possible to score on level 1-5 through coding challenge.
   Level 6 is only for internal promotions. Check the engineering levels document for more details.
@@ -76,7 +76,7 @@ We appreciate your time and are looking forward to hack on this project together
   We are going to compile the program, test it and get back to you.
 
   \section{Project Description}
-  
+
   Implement a server that will be receiving requests from imaginary IOT clients and tracking the number of registered IOT devices.
 
   You do not need to implement the IOT client. Teleport provides a \href{https://github.com/gravitational/fakeiot}{reference IOT client implementation} to aid you in developing and testing your server.
@@ -88,22 +88,22 @@ We appreciate your time and are looking forward to hack on this project together
 Serve the admin dashboard that displays the number of currently registered IOT clients for a particular account. See the mockups for the dashboard UI and interaction flows below. HTML and CSS assets for the dashboard are provided by Teleport: \href{https://github.com/gravitational/challenge-user-management}{user management}
 
 By default the account should be assigned a “Standard Plan” that only allows a certain maximum number of registered IOT devices. The dashboard should provide the ability to upgrade the account to an “Enterprise Plan” once the limit of registered users/devices is reached.
-  
+
 
   \subsection*{Level 1}
 
   \subsubsection*{Login Form}
-  
-  Admin signs in using basic authentication.
+
+  Admin signs in on the login page.
 
   \begin{center}
     \includegraphics[width=\textwidth]{login}
   \end{center}
 
-  \begin{itemize} 
+  \begin{itemize}
   \item Implement authentication and session management in the most secure way possible.
   \item Do not store the password in plain text. Pick the most secure algorithm of storing password hashes.
-  \item Web client should use Basic Authentication (username/password).
+  \item Web client should use email and password for authentication.
   \item Server-side form is ok.
   \item Implement logout and session timeout.
   \item Application should not be vulnerable to typical web security vulnerabilities like XSS, CSRF, and SSRF.
@@ -113,13 +113,13 @@ By default the account should be assigned a “Standard Plan” that only allows
   \subsection*{Level 2}
 
   \subsubsection{Current Plan}
-  
+
   Once the admin is logged in, the dashboard displays the current plan and the number of registered/available seats for IOT clients. The progress bar and device count should update periodically without the user refreshing the browser.
 
   \begin{center}
     \includegraphics[width=\textwidth]{dashboard-initial}
   \end{center}
-  
+
   \begin{itemize}
   \item It's OK to use polling for the refresh.
   \item Add HTTPS API with Bearer Token authentication to collect metrics from the client.
@@ -135,7 +135,7 @@ By default the account should be assigned a “Standard Plan” that only allows
 
   \subsubsection{Plan Upgrade}
 
-  Once the plan has been upgraded successfully, the dashboard should display a success message along with the updated plan name and device limits. 
+  Once the plan has been upgraded successfully, the dashboard should display a success message along with the updated plan name and device limits.
 
   \begin{center}
     \includegraphics[width=\textwidth]{dashboard-upgraded}
@@ -153,7 +153,7 @@ By default the account should be assigned a “Standard Plan” that only allows
 
 The interview team joins the slack channel. The team consists of the engineers who will be working with you.
 Ask them bout the engineering culture, work and life balance, or anything else that you would like to learn about Teleport.
-  
+
 Before writing the actual code, create a brief design document in Google Docs or markdown in Github and share with the team.
 
 This document should consist of key trade-offs and key design approaches. Please avoid writing overly detailed design document. Use this document to make sure the team could provide feedback on your design and demonstrate that you've investigated the problem space.
@@ -191,7 +191,7 @@ These are the areas we will be evaluating in the submission:
   \end{itemize}
 
 \subsection{Trade-offs}
-       
+
 Write as little code as possible, otherwise this task will consume too much time and code quality will suffer.
 
 Please cut corners, for example configuration tends to take a lot of time, and is not important for this task.
@@ -199,7 +199,7 @@ Please cut corners, for example configuration tends to take a lot of time, and i
 Use hard codes as much as possible and simply add TODO items showing your thinking, for example:
 
 \begin{lstlisting}[caption=TODO example]
-  
+
   // TODO: Add configuration system.
   // Consider using CLI library to support both
   // environment variables and reasonable default values,
@@ -229,7 +229,7 @@ Please don’t overdo the testing. This could take a very long time and distract
 The tests should cover both the happy path (function/procedure success) and several error paths (failure due to bad input, failed dependency, etc). Please demonstrate both good test structure and your analysis of edge cases and possible failures.
 
 \subsection{Pitfalls and Gotchas}
-    
+
   To help you out, we've composed a list of things that previously resulted in a no-pass from the interview team:
 
     \begin{itemize}
@@ -242,7 +242,7 @@ The tests should cover both the happy path (function/procedure success) and seve
     \end{itemize}
 
 \subsection{Scoring}
-    
+
 We want to be as transparent as possible on how we will be scoring your submission.
 The following table provides a description of different areas you will be evaluated on and how they will affect your overall score.
 
@@ -254,7 +254,7 @@ The following table provides a description of different areas you will be evalua
   Description & Points Awarded & Points Subtracted \\
   \hline
   The submitted code has a clear and modular structure & +1 & -1 \\
-  \hline   
+  \hline
   The candidate communicated their progress during the interview & +1 & -1 \\
   \hline
   The program builds are reproducible & +1 & -1 \\
@@ -266,7 +266,7 @@ The following table provides a description of different areas you will be evalua
   Client side code is not vulnerable to CSRF and other attacks & +1 & -1 \\
   \hline
   Server side code uses strong HTPS configuration and security & +1 & -1 \\
-  \hline  
+  \hline
   The code provides examples of tests covering key components & +1 & -1 \\
   \hline
   The code provides clear error handling and reporting & +1 & -1 \\
@@ -278,7 +278,7 @@ The following table provides a description of different areas you will be evalua
 \end{tabular}
 \end{center}
 
-\subsection{Scoring}
+\subsection{Questions}
 
 It is OK to ask the interview team questions. Some folks stay away from
 asking questions to avoid appearing less experienced, so we provide examples of questions
