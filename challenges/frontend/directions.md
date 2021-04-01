@@ -4,9 +4,9 @@
 
 Create a fictitious website using the Next.js framework and the designs provided by the client. 
 
-<img src="./screenshots/homepage.png" height="400" />
-<img src="./screenshots/homepage-with-dropdown.png" height="400" />
-<img src="./screenshots/mobile-version.png" height="400" />
+<img src="./screenshots/website.png" height="400" />
+<img src="./screenshots/authenticated.png" height="400" />
+<img src="./screenshots/mobile.png" height="400" />
 
 ## Rationale
 We would like to evaluate your skill in the following ares: 
@@ -40,15 +40,17 @@ You can find images for the challenge in **assets** folder along with the **Sket
 - Provide documentation on how to get it running locally 
 
 ## Level 2 - Create styles for these components
-- Use react style components to style the existing components you have created
+- Use react [styled components](https://styled-components.com/) to style the existing components you have created
+- Make sure your styles are responsive for differnt screen sizes (see mobile screen shot in images folder)
 - Add functionality for dropdown menu
-- Add functionality for code box widget 
-- Add functionality for quote slider (you can use fake text for quotes and avatars) 
+- Create a unit test for the dropdown menu
+- 
 
 ## Level 3-4 - Responsive styling and unit testing, server side rendering
-- Provide unit tests for at least 2 of your components and at least one server side unit test. 
-- Migrate the application to the server so pages can be rendered on each http request from the server. 
-- Update all components so they work with any screen size or resolution 
+- Add functionality for code box widget 
+- Add Authentication using github for signing in
+- Update the navigation and component, hero image, and cod box when the user is authenticated 
+- Provide unit tests for: github authentication, dynamically changing elements during when authed, and the codebox widget.  
 
 # Guidance
 
