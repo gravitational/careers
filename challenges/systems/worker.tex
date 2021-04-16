@@ -7,22 +7,22 @@
 \hypersetup{
     colorlinks=true,
     linkcolor=blue,
-    filecolor=magenta,      
+    filecolor=magenta,
     urlcolor=cyan,
 }
 \lstset{basicstyle=\sffamily}
 \usepackage{array}
 \usepackage[table]{xcolor}
 
-\begin{document} 
+\begin{document}
 \title{Linux Job Worker}
 
 \section{Summary}
- 
+
 Implement a prototype job worker service that provides an API to run arbitrary Linux processes.
 
 \section{Rationale}
- 
+
     This exercise has two goals:
 
     \begin{itemize} %
@@ -38,11 +38,10 @@ Implement a prototype job worker service that provides an API to run arbitrary L
 
     We appreciate your time and are looking forward to hack on this project together.
 
-\section{Requirements} 
+\section{Requirements}
 
   There are 6 engineering levels at Teleport. It's possible to score on level 1-5 through coding challenge.
-  Level 6 is only for internal promotions. Check the engineering levels document for more details.
-  To qualify for a level, implement requirements for all levels up to the one you are interested in.
+  Level 6 is only for internal promotions. Check the \href{https://raw.githubusercontent.com/gravitational/careers/main/levels.pdf}{engineering levels document} for more details.
 
   Start with a very brief Google doc that covers the edge cases and design approach and post it to the Slack channel. After the doc is approved, implement interfaces and an example program using the library.
 
@@ -51,54 +50,120 @@ Implement a prototype job worker service that provides an API to run arbitrary L
   Split the submission into 2-3 pull requests for us to review. We will review every pull request and provide our feedback.
 
   We are going to compile the program, test it and get back to you.
-  
-  \subsection*{Level 1}
+
+ \subsection*{Level 1}
 
   \subsubsection*{Library}
-  \begin{itemize} 
-  \item[] Worker library with methods to start/stop/query status and get an output of a running job.
+  \begin{itemize}
+  \item[] Worker library with methods to start/stop/query status and get the output of a job.
   \end{itemize}
 
   \subsubsection*{API}
-  \begin{itemize} 
-  \item[] Add HTTPS API to start/stop/get status of a running process. Use basic authentication.
+  \begin{itemize}
+  \item[] HTTPS API to start/stop/get status of a running process.
+  \item[] Use HTTP Basic Authentication.
+  \item[] Use a simple authorization scheme.
   \end{itemize}
 
-  \subsubsection*{Client}
-  \begin{itemize} 
-  \item[] Client command should be able to connect to worker service and schedule several jobs.
-  \item[] Client should be able to query result of the job execution and fetch the logs.
-  \end{itemize}    
-    
+  \subsubsection*{CLI}
+  \begin{itemize}
+  \item[] CLI should be able to connect to worker service and schedule several jobs.
+  \item[] CLI should be able to query result of the job execution and fetch its output.
+  \end{itemize}
+
  \subsection*{Level 2}
 
- \subsubsection*{API}
- \begin{itemize} 
- \item[] Use mTLS instead of basic authentication and verify client certificate. Set up strong set of cipher suites for TLS and good crypto setup for certificates.
- \end{itemize}
+  \subsubsection*{Library}
+  \begin{itemize}
+  \item[] Worker library with methods to start/stop/query status and get the output of a job.
+  \end{itemize}
+
+  \subsubsection*{API}
+  \begin{itemize}
+  \item[] HTTPS API to start/stop/get status of a running process.
+  \item[] Use mTLS authentication and verify client certificate. Set up strong set of cipher suites for TLS and good crypto setup for certificates. Do not use any other authentication protocols on top of mTLS.
+  \item[] Use a simple authorization scheme.
+  \end{itemize}
+
+  \subsubsection*{CLI}
+  \begin{itemize}
+  \item[] CLI should be able to connect to worker service and schedule several jobs.
+  \item[] CLI should be able to query result of the job execution and fetch its output.
+  \end{itemize}
 
  \subsection*{Level 3}
-    
+
+  \subsubsection*{Library}
+  \begin{itemize}
+  \item[] Worker library with methods to start/stop/query status and get the output of a job.
+  \item[] Library should be able to stream the output of a running job.
+  \end{itemize}
+
   \subsubsection*{API}
-  \begin{itemize} 
-  \item[] Use \href{https://grpc.io}{GRPC} for API and add a streaming output of a running job process.
-  \item[] Add streaming log output of a running job process.
+  \begin{itemize}
+  \item[] \href{https://grpc.io}{GRPC} API to start/stop/get status/stream output of a running process.
+  \item[] Use mTLS authentication and verify client certificate. Set up strong set of cipher suites for TLS and good crypto setup for certificates. Do not use any other authentication protocols on top of mTLS.
+  \item[] Use a simple authorization scheme.
   \end{itemize}
 
   \subsubsection*{Client}
-  \begin{itemize} 
-  \item[] Client should be able to stream the logs.
+  \begin{itemize}
+  \item[] CLI should be able to connect to worker service and schedule several jobs.
+  \item[] CLI should be able to query result of the job execution and stream its output.
   \end{itemize}
-  
+
   \subsection*{Level 4}
-    
+
+  \subsubsection*{Library}
+  \begin{itemize}
+  \item[] Worker library with methods to start/stop/query status and get the output of a job.
+  \item[] Library should be able to stream the output of a running job.
+  \end{itemize}
+
+  \subsubsection*{API}
+  \begin{itemize}
+  \item[] \href{https://grpc.io}{GRPC} API to start/stop/get status/stream output of a running process.
+  \item[] Use mTLS authentication and verify client certificate. Set up strong set of cipher suites for TLS and good crypto setup for certificates. Do not use any other authentication protocols on top of mTLS.
+  \item[] Use a simple authorization scheme.
+  \end{itemize}
+
+  \subsubsection*{Client}
+  \begin{itemize}
+  \item[] CLI should be able to connect to worker service and schedule several jobs.
+  \item[] CLI should be able to query result of the job execution and stream its output.
+  \end{itemize}
+
   \subsubsection*{Resource control}
   \begin{itemize}
-  \item[] Add limits for amount of CPU, Memory and Disk IO using system calls.
+  \item[] Add limits for amount of CPU, Memory and Disk IO per job using system calls.
   \end{itemize}
 
   \subsection*{Level 5}
-    
+
+  \subsubsection*{Library}
+  \begin{itemize}
+  \item[] Worker library with methods to start/stop/query status and get the output of a job.
+  \item[] Library should be able to stream the output of a running job.
+  \end{itemize}
+
+  \subsubsection*{API}
+  \begin{itemize}
+  \item[] \href{https://grpc.io}{GRPC} API to start/stop/get status/stream output of a running process.
+  \item[] Use mTLS authentication and verify client certificate. Set up strong set of cipher suites for TLS and good crypto setup for certificates. Do not use any other authentication protocols on top of mTLS.
+  \item[] Use a simple authorization scheme.
+  \end{itemize}
+
+  \subsubsection*{Client}
+  \begin{itemize}
+  \item[] CLI should be able to connect to worker service and schedule several jobs.
+  \item[] CLI should be able to query result of the job execution and stream its output.
+  \end{itemize}
+
+  \subsubsection*{Resource control}
+  \begin{itemize}
+  \item[] Add limits for amount of CPU, Memory and Disk IO per job using system calls.
+  \end{itemize}
+
   \subsubsection*{Isolation}
   \begin{itemize}
   \item[] Each job process should be given a separate PID, Mount and Networking namespace using system calls.
@@ -110,7 +175,7 @@ Implement a prototype job worker service that provides an API to run arbitrary L
 
 The interview team will join the Slack channel. The team consists of the engineers who will be working with you.
 Ask them about the engineering culture, work and life balance, or anything else that you would like to learn about Teleport.
-  
+
 Before writing the actual code, create a brief design document in Google Docs or markdown in Github and share with the team.
 
 This document should consist of key trade-offs and key design approaches. Please avoid writing an overly detailed design document. Use this document to make sure the team could provide feedback on your design and demonstrate that you've investigated the problem space.
@@ -150,7 +215,7 @@ These are the areas we will be evaluating in the submission:
   \end{itemize}
 
 \subsection{Trade-offs}
-       
+
 Write as little code as possible, otherwise this task will consume too much time and code quality will suffer.
 
 Please cut corners, for example configuration tends to take a lot of time, and is not important for this task.
@@ -158,7 +223,7 @@ Please cut corners, for example configuration tends to take a lot of time, and i
 Use hardcoded values as much as possible and simply add TODO items showing your thinking, for example:
 
 \begin{lstlisting}[caption=TODO example]
-  
+
   // TODO: Add configuration system.
   // Consider using CLI library to support both
   // environment variables and reasonable default values,
@@ -180,7 +245,7 @@ Do not try to achieve full test coverage. This will take too long. Take two key 
 
 
 \subsection{Pitfalls and Gotchas}
-    
+
   To help you out, we've composed a list of things that previously resulted in a no-pass from the interview team:
 
     \begin{itemize}
@@ -192,44 +257,7 @@ Do not try to achieve full test coverage. This will take too long. Take two key 
     \item Implementing custom security algorithms/authentication schemes is always a bad idea unless you are a trained security researcher/engineer. It is definitely a bad idea for this task - try to stick to industry proven security methods as much as possible.
     \end{itemize}
 
-\subsection{Scoring}
-    
-We want to be as transparent as possible on how we will be scoring your submission.
-The following table provides a description of different areas you will be evaluated on and how they will affect your overall score.
-
-\begin{center}
-\rowcolors{2}{gray!80!gray!50}{gray!50!gray!20}
-\begin{tabular}{ | m{25em} | m{5em}| m{5em} | }
-  \hline
-  \rowcolor{blue!60!black!10}
-  Description & Points Awarded & Points Subtracted \\
-  \hline
-  The submitted code has a clear and modular structure & +1 & -1 \\
-  \hline   
-  The candidate communicated their progress during the interview & +1 & -1 \\
-  \hline
-  The program builds are reproducible & +1 & -1 \\
-  \hline
-  README provides clear instructions & +1 & -1 \\
-  \hline
-  The candidate outlined the key design points in the design document & +1 & -1 \\
-  \hline
-  The code has no obvious data races and deadlocks & +1 & -1 \\
-  \hline
-  The code provides examples of tests covering key components & +1 & -1 \\
-  \hline
-  The code provides clear error handling and reporting & +1 & -1 \\
-  \hline
-  The program is working according to the specification & +1 & -1 \\
-  \hline
-  The candidate demonstrates ability to handle and apply feedback & +1 & -1 \\
-  \hline
-  The client-server communication is implemented in a secure way & +1 & -1 \\
-  \hline
-\end{tabular}
-\end{center}
-
-\subsection{Scoring}
+\subsection{Questions}
 
 It is OK to ask the interview team questions. Some folks stay away from
 asking questions to avoid appearing less experienced, so we provide examples of questions
@@ -249,7 +277,7 @@ Unless specified in the requirements, pick the solution that works best for you.
 
 \section{Tools}
 
-This task should be implemented in Go, C++ or Rust and should work on 64-bit Linux machines.
+This task should be implemented in Go or Rust and should work on 64-bit Linux machines.
 
 \section{Timing}
 
