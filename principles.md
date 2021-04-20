@@ -1,24 +1,20 @@
 ## Product and Engineering Principles
 
-**We choose simpler designs whenever possible.**
+**We believe in being paid for quality work**
 
-Having less configuration knobs is better for security. Complex products are easier to hack and harder
-to use. Security feature is only good if it make user experience better, otherwise users will find ways to work around it.
+There's an incredible amount of software infrastructure that is under funded and ignored.
+We believe our software needs to generate revenue to employ the best minds.
 
-That's why we prefer [client certificates](https://goteleport.com/teleport/how-it-works/certificate-based-authentication-ssh-kubernetes/)
-and as way to authenticate and [reduce the number of ports, configuration options and protocols](https://github.com/gravitational/teleport/issues/5777).
+**We balance openness and transparency**
 
-**Security through transparency**
+We work as much as we can in the open, our commits, designs, and comments are largely in public repositories for anyone to use and observe.
+We strive to find balance in open-core and community friendly software versus competing in a dynamic and evolving market segment.
 
-The only way to build secure systems is through peer review and transparency.
+All our security critical code is developed in the open.
+Our independent audits [get published](https://goteleport.com/resources/audits/), even the unflattering ones.
 
-That's why we have [open design process](https://github.com/gravitational/teleport/pull/5135/files),
-and [publish security audits](https://blog.doyensec.com/2020/03/02/gravitational-audit.html) even
-if reports are critical.
+**We want to tackle and solve the hard problems**
 
-**We are not selling security and customers are not the product**
-
-Our products improve developer efficiency and don't stay in the way. They have to be secure, but security
-is not what we sell. Everyone deserves strong security and privacy.
-That's why we built OSS version of Teleport to be as secure as possible. Our software does not spy on our customers.
-When we want your data, we ask [for permission first](https://github.com/gravitational/teleport/pull/5505).
+We want to minimize the theater in security products, and offer meaningful improvements to security posture.
+We want to focus on the user, having a product that users aren't trying to work around to get their jobs done.
+We want to end passwords as a vehicle for trust, including passwords in disguise such as tokens.
