@@ -9,7 +9,7 @@ Teleport is a Y-Combinator company that is well funded by top-tier investors and
 We value our craft, a work-life balance and embrace a culture of mutual respect.
 
 [Teleport Repository](https://github.com/gravitational/teleport)
-[Apply Here](https://jobs.lever.co/gravitational/8a3ba43b-ae42-4225-aaf0-7f54713202d6)
+[Apply Here](https://jobs.lever.co/teleport/2ec21642-ae90-4765-b9e3-b8b3ea312b3c)
 
 ## About this job
 
@@ -56,7 +56,7 @@ What to expect once you apply:
 * You will join 30 minute intro call and we will walk you through the compensation, interview process and requirements.
 * You join a slack channel and submit a coding challenge in Golang or Rust on the backend and Typescript or JavaScript on front-end using Github.
 
-[Apply Here](https://jobs.lever.co/gravitational/8a3ba43b-ae42-4225-aaf0-7f54713202d6)
+[Apply Here](https://jobs.lever.co/teleport/2ec21642-ae90-4765-b9e3-b8b3ea312b3c)
 
 ## Equal Opportunity
 

@@ -21,7 +21,7 @@ We offer:
   * Excellent health insurance.
   * Work anywhere in the U.S, Canada or Europe
 
-Apply: https://jobs.lever.co/gravitational
+Apply: https://jobs.lever.co/teleport
 
 We are Backend, Security, Full-stack Engineers and SREs.
 
