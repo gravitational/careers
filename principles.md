@@ -7,7 +7,7 @@ We believe our software needs to generate revenue to employ the best minds.
 
 **We balance openness and transparency**
 
-We work as much as we can in the open, our commits, designs, and comments are largely in public repositories for anyone to use and observe.
+We work as much as we can in the open; our commits, designs, and comments are largely in public repositories for anyone to use and observe.
 We strive to find balance in open-core and community friendly software versus competing in a dynamic and evolving market segment.
 
 All our security critical code is developed in the open.
