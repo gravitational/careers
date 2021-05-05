@@ -1,6 +1,6 @@
 # Summary
 
-This exercise simulates a simulated troubleshooting session where several faults and failures have been created in a sample environment, requiring the candidate to investigate and solve problems. 
+This exercise simulates a troubleshooting session where several faults and failures have been created in a sample environment, requiring the candidate to investigate and solve problems. 
 
 
 # Requirements

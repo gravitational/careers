@@ -67,24 +67,31 @@ Include a readme with the program that explains any dependencies and how to buil
 Implement all of the level 1 requirements plus:
 1. Add a Makefile or your preferred build scripting to build and test the solution.
 2. Add some tests, test for corner cases or unexpected behaviour.
+3. Add the ability to detect a port scan, where a single source IP connects to more than 3 host ports in the previous minute.
+
+Sample Output:
+```
+2021-04-28 15:28:05: Port scan detected: 192.0.2.56 -> 10.0.0.5 on ports 80,81,82,83
+```
 
 ### Questions
 1. Why did you choose `x` to write the build automation?
 2. Is there anything else you would test if you had more time?
 3. What is the most important tool, script, or technique you have for solving problems in production? Explain why this tool/script/technique is the most important.
-4. What is the hardest technical problem or outage you've had to solve in your career? Explain what made it so difficult?
+
 
 ## Level 3:
-Implement all of the level 1 requirements plus:
+Implement all of the level 2 requirements plus:
 1. Add a prometheus endpoint to report metrics on the following:
     1. Counter - number of new connections
 
     Tip: There are client libraries available in many languages for providing prometheus metrics, see https://prometheus.io/docs/instrumenting/clientlibs/
-2. Build the project into a docker container, provide instructions on how to execute as a container but reporting connections on the host.
+2. Build the project into a docker container, provide instructions on how to execute as a container while reporting connections on the host.
+3. When a port scan is detected, configure the host firewall to block connections by source-ip.
 
 ### Questions
 1. If you had to deploy this program to hundreds of servers, what would be your preferred method? Why?
-2. Describe a problem and how you solved that problem that you are particularly proud of?
+4. What is the hardest technical problem or outage you've had to solve in your career? Explain what made it so difficult?
 
 # Scoring
 The submission will be provided to a panel of team members, who will review the submission, run the code, try and break it, and review the written answers. Each panel member will then privately submit a vote of +1 or -2 within our tracking system along with comments on the submission. Once the results have been collected, the hiring manager will schedule a call with the panel to go over the results, how the interview went, and come to agreement on the results.
@@ -94,7 +101,7 @@ In case of a positive result, we will connect you to our HR team who will make a
 The the case of a negative result, the hiring manager will contact you and share a list of key observations from the panel that affected the result.
 
 # Interview channel
-For the duration of the interview we will invite you to a slack channel with our current team members present. Feel free to use the channel to coordinate with us, ask any questions, etc. Also, feel free to take the opportunity to ask the team questions about the company and team, it's just as important that the candidate ensure our culture and team are a good fit for them. 
+For the duration of the interview we will invite you to a slack channel with our team. Feel free to use the channel to coordinate with us, ask any questions, etc. Also, feel free to take the opportunity to ask the team questions about the company and team, it's just as important that the candidate ensure our culture and team are a good fit for them. 
 
 # Tips
 
@@ -105,5 +112,6 @@ For the duration of the interview we will invite you to a slack channel with our
 - It should take 4-8 hours to complete the challenge, be mindful of your own time and try and avoid scope creep.
 - We do not provide higher scores for submissions that are submitted quickly.
 - From when the challenge is started you have a maximum of 1 week to complete the challenge.
+- Keep answers to the questions brief, 4 to 5 sentences maximum.
 
 
