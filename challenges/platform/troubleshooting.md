@@ -49,4 +49,18 @@ While this is a simulated environment, the candidate should treat the challenge 
 
 It's OK to ask the interview team questions; we'll do our best to provide hints or help steer the investigation if the investigation is going in the wrong direction.
 
+# Scoring
+The session will be attended by a panel of team member, who will participate in the troubleshooting session. After the session, each team member will privately submit a vote of +1 or -2 within our tracking system along with comments. With your permission, we will record the zoom meeting incase any panel member cannot attend or any panel member needs to leave part way through the meeting. Any recordings will be deleted once each panel member has submitted their feedback.
 
+## What we look for
+- How the candidate reacts under pressure.
+- How the candidate communicates their thought process while troubleshooting.
+- The troubleshooting approach, compared to the level being applied for (the team will expect more from a senior candidate than a junior candidate).
+- How the problems are solved.
+
+
+# Tips
+- It's not necessary to complete every problem. These are difficult problems to solve.
+- It's easy to get hung up or stuck on an individual problem, don't be afraid to move on.
+- Use any tools or resources you would use during your normal work day.
+- We'll provide tips during the session if you get off course.

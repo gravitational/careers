@@ -100,6 +100,17 @@ In case of a positive result, we will connect you to our HR team who will make a
 
 In case of a negative result, the hiring manager will contact you via email and share a list of key observations from the panel that affected the result.
 
+## What we look for
+We do our best to eliminate as many biases as possible in our interview process, and look only at the technical merits of the submission based on our experience. The panel members don't review resumes or backgrounds, and only see the submission itself and any communications over slack. Our internal voting process requires comments, so that we can try and identify individual biases that may occur.
+
+In general we look for:
+- Secure solutions where appropriate, everything we do impacts the security of our customers. (Shortcuts are allowed for this project, but with commentary on how to properly implement security).
+- How the candidate communicates, this includes setting expectations, README's, in code documentation, etc.
+- How the candidate explains technical details.
+- The technical merits of the solution, is it cleanly written, easy to understand, does it handle corner cases, etc.
+- Are there any glaring problems or limitations outside of expectations.
+- A demonstration of intellectual curiosity.
+
 # Interview channel
 For the duration of the interview we will invite you to a slack channel with our team. Feel free to use the channel to coordinate with us, ask any questions, etc. Also, feel free to take the opportunity to ask the team questions about the company and team, it's just as important that the candidate ensure our culture and team are a good fit for them. 
 
@@ -111,12 +122,12 @@ Use the interview channel to submit the answers to the questions and link to the
 - Include clear instructions on any dependencies so we can build and test the program ourselves.
 - Add comments to help us understand the code.
 - It's OK and encouraged to take shortcuts and keep the solution brief, make sure to include comments to help us understand where these shortcuts were taken.
-- It should take 4-8 hours to complete the challenge, be mindful of your own time and try and avoid scope creep.
+- It should take 6-10 hours to complete the challenge, be mindful of your own time and try and avoid scope creep.
 - We do not provide higher scores for submissions that are submitted quickly.
 - From when the challenge is started you have a maximum of 1 week to complete the challenge.
-- Keep answers to the questions brief, 4 to 5 sentences maximum.
+- Keep answers to the questions brief, 4 to 8 sentences maximum.
 - We claim no ownership over the submission itself, you may do what you wish with it after the interview.
-
+- Feel free to drop the code into a github repository, and invite us as contributors if you prefer to keep the submission private.
 
 
 
