@@ -98,10 +98,12 @@ The submission will be provided to a panel of team members, who will review the 
 
 In case of a positive result, we will connect you to our HR team who will make an offer and coordinate the rest of the hiring process.
 
-The the case of a negative result, the hiring manager will contact you and share a list of key observations from the panel that affected the result.
+In case of a negative result, the hiring manager will contact you via email and share a list of key observations from the panel that affected the result.
 
 # Interview channel
 For the duration of the interview we will invite you to a slack channel with our team. Feel free to use the channel to coordinate with us, ask any questions, etc. Also, feel free to take the opportunity to ask the team questions about the company and team, it's just as important that the candidate ensure our culture and team are a good fit for them. 
+
+Use the interview channel to submit the answers to the questions and link to the code when ready. We'll use the channel to follow up on any questions, and report and issues running the submission. 
 
 # Tips
 
@@ -113,5 +115,8 @@ For the duration of the interview we will invite you to a slack channel with our
 - We do not provide higher scores for submissions that are submitted quickly.
 - From when the challenge is started you have a maximum of 1 week to complete the challenge.
 - Keep answers to the questions brief, 4 to 5 sentences maximum.
+- We claim no ownership over the submission itself, you may do what you wish with it after the interview.
+
+
 
 
