@@ -109,7 +109,7 @@ In general we look for:
 - How the candidate explains technical details.
 - The technical merits of the solution, is it cleanly written, easy to understand, does it handle corner cases, etc.
 - Are there any glaring problems or limitations outside of expectations.
-- A demonstration of intellectual curiosity.
+- A demonstration of intellectual curiosity - how willing the candidate is to do research into the latest and greatest, dig into the little things to find the big problems, and adapt to the ever changing tech landscape.
 
 # Interview channel
 For the duration of the interview we will invite you to a slack channel with our team. Feel free to use the channel to coordinate with us, ask any questions, etc. Also, feel free to take the opportunity to ask the team questions about the company and team, it's just as important that the candidate ensure our culture and team are a good fit for them. 
