@@ -40,7 +40,8 @@ The format is described here: https://www.kernel.org/doc/Documentation/networkin
 
 The second and third columns contain IP addresses and port pairs in hex format. Be careful since the IP address is printed in little endian, and the port is printed in big endian (on x86 architectures).
 
-0664A8C0:1FFE translates to 10.162.15.225:55474
+0100007F:0050 translates to 127.0.0.1:80
+E10FA20A:01BB translates to 10.162.15.225:443
 
 ## Level 1:
 
