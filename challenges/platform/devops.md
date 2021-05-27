@@ -4,7 +4,7 @@ Implement a small program that reads `/proc/net/tcp` every 10 seconds and output
 
 # Requirements
 
-This challenge covers 3 engineering levels at Teleport, where we interview for levels 1-3. Level 4+ is reserved for internal promotions and other engineering roles.
+This challenge covers 3 engineering levels at Teleport, where we interview for levels 1-5. Level 6+ is reserved for internal promotions and other engineering roles.
 
 We've decided we want to put together a small program to report new TCP connections on a linux host. Write a program that meets the requirements of the level you are applying for, and submit the results. Also please submit answers to the questions outlined in each level.
 
@@ -93,6 +93,21 @@ Implement all of the level 2 requirements plus:
 ### Questions
 1. If you had to deploy this program to hundreds of servers, what would be your preferred method? Why?
 4. What is the hardest technical problem or outage you've had to solve in your career? Explain what made it so difficult?
+
+## Level 4:
+Instead of polling `/proc/net/tcp` or the host for a list of connections it's tracking, we want to use a better model and track connection attempts in real time. Use one of the following methods to track attempted connections:
+1. Use a pcap library to track TCP SYN Packets
+    1. Make sure the capture has a filter set to limit the number of packets passed to userspace to only interesting packets required for connection tracking.
+2. Load a BPF program into the linux express data path (XDP) and attach to an interface to monitor for new connections and report to userspace.
+3. Load a BPF program as a Linux Security Module (LSM) and report on new connections to userspace.
+
+Note: Reading `/proc/net/tcp` is no longer required, and should not be implemented.
+
+## Level 5:
+Instead of configuring the host based firewall to block the source of a port scan, write a BPF program to do so as either a LSM or XDP implementation.
+
+Note: Writing to the host firewall is no longer required and should be replaced by the above method.
+
 
 # Scoring
 The submission will be provided to a panel of team members, who will review the submission, run the code, try and break it, and review the written answers. Each panel member will then privately submit a vote of +1 or -2 within our tracking system along with comments on the submission. Once the results have been collected, the hiring manager will schedule a call with the panel to go over the results, how the interview went, and come to agreement on the results.
