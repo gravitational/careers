@@ -52,6 +52,6 @@ We use two interviews for team members with operational backgrounds, the first i
 | Tooling | Able to patch / update internal tools, test and apply configuration updates, etc. | Take ownership of key tools, like CI/CD platform, Terraform, AWS Configuration, etc. | Take design lead on key operational areas, such as introducing new tooling, new monitoring, or complex automation | Able to work with vendors or opensource communities to ensure external tooling meets our security, compliance, and operational needs |
 
 <br />
-Note: These levels are used as a guide, not every engineer specifically matches every skill in every focus area of the guide. Higher level engineers are expected to have a broader set of skills than junior team members. Engineers that focus on certain disciplines do not require as broad an area of skills, such as team members focussing on Tooling may not require as deep network understand. All team members are expected to meet Communications, Security, Oncall, and Operations requirements.
+Note: These levels are used as a guide, not every engineer specifically matches every skill in every focus area of the guide. Higher level engineers are expected to have a broader set of skills than junior team members. Engineers that focus on certain disciplines do not require as broad an area of skills, such as team members focussing on Tooling may not require as deep network understanding. All team members are expected to meet Communications, Security, Oncall, and Operations requirements.
 
 

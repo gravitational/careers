@@ -50,7 +50,7 @@ While this is a simulated environment, the candidate should treat the challenge 
 It's OK to ask the interview team questions; we'll do our best to provide hints or help steer the investigation if the investigation is going in the wrong direction.
 
 # Scoring
-The session will be attended by a panel of team member, who will participate in the troubleshooting session. After the session, each team member will privately submit a vote of +1 or -2 within our tracking system along with comments. With your permission, we will record the zoom meeting incase any panel member cannot attend or any panel member needs to leave part way through the meeting. Any recordings will be deleted once each panel member has submitted their feedback.
+The session will be attended by a panel of team members, who will participate in the troubleshooting session. After the session, each team member will privately submit a vote of +1 or -2 within our tracking system along with comments. With your permission, we will record the zoom meeting incase any panel member cannot attend or any panel member needs to leave part way through the meeting. Any recordings will be deleted once each panel member has submitted their feedback.
 
 ## What we look for
 - How the candidate reacts under pressure.

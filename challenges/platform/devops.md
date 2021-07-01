@@ -4,7 +4,7 @@ Implement a small program that reads `/proc/net/tcp` every 10 seconds and output
 
 # Requirements
 
-This challenge covers 3 engineering levels at Teleport, where we interview for levels 1-5. Level 6+ is reserved for internal promotions and other engineering roles.
+This challenge covers 5 engineering levels at Teleport. Level 6+ is reserved for internal promotions and other engineering roles.
 
 We've decided we want to put together a small program to report new TCP connections on a linux host. Write a program that meets the requirements of the level you are applying for, and submit the results. Also please submit answers to the questions outlined in each level.
 
