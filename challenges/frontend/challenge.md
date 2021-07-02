@@ -1,21 +1,21 @@
-# Application Developer (front-end)
+# Frontend Application Developer
 
 ## Summary
-Implement a simple application that allows a user to browse directory content on a remote server.
+Implement an application that allows a user to browse directory content on a remote server.
 
 ## Rationale
 We would like to evaluate your skill in the following areas:
 - Taking existing high-level requirements and translating them to a functional application
 - Writing production level code that does not depend on gigabytes of npm packages
 - Communicating with the team when working on the challenge
-- Handling feedback from Teleport employees
+- Handling feedback
 
 We believe this technique is not only better but also more fun compared to whiteboard/quiz interviews so common in the industry. It’s not without the downsides - it could take longer than traditional interviews. That said, it's our view that this type of challenge gives us a more accurate assessment of your ability to work well on the types of projects we’re working on day-to-day here at Teleport. [Some of the best teams use coding challenges](https://sockpuppet.org/blog/2015/03/06/the-hiring-post/). We appreciate your time and are looking forward to hacking on this project together.
 
 ## Tools
 - CSS: any
 - Frontend: React, React Router
-- Backend: Nodejs|Golang|Rust
+- Backend: NodeJS, Golang, Rust
 - Version Control: Github
 
 ## Requirements
@@ -31,9 +31,9 @@ We believe this technique is not only better but also more fun compared to white
   This level focuses on JS/CSS/DOM knowledge and does not require any server-side logic to implement.
 
   Create a directory viewer with the following functionality:
-  - An ability to view and browse directory content
-  - An ability to sort and filter on all shown attributes (within the current directory)
-  - An ability to bookmark URLs for quick navigation
+  - Viewing and browsing of directory content
+  - Sorting and filtering on all attributes (within the current directory)
+  - Allowing to bookmark URLs for quick navigation
 
   Directions:
   - Build your own components
@@ -75,7 +75,7 @@ const directory = {
 ```
 
   - You can use a design of similar viewers like Google Drive or Github
-    as a starting point and then add missing pieces to it. For example, you can borrow css from these design systems:
+    as a starting point and then add missing pieces to it. For example, you can borrow CSS from these design systems:
     [github](https://primer.style/components/getting-started) or
     [google](https://material-ui.com/getting-started/usage/) if you like.
 
@@ -141,7 +141,7 @@ To help you out, we’ve composed a list of things that previously resulted in a
 
 - Keep your CSS simple but not simpler. Do not waste your time on animations, instead make sure that an extra character does not destroy your layout.
 
-- Make sure that your code is secured and your application is not vulnerable to CSRF/XSS attacks.
+- Make sure that your code is secured and your application is not vulnerable to CSRF/XSS attacks. For a senior level, make sure you have a good crypto setup and secured session management.
 
 ## Scoring
 
@@ -153,5 +153,5 @@ We want to be as transparent as possible on how we will be scoring your submissi
 | The code provides examples of tests covering key components                                                          | +1                      | -1                         |
 | The app works according to the specifications, no bugs                                                                        | +1                      | -1                         |
 | The candidate demonstrates an ability to handle and apply feedback                                                   | +1                      | -1                         |
-| The code is not vulnerable to CSRF and other attacks                                                                 | +1                      | -1                         |
+| The code is not vulnerable to CSRF/XSS and other attacks                                                                 | +1                      | -1                         |
 
