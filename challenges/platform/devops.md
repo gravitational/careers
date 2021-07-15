@@ -68,7 +68,7 @@ Include a readme with the program that explains any dependencies and how to buil
 Implement all of the level 1 requirements plus:
 1. Add a Makefile or your preferred build scripting to build and test the solution.
 2. Add some tests, test for corner cases or unexpected behaviour.
-3. Add the ability to detect a port scan, where a single source IP connects to more than 3 host ports in the previous minute.
+3. Add the ability to detect an incoming port scan, where a single remote IP connects to more than 3 local ports in the previous minute.
 
 Sample Output:
 ```
