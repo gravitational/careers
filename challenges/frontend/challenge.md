@@ -150,8 +150,10 @@ We want to be as transparent as possible on how we will be scoring your submissi
 | Description                                                                                                          | Possible Points Awarded | Possible Points Subtracted |
 |----------------------------------------------------------------------------------------------------------------------|-------------------------|----------------------------|
 | The submitted code has a clear and modular structure.                                                                | +1                      | -1                         |
+| The candidate outlined the key design points in the design document                                                  | +1                      | -1                         |
 | The code provides examples of tests covering key components                                                          | +1                      | -1                         |
-| The app works according to the specifications, no bugs                                                                        | +1                      | -1                         |
+| The code provides clear error handling and reporting                                                                 | +1                      | -1                         |
+| The app works according to the specifications, no bugs                                                               | +1                      | -1                         |
 | The candidate demonstrates an ability to handle and apply feedback                                                   | +1                      | -1                         |
-| The code is not vulnerable to CSRF/XSS and other attacks                                                                 | +1                      | -1                         |
+| The code is not vulnerable to CSRF/XSS and other attacks                                                             | +1                      | -1                         |
 
