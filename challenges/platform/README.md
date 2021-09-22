@@ -2,7 +2,7 @@
 
 The Teleport Cloud offering is new; we're on a journey of defining and building a culture around production, offering a secure and reliable hosted version of Teleport Enterprise as a service. 
 
-Our mandate is straightforward; we need to be prepared to secure, monitor, maintain, scale, investigate, and automate our production environment for Teleport Cloud. Our work includes a wide variety of projects drawing on various skillsets, from ensuring we're up to date on patches to redesigning parts of the Teleport Core project to be more appealing to the Cloud.
+Our mandate is straightforward; we need to be prepared to secure, monitor, maintain, scale, investigate, and automate our production environment for Teleport Cloud. Our work includes a wide variety of projects drawing on various skillsets, from ensuring we're up to date on patches to redesigning parts of the Teleport Core project to take a cloud native approach for our infrastructure to maintain high availability and low latency for our customers.
 
 Here are some of the projects we're working on right now:
 * Rewriting the Teleport core project networking so that agents run by customers require fewer connections and overhead when phoning home.
@@ -18,7 +18,7 @@ The toolset we currently use is:
 * Prometheus / Alertmanager / Loki internally and on Grafana Cloud
 * Amazon Web Services
 * Drone.io
-* and More
+* and more
 
 # Rationale
 
@@ -316,6 +316,6 @@ We use two interviews for team members with operational backgrounds, the first i
 <br />
 Note: These levels are used as a guide, not every engineer specifically matches every skill in every focus area of the guide. Higher level engineers are expected to have a broader set of skills than junior team members. Engineers that focus on certain disciplines do not require as broad an area of skills, such as team members focussing on Tooling may not require as deep network understanding. All team members are expected to meet Communications, Security, Oncall, and Operations requirements.
 <br />
-Note: Our production and operational focussed culture is very new and under development
+Note: Our production and operational culture is still new, and you will be expected to help us shape it
 
 
