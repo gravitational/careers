@@ -112,7 +112,7 @@ Note: Writing to the host firewall is no longer required and should be replaced 
 # Scoring
 The submission will be provided to a panel of team members, who will review the submission, run the code, try and break it, and review the written answers. Each panel member will then privately submit a vote of +1 or -2 within our tracking system along with comments on the submission. Once the results have been collected, the hiring manager will schedule a call with the panel to go over the results, how the interview went, and come to agreement on the results.
 
-In case of a positive result, we will connect you to our HR team who will make an offer and coordinate the rest of the hiring process.
+In case of a positive result, we will schedule and move on to the [Troubleshooting](troubleshooting.md) interview.
 
 In case of a negative result, the hiring manager will contact you via email and share a list of key observations from the panel that affected the result.
 
