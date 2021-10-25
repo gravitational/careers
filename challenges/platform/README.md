@@ -2,27 +2,12 @@
 
 The Teleport Cloud offering is new; we're on a journey of defining and building a culture around production, offering a secure and reliable hosted version of Teleport Enterprise as a service. 
 
-Our mandate is straightforward; we need to be prepared to secure, monitor, maintain, scale, investigate, and automate our production environment for Teleport Cloud. Our work includes a wide variety of projects drawing on various skillsets, from ensuring we're up to date on patches to redesigning parts of the Teleport Core project to take a cloud native approach for our infrastructure to maintain high availability and low latency for our customers.
+To learn more about the teams that are a part of Teleport Cloud, visit our [Engineering Teams](../../teams.md) page.
 
-Here are some of the projects we're working on right now:
-* Rewriting the Teleport core project networking so that agents run by customers require fewer connections and overhead when phoning home.
-* We are expanding Teleport Cloud to multiple regions, reducing latency between users and their infrastructure.
-* We are deploying auto scalers, so no one needs to be paged to scale our infrastructure when there is a burst in new accounts.
-* We're improving our security posture, currently focusing on ensuring we have an audit trail for generated and published assets and ensuring we're using encryption at rest in the right places.
-* Progressing beyond minimum viable monitoring and alerting and fully adopting Grafana Cloud as our centralized metrics, alerting and logging platform.
-
-The toolset we currently use is:
-* Golang
-* Terraform and Packer
-* Kubernetes
-* Prometheus / Alertmanager / Loki internally and on Grafana Cloud
-* Amazon Web Services
-* Drone.io
-* and more
 
 # Rationale
 
-These exercises have two goals.
+The Teleport Cloud team uses both coding challenges and hands on Linux administration puzzles to evaluate candidates depending on their role. These exercises have two goals:
 
 - It helps us understand what to expect from you as an engineer, how you reason about production systems and investigate faults.
 - It helps you get a feel for what it would be like to work at Teleport, as this exercise aims to simulate some of our day-as-usual and expose you to the type of work we're doing here.
