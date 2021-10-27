@@ -67,19 +67,24 @@ The Internal Tools team is focused on building simple and secure foundational to
 
 Teleport DevOps is responsible for building, maintaining, and testing open-source modules for various configuration management platforms. This will be the open-source code that enables both our OSS and Enterprise customers to deploy and maintain Teleport on their chosen configuration management system. We’re looking to cover Kubernetes, Terraform on various clouds, Ansible, Salt, Puppet, etc.
 
-## Cloud Platform team
+## Cloud
+The Teleport Cloud offering is new; we're on a journey of defining and building a culture around production, offering a secure and reliable hosted version of Teleport Enterprise as a service. Our mandate is straightforward; we need to be prepared to secure, develop, monitor, maintain, scale, investigate, and automate the SAAS version of Teleport. Our work includes a wide variety of projects drawing on various skill sets, from ensuring we're up to date on patches to redesigning parts of the Teleport Core project to leverage the capabilities a cloud environment can deliver.
 
-The Teleport Cloud offering is new; we're on a journey of defining and building a culture around production, offering a secure and reliable hosted version of Teleport Enterprise as a service.
 
-Our mandate is straightforward; we need to be prepared to secure, monitor, maintain, scale, investigate, and automate our production environment for Teleport Cloud. Our work includes a wide variety of projects drawing on various skill sets, from ensuring we're up to date on patches to redesigning parts of the Teleport Core project to be more appealing to the Cloud.
+### Cloud Tools Team
+TBD
 
-#### Here are some of the projects we're working on right now:
+### Cloud Reliability Team
 
-* Rewriting the Teleport core project networking so that agents run by customers require fewer connections and overhead when phoning home.
-* We are expanding Teleport Cloud to multiple regions, reducing latency between users and their infrastructure.
-* We are deploying auto scalers, so no one needs to be paged to scale our infrastructure when there is a burst in new accounts.
-* We're improving our security posture, currently focusing on ensuring we have an audit trail for generated and published assets and ensuring we're using encryption at rest in the right places.
-* Progressing beyond minimum viable monitoring and alerting and fully adopting Grafana Cloud as our centralized metrics, alerting and logging platform.
+The Cloud Reliability team combines practices from SRE, Production Engineering, and Devops to take ownership of our production environment, focussing on the security, monitoring, scalability, maintenance, and engineering of production. This team is relatively new, we're building practices appropriate to a new SAAS offering, and taking on appropriate technical debt for a team our size, as we expand and grow the Teleport Cloud product.
+
+Here are some of the projects we're working on right now:
+
+- We're scaling our cloud capabilities, moving from decisions made during prototyping that limited scale, to designs that can sustain thousands of tenants.
+- We're expanding Teleport Cloud to multiple regions around the world with automatic routing the optimal path for users to reach their infrastructure.
+- We're rewriting our monitoring stack which started quick and dirty, into a platform we can use to escalate the real emergencies, and leave our engineers with a good nights sleep for everything else.
+- Disaster recovery planning and tests that prepare us for mistakes that may occur in production
+
 
 #### The toolset we currently use is:
 
@@ -91,9 +96,9 @@ Our mandate is straightforward; we need to be prepared to secure, monitor, maint
 * Drone.io
 * and More
 
-## Cloud Application team
+### Cloud Application Team
 
-Teleport Cloud is the SaaS version of Teleport that we launched in early 2021. As the applications team for Teleport Cloud, our goal is to manage the deployments of Teleport for our cloud customers and provide a stable, easy-to-use product.
+The Cloud Applications team focusses on the software heavy lifting of the cloud product, writing our controllers, networking improvements, and management plane of Teleport Cloud to offer a stable and easy-to-use product.
 
 The team intersects with almost all other departments in the company and as such there is a large variety of projects that we're involved in, for example:
 
@@ -115,3 +120,17 @@ The team intersects with almost all other departments in the company and as such
 * PostgreSQL
 * gRPC
 * Grafana & Prometheus
+
+### Cloud Security Infrastructure Team
+
+At Teleport, we carry a philosophy that all teams are responsible for security, and it isn't someone else's job to make our product secure. With that in mind, we want to put together a team that can fill in our gaps, and focus on driving our security capabilities forward. Members of the security infrastructure team will build common infra and tooling that enhances our security posture, such as secure access to our production environment. They'll also consult with other teams and coordinate cross-team initiatives to ensure we're continually making Teleport Cloud a more difficult product to breach. 
+
+This is a new team, that can draw on development, sre, and devops skills with an interest in developing expertise in technical security.
+
+Projects within the team:
+- Secure admin access to the production environment - ensuring our attack chain requires multiple vulnerabilities to compromise customers secrets.
+- Executing on our security roadmap, from ensuring we have proper scanning and response to documented vulnerabilities, to tackling complex software supply chain problems.
+- Building common audit infrastructure, that other teams can simply plug into
+
+
+
