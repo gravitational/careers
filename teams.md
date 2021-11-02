@@ -65,7 +65,9 @@ The Internal Tools team is focused on building simple and secure foundational to
 
 ### Teleport Devops
 
-Teleport DevOps is responsible for building, maintaining, and testing open-source modules for various configuration management platforms. This will be the open-source code that enables both our OSS and Enterprise customers to deploy and maintain Teleport on their chosen configuration management system. We’re looking to cover Kubernetes, Terraform on various clouds, Ansible, Salt, Puppet, etc.
+We want to ensure Teleport is easy to install and maintain within our customers infrastructure, whether they're enterprise or opensource customers. This means supporting the plethora of configuration management tools and approaches different customers use. In this role you get to work with the most popular configuration management tooling to ensure we have modules and docs for using Teleport with the customers preferred deployment platform. This role allows a great opportunity to work with Kubernetes, Terraform, Packer, Ansible, Salt, Puppet, and more within various cloud providers.
+
+Success in this role ensures that customers of Teleport can not only install but maintain their teleport deployments on their own infrastructure.
 
 ## Cloud
 The Teleport Cloud offering is new; we're on a journey of defining and building a culture around production, offering a secure and reliable hosted version of Teleport Enterprise as a service. Our mandate is straightforward; we need to be prepared to secure, develop, monitor, maintain, scale, investigate, and automate the SAAS version of Teleport. Our work includes a wide variety of projects drawing on various skill sets, from ensuring we're up to date on patches to redesigning parts of the Teleport Core project to leverage the capabilities a cloud environment can deliver.
