@@ -58,16 +58,16 @@ The Teleport Frontend Applications team is focused on building user-friendly web
 
 ### Internal Tools
 
-The Internal Tools team is focused on building simple and secure foundational tools and processes to increase developer autonomy and productivity in a distributed environment.
+Internal tools are more essential than most team members realize. The dev process can grind to a halt without a dedicated team to ensure the test automation, and other support tools are reliable and efficient. Security is also of paramount importance here, poor security in support systems turns those productivity assets into liabilities for the company. 
 
-* Workflow automation bots [#8116](https://github.com/gravitational/teleport/pull/8116)
-* Designing and building next generation CI and CD platforms.
+This growing and dynamic team is responsible for building and maintaining secure tools and processes including CI/CD that increas developer autonomy and productivity for our distributed team.
+
 
 ### Teleport Devops
 
-We want to ensure Teleport is easy to install and maintain within our customers infrastructure, whether they're enterprise or opensource customers. This means supporting the plethora of configuration management tools and approaches different customers use. In this role you get to work with the most popular configuration management tooling to ensure we have modules and docs for using Teleport with the customers preferred deployment platform. This role allows a great opportunity to work with Kubernetes, Terraform, Packer, Ansible, Salt, Puppet, and more within various cloud providers.
+We want to ensure Teleport is easy to install and maintain for our enterprise and opensource customers. This means supporting the plethora of configuration management tools and approaches different customers use. In this role you get to work with the most popular configuration management tooling to ensure we have modules and docs for using Teleport with the customers preferred deployment platform. This role allows a great opportunity to work with Kubernetes, Terraform, Packer, Ansible, Salt, Puppet, and more within various cloud providers.
 
-Success in this role ensures that customers of Teleport can not only install but maintain their teleport deployments on their own infrastructure.
+Success in this role ensures that customers of Teleport can not only install but maintain their Teleport deployments on their own infrastructure using their preferred configuration management tools.
 
 ## Cloud
 The Teleport Cloud offering is new; we're on a journey of defining and building a culture around production, offering a secure and reliable hosted version of Teleport Enterprise as a service. Our mandate is straightforward; we need to be prepared to secure, develop, monitor, maintain, scale, investigate, and automate the SAAS version of Teleport. Our work includes a wide variety of projects drawing on various skill sets, from ensuring we're up to date on patches to redesigning parts of the Teleport Core project to leverage the capabilities a cloud environment can deliver.
