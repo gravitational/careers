@@ -1,16 +1,14 @@
 # Summary
 
-This exercise simulates a troubleshooting session where several faults and failures have been created in a sample environment, requiring the candidate to investigate and solve problems. 
+This exercise simulates a troubleshooting session; The candidate must investigate and solve several faults and failures across Linux servers.
 
+The challenge is set up as a remote troubleshooting session. Teleport engineers will follow along via Zoom screen sharing as the candidate SSHs into Linux servers and debugs a range of problems.
 
-# Requirements
-The challenge is set up as a remote troubleshooting session. The candidate and Teleport engineers in similar roles will join a live troubleshooting session via zoom screen sharing. The candidate will be required to solve several faults created in a simulated customer environment. 
-
-These problems represent the hardest type of troubleshooting we have to do, solving systems problems with unfamiliar software and simulating the worst-case experience of solving difficult problems we've witnessed in the field. These problems come from our experience solving unexpected problems and miss-configurations in a production environment.
+The sandbox problems are designed to simulate real-world troubleshooting encountered in our jobs. To solve them, the candidate will need to interact with unfamiliar software, debug systems level problems, and make changes to remediate the issues -- similar to responding to unexpected downtime. The problems stem from our experience debugging unexpected problems and misconfigurations in both our own and our customer's production environments.
 
 # Guidance
 ## Interview Process
-The interview team and candidate will join a scheduled zoom call for the troubleshooting session, scheduled for 2.5 hours.
+The interview team and candidate will join a scheduled Zoom call for the troubleshooting session, scheduled for 2.5 hours.
 
 - 5m - Intro and Setup
 - 60m - Troubleshooting
@@ -19,43 +17,45 @@ The interview team and candidate will join a scheduled zoom call for the trouble
 - 15m - Wrap up, Q&A, etc.
 
 ## Areas of Focus
-We are not looking for any specific application knowledge. The test is designed to troubleshoot generic configuration or system faults on any software deployed to a generic Linux host. While this does not require any deployed application knowledge, some familiarity with collecting logs or investigating unfamiliar software is part of the process.
+Our test is designed to cover a range of configuration errors and system faults encountered on a Linux server. Successful candidates will be familiar with collecting logs from and investigating unfamiliar software in order to diagnose underlying system problems. We avoid challenges that require application specific expertise; Instead, we use applications as a jumping off point for diagnosing underlying system issues.
 
 The faults are present in:
 - kernel / systemd / cgroups
-- filesystem or volumes
+- filesystems and volumes
 - networking
 - TLS connectivity
-- Application behaviour
+- Application behavior
 
 We use the following software to represent applications on the host, which are experiencing faults:
 - nginx
 - etcd
 - docker
+- kubernetes
 - ipvs
 
-As this is meant to test the way we normally work, you may use any resource you would normally use when troubleshooting a system; for example, using google as a reference is normal and expected.
+While it is not required to be familiar with these applications, familiarity will lend a leg up when you need to querying logs or judging expected behavior.
+
+This is meant to test the way we normally work; please use any resource you would use when troubleshooting a system at home or in your job. For example, it is encouraged to Google if you encounter a promising, but unfamiliar error message. We look favorably on candidates who know how to formulate good queries when they're stumped.
+
+Similarly, you're welcome to install troubleshooting packages on the servers. While we've installed many common debugging tools, if you're used to having `htop`, `tldr`, or `execsnoop` at your fingertips, don't hesitate to install them.
 
 ## Pitfalls and Gotchas
-Some of the challenges exercise some of the hardest problems we've seen in the wild, so it's common to get stuck on one problem. If you do find you're not making progress on an issue, it's fine to move on and skip a problem and come back to it later.
+Some challenges reproduce the hardest problems we've seen in the wild, so it's common to get stuck. If you don't know where to start or find you're not making progress on an issue, please skip that problem.  You may return to it later, after you complete the other problems.
 
-While this is a simulated environment, the candidate should treat the challenge as troubleshooting a live customer or production system.
+While this is a simulated environment, the candidate should treat the challenge as troubleshooting a live production or customer system. If you'd like to try something risky, ask the interview team and we'll act as your peers. We hold it against candidates that "cowboy" in a potentially dangerous guess at a fix without understanding the underlying problem.
 
 It's OK to ask the interview team questions; we'll do our best to provide hints or help steer the investigation if the investigation is going in the wrong direction.
 
 # Scoring
-The session will be attended by a panel of team members, who will participate in the troubleshooting session. After the session, each team member will privately submit a vote of +1 or -2 within our tracking system along with comments. With your permission, we will record the zoom meeting incase any panel member cannot attend or any panel member needs to leave part way through the meeting. Any recordings will be deleted once each panel member has submitted their feedback.
+The session is scored by a panel of peer Engineers attending the troubleshooting session.  With your permission, we will record the Zoom meeting in case a panel member cannot attend or any panel member needs to leave part way through the meeting. All recordings are deleted immediately after feedback is collected.
 
-In the case of a positive result, we will connect you to our HR team, who will reach out to discuss an offer.
-
-In case of a negative score result, the hiring manager will contact you and share a list of the team's key observations that affected the result of both interviews.
+After participating in or viewing the session, each panelist will privately submit a vote of +1 or -2 to our applicant tracking system along with comments. In the case of a positive result, we will connect you to our HR team, who will reach out to discuss an offer. In case of a negative score result, the hiring manager will contact you and share a list of the team's key observations that affected the result of both interviews.
 
 ## What we look for
-- How the candidate reacts under pressure.
-- How the candidate communicates their thought process while troubleshooting.
+- Good debugging instincts under pressure. E.g. Determining which error messages are promising, and which are unrelated to the problem at hand.
+- Clear communication of thought process while troubleshooting.
 - The troubleshooting approach, compared to the level being applied for (the team will expect more from a senior candidate than a junior candidate).
 - How the problems are solved.
-
 
 # Tips
 - It's not necessary to complete every problem. These are difficult problems to solve.
