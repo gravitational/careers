@@ -43,8 +43,7 @@ We are going to compile the program, test it and get back to you.
 
 ### CLI
 
-* CLI should be able to connect to worker service and schedule several jobs.
-* CLI should be able to query result of the job execution and fetch its output.
+* CLI should be able to connect to worker service and start, stop, get status, and output of a job.
 
 ## Level 2
 
@@ -60,8 +59,7 @@ We are going to compile the program, test it and get back to you.
 
 ### CLI
 
-* CLI should be able to connect to worker service and schedule several jobs.
-* CLI should be able to query result of the job execution and fetch its output.
+* CLI should be able to connect to worker service and start, stop, get status, and output of a job.
 
 ## Level 3
 
@@ -80,8 +78,7 @@ We are going to compile the program, test it and get back to you.
 
 ### Client
 
-* CLI should be able to connect to worker service and schedule several jobs.
-* CLI should be able to query result of the job execution and stream its output.
+* CLI should be able to connect to worker service and start, stop, get status, and stream output of a job.
 
 ## Level 4
 
@@ -101,8 +98,7 @@ We are going to compile the program, test it and get back to you.
 
 ### Client
 
-* CLI should be able to connect to worker service and schedule several jobs.
-* CLI should be able to query result of the job execution and stream its output.
+* CLI should be able to connect to worker service and start, stop, get status, and stream output of a job.
 
 ## Level 5
 
@@ -123,8 +119,7 @@ We are going to compile the program, test it and get back to you.
 
 ### Client
 
-* CLI should be able to connect to worker service and schedule several jobs.
-* CLI should be able to query result of the job execution and stream its output.
+* CLI should be able to connect to worker service and start, stop, get status, and stream output of a job.
 
 # Guidance
 
@@ -134,7 +129,7 @@ The interview team will join the Slack channel. The team consists of the enginee
 
 Before writing the actual code, create a brief design document in Google Docs or markdown in Github and share with the team.
 
-This document should consist of key trade-offs, design approaches, scope and tradeoffs, security, and API.
+This document should cover at least: design approach, trade-offs, scope, proposed API, and security considerations. For security, please include considerations for transport layer, authentication, and authorization.
 
 Please avoid writing an overly detailed design document. Use this document to make sure the team could provide feedback on your design and demonstrate that you've investigated the problem space.
 
@@ -161,8 +156,7 @@ Teleport focuses on networking, infrastructure and security.
 These are the areas we will be evaluating in the submission:
 
 * Use consistent coding style. We follow [Go Coding Style](https://github.com/golang/go/wiki/CodeReviewComments) for the Go language. If you are going to use a different language, please pick coding style guidelines and let us know what they are.
-* Create one test for authentication and another for the networking component.
-* Create one test for unhappy scenario.
+* At the minimum, create tests for authentication, networking, and unhappy scenario.
 * Make sure builds are reproducible. Pick any vendoring/packaging system that will allow us to get consistent build results.
 * Ensure error handling and error reporting is consistent. The system should report clear errors and not crash under non-critical conditions.
 * Avoid concurrency and networking errors. Most of the issues we've seen in production are related to data races, networking error handling or goroutine leaks. We will be looking for those errors in your code.
@@ -192,7 +186,6 @@ Here are some other trade-offs that will help you to spend less time on the task
 Do not implement a system that scales or is highly performing. Describe which performance improvements you would add in the future.
 High availability. It is OK if the system is not highly available. Write down how you would make the system highly available and why your system is not.
 Do not try to achieve full test coverage. This will take too long. Take two key components, e.g. authentication/authorization layer and networking and implement one or two test cases that demonstrate your approach to testing.
-
 
 ## Pitfalls and Gotchas
 
