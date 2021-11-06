@@ -32,6 +32,7 @@ We believe this technique is not only better but also more fun compared to white
 
   Create a directory viewer with the following functionality:
   - Viewing and browsing of directory content
+  - Viewing a file will show you metadata about the file (preview is not required)
   - Sorting and filtering on all attributes (within the current directory)
   - Allowing to bookmark URLs for quick navigation
 
@@ -87,7 +88,7 @@ const directory = {
   Take level 1 requirements and instead of a static JSON create your own service with the following functionality:
   - A session management for login/logout
   - A login screen where an unauthenticated user is automatically redirected to (and then taken back to original URL)
-  - An API that allows authenticated users to browse a server directory
+  - An API that allows authenticated users to browse a server directory 1-level deep at a time
 
   Directions:
   - You can store user sessions in the memory or on disk
@@ -98,11 +99,11 @@ const directory = {
 # Guidance
 
 ## Interview process
-The interview team joins the slack channel. The team consists of the engineers who will be working with you. Ask them about the engineering culture, work and life balance, or anything else that you would like to learn about Teleport.
+The interview team joins the Slack channel. The team consists of the engineers who will be working with you. Ask them about the engineering culture, work and life balance, or anything else that you would like to learn about Teleport.
 
 Before writing the actual code, create a brief design document in Google Docs or markdown in Github and share with the team.
 
-This document should include a proposed UX of the app. The document should list tools and libraries selected for the job. It should cover the security aspect of the challenge: authentication, session management, APIs, CSRF, XSS, etc.
+This document should include proposed UX of the app, tools and libraries that will be used, proposed API, implementation details where appropriate (for example: session management), and security.
 
 Please avoid writing an overly detailed design document. Use this document to make sure the team could provide feedback on your design and demonstrate that you've investigated the problem space.
 
@@ -132,16 +133,11 @@ These are the areas we will be evaluating in the submission:
 To help you out, we’ve composed a list of things that previously resulted in a no-pass from the interview team:
 
 - Scope creep. Candidates have tried to implement too much and ran out of time, energy.
-
-- Avoid using unnecessary 3d party dependencies.
-
+- Avoid using unnecessary 3rd party dependencies.
 - Error handling. We pay extra attention to error handling. Make sure that they are properly handled and not ignored.
-
 - URL navigation is a big part of great UX, do not ignore it.
-
 - Keep your CSS simple but not simpler. Do not waste your time on animations, instead make sure that an extra character does not destroy your layout.
-
-- Make sure that your code is secured and your application is not vulnerable to CSRF/XSS attacks. For a senior level, make sure you have a good crypto setup and secured session management.
+- Make sure that your code is secured and your application is not vulnerable to common web security vulnerabilities. For a senior level, make sure you have a good crypto setup and secured session management.
 
 ## Scoring
 
@@ -155,5 +151,4 @@ We want to be as transparent as possible on how we will be scoring your submissi
 | The code provides clear error handling and reporting                                                                 | +1                      | -1                         |
 | The app works according to the specifications, no bugs                                                               | +1                      | -1                         |
 | The candidate demonstrates an ability to handle and apply feedback                                                   | +1                      | -1                         |
-| The code is not vulnerable to CSRF/XSS and other attacks                                                             | +1                      | -1                         |
-
+| The code is not vulnerable to common web security vulnerabilities                                                    | +1                      | -1                         |
