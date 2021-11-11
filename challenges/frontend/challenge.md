@@ -84,7 +84,7 @@ const directory = {
 
 <img src="./assets/github.jpg" height="200" />
 
-### Level 3-4
+### Level 2-3
   Take level 1 requirements and instead of a static JSON create your own service with the following functionality:
   - A session management for login/logout
   - A login screen where an unauthenticated user is automatically redirected to (and then taken back to original URL)
@@ -95,6 +95,9 @@ const directory = {
   - You can hardcode some parameters such as a directory location, or username/hash.
   - Use native/standard libraries. Avoid using out-of-the-box solutions like passportjs, or lodash
   - Use native browser API for networking.
+
+### Level 4-5
+  Add file upload/delete/download functionality to the level 2-3 requirements.
 
 # Guidance
 
