@@ -27,7 +27,7 @@ We believe this technique is not only better but also more fun compared to white
 
   There are 6 engineering levels at Teleport. It’s possible to score on levels 1-4 through this coding challenge; each level has its own set of requirements.
 
-### Level 1-2
+### Level 1
   This level focuses on JS/CSS/DOM knowledge and does not require any server-side logic to implement.
 
   Create a directory viewer with the following functionality:
