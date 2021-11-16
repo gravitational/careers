@@ -58,24 +58,21 @@ The Teleport Frontend Applications team is focused on building user-friendly web
 
 ### Internal Tools
 
-The Internal Tools team is focused on building simple and secure foundational tools and processes to increase developer autonomy and productivity in a distributed environment.
+The Core Tooling team contributes force multiplication efforts to help engineers developing Teleport and across the org. This team is the backbone to ensuring the rest of the development team remains incredibly productive, and that we operate in the open, with an opensource code base. 
 
-* Workflow automation bots [#8116](https://github.com/gravitational/teleport/pull/8116)
-* Designing and building next generation CI and CD platforms.
+The team is currently working on:
+* Redefining our CI tooling, to ensure high confidence that the CI tooling is not a security liability, while making the development teams more productive.
+* Building robust and essential Release engineering tooling, so the code we produce can get into our customers hands in a secure manner.
+* Internal automation, bots, and integrations that keep the team members autonomous.
+
 
 ### Teleport Devops
 
-Teleport DevOps is responsible for building, maintaining, and testing open-source modules for various configuration management platforms. This will be the open-source code that enables both our OSS and Enterprise customers to deploy and maintain Teleport on their chosen configuration management system. We’re looking to cover Kubernetes, Terraform on various clouds, Ansible, Salt, Puppet, etc.
-
+The Teleport codebase is used by DevOps teams around the world. These customers and OSS users use a variety of tools in their day to day jobs. This role is all about ensuring that we provide stable and reliable integrations with the configuration management tools that are most important to our community. We want to ensure that whether it's Kubernetes or Ansible, we have a fully realized way to deploy and maintain Teleport. This is a great opportunity to work with Kubernetes, Terraform (on various cloud providers), Ansible, Salt, Puppet, and so much more!
 
 ## Cloud
 
-Teleport Cloud is the SaaS version of Teleport launched in early 2021.
-As the team backing it, we build, secure, monitor, maintain, scale, investigate,
-and automate our production environment backing Teleport Cloud. Our work
-includes a wide variety of projects drawing on various skill sets, from ensuring
-we're up to date on patches to redesigning and developing useful-to-cloud
-features of Teleport Core.
+The Teleport Cloud offering is new; we're on a journey of defining and building a culture around production services, offering a secure and reliable hosted version of Teleport. Our mandate is straightforward; we need to be prepared to secure, develop, monitor, maintain, scale, investigate, and automate the cloud hosted version of Teleport and the systems that support our work. Our work varies from the mundane to the remarkable, ensuring that the cloud version of Teleport is a compelling option for our customers.
 
 ### Technologies
 
@@ -90,30 +87,28 @@ We use the following technologies to build Teleport Cloud:
 * Prometheus / Alertmanager / Loki internally and on Grafana Cloud
 * Drone.io
 
-### Cloud Security
+### Cloud Security Infrastructure
 
-We're just starting our cloud security team, a hands-on and code-first group of
-engineers dedicated to the security of our hosted Teleport Cloud.  If you're an
-experienced, opinionated security professional come help us secure Teleport.
-Projects in our Roadmap include:
+Our Cloud Security Infrastructure team is still being defined. Our philosophy is we want all team members to be responsible for security of their work, however, at the same time we want to begin building a team that is able to build common security infrastructure and tackle the security initiatives that other teams are not prepared to drive forward. We also want to act as consultants, involved in the development process to ensure new features and patches meet our security objectives.
 
-* Coordinating with red teams (both internal and external) to rapidly respond
-  and mitigate issues.
-* Remediating AWS access errors, design and implement proactive tooling to avoid
-  similar mistakes.
-* Improving our vulnerability management and disclosure process.
+As this is a new team, we're still defining how this team will contribute to our overall objectives. A security background isn't strictly necessary to excel in this role, we're looking for professionals from DevOps or Systems Engineering type backgrounds that integrate security critical thinking into their thought process.
+
+Types of projects this team may handle:
+* Securing SRE access to production, ensuring the tooling, audit, and security controls are in place for production access.
+* Look at tough problems, like our software supply chain, and how code is protected from developer to production.
+* Working with our consultants, well known experts in the security field, to deliver the best security value for our customers.
 
 
 ### Cloud Reliability
 
 Our Cloud Reliability Team defines and builds a culture around production,
-ensuring sublinear scaling of operations against company/product growth.
+ensuring scaling of our product offering against company/product growth.
 
 Some projects we're working on right now:
 
 * Expanding Teleport Cloud to multiple regions, reducing latency between users
   and their infrastructure.
-* Defining SLOs, and developing  centralized monitoring and alerting based on them
+* Defining SLOs, and developing centralized monitoring and alerting based on them
 * Evaluating and implementing database and storage solutions that match or
   exceed our SLOs and growth demands
 * Developing procedures and automation to ensure reliable and safe rollouts
