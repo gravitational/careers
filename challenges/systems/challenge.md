@@ -226,4 +226,4 @@ Once you join the Slack channel, you have between 1 to 2 weeks complete the chal
 
 Within this timeframe, we don't give higher scores to challenges submitted more quickly. We only evaluate the quality of the submission.
 
-We only start the coding challenge if there are several open positions available and let all candidates finish the code submission.
+We only start the coding challenge if there are several open positions available.
