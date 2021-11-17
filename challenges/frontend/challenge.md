@@ -27,7 +27,7 @@ We believe this technique is not only better but also more fun compared to white
 
   There are 6 engineering levels at Teleport. It’s possible to score on levels 1-4 through this coding challenge; each level has its own set of requirements.
 
-### Level 1
+### Level 1-2
   This level focuses on JS/CSS/DOM knowledge and does not require any server-side logic to implement.
 
   Create a directory viewer with the following functionality:
@@ -84,7 +84,7 @@ const directory = {
 
 <img src="./assets/github.jpg" height="200" />
 
-### Level 2-3
+### Level 3-5
   Take level 1 requirements and instead of a static JSON create your own service with the following functionality:
   - A session management for login/logout
   - A login screen where an unauthenticated user is automatically redirected to (and then taken back to original URL)
@@ -95,9 +95,6 @@ const directory = {
   - You can hardcode some parameters such as a directory location, or username/hash.
   - Use native/standard libraries. Avoid using out-of-the-box solutions like passportjs, or lodash
   - Use native browser API for networking.
-
-### Level 4-5
-  Add file upload/delete/download functionality to the level 2-3 requirements.
 
 # Guidance
 
