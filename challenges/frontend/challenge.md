@@ -120,16 +120,11 @@ Directions:
 * Use native/standard libraries. Avoid using out-of-the-box solutions like passportjs, or lodash
 * Use native browser API for networking.
 
-### Level 4
+### Level 4-5
 
-This level focuses on a more comprehensive understanding of web security.
+This level focuses on the quality of the submission and a comprehensive understanding of software security.
 
 * Make sure your application is not vulnerable to any web security vulnerabilities.
-
-### Level 5
-
-This level focuses on security.
-
 * Make sure you have strong TLS setup.
 
 # Guidance
