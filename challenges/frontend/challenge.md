@@ -24,9 +24,9 @@ We believe this technique is not only better but also more fun compared to white
 
 ## Levels
 
-There are 6 engineering levels at Teleport. Levels 1-4 are open through the challenge.
+There are 6 engineering levels at Teleport. Levels 1-4 are open through the frontend challenge.
 
-Levels 5 and 6 is only for internal promotions. Check the [engineering levels document](https://raw.githubusercontent.com/gravitational/careers/main/levels.pdf) for more details.
+For frontend engineers, levels 5 and 6 are only for internal promotions. Check the [engineering levels document](https://raw.githubusercontent.com/gravitational/careers/main/levels.pdf) for more details.
 
 ## Requirements
 
