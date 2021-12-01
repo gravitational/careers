@@ -24,9 +24,9 @@ We believe this technique is not only better but also more fun compared to white
 
 ## Levels
 
-There are 6 engineering levels at Teleport. Levels 1-5 are open through the challenge.
+There are 6 engineering levels at Teleport. Levels 1-4 are open through the challenge.
 
-Level 6 is only for internal promotions. Check the [engineering levels document](https://raw.githubusercontent.com/gravitational/careers/main/levels.pdf) for more details.
+Levels 5 and 6 is only for internal promotions. Check the [engineering levels document](https://raw.githubusercontent.com/gravitational/careers/main/levels.pdf) for more details.
 
 ## Requirements
 
@@ -120,7 +120,7 @@ Directions:
 * Use native/standard libraries. Avoid using out-of-the-box solutions like passportjs, or lodash
 * Use native browser API for networking.
 
-### Level 4-5
+### Level 4
 
 This level focuses on the quality of the submission and a comprehensive understanding of software security.
 
