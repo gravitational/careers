@@ -95,7 +95,7 @@ Implement all of the level 2 requirements plus:
 4. What is the hardest technical problem or outage you've had to solve in your career? Explain what made it so difficult?
 
 ## Level 4:
-Instead of polling `/proc/net/tcp` or the host for a list of connections it's tracking, we want to use a better model and track connection attempts in real time. Use one of the following methods to track attempted connections:
+Implement all of the level 3 requirements but instead of polling `/proc/net/tcp` or the host for a list of connections it's tracking, we want to use a better model and track connection attempts in real time. Use one of the following methods to track attempted connections:
 1. Use a pcap library to track TCP SYN Packets
     1. Make sure the capture has a filter set to limit the number of packets passed to userspace to only interesting packets required for connection tracking.
 2. Load a BPF program into the linux express data path (XDP) and attach to an interface to monitor for new connections and report to userspace.
