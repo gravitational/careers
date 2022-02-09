@@ -44,7 +44,11 @@ The team is working on pairing [hardware devices](https://github.com/gravitation
 
 The Teleport Desktop Access team is focused on secure and user-friendly remote desktop access.
 
-The team is currently working on browser-based [Windows Desktop Access](https://github.com/gravitational/teleport/pull/7725).
+The team is currently working on browser-based Windows Desktop Access, including:
+- MFA
+- Shared clipboard
+- Session recording
+- Performance optimization and security hardening
 
 ### Frontend Applications
 
