@@ -23,7 +23,7 @@ We appreciate your time and are looking forward to hacking on this challenge tog
 Systems developers on the platform team leverage a strong background in software development to build, maintain, deploy core production services.
 
 ### Challenge
-1. [Systems developer challenge](../systems/worker.pdf)
+1. [Systems developer challenge](../systems/challenge.md)
 
 ### Levels
 See [levels.pdf](../../levels.pdf)
