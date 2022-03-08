@@ -162,7 +162,7 @@ This is a test challenge and we have no intent of using the code you’ve submit
 
 These are the areas we will be evaluating in the submission:
 
-* Use consistent coding style. We follow [AirBnB Coding Style](https://github.com/airbnb/javascript) for JS and use [prettier](https://prettier.io/) code formatter.
+* Use consistent coding style. We follow recommended [ESLint](https://eslint.org/docs/user-guide/configuring/configuration-files#using-eslintrecommended) and [eslint-plugin-react](https://github.com/yannickcr/eslint-plugin-react#configuration) rules for JS and use [prettier](https://prettier.io/) code formatter.
 * Create a few unit-tests for scenarios you think make sense.
 * Make sure builds are reproducible. Pick any vendoring/packaging system that will allow us to get consistent build results.
 * Ensure error handling and error reporting is consistent. The app should report clear errors and not crash under non-critical conditions.
