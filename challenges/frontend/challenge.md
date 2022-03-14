@@ -111,13 +111,15 @@ CSS from these design systems:
 This level focuses on serving web assets.
 
 * Serve web assets from a web server.
-* Add the ability to bookmark URLs for quick navigation.
+* Containerize your application using Docker.
+* URL Naviation
 
 Directions:
 
-* Containerize your application using Docker.
 * You can use a basic server (like nginx) to serve web assets or write a small
   NodeJS/Go application to serve them.
+* Ensure that the path of the directory/file being viewed is part of the URL.
+  Refreshing the page should show the same state/content as before.
 
 ### Level 3
 
