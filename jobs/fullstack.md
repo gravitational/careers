@@ -24,8 +24,6 @@ infrastructure.
 Teleport is an open source project, written in Go and Rust with web-based UIs in
 TypeScript with React.
 
-
-
 **We love this job, and hope you will enjoy it too**
 
 * The range of problem solving includes networking, performance, security and integrations with existing systems.
