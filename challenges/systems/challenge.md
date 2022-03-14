@@ -29,16 +29,33 @@ Level 6 is only for internal promotions. Check the
 [engineering levels document](https://raw.githubusercontent.com/gravitational/careers/main/levels.pdf)
 for more details.
 
-Start with a very brief Google doc that covers the edge cases and design
-approach and post it to the Slack channel. After the doc is approved, implement
-interfaces and an example program using the library.
-
-Add a couple of high quality tests that cover happy and unhappy scenarios.
-
 Split the submission into 2-3 pull requests for us to review. We will review
 every pull request and provide our feedback.
 
 We are going to compile the program, test it and get back to you.
+
+## Design Doc
+
+Start with a very brief Google doc that covers the edge cases and design
+approach and post it to the Slack channel. Be sure to cover the following in
+your design:
+
+* CLI user experience: a couple examples of what it may look like to invoke a
+  command. This allows us an opportunity to envision how we will run the program.
+* Level 3+: Streaming approach, TLS setup (version, cipher suites, etc.)
+* Level 4+: Process execution lifecycle (how will you start and stop jobs, add
+  them to cgroups, etc.)
+
+After the doc is approved, implement interfaces and an example program using the
+library.
+
+## Testing
+
+Add a couple of high quality tests that cover happy and unhappy scenarios.
+
+Do not try to achieve full test coverage. This will take too long. Take two key
+components, e.g. authentication/authorization layer and networking and implement
+one or two test cases that demonstrate your approach to testing.
 
 ## Level 1
 
@@ -243,10 +260,7 @@ Here are some other trade-offs that will help you to spend less time on the task
 Do not implement a system that scales or is highly performing. Describe which
 performance improvements you would add in the future. High availability. It is
 OK if the system is not highly available. Write down how you would make the
-system highly available and why your system is not. Do not try to achieve full
-test coverage. This will take too long. Take two key components, e.g.
-authentication/authorization layer and networking and implement one or two test
-cases that demonstrate your approach to testing.
+system highly available and why your system is not.
 
 ## Pitfalls and Gotchas
 
