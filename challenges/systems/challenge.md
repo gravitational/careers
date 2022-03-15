@@ -36,9 +36,11 @@ We are going to compile the program, test it and get back to you.
 
 ## Design Doc
 
-Start with a very brief Google doc that covers the edge cases and design
-approach and post it to the Slack channel. Be sure to cover the following in
-your design:
+Start with a brief doc that covers the edge cases and design approach. At
+Teleport, we prefer Markdown for
+[our designs](https://github.com/gravitational/teleport/blob/master/rfd/0000-rfds.md).
+
+Be sure to cover the following in your design:
 
 * CLI user experience: a couple examples of what it may look like to invoke a
   command. This allows us an opportunity to envision how we will run the program.
@@ -46,8 +48,20 @@ your design:
 * Level 4+: Process execution lifecycle (how will you start and stop jobs, add
   them to cgroups, etc.)
 
-After the doc is approved, implement interfaces and an example program using the
-library.
+Open a pull request with your design and share a link with the reviewers via
+Slack. After the doc is approved, implement interfaces and an example program
+using the library.
+
+A few notes about the design document:
+
+* We expect the design document to be complete roughly within the first week.
+  This is to ensure you have enough time to work on the implementation.
+* Avoid writing an overly detailed design document. Two to three pages is
+  sufficient.
+* Avoid sending us draft design documents, it is difficult to evaluate what
+  parts are draft and which parts are complete. Instead we encourage asking
+  questions in Slack and sharing a design document that is ready to be
+  reviewed.
 
 ## Testing
 
@@ -191,12 +205,8 @@ After the final submission, the interview team will assemble and vote using a
 "+1, -2" anonymous voting system: +1 is submitted whenever a team member accepts
 the submission, -2 otherwise.
 
-In case of a positive result, we will connect you to our HR team who will
-collect one-two references and will work out other details. You can start the
-reference collection process in parallel if you would like to speed up the
-process.
-
-After reference collection, our ops team will send you an offer.
+In case of a positive result, we will connect you to our HR and recruiting
+teams, who will work out the details and present an offer.
 
 In case of a negative score result, hiring manager will contact you and share a
 list of the key observations from the team that affected the result.
@@ -205,7 +215,7 @@ list of the key observations from the team that affected the result.
 
 This is a test challenge and we have no intent of using the code you've
 submitted in production. This is your work, and you are free to do whatever you
-feel is reasonable with it. In the scenario when you don't pass, you can open
+feel is reasonable with it. In the scenario where you don't pass, you can open
 source it with any license and use it as a portfolio project.
 
 ## Areas of focus
@@ -218,8 +228,8 @@ These are the areas we will be evaluating in the submission:
   [Go Coding Style](https://github.com/golang/go/wiki/CodeReviewComments) for
   the Go language. If you are going to use a different language, please pick
   coding style guidelines and let us know what they are.
-* At the minimum, create tests for authentication, networking, and unhappy
-  scenario.
+* At the minimum, create tests for authentication, networking, and an
+  unhappy/error scenario.
 * Make sure builds are reproducible. Pick any vendoring/packaging system that
   will allow us to get consistent build results.
 * Ensure error handling and error reporting is consistent. The system should
@@ -257,10 +267,10 @@ the interview team.
 
 Here are some other trade-offs that will help you to spend less time on the task:
 
-Do not implement a system that scales or is highly performing. Describe which
-performance improvements you would add in the future. High availability. It is
-OK if the system is not highly available. Write down how you would make the
-system highly available and why your system is not.
+* Do not implement a system that scales or is highly performing. Describe which
+  performance improvements you would add in the future.
+* It is OK if the system is not highly available. Write down how you would make
+  the system highly available and why your system is not.
 
 ## Pitfalls and Gotchas
 

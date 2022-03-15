@@ -108,11 +108,12 @@ CSS from these design systems:
 
 ### Level 2
 
-This level focuses on serving web assets.
+This level focuses on serving web assets. In addition to the Level 1
+requirements, you will:
 
 * Serve web assets from a web server.
 * Containerize your application using Docker.
-* URL Naviation
+* Implement URL Naviation
 
 Directions:
 
@@ -124,25 +125,29 @@ Directions:
 ### Level 3
 
 This level focuses on backend knowledge and a basic understanding of web security.
+At this level, you'll implement the UI from the Level 2 challanege, and add a backend
+with the following features:
 
-Instead of using a static JSON object to display the contents of a directory:
-
+* Implement an API that allows authenticated users to browse a server directory
+  1-level deep at a time. Update the UI to use this API instead of a static JSON
+  object.
 * Add support for session management for login/logout.
 * A login screen where an unauthenticated user is automatically redirected to
   (and then taken back to original URL).
-* An API that allows authenticated users to browse a server directory 1-level
-  deep at a time.
 
 Directions:
 
 * You can store user sessions in the memory, no need to use a database.
-* You can hardcode some parameters such as a directory location, or username/hash.
-* Use native/standard libraries. Avoid using out-of-the-box solutions like passportjs, or lodash
-* Use native browser API for networking.
+* You can hardcode some parameters such as a directory location, or
+  username/hash.
+* Use native/standard libraries. Avoid using out-of-the-box solutions like
+  passportjs, or lodash
+* Use native browser APIs for networking.
 
 ### Level 4
 
-This level focuses on the quality of the submission and a comprehensive understanding of software security.
+This level focuses on the quality of the submission and a comprehensive
+understanding of software security.
 
 * Make sure your application is not vulnerable to any web security vulnerabilities.
 * Make sure you have strong TLS setup.
@@ -155,8 +160,9 @@ The interview team joins the Slack channel. The team consists of the engineers
 who will be working with you. Ask them about the engineering culture, work and
 life balance, or anything else that you would like to learn about Teleport.
 
-Before writing the actual code, create a brief design document in Google Docs or
-markdown in Github and share with the team.
+Before writing the actual code, create a brief design document and share with
+the team. At Teleport, we prefer Markdown for
+[our designs](https://github.com/gravitational/teleport/blob/master/rfd/0000-rfds.md).
 
 This document should include proposed UX of the app (wireframes are great),
 tools and libraries that will be used, proposed API, implementation details
@@ -171,7 +177,7 @@ A few notes about the design document:
 * Avoid sending us draft design documents, it is difficult to evaluate what
   parts are draft and which parts are complete. Instead we encourage asking
   questions in Slack and sharing a design document that is ready to be
-  evaluated.
+  reviewed.
 
 Split your code submission using pull requests and give the team an opportunity
 to review the PRs. A good “rule of thumb” to follow is that the final PR
@@ -186,11 +192,7 @@ are going to contribute our time too.
 After the final submission, the interview team will assemble and vote using +1,
 -2 anonymous voting system: +1 is submitted whenever a team member accepts the
 submission, -2 otherwise. In case of a positive result, we will connect you to
-our HR team who will collect one-two references and will work out other details.
-You can start the reference collection process in parallel if you would like to
-speed up the process.
-
-After reference collection, our ops team will send you an offer.
+our HR and recruiting teams, who will work out the details and present an offer.
 
 In case of a negative score result, the hiring manager will contact you and send
 a list of key observations from the team that affected the result.
@@ -199,18 +201,18 @@ a list of key observations from the team that affected the result.
 
 This is a test challenge and we have no intent of using the code you’ve
 submitted in production. This is your work, and you are free to do whatever you
-feel is reasonable with it. In the scenario when you don’t pass, you can open
+feel is reasonable with it. In the scenario where you don’t pass, you can open
 source it with any license and use it as a portfolio project.
 
 ## Areas of focus
 
 These are the areas we will be evaluating in the submission:
 
-* Use consistent coding style. We follow recommended
+* Use consistent coding style. We use the recommended
   [ESLint](https://eslint.org/docs/user-guide/configuring/configuration-files#using-eslintrecommended)
   and
   [eslint-plugin-react](https://github.com/yannickcr/eslint-plugin-react#configuration)
-  rules for JS and use [prettier](https://prettier.io/) code formatter.
+  rules for JS, and format our code with [prettier](https://prettier.io/).
 * Create a few unit-tests for scenarios you think make sense.
 * Make sure builds are reproducible. Pick any vendoring/packaging system that
   will allow us to get consistent build results.
@@ -230,14 +232,15 @@ To help you out, we’ve composed a list of things that previously resulted in a
 * Keep your CSS simple but not simpler. Do not waste your time on animations,
   instead make sure that an extra character does not destroy your layout.
 * Make sure that your code is secured and your application is not vulnerable to
-  common web security vulnerabilities. For a senior level, make sure you have a
-  good crypto setup and secure session management.
+  common
+  [web security vulnerabilities](https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html).
+  For a senior level, make sure you have a good crypto setup and secure session
+  management.
 
 ## Scoring
 
 We want to be as transparent as possible on how we will be scoring your
-submission. The following table describes areas you will be evaluated on. and
-how they will affect your overall score.
+submission. You will be evaluated on the following criteria:
 
 * The submitted code has a clear and modular structure.
 * The candidate outlined the key design points in the design document.
