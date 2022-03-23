@@ -232,9 +232,11 @@ To help you out, we’ve composed a list of things that previously resulted in a
 * Keep your CSS simple but not simpler. Do not waste your time on animations,
   instead make sure that an extra character does not destroy your layout.
 * Make sure that your code is secured and your application is not vulnerable to
-  common
-  [web security vulnerabilities](https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html).
-  For a senior level, make sure you have a good crypto setup and secure session
+  common web security vulnerabilities.
+    * Recommended resources:
+        * [Authentication Cheat Sheat](https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html)
+        * [OWASP Top Ten](https://owasp.org/www-project-top-ten/)
+* For a senior level, make sure you have a good crypto setup and secure session
   management.
 
 ## Scoring
