@@ -35,7 +35,7 @@ Team members with experience in various operations focused disciplines are focus
 
 ### Challenge
 We use two interviews for team members with operational backgrounds, the first is a lightweight scripting / programming challenge, and the second is a troubleshooting production test. See the following links for outlines of each challenge.
-1. [Devops development challenge](automation.md)
+1. [Automation development challenge](automation.md)
 2. [Troubleshooting challenge](troubleshooting.md)
 
 ### Levels
