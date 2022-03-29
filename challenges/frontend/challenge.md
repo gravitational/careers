@@ -45,8 +45,9 @@ Implement an application that allows a user to browse directory content on a rem
 
 This application should have the following functionality:
 
-* A file/folder viewer with a client-side search and sorting capabilities.
-* Authentication with a login screen and backend API to browse a directory.
+* A directory viewer client with client-side search and sorting capabilities (level 1) and url-based navigation (level 2).
+* A server for serving the webassets, containerized using Docker (level 2).
+* Authentication with a login screen and backend API to browse a directory (level 3+).
 
 ### Level 1
 
@@ -54,8 +55,8 @@ This level focuses on JS/CSS/DOM knowledge and does not require any server-side 
 
 Create a directory viewer with the following functionality:
 
-* Viewing and browsing of directory content.
-* Viewing a file will show you metadata about the file (preview is not required).
+* An interface for viewing and browsing directory content.
+* Viewing a file should show you metadata about the file (**file preview is _not_ required**).
 * Sorting and filtering on all attributes within the current directory.
 
 Directions:
@@ -68,29 +69,29 @@ Directions:
 ```js
 const directory = {
   name: "teleport",
-  sizeKb: 0,
+  size: 0, // bytes
   type: "dir",
   items: [
     {
       name: "lib",
-      sizeKb: 0,
+      size: 0, // bytes
       type: "dir",
       items: [
         {
           name: "teleport.go",
-          sizeKb: 320,
+          size: 320000, // bytes
           type: "file",
         },
         {
           name: "test.go",
-          sizeKb: 3320,
+          size: 3320000, // bytes
           type: "file",
         },
       ],
     },
     {
       name: "README.md",
-      sizeKb: 4340,
+      size: 4340000, // bytes
       type: "file",
     },
   ],
@@ -105,6 +106,10 @@ CSS from these design systems:
 
 <img src="./assets/google.jpg" height="300" />
 <img src="./assets/github.jpg" height="200" />
+
+Note that unlike Google Drive and Github, clicking on a file does not need to show you a view of the file itself. Instead, just show a page that displays the `name` and `size` of the file itself, along the lines of this:
+
+<img src="./assets/file.jpg" height="300" />
 
 ### Level 2
 
