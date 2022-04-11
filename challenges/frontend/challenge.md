@@ -56,8 +56,8 @@ This level focuses on JS/CSS/DOM knowledge and does not require any server-side 
 Create a directory viewer with the following functionality:
 
 * An interface for viewing and browsing directory content.
-* Viewing a file should show you metadata about the file (**file preview is _not_ required**).
-* Sorting and filtering on all attributes within the current directory.
+* Searching on filename and sorting on filename, type, and size within the current directory.
+* Unlike simlar interfaces such as Google Drive and Dropbox, **file preview is _not_ required**. Clicking on a file should be a no-op.
 
 Directions:
 
@@ -106,10 +106,6 @@ CSS from these design systems:
 
 <img src="./assets/google.jpg" height="300" />
 <img src="./assets/github.jpg" height="200" />
-
-Note that unlike Google Drive and Github, clicking on a file does not need to show you a view of the file itself. Instead, just show a page that displays the `name` and `size` of the file itself, along the lines of this:
-
-<img src="./assets/file.jpg" height="300" />
 
 ### Level 2
 
