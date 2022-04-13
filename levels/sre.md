@@ -1,17 +1,17 @@
 <table>
   <tr>
-    <th><div style="width:200px">Level/Skill</div></th>
-    <th><div style="width:200px">Scope</div></th>
-    <th><div style="width:200px">Collaboration</div></th>
-    <th><div style="width:200px">Skills Development</div></th>
-    <th><div style="width:200px">Mentorship</div></th>
-    <th><div style="width:200px">Communications</div></th>
-    <th><div style="width:200px">On-call</div></th>
-    <th><div style="width:200px">Security</div></th>
-    <th><div style="width:200px">Operations</div></th>
-    <th><div style="width:200px">Development / Automation</div></th>
-    <th><div style="width:200px">Reliability</div></th>
-    <th><div style="width:200px">Systems Experience and Understanding</div></th>
+    <th>Level/Skill</th>
+    <th>Scope</th>
+    <th>Collaboration</th>
+    <th>Skills Development</th>
+    <th>Mentorship</th>
+    <th><pre>Communications                 </pre></th>
+    <th>On-call</th>
+    <th>Security</th>
+    <th>Operations</th>
+    <th>Development / Automation</th>
+    <th>Reliability</th>
+    <th>Systems Experience and Understanding</th>
   </tr>
 
   <tr align="left" valign="top">
