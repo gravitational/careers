@@ -21,13 +21,13 @@ security are based on the coding challenge.
 
 <table>
   <tr>
-    <th><pre>Level/Skill </pre></th>
-    <th><pre>1           </pre></th>
-    <th><pre>2           </pre></th>
-    <th><pre>3           </pre></th>
-    <th><pre>4           </pre></th>
-    <th><pre>5           </pre></th>
-    <th><pre>6           </pre></th>
+    <th><pre>Level/Skill        </pre></th>
+    <th><pre>1                  </pre></th>
+    <th><pre>2                  </pre></th>
+    <th><pre>3                  </pre></th>
+    <th><pre>4                  </pre></th>
+    <th><pre>5                  </pre></th>
+    <th><pre>6                  </pre></th>
   </tr>
 
   <tr align="left" valign="top">
@@ -68,10 +68,10 @@ security are based on the coding challenge.
       synchronization primitives and properly sharing state between components
       of the system.
     </td>
-    <td>
+    <!--td>
       Understands the usage of compilers, interpreters, build tools at the
       organization.
-    </td>
+    </td-->
   </tr>
 
 
