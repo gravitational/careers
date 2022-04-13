@@ -1,3 +1,24 @@
+## Site Reliability Engineer Levels
+
+### Legend
+
+The matrix below explains the requirements for engineering levels. Each level
+has to match at least one of the requirements for the level and the level
+before it.
+
+Not all skills go to level 6. This is determined by the focus of Teleport.
+
+For example, security skills are more relevant, as we are a security oriented
+company, and we are interested in R&D level 6 engineers, however OS/tooling is
+not the primary focus, so basic levels are satisfactory.
+
+As the level advances past 4, the focus shifts from technical skills to
+bringing products to market, as it's more relevant to Teleport as a for-profit
+startup.
+
+Skills are a mix of technical and communication abilities. Some references to
+security are based on the coding challenge.
+
 <table>
   <tr>
     <th><pre>Level/Skill                </pre></th>
@@ -96,7 +117,7 @@
     </td>
     <td>Contributes to disaster recover planning and participates in resiliency tests</td>
     <td>Engineers a key area of the cloud platform, such as design and deployment of autoscaling logic, patch automation, backup &amp; restore, etc</td>
-    <td>Contributes to internal and upstream projects to fill instrumentation and logging gaps to collect the right information in metrics, logging, and alarming systems.</td>
+    <td>Contributes to internal and upstream projects to fill instrumentation and logging gaps to collect the right information in metrics, logging, and alarming systems</td>
     <td>Solid understanding of linux workload isolation, syscall filtering, internals, for high security and production workloads</td>
   </tr>
 
@@ -106,7 +127,7 @@
     <td>Leads efforts within a team or portions of cross team efforts as applicable to a team</td>
     <td>Is a domain expert in a particular technology or product area, drawing on the broader skills exposure</td>
     <td></td>
-    <td>Communicates design intent through design documents, technical reports, that is clear and understandable by the wide team.</td>
+    <td>Communicates design intent through design documents, technical reports, that is clear and understandable by the wide team</td>
     <td>
       <ul>
         <li>Applies significant investigation experience to solve rare problems</li>
