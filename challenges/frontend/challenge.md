@@ -114,7 +114,7 @@ requirements, you will:
 
 * Serve web assets from a web server.
 * Containerize your application using Docker.
-* Implement URL Naviation
+* Implement URL Navigation
 
 Directions:
 
@@ -126,10 +126,10 @@ Directions:
 ### Level 3
 
 This level focuses on backend knowledge and a basic understanding of web security.
-At this level, you'll implement the UI from the Level 2 challanege, and add a backend
+At this level, you'll implement the UI from the Level 2 challenge, and add a backend
 with the following features:
 
-* Implement an API that allows authenticated users to browse a server directory
+* An API that allows authenticated users to browse a server directory
   1-level deep at a time. Update the UI to use this API instead of a static JSON
   object.
 * Add support for session management for login/logout.
