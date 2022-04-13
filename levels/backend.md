@@ -21,14 +21,13 @@ security are based on the coding challenge.
 
 <table>
   <tr>
-    <th><pre>Level/Skill                </pre></th>
-    <th><pre>Data structures/Algorithms </pre></th>
-    <th><pre>Product Output             </pre></th>
-    <th><pre>Security                   </pre></th>
-    <th><pre>Communication/Writing      </pre></th>
-    <th><pre>Networking                 </pre></th>
-    <th><pre>Systems Engineering        </pre></th>
-    <th><pre>OS/Tooling                 </pre></th>
+    <th><pre>Level/Skill </pre></th>
+    <th><pre>1           </pre></th>
+    <th><pre>2           </pre></th>
+    <th><pre>3           </pre></th>
+    <th><pre>4           </pre></th>
+    <th><pre>5           </pre></th>
+    <th><pre>6           </pre></th>
   </tr>
 
   <tr align="left" valign="top">
