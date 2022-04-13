@@ -21,13 +21,14 @@ security are based on the coding challenge.
 
 <table>
   <tr>
-    <th><pre>Level/Skill        </pre></th>
-    <th><pre>1                  </pre></th>
-    <th><pre>2                  </pre></th>
-    <th><pre>3                  </pre></th>
-    <th><pre>4                  </pre></th>
-    <th><pre>5                  </pre></th>
-    <th><pre>6                  </pre></th>
+    <th><pre>Level/Skill                </pre></th>
+    <th><pre>Data structures/Algorithms </pre></th>
+    <th><pre>Product Output             </pre></th>
+    <th><pre>Security                   </pre></th>
+    <th><pre>Communication/Writing      </pre></th>
+    <th><pre>Networking                 </pre></th>
+    <th><pre>Systems Engineering        </pre></th>
+    <th><pre>OS/Tooling                 </pre></th>
   </tr>
 
   <tr align="left" valign="top">
@@ -68,10 +69,10 @@ security are based on the coding challenge.
       synchronization primitives and properly sharing state between components
       of the system.
     </td>
-    <!--td>
+    <td>
       Understands the usage of compilers, interpreters, build tools at the
       organization.
-    </td-->
+    </td>
   </tr>
 
 
@@ -79,47 +80,4 @@ security are based on the coding challenge.
 
 ### Level 1
 
-#### Data structures/Algorithms
 
-Demonstrates good understanding of basic data structures - hash tables,
-linked lists, trees. Can reason about algorithm complexity. Applies
-relevant data structures in day to day activity, can implement a
-production quality. It might be not the most efficient or secure, but
-correct.
-
-#### Product Output
-
-Creates a design document based on well-defined scoped requirements and
-implements it.
-
-#### Security
-
-Applies basic security principles to program design. For example, can set
-up HTTPS and password based auth.
-
-#### Communication/Writing
-
-Reports progress on a regular basis as required by the team's operational
-requirements. Actively solicits feedback.Participates on interview panels.
-
-#### Networking
-
-Understands and reasons about networking concepts. Understands and can
-write production quality web servers. Understands common networking issues
-and troubleshooting techniques.
-
-#### Systems Engineering
-
-Understands the usage of POSIX and other APIs for Linux systems.
-Understands synchronization primitives and their application, including
-reasoning about deadlocks and data races. Can write basic system-level
-code using the different types of memory and allocation. Understands inter
-process communication and can build systems leveraging it. Can implement
-data race and deadlock free code using basic production guidelines - using
-synchronization primitives and properly sharing state between components
-of the system.
-
-#### OS/Tooling
-
-Understands the usage of compilers, interpreters, build tools at the
-organization.
