@@ -32,41 +32,49 @@ security are based on the coding challenge.
   </tr>
 
   <tr align="left" valign="top">
-    <td>1</td>
     <td>
-    Demonstrates good understanding of basic data structures - hash tables, linked lists, trees. Can reason about algorithm complexity.
-
-    Applies relevant data structures in day to day activity, can implement a production quality. It might be not the most efficient or secure, but correct.
+        1
     </td>
-
-<td>
-    Creates a design document based on well-defined scoped requirements and implements it. &
-
-</td>
-
-<td>
-    Applies basic security principles to program design. For example, can set up HTTPS and password based auth. 
-
-</td>
-<td>
-    Reports progress on a regular basis as required by the team's operational requirements. Actively solicits feedback.Participates on interview panels. 
-
-</td>
-<td>
-    Understands and reasons about networking concepts. Understands and can write production quality web servers. Understands common networking issues and troubleshooting techniques. 
-
-</td>
-<td>
-    Understands the usage of POSIX and other APIs for Linux systems. Understands synchronization primitives and their application, including reasoning about deadlocks and data races.
-    Can write basic system-level code using the different types of memory and allocation.
-    Understands inter process communication and can build systems leveraging it.
-    Can implement data race and deadlock free code using basic production guidelines - using synchronization primitives and properly sharing state between components of the system.&
-    Understands the usage of compilers, interpreters, build tools at the organization.
-
-</td>
-
-
+    <td>
+      Demonstrates good understanding of basic data structures - hash tables,
+      linked lists, trees. Can reason about algorithm complexity. Applies
+      relevant data structures in day to day activity, can implement a
+      production quality. It might be not the most efficient or secure, but
+      correct.
+    </td>
+    <td>
+      Creates a design document based on well-defined scoped requirements and
+      implements it.
+    </td>
+    <td>
+      Applies basic security principles to program design. For example, can set
+      up HTTPS and password based auth.
+    </td>
+    <td>
+      Reports progress on a regular basis as required by the team's operational
+      requirements. Actively solicits feedback.Participates on interview panels.
+    </td>
+    <td>
+      Understands and reasons about networking concepts. Understands and can
+      write production quality web servers. Understands common networking issues
+      and troubleshooting techniques.
+    </td>
+    <td>
+      Understands the usage of POSIX and other APIs for Linux systems.
+      Understands synchronization primitives and their application, including
+      reasoning about deadlocks and data races. Can write basic system-level
+      code using the different types of memory and allocation. Understands inter
+      process communication and can build systems leveraging it. Can implement
+      data race and deadlock free code using basic production guidelines - using
+      synchronization primitives and properly sharing state between components
+      of the system.
+    </td>
+    <td>
+      Understands the usage of compilers, interpreters, build tools at the
+      organization.
+    </td>
   </tr>
+
 
 </table>
 
