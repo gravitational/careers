@@ -1,17 +1,17 @@
 <table>
   <tr>
-    <th><pre>Level/Skill                         </pre></th>
-    <th><pre>Scope                               </pre></th>
-    <th><pre>Collaboration                       </pre></th>
-    <th><pre>Skills Development                  </pre></th>
-    <th><pre>Mentorship                          </pre></th>
-    <th><pre>Communications                      </pre></th>
-    <th><pre>On-call                             </pre></th>
-    <th><pre>Security                            </pre></th>
-    <th><pre>Operations                          </pre></th>
-    <th><pre>Development and Automation          </pre></th>
-    <th><pre>Reliability                         </pre></th>
-    <th>`Systems Experience and Understanding`</th>
+    <th><pre>Level/Skill                </pre></th>
+    <th><pre>Scope                      </pre></th>
+    <th><pre>Collaboration              </pre></th>
+    <th><pre>Skills Development         </pre></th>
+    <th><pre>Mentorship                 </pre></th>
+    <th><pre>Communications             </pre></th>
+    <th><pre>On-call                    </pre></th>
+    <th><pre>Security                   </pre></th>
+    <th><pre>Operations                 </pre></th>
+    <th><pre>Development and Automation </pre></th>
+    <th><pre>Reliability                </pre></th>
+    <th><pre>Systems Engineering        </pre></th>
   </tr>
 
   <tr align="left" valign="top">
