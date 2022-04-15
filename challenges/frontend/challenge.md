@@ -179,6 +179,8 @@ A few notes about the design document:
   parts are draft and which parts are complete. Instead we encourage asking
   questions in Slack and sharing a design document that is ready to be
   reviewed.
+* When you feel it's ready, create a PR for this document to allow the team to
+  review and comment on it.
 
 Split your code submission using pull requests and give the team an opportunity
 to review the PRs. A good “rule of thumb” to follow is that the final PR
