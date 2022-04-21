@@ -1,14 +1,15 @@
 # Summary
 
-Implement a prototype load balancer.
+Implement a basic load balancer. Load balancer are used to distribute network
+load across hosts.
 
 # Rationale
 
 This exercise has two goals:
 
 * It helps us to understand what to expect from you as a developer, how you
-  write production code, how you reason about API design and how you
-  communicate when trying to understand a problem before you solve it.
+  write code, how you reason about API design and how you communicate when
+  trying to understand a problem before you solve it.
 * It helps you get a feel for what it would be like to work at Teleport, as
   this exercise aims to simulate our day-as-usual and expose you to the type of
   work we're doing here.
@@ -19,7 +20,7 @@ downsides - it could take longer than traditional interviews.
 
 [Some of the best teams use coding challenges.](https://sockpuppet.org/blog/2015/03/06/the-hiring-post/)
 
-We appreciate your time and are looking forward to hack on this project
+We appreciate your time and are looking forward to hacking on this project
 together.
 
 # Levels
@@ -86,10 +87,10 @@ list of the key observations from the team that affected the result.
 
 ### Server
 
-* Develop a simple authorization scheme that defines what upstreams are
-  available to which clients; this scheme can be statically defined in code
 * Secure communication between client and server using TLS and token
   authentication
+* Develop a simple authorization scheme that defines what upstreams are
+  available to which clients; this scheme can be statically defined in code
 * Accept and forward requests to upstreams using library
 
 ## Level 2
@@ -97,14 +98,14 @@ list of the key observations from the team that affected the result.
 ### Library
 
 * Implement a round-robin request forwarder to forward requests to
-  upstreams
+  multiple upstreams
 
 ### Server
 
-* Develop a simple authorization scheme that defines what upstreams are
-  available to which clients; this scheme can be statically defined in code
 * Use mTLS authentication to have the server verify identity of the client and
   client of the server
+* Develop a simple authorization scheme that defines what upstreams are
+  available to which clients; this scheme can be statically defined in code
 * Accept and forward requests to upstreams using library
 
 ## Level 3
@@ -116,10 +117,10 @@ list of the key observations from the team that affected the result.
 
 ### Server
 
-* Develop a simple authorization scheme that defines what upstreams are
-  available to which clients; this scheme can be statically defined in code
 * Use mTLS authentication to have the server verify identity of the client and
   client of the server
+* Develop a simple authorization scheme that defines what upstreams are
+  available to which clients; this scheme can be statically defined in code
 * Accept and forward requests to upstreams using library
 
 ## Level 4
@@ -133,10 +134,10 @@ list of the key observations from the team that affected the result.
 
 ### Server
 
-* Develop a simple authorization scheme that defines what upstreams are
-  available to which clients; this scheme can be statically defined in code
 * Use mTLS authentication to have the server verify identity of the client and
   client of the server
+* Develop a simple authorization scheme that defines what upstreams are
+  available to which clients; this scheme can be statically defined in code
 * Accept and forward requests to upstreams using library
 
 ## Level 5
@@ -147,14 +148,15 @@ list of the key observations from the team that affected the result.
   request forwarder
 * Track number of connections per client and implement a rate limiting request
   forwarder
-* Track unhealthy upstreams and implement a circuit breaking requests forwarder
+* Track unhealthy upstreams and implement health checking and remove unhealthy
+  upstreams
 
 ## Server
 
-* Develop a simple authorization scheme that defines what upstreams are
-  available to which clients; this scheme can be statically defined in code
 * Use mTLS authentication to have the server verify identity of the client and
   client of the server
+* Develop a simple authorization scheme that defines what upstreams are
+  available to which clients; this scheme can be statically defined in code
 * Accept and forward requests to upstreams using library
 
 # Guidance
