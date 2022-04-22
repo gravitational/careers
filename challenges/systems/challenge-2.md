@@ -1,7 +1,7 @@
 # Summary
 
 Implement a basic load balancer. Load balancers are used to distribute network
-load across hosts.
+load across multiple hosts (or upstreams).
 
 # Rationale
 
@@ -43,13 +43,14 @@ Before writing any actual code, we ask that you write a brief design document.
 The design document should cover: design approach, scope, proposed API,
 security considerations, CLI UX, and implementation details where appropriate.
 
-Please submit the design document as Markdown and PR#1 to your repository to
-allow us to provide you feedback on the proposed design.
+Please submit the design document and all code in a GitHub repository. Public
+or private is your choice. Please submit the design document as a Pull Request
+to allow us to provide you feedback on the proposed design.
 
 A few notes about the design document:
 
-* We expect the design document to be completed roughly within the first week.
-  This is to ensure you have enough time to work on the implementation.
+* Try to get the design document approved within the first 2-3 days. This is to
+  ensure you have enough time to work on the implementation.
 * Avoid writing an overly detailed design document. Two to three pages is
   sufficient.
 * Avoid sending us draft design documents. It is difficult to evaluate which
@@ -87,8 +88,9 @@ list of the key observations from the team that affected the result.
 
 ### Server
 
-* Secure communication between client and server using TLS and token
-  authentication
+* Secure communication between client and server using TLS and an [opaque
+  bearer token](https://latacora.micro.blog/2018/06/12/a-childs-garden.html)
+  for authentication
 * Develop a simple authorization scheme that defines what upstreams are
   available to which clients; this scheme can be statically defined in code
 * Accept and forward requests to upstreams using the library
