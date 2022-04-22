@@ -1,6 +1,6 @@
 # Summary
 
-Implement a basic load balancer. Load balancer are used to distribute network
+Implement a basic load balancer. Load balancers are used to distribute network
 load across hosts.
 
 # Rationale
@@ -15,7 +15,7 @@ This exercise has two goals:
   work we're doing here.
 
 We believe this technique is not only better, but also is more fun compared to
-whiteboard/quiz interviews so common in the industry. It's not without the
+whiteboard/quiz interviews so common in the industry. It's not without
 downsides - it could take longer than traditional interviews.
 
 [Some of the best teams use coding challenges.](https://sockpuppet.org/blog/2015/03/06/the-hiring-post/)
@@ -36,7 +36,7 @@ for more details.
 
 The interview process will start with you receiving an invite to a private
 Slack channel. That channel will contain the interview panel. You can ask them
-about the engineering culture, work and life balance, or anything else that you
+about the engineering culture, work-life balance, or anything else that you
 would like to learn about Teleport.
 
 Before writing any actual code, we ask that you write a brief design document.
@@ -48,15 +48,15 @@ allow us to provide you feedback on the proposed design.
 
 A few notes about the design document:
 
-* We expect the design document to be complete roughly within the first week.
+* We expect the design document to be completed roughly within the first week.
   This is to ensure you have enough time to work on the implementation.
 * Avoid writing an overly detailed design document. Two to three pages is
   sufficient.
-* Avoid sending us draft design documents, it is difficult to evaluate which
+* Avoid sending us draft design documents. It is difficult to evaluate which
   parts are draft and which parts are complete. Instead we encourage asking
   questions in Slack and sharing a design document that is ready to be reviewed.
 
-Once the design document has been approved by two reviewers, move onto
+Once the design document has been approved by two reviewers, move on to the
 implementation.
 
 Split your code submission into roughly 3-5 Pull Requests to give the team an
@@ -74,7 +74,7 @@ accepts the submission, -2 otherwise.
 In case of a positive result, we will connect you to our HR and recruiting
 teams, who will work out the details and present an offer.
 
-In case of a negative score result, hiring manager will contact you and share a
+In case of a negative score result, the hiring manager will contact you and share a
 list of the key observations from the team that affected the result.
 
 # Requirements
@@ -91,7 +91,7 @@ list of the key observations from the team that affected the result.
   authentication
 * Develop a simple authorization scheme that defines what upstreams are
   available to which clients; this scheme can be statically defined in code
-* Accept and forward requests to upstreams using library
+* Accept and forward requests to upstreams using the library
 
 ## Level 2
 
@@ -102,17 +102,17 @@ list of the key observations from the team that affected the result.
 
 ### Server
 
-* Use mTLS authentication to have the server verify identity of the client and
-  client of the server
+* Use mTLS authentication to verify the client's identity
 * Develop a simple authorization scheme that defines what upstreams are
   available to which clients; this scheme can be statically defined in code
 * Accept and forward requests to upstreams using library
+* Copy upstream's response back to the client
 
 ## Level 3
 
 ### Library
 
-* Track number of connections per upstreams and implement a least connections
+* Track the number of connections per upstream and implement a least connections
   request forwarder
 
 ### Server
