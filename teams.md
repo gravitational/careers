@@ -52,14 +52,6 @@ The team is currently working on scaling Teleport to
 [secure automatic upgrades](https://github.com/gravitational/teleport/pull/6691)
 of large fleets of servers.
 
-### Teleport Terminal
-
-The Teleport Terminal team is focused on creating desktop applications that make
-Teleport easier to use and more secure.
-
-The team is working towards the first release of Teleport Terminal, adding
-support for SSO, Server Access, Kubernetes Access, and Database Access.
-
 ### Desktop Access
 
 The Teleport Desktop Access team is focused on secure and user-friendly remote desktop access.
@@ -71,6 +63,14 @@ The team is currently working on browser-based Windows Desktop Access, including
 - Session recording
 - Performance optimization and security hardening
 
+### Teleport Connect
+
+The Teleport Connect team is focused on creating desktop applications that make
+Teleport easier to use and more secure.
+
+The team is working towards the first release of Teleport Connect, adding
+support for SSO, Server Access, Kubernetes Access, and Database Access.
+
 ### Frontend Applications
 
 The Teleport Frontend Applications team is focused on building user-friendly web
@@ -78,7 +78,7 @@ applications.
 
 * Support for server-side pagination and filtering
   [capabilities](https://github.com/gravitational/teleport/blob/master/rfd/0055-webui-ss-paginate-filter.md)
-* Building a new user interface for Teleport's terminal.
+* Building a new user interface for Teleport Connect.
 * Improving the session player for recorded SSH and desktop sessions.
 
 ### Internal Tools
