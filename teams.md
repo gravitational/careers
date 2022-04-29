@@ -26,11 +26,11 @@ The Application and Database Access team works on providing access to [web appli
 
 #### Here are the examples of projects you may be working on:
 
-* Adding support for more database access [protocols](https://github.com/gravitational/teleport/issues?q=is%3Aopen+is%3Aissue+label%3Adatabase-access+label%3Adb%2Frequested) and improving the existing ones.
-* Working on [features](https://github.com/gravitational/teleport/issues?q=is%3Aissue+is%3Aopen+label%3Aapplication-access+label%3Afeature-request) for application access identity-aware proxy.
-* Building advanced access controls such as [session recording](https://github.com/gravitational/teleport/issues/5799), [data masking](https://github.com/gravitational/teleport/issues/7150) and [per-session MFA](https://github.com/gravitational/teleport/issues/6172).
-* Implementing cloud access solutions for AWS, GCP and Azure.
-* Improving the UX of application and database access products.
+- Adding support for more database access [protocols](https://github.com/gravitational/teleport/issues?q=is%3Aopen+is%3Aissue+label%3Adatabase-access+label%3Adb%2Frequested) and improving the existing ones.
+- Working on [features](https://github.com/gravitational/teleport/issues?q=is%3Aissue+is%3Aopen+label%3Aapplication-access+label%3Afeature-request) for application access identity-aware proxy.
+- Building advanced access controls such as [session recording](https://github.com/gravitational/teleport/issues/5799), [data masking](https://github.com/gravitational/teleport/issues/7150) and [per-session MFA](https://github.com/gravitational/teleport/issues/6172).
+- Implementing cloud access solutions for AWS, GCP and Azure.
+- Improving the UX of application and database access products.
 
 ### Product Security
 
@@ -52,6 +52,19 @@ The team is currently working on scaling Teleport to
 [secure automatic upgrades](https://github.com/gravitational/teleport/pull/6691)
 of large fleets of servers.
 
+### Machine ID
+
+The [Machine ID](https://goteleport.com/blog/machine-to-machine-access/) team is
+focused on bringing all the advantages and convenience that Teleport provides
+for human users to machine use cases.
+
+The team is currently working on:
+
+- support for database access, kubernetes access, and application access
+- simplifying setup and configuration
+- support for issuing host certificates
+- CA rotation
+
 ### Desktop Access
 
 The Teleport Desktop Access team is focused on secure and user-friendly remote desktop access.
@@ -65,21 +78,21 @@ The team is currently working on browser-based Windows Desktop Access, including
 
 ### Teleport Connect
 
-The Teleport Connect team is focused on creating desktop applications that make
-Teleport easier to use and more secure.
+The [Teleport Connect](https://goteleport.com/blog/teleport-connect/) team is
+focused on creating desktop applications that make Teleport easier to use and
+more secure.
 
 The team is working towards the first release of Teleport Connect, adding
-support for SSO, Server Access, Kubernetes Access, and Database Access.
+support for SSO, Server Access, Database Access, and Kubernetes Access.
 
 ### Frontend Applications
 
 The Teleport Frontend Applications team is focused on building user-friendly web
 applications.
 
-* Support for server-side pagination and filtering
-  [capabilities](https://github.com/gravitational/teleport/blob/master/rfd/0055-webui-ss-paginate-filter.md)
-* Building a new user interface for Teleport Connect.
-* Improving the session player for recorded SSH and desktop sessions.
+- An updated web UI for passwordless logins
+- Advanced filtering and clickable labels
+- Improved UI for access requests
 
 ### Internal Tools
 
@@ -94,13 +107,12 @@ integration/distribution to package managers.
 
 The team is currently working on:
 
-* Redefining our CI tooling, to ensure high confidence that the CI tooling is
+- Redefining our CI tooling, to ensure high confidence that the CI tooling is
   not a security liability, while making the development teams more productive.
-* Building robust and essential Release engineering tooling, so the code we
+- Building robust and essential Release engineering tooling, so the code we
   produce can get into our customers hands in a secure manner.
-* Internal automation, bots, and integrations that keep the team members
+- Internal automation, bots, and integrations that keep the team members
   autonomous.
-
 
 ### Teleport Devops
 
@@ -127,14 +139,14 @@ Teleport is a compelling option for our customers.
 
 We use the following technologies to build Teleport Cloud:
 
-* Golang
-* Typescript & React
-* PostgreSQL
-* Terraform and Packer
-* Amazon Web Services
-* Kubernetes
-* Prometheus / Alertmanager / Loki internally and on Grafana Cloud
-* Drone.io
+- Golang
+- Typescript & React
+- PostgreSQL
+- Terraform and Packer
+- Amazon Web Services
+- Kubernetes
+- Prometheus / Alertmanager / Loki internally and on Grafana Cloud
+- Drone.io
 
 ### Cloud Security Infrastructure
 
@@ -153,13 +165,13 @@ type backgrounds that integrate security critical thinking into their thought
 process.
 
 Types of projects this team may handle:
-* Securing SRE access to production, ensuring the tooling, audit, and security
-  controls are in place for production access.
-* Look at tough problems, like our software supply chain, and how code is
-  protected from developer to production.
-* Working with our consultants, well known experts in the security field, to
-  deliver the best security value for our customers.
 
+- Securing SRE access to production, ensuring the tooling, audit, and security
+  controls are in place for production access.
+- Look at tough problems, like our software supply chain, and how code is
+  protected from developer to production.
+- Working with our consultants, well known experts in the security field, to
+  deliver the best security value for our customers.
 
 ### Cloud Reliability
 
@@ -168,12 +180,12 @@ ensuring scaling of our product offering against company/product growth.
 
 Some projects we're working on right now:
 
-* Expanding Teleport Cloud to multiple regions, reducing latency between users
+- Expanding Teleport Cloud to multiple regions, reducing latency between users
   and their infrastructure.
-* Defining SLOs, and developing centralized monitoring and alerting based on them
-* Evaluating and implementing database and storage solutions that match or
+- Defining SLOs, and developing centralized monitoring and alerting based on them
+- Evaluating and implementing database and storage solutions that match or
   exceed our SLOs and growth demands
-* Developing procedures and automation to ensure reliable and safe rollouts
+- Developing procedures and automation to ensure reliable and safe rollouts
 
 ### Cloud Applications
 
@@ -183,11 +195,11 @@ for our cloud customers and provide a stable, easy-to-use product.
 The team intersects with almost all other departments in the company and offers
 a broad range of projects. For example:
 
-* Building Kubernetes operators
-* Developing subscription & billing logic
-* Contributing UI & UX improvements for Teleport
-* Rewriting Teleport core networking to work better for cloud use cases.
-* Asset distribution
+- Building Kubernetes operators
+- Developing subscription & billing logic
+- Contributing UI & UX improvements for Teleport
+- Rewriting Teleport core networking to work better for cloud use cases.
+- Asset distribution
 
 ### Cloud Tooling
 
@@ -195,11 +207,11 @@ The Cloud Tooling team contributes force multiplication efforts to help
 engineers developing Teleport Cloud and across the org. We're currently working
 on:
 
-* Building and maintaining Teleport clusters that engineers use to securely
+- Building and maintaining Teleport clusters that engineers use to securely
   access our infrastructure backing Teleport Cloud.
-* Improving static analysis and automated tests.
-* Developing security conscious CI guidelines and tooling.
-* While we build up the Cloud Security team, tooling is heavily invested in
+- Improving static analysis and automated tests.
+- Developing security conscious CI guidelines and tooling.
+- While we build up the Cloud Security team, tooling is heavily invested in
   improving our security posture
   audit trail for generated and published assets and ensuring we're using
   encryption at rest in the right places.
