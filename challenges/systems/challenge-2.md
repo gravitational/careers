@@ -1,7 +1,7 @@
 # Summary
 
-Implement a basic load balancer. Load balancers are used to distribute network
-load across multiple hosts (or upstreams).
+Implement a basic TCP load balancer. Load balancers are used to distribute
+network load across multiple hosts (or upstreams).
 
 # Rationale
 
@@ -84,15 +84,15 @@ list of the key observations from the team that affected the result.
 
 ### Library
 
-* Implement a simple request forwarder to forward requests to an upstream
+* Implement a request forwarder to forward requests to an upstream.
 
 ### Server
 
 * Secure communication between client and server using TLS and an [opaque
   bearer token](https://latacora.micro.blog/2018/06/12/a-childs-garden.html)
   for authentication
-* Develop a simple authorization scheme that defines what upstreams are
-  available to which clients; this scheme can be statically defined in code
+* Develop a simple authorization scheme that defines what clients can use the
+  load balancer; this scheme can be statically defined in code
 * Accept and forward requests to upstreams using the library
 
 ## Level 2
@@ -100,7 +100,7 @@ list of the key observations from the team that affected the result.
 ### Library
 
 * Implement a round-robin request forwarder to forward requests to
-  multiple upstreams
+  multiple upstreams.
 
 ### Server
 
@@ -108,14 +108,13 @@ list of the key observations from the team that affected the result.
 * Develop a simple authorization scheme that defines what upstreams are
   available to which clients; this scheme can be statically defined in code
 * Accept and forward requests to upstreams using library
-* Copy upstream's response back to the client
 
 ## Level 3
 
 ### Library
 
-* Track the number of connections per upstream and implement a least connections
-  request forwarder
+* Implement a least connections request forwarder that tracks the number of
+  connections per upstream.
 
 ### Server
 
@@ -129,10 +128,10 @@ list of the key observations from the team that affected the result.
 
 ### Library
 
-* Track number of connections per upstreams and implement a least connections
-  request forwarder
-* Track number of connections per client and implement a rate limiting request
-  forwarder
+* Implement a least connections request forwarder that tracks the number of
+  connections per upstream.
+* Implement a per-client connection rate limiter that tracks the number of
+  client connections.
 
 ### Server
 
@@ -146,12 +145,12 @@ list of the key observations from the team that affected the result.
 
 ## Library
 
-* Track number of connections per upstreams and implement a least connections
-  request forwarder
-* Track number of connections per client and implement a rate limiting request
-  forwarder
-* Track unhealthy upstreams and implement health checking and remove unhealthy
-  upstreams
+* Implement a least connections request forwarder that tracks the number of
+  connections per upstream.
+* Implement a per-client connection rate limiter that tracks the number of
+  client connections.
+* Implement a health checking request forwarder that removes unhealthy
+  upstreams.
 
 ## Server
 
@@ -184,8 +183,7 @@ These are the areas we will be evaluating in the submission:
   not try to achieve full test coverage. This will take too long. Take two key
   components, e.g. authentication/authorization layer and networking and
   implement one or two test cases that demonstrate your approach to testing.
-* Make sure builds are reproducible. Pick any vendoring/packaging system that
-  will allow us to get consistent build results.
+* Use Go modules for consistent and reproducible build results.
 * Ensure error handling and error reporting is consistent. The system should
   report clear errors and not crash under non-critical conditions.
 * Avoid concurrency and networking errors. Most of the issues we've seen in
