@@ -191,7 +191,7 @@ These are the areas we will be evaluating in the submission:
 * Avoid concurrency and networking errors. Most of the issues we've seen in
   production are related to data races, networking error handling or goroutine
   leaks. We will be looking for those errors in your code.
-* Security. Use strong authentication and simplest, but robust authorization.
+* Security. Use strong authentication and simple but robust authorization.
   Set up the strongest transport encryption you can. Test it.
 
 ## Trade-offs
@@ -199,7 +199,7 @@ These are the areas we will be evaluating in the submission:
 Write as little code as possible, otherwise this task will consume too much
 time and code quality will suffer.
 
-Please cut corners, for example configuration tends to take a lot of time, and
+Please cut corners. For example, configuration tends to take a lot of time and 
 is not important for this task.
 
 Use hardcoded values as much as possible and simply add TODO items showing your
@@ -212,8 +212,8 @@ thinking, for example:
   // for example https://github.com/alecthomas/kingpin
 ```
 
-Comments like this one are really helpful to us. They save yourself a lot of
-time and demonstrate that you've spent time thinking about this problem and
+Comments like this one are really helpful to us. They save you a lot of 
+time, demonstrate that you've spent time thinking about this problem, and 
 provide a clear path to a solution.
 
 Consider making other reasonable trade-offs. Make sure you communicate them to
@@ -224,7 +224,7 @@ task:
 
 * Do not implement a system that scales or is highly performing. Describe which
   performance improvements you would add in the future.
-* It is OK if the system is not highly available. Write down how you would make
+* It is okay if the system is not highly available. Write down how you would make 
   the system highly available and why your system is not.
 
 ## Pitfalls and Gotchas
@@ -232,11 +232,11 @@ task:
 To help you out, we've composed a list of things that previously resulted in a
 no-pass from the interview team:
 
-* Scope creep. Candidates have tried to implement too much and ran out of time
+* Scope creep. Candidates have tried to implement too much and they ran out of time 
   and energy. To avoid this pitfall, use the simplest solution that will work.
-  Avoid writing too much code. We've seen candidates' code introducing caching
-  and making many mistakes in the caching layer validation logic. Not having
-  caching would have solved this problem.
+  Avoid writing too much code. We've seen candidates' code introduce caching, 
+  which resulted in many mistakes in the caching layer validation logic. Not
+  implementing a caching layer would have solved this problem.
 * Data races. We will scan the code with a race detector and do our best to
   find data races in the code. Avoid global state as much as possible; if using
   global state, write down a good description why it is necessary and protect it
@@ -246,7 +246,7 @@ no-pass from the interview team:
   holding a mutex and making a network call without timeouts in place. Be extra
   careful with networking and sync primitives.
 * Unstructured code. We've seen candidates leaving commented chunks of code,
-  having one large file with all the code, not having code structure at all.
+  having one large file with all the code, or not having code structure at all.
 * Not communicating. Some candidates have submitted all their code to the
   master branch without raising pull requests, which does not give us the
   ability to provide feedback on the various implementation phases. We are a
@@ -258,7 +258,7 @@ no-pass from the interview team:
 
 ## Questions
 
-It is OK to ask the interview team questions. Some folks stay away from asking
+It is okay to ask the interview team questions. Some folks stay away from asking
 questions to avoid appearing less experienced, so we provide examples of
 questions to ask and questions we expect candidates to figure out on their own.
 
@@ -288,8 +288,8 @@ machines.
 You can split coding over a couple of weekdays or weekends and find time to ask
 questions and receive feedback.
 
-Once you join the Slack channel, you have between 1 to 2 weeks complete the
-challenge depending on the challenge you choose.
+Once you join the Slack channel, you have between 1 to 2 weeks to complete the
+challenge depending on the level you choose.
 
 Within this timeframe, we don't give higher scores to challenges submitted more
 quickly. We only evaluate the quality of the submission.
