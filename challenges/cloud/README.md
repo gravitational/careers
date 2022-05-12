@@ -311,6 +311,5 @@ In the cloud team, we follow a philosophy of all engineers are responsible for t
 
 
 ### Challenge
-We use two interviews for team members with operational backgrounds, the first is a lightweight scripting / programming challenge, and the second is a troubleshooting production test. See the following links for outlines of each challenge.
+We use two interviews for team members with operational backgrounds. The first is a lightweight scripting / programming challenge, and the second is a troubleshooting production test. See the following link for outlines of the first challenge.
 1. [Automation development challenge](automation.md)
-2. [Security Audit challenge](security_audit.md)
