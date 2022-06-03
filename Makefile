@@ -1,6 +1,10 @@
 export TEXINPUTS := $(TEXINPUTS):$(abspath styles)
 
-all: challenges/systems-intern/worker-library.pdf challenges/systems/worker.pdf challenges/fullstack/dashboard.pdf levels.pdf
+TEX_SOURCES := $(shell find -name '*.tex')
+GENERATED_PDFS := $(TEX_SOURCES:.tex=.pdf)
+
+.PHONY: all
+all: $(GENERATED_PDFS)
 
 %.pdf: %.tex
 	cd $(@D) && pdflatex $(abspath $<)
@@ -16,4 +20,4 @@ install-ubuntu:
 
 .PHONY: clean
 clean:
-	rm -f systems/worker.pdf challenges/fullstack/dashboard.pdf levels.pdf
+	rm -f $(GENERATED_PDFS)
