@@ -78,11 +78,11 @@ is to produce a self-contained GitHub project that automates away as much as
 possible. This should include code quality, testing, build, and deployment.
 
 Expect the interview panel to clone the repository and execute one or more 
-Make targets that build, and test a working solution. 
+Make targets that build and test a working solution. 
 
 Add a couple of high quality tests that cover happy and unhappy scenarios. Keep
-external dependencies as low or clear as possible. The reviewers will expect to
-be able to checkout the repository and execute the tests themselves.
+external dependencies as low or clear as possible. Expect the reviewers to
+checkout the repository and execute the tests themselves.
 
 Do not try to achieve full test coverage. This will take too long. Write enough
 to exercise the different key components and show they are working as
@@ -97,7 +97,7 @@ please choose one that has the ability to run on macOS and Linux.
 ## Key Dependencies
 
 You are welcome to solve this challenge using tools you are most familiar with,
-however, we will be appreciative if you made sure to, at a minimum, make use of:
+but, at a minimum, please include the following:
 
 * Go
 * make
@@ -107,41 +107,41 @@ however, we will be appreciative if you made sure to, at a minimum, make use of:
 
 ### Server
 
-* HTTP API to retrieve the replica count of a given Kubernetes Deployment
+* HTTP API to retrieve the replica count of the Kubernetes Deployment
 
 ### Automation
 
-* Ability to build the server conveniently in a Docker container
-* Ability to run the server conveniently
+* Ability to build the server in a Docker container
+* Ability to run the server
 
 ## Level 2
 
 ### Server
 
-* HTTP API to retrieve the replica count of a given Kubernetes Deployment
-* HTTP API to set the replica count of a given Kubernetes Deployment
+* HTTP API to retrieve the replica count of the Kubernetes Deployment
+* HTTP API to set the replica count of the Kubernetes Deployment
 
 ### Automation
 
-* Ability to build the server conveniently in a Docker container
-* Ability to run the server conveniently
+* Ability to build the server in a Docker container
+* Ability to run the server
 * Ability to execute tests against a locally configured Kubernetes config
 
 ## Level 3
 
 ### Server
 
-* HTTP API to retrieve the replica count of a given Kubernetes Deployment
-* HTTP API to set the replica count of a given Kubernetes Deployment
-* HTTP API to get the list of available Deployments in the underlying Kubernetes cluster
+* HTTP API to retrieve the replica count of the Kubernetes Deployment
+* HTTP API to set the replica count of a the Kubernetes Deployment
+* HTTP API to get the list of available Deployments in the Kubernetes cluster
 * HTTP health check verifying Kubernetes connectivity
 
 ### Automation
 
-* Ability to build the server conveniently in a Docker container
-* Ability to run the server conveniently
+* Ability to build the server in a Docker container
+* Ability to run the server
 * Ability to execute tests against a locally configured Kubernetes config
-* GitHub Actions for every commit: ensuring the software builds, tests pass, and verify code quality
+* GitHub Actions for every commit that verifies code quality, ensures the software builds, and all tests pass
 
 ### Deployment
 
@@ -157,22 +157,22 @@ to an AWS EKS cluster.
 
 ### Server
 
-* HTTP API to retrieve the replica count of a given Kubernetes Deployment
-* HTTP API to set the replica count of a given Kubernetes Deployment
-* HTTP API to get the list of available Deployments in the underlying Kubernetes cluster
+* HTTP API to retrieve the replica count of the Kubernetes Deployment
+* HTTP API to set the replica count of a the Kubernetes Deployment
+* HTTP API to get the list of available Deployments in the Kubernetes cluster
 * HTTP health check verifying Kubernetes connectivity
-* Extend the API to support a difference between desired and current state
-* Extend the Server to support the ability to show the differences between desired and current state
-* Secure the endpoint with mTLS
+* Extend the API to support a difference between current and desired state
+* Extend the Server to support the ability to show the differences between current and desired state
+* Secure connections with mTLS
 
 ### Automation
 
-* Ability to build the server conveniently in a Docker container
-* Ability to run the server conveniently
+* Ability to build the server in a Docker container
+* Ability to run the server
 * Ability to execute tests against a locally configured Kubernetes config
-* GitHub Actions for every commit: ensuring the software builds, tests pass, and verify code quality
-* Build releases of the API Server
-* Produce Docker images fit for production
+* GitHub Actions for every commit that verifies code quality, ensures the software builds, and all tests pass
+* Build releases of the Server
+* Produce production quality Docker images
 
 ### Deployment
 
@@ -191,25 +191,24 @@ to an AWS EKS cluster. Please include security considerations as well.
 
 ### Server
 
-* HTTP API to retrieve the replica count of a given Kubernetes Deployment
-* HTTP API to set the replica count of a given Kubernetes Deployment
-* HTTP API to get the list of available Deployments in the underlying Kubernetes cluster
+* HTTP API to retrieve the replica count of the Kubernetes Deployment
+* HTTP API to set the replica count of a the Kubernetes Deployment
+* HTTP API to get the list of available Deployments in the Kubernetes cluster
 * HTTP health check verifying Kubernetes connectivity
-* Extend the API to support a difference between desired and current state
-* Extend the Server to support the ability to show the differences between desired and current state
-* Secure the endpoint with mTLS
-* Replace the current HTTP API with gRPC
-* Secure the endpoint with mTLS
+* Extend the API to support a difference between current and desired state
+* Extend the Server to support the ability to show the differences between current and desired state
+* Secure connections with mTLS
+* Replace the HTTP API with gRPC
 * Extend the Server to support reconciling cluster state (i.e. an external actor changed the replica count manually)
 
 ### Automation
 
-* Ability to build the server conveniently in a Docker container
-* Ability to run the server conveniently
+* Ability to build the server in a Docker container
+* Ability to run the server
 * Ability to execute tests against a locally configured Kubernetes config
-* GitHub Actions for every commit: ensuring the software builds, tests pass, and verify code quality
-* Build releases of the API Server
-* Produce Docker images fit for production
+* GitHub Actions for every commit that verifies code quality, ensures the software builds, and all tests pass
+* Build releases of the Server
+* Produce production quality Docker images
 * Deploy and manage a local Kubernetes Cluster
 * Deploy and upgrade to the local Kubernetes Cluster with no service interruption
 * GitHub Action driven workflows for Deployment
