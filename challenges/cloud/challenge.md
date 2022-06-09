@@ -1,6 +1,6 @@
 # Summary
 
-Monitor, deploy and extend a prototype service that provides an API to Kubernetes resources
+Monitor, deploy, and extend a prototype service that provides an API for Kubernetes resources
 
 # Rationale
 
@@ -8,7 +8,7 @@ This exercise has two goals:
 
 * It helps us to understand what to expect from you as a Site Reliability Engineer,
   how you reason about a production service, how you reason about system design, your
-  opinions on automation & tooling and how you communicate when trying to solve problems.
+  opinions on automation & tooling, and how you communicate when trying to solve problems.
 * It helps you get a feel for what it would be like to work at Teleport, as this
   exercise aims to simulate our day-as-usual and expose you to the type of work
   we're doing here.
@@ -19,7 +19,7 @@ downsides - it could take longer than traditional interviews.
 
 [Some of the best teams use coding challenges.](https://sockpuppet.org/blog/2015/03/06/the-hiring-post/)
 
-We appreciate your time and are looking forward to hack on this project together.
+We appreciate your time and are looking forward to hacking on this project together.
 
 # Requirements
 
@@ -27,25 +27,25 @@ This challenge covers 5 engineering levels at Teleport. Level 6 is only for inte
 [engineering levels document](https://raw.githubusercontent.com/gravitational/careers/main/levels.pdf)
 for more details.
 
-Your submission will need to meet the requirements of the level you are applying for.
-
-Split the submission into 2-3 pull requests for us to review. We will review
-every pull request and provide our feedback.
-
-We are going to inspect the repository, test it and get back to you.
+* Your submission will need to meet the requirements of the level you are applying for.
+* Split the submission into 2-3 pull requests for us to review. We will review
+  every pull request and provide our feedback.
+* We are going to inspect the repository, test it, and get back to you.
 
 ## Existing Repository
 
 <!-- 
 TODO: create and populate a repo under gravitational
 -->
-There is an initial and incomplete implementation of the Go Service in [this GitHub Repository](#)
-
-Start by forking the repository and use it going forward. Invite us as contributors if you prefer to keep the submission private.
+An incomplete implementation of a Go Service is located in [this GitHub Repository](#).
+You will extend this implementation by adding features described below depending
+on the level you are applying to. Start by forking the repository and then communicating 
+the new repository's location to our interview Slack channel. Invite interview panel
+participants as contributors in the new repository if you prefer to keep your submission private.
 
 ## Design Doc
 
-Start with a brief doc that covers the edge cases and design approach. At
+Start with a brief design document that covers the edge cases and design approach. At
 Teleport, we prefer Markdown for
 [our designs](https://github.com/gravitational/teleport/blob/master/rfd/0000-rfds.md).
 
@@ -54,9 +54,10 @@ Be sure to cover the following in your design:
 * Developer workflow
 * Level 3+: Build, Release
 * Level 4+: State management and Delivery
-* Level 5+: Reconciliation, Conflicts and Automation
+* Level 5+: Reconciliation, Conflicts, and Automation
 
-Open a pull request with your design and share a link with the reviewers via Slack. After the doc is approved, implement the proposed solution.
+Open a pull request with your design and share a link with the reviewers via Slack.
+After the document is approved by at least 2 reviews, move on to the implementation.
 
 A few notes about the design document:
 
@@ -69,15 +70,15 @@ A few notes about the design document:
   questions in Slack and sharing a design document that is ready to be
   reviewed.
 
-## Automation
+## Server & Automation
 
-A key feature of this challenge is to produce a self-contained GitHub project
-that automates away as much as possible. From the point of view of development
-as well as quality assurance and ideally, build and deployment.
+Once the design document is approved, begin working on adding features to the
+server implementation that includes automation. A key feature of this challenge 
+is to produce a self-contained GitHub project that automates away as much as 
+possible. This should include code quality, testing, build, and deployment.
 
-As much as reasonable, we should be able to clone a repo and run one or more Make targets and have a working solution.
-
-## Testing
+Expect the interview panel to clone the repository and execute one or more 
+Make targets that build, and test a working solution. 
 
 Add a couple of high quality tests that cover happy and unhappy scenarios. Keep
 external dependencies as low or clear as possible. The reviewers will expect to
@@ -87,10 +88,16 @@ Do not try to achieve full test coverage. This will take too long. Write enough
 to exercise the different key components and show they are working as
 intended, as well as to demonstrate your approach to automation.
 
+## Deployment
+
+Levels 3+ include a deployment step which should deploy the solution to a local
+Kubernetes cluster. The choice of which Kubernetes cluster is up to you, but 
+please choose one that has the ability to run on macOS and Linux.
+
 ## Key Dependencies
 
-You are welcome to solve this challenge using tools you are most familiar with, however, we
-will be appreciative if you made sure to, at a minimum, make use of:
+You are welcome to solve this challenge using tools you are most familiar with,
+however, we will be appreciative if you made sure to, at a minimum, make use of:
 
 * Go
 * make
@@ -134,16 +141,19 @@ will be appreciative if you made sure to, at a minimum, make use of:
 * Ability to build the server conveniently in a Docker container
 * Ability to run the server conveniently
 * Ability to execute tests against a locally configured Kubernetes config
-* GitHub Actions for every commit
-  * Ensuring the software builds
-  * Ensuring the tests pass
-  * Verifying some level of code quality
+* GitHub Actions for every commit: ensuring the software builds, tests pass, and verify code quality
 
 ### Deployment
 
 * Create a helm chart for the service
 
 ## Level 4
+
+### Design
+
+In addition to including details about the requirements below, the design
+document should include a section describing how this solution could be deployed
+to an AWS EKS cluster.
 
 ### Server
 
@@ -161,17 +171,23 @@ will be appreciative if you made sure to, at a minimum, make use of:
 * Ability to run the server conveniently
 * Ability to execute tests against a locally configured Kubernetes config
 * GitHub Actions for every commit: ensuring the software builds, tests pass, and verify code quality
-* Build Releases of the API Server
+* Build releases of the API Server
 * Produce Docker images fit for production
 
 ### Deployment
 
 * Create a helm chart for the service
-* Deploy Releases of the API Server to a Kubernetes cluster (and possible dependencies)
-* Upgrade Releases of the API Server to a Kubernetes cluster (and possible dependencies)
+* Deploy releases of the API Server to a Kubernetes cluster (and possible dependencies)
+* Upgrade releases of the API Server to a Kubernetes cluster (and possible dependencies)
 
 
 ## Level 5
+
+### Design
+
+In addition to including details about the requirements below, the design
+document should include a section describing how this solution could be deployed
+to an AWS EKS cluster. Please include security considerations as well.
 
 ### Server
 
@@ -192,7 +208,7 @@ will be appreciative if you made sure to, at a minimum, make use of:
 * Ability to run the server conveniently
 * Ability to execute tests against a locally configured Kubernetes config
 * GitHub Actions for every commit: ensuring the software builds, tests pass, and verify code quality
-* Build Releases of the API Server
+* Build releases of the API Server
 * Produce Docker images fit for production
 * Deploy and manage a local Kubernetes Cluster
 * Deploy and upgrade to the local Kubernetes Cluster with no service interruption
@@ -201,12 +217,9 @@ will be appreciative if you made sure to, at a minimum, make use of:
 ### Deployment
 
 * Create a helm chart for the service
-* Deploy Releases of the API Server to a Kubernetes cluster (and possible dependencies)
-* Upgrade Releases of the API Server to a Kubernetes cluster (and possible dependencies)
+* Deploy releases of the API Server to a Kubernetes cluster (and possible dependencies)
+* Upgrade releases of the API Server to a Kubernetes cluster (and possible dependencies)
 * Include a production Deployment of this service: Service, Ingress, TLC, RBAC
-
-This can still target a local Kubernetes Cluster, but the design should include considerations for deployment
-to remote clusters, like AWS EKS, for instance.
 
 # Guidance
 
@@ -352,8 +365,8 @@ machine.
 
 It's safe to assume a working Docker environment will be available locally as well.
 
-Additional external dependencies are acceptable, like Terraform, minikube/k3d, etc.
-However, your Makefile is expected to handle these dependencies.
+Additional external dependencies are acceptable such as Terraform and minikube/k3d,
+but please ensure your Makefile is handles these dependencies.
 
 # Timing
 
