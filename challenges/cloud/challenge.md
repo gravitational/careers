@@ -111,21 +111,29 @@ will be appreciative if you made sure to, at a minimum, make use of:
 
 ### Server
 
+* HTTP API to retrieve the replica count of a given Kubernetes Deployment
 * HTTP API to set the replica count of a given Kubernetes Deployment
 
 ### Automation
 
+* Ability to build the server conveniently in a Docker container
+* Ability to run the server conveniently
 * Ability to execute tests against a locally configured Kubernetes config
 
 ## Level 3
 
 ### Server
 
+* HTTP API to retrieve the replica count of a given Kubernetes Deployment
+* HTTP API to set the replica count of a given Kubernetes Deployment
 * HTTP API to get the list of available Deployments in the underlying Kubernetes cluster
 * HTTP health check verifying Kubernetes connectivity
 
 ### Automation
 
+* Ability to build the server conveniently in a Docker container
+* Ability to run the server conveniently
+* Ability to execute tests against a locally configured Kubernetes config
 * GitHub Actions for every commit
   * Ensuring the software builds
   * Ensuring the tests pass
@@ -139,17 +147,26 @@ will be appreciative if you made sure to, at a minimum, make use of:
 
 ### Server
 
+* HTTP API to retrieve the replica count of a given Kubernetes Deployment
+* HTTP API to set the replica count of a given Kubernetes Deployment
+* HTTP API to get the list of available Deployments in the underlying Kubernetes cluster
+* HTTP health check verifying Kubernetes connectivity
 * Extend the API to support a difference between desired and current state
 * Extend the Server to support the ability to show the differences between desired and current state
 * Secure the endpoint with mTLS
 
 ### Automation
 
+* Ability to build the server conveniently in a Docker container
+* Ability to run the server conveniently
+* Ability to execute tests against a locally configured Kubernetes config
+* GitHub Actions for every commit: ensuring the software builds, tests pass, and verify code quality
 * Build Releases of the API Server
 * Produce Docker images fit for production
 
 ### Deployment
 
+* Create a helm chart for the service
 * Deploy Releases of the API Server to a Kubernetes cluster (and possible dependencies)
 * Upgrade Releases of the API Server to a Kubernetes cluster (and possible dependencies)
 
@@ -157,23 +174,36 @@ will be appreciative if you made sure to, at a minimum, make use of:
 ## Level 5
 
 ### Server
+
+* HTTP API to retrieve the replica count of a given Kubernetes Deployment
+* HTTP API to set the replica count of a given Kubernetes Deployment
+* HTTP API to get the list of available Deployments in the underlying Kubernetes cluster
+* HTTP health check verifying Kubernetes connectivity
+* Extend the API to support a difference between desired and current state
+* Extend the Server to support the ability to show the differences between desired and current state
+* Secure the endpoint with mTLS
 * Replace the current HTTP API with gRPC
 * Secure the endpoint with mTLS
 * Extend the Server to support reconciling cluster state (i.e. an external actor changed the replica count manually)
 
 ### Automation
 
+* Ability to build the server conveniently in a Docker container
+* Ability to run the server conveniently
+* Ability to execute tests against a locally configured Kubernetes config
+* GitHub Actions for every commit: ensuring the software builds, tests pass, and verify code quality
+* Build Releases of the API Server
+* Produce Docker images fit for production
 * Deploy and manage a local Kubernetes Cluster
 * Deploy and upgrade to the local Kubernetes Cluster with no service interruption
 * GitHub Action driven workflows for Deployment
 
 ### Deployment
 
-* Include a production Deployment of this service
-  * Service
-  * Ingress
-  * TLS
-  * RBAC
+* Create a helm chart for the service
+* Deploy Releases of the API Server to a Kubernetes cluster (and possible dependencies)
+* Upgrade Releases of the API Server to a Kubernetes cluster (and possible dependencies)
+* Include a production Deployment of this service: Service, Ingress, TLC, RBAC
 
 This can still target a local Kubernetes Cluster, but the design should include considerations for deployment
 to remote clusters, like AWS EKS, for instance.
