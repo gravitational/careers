@@ -32,16 +32,14 @@ for more details.
   every pull request and provide our feedback.
 * We are going to inspect the repository, test it, and get back to you.
 
-## Existing Repository
+## Server
 
-<!-- 
-TODO: create and populate a repo under gravitational
--->
-An incomplete implementation of a Go Service is located in [this GitHub Repository](#).
+An incomplete implementation of a Go server is located [here](sre-server.go).
 You will extend this implementation by adding features described below depending
-on the level you are applying to. Start by forking the repository and then communicating 
-the new repository's location to our interview Slack channel. Invite interview panel
-participants as contributors in the new repository if you prefer to keep your submission private.
+on the level you are applying to. Start by creating a new Github repository. Then
+let the interview panel know the repository's location by pasting a link in your
+interview Slack channel. Invite interview panel participants as contributors to
+the new repository if you prefer to keep your submission private.
 
 ## Design Doc
 
@@ -125,7 +123,7 @@ but, at a minimum, please include the following:
 
 * Ability to build the server in a Docker container
 * Ability to run the server
-* Ability to execute tests against a locally configured Kubernetes config
+* Ability to execute integration tests against the local Kubernetes cluster
 
 ## Level 3
 
@@ -140,7 +138,7 @@ but, at a minimum, please include the following:
 
 * Ability to build the server in a Docker container
 * Ability to run the server
-* Ability to execute tests against a locally configured Kubernetes config
+* Ability to execute integration tests against the local Kubernetes cluster
 * GitHub Actions for every commit that verifies code quality, ensures the software builds, and all tests pass
 
 ### Deployment
@@ -169,16 +167,16 @@ to an AWS EKS cluster.
 
 * Ability to build the server in a Docker container
 * Ability to run the server
-* Ability to execute tests against a locally configured Kubernetes config
+* Ability to execute integration tests against the local Kubernetes cluster
 * GitHub Actions for every commit that verifies code quality, ensures the software builds, and all tests pass
-* Build releases of the Server
-* Produce production quality Docker images
+* Produce production ready releases (binaries and docker image)
 
 ### Deployment
 
 * Create a helm chart for the service
 * Deploy releases of the API Server to a Kubernetes cluster (and possible dependencies)
 * Upgrade releases of the API Server to a Kubernetes cluster (and possible dependencies)
+* Include a production Deployment of this service, including but not limited to: Deployment, ServiceAccount, Service
 
 
 ## Level 5
@@ -205,10 +203,9 @@ to an AWS EKS cluster. Please include security considerations as well.
 
 * Ability to build the server in a Docker container
 * Ability to run the server
-* Ability to execute tests against a locally configured Kubernetes config
+* Ability to execute integration tests against the local Kubernetes cluster
 * GitHub Actions for every commit that verifies code quality, ensures the software builds, and all tests pass
-* Build releases of the Server
-* Produce production quality Docker images
+* Produce production ready releases (binaries and docker image)
 * Deploy and manage a local Kubernetes Cluster
 * Deploy and upgrade to the local Kubernetes Cluster with no service interruption
 * GitHub Action driven workflows for Deployment
@@ -218,7 +215,7 @@ to an AWS EKS cluster. Please include security considerations as well.
 * Create a helm chart for the service
 * Deploy releases of the API Server to a Kubernetes cluster (and possible dependencies)
 * Upgrade releases of the API Server to a Kubernetes cluster (and possible dependencies)
-* Include a production Deployment of this service: Service, Ingress, TLC, RBAC
+* Include a production Deployment of this service, including but not limited to: Deployment, Role, RoleBinding, ServiceAccount, Service
 
 # Guidance
 
