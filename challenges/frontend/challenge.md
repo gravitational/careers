@@ -232,8 +232,8 @@ To help you out, we’ve composed a list of things that previously resulted in a
      complex feature. Instead, if you think something could be made more complex in a full-fledged
      app, leave a comment about it and move on with a solution which solves the problem at hand.
    * For example, there is no need to implement a pluggable auth system which in the future would
-     let you easily switch between different auth methods. Focus on implementing a single auth
-     method that satisfies challenge requirements.
+     let you easily switch between different auth methods. It is better to focus on implementing
+     a single auth method.
 * Avoid using unnecessary 3rd party dependencies.
 * Error handling. We pay extra attention to error handling. Make sure that they
   are properly handled and not ignored.
