@@ -61,7 +61,7 @@ A few notes about the design document:
 
 * We expect the design document to be completed roughly within the first week.
   This is to ensure you have enough time to work on the implementation.
-* Avoid writing an overly detailed design document. Two to three pages is
+* Avoid writing an overly detailed design document. 500-1500 words is
   sufficient.
 * Avoid sending us draft design documents, it is difficult to evaluate what
   parts are draft and which parts are complete. Instead we encourage asking
@@ -356,21 +356,21 @@ Unless specified in the requirements, pick the solution that works best for you.
 
 # Tools
 
-This task should be implemented in Go and should work on a 64-bit Linux or MacOS
+This task should be implemented in Go and should work on a x86 64-bit Linux or MacOS
 machine.
 
 It's safe to assume a working Docker environment will be available locally as well.
 
 Additional external dependencies are acceptable such as Terraform and minikube/k3d,
-but please ensure your Makefile is handles these dependencies.
+but please ensure your Makefile has targets to install these dependencies.
 
 # Timing
 
 You can split coding over a couple of weekdays or weekends and find time to ask
 questions and receive feedback.
 
-Once you join the Slack channel, you have between 1 to 2 weeks complete the
-challenge depending on the challenge you choose.
+Once you join the Slack channel, you have up to 2 weeks to complete the
+challenge.
 
 Within this time frame, we don't give higher scores to challenges submitted more
 quickly. We only evaluate the quality of the submission.
