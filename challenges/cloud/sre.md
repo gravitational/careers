@@ -151,7 +151,8 @@ but, at a minimum, please include the following:
 
 In addition to including details about the requirements below, the design
 document should include a section describing how this solution could be deployed
-to an AWS EKS cluster.
+to an AWS EKS cluster. Please note that you are not expected to implement any
+deployment automation for an EKS target, or create any AWS resources.
 
 ### Server
 
