@@ -55,7 +55,7 @@ Be sure to cover the following in your design:
 * Level 5+: Reconciliation, Conflicts, and Automation
 
 Open a pull request with your design and share a link with the reviewers via Slack.
-After the document is approved by at least 2 reviews, move on to the implementation.
+After the document is approved by at least 2 reviewers, move on to the implementation.
 
 A few notes about the design document:
 
