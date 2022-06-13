@@ -228,6 +228,12 @@ These are the areas we will be evaluating in the submission:
 To help you out, we’ve composed a list of things that previously resulted in a no-pass from the interview team:
 
 * Scope creep. Candidates have tried to implement too much and ran out of time.
+   * Avoid implementing an overly complex solution just to show that you are capable of writing a
+     complex feature. Instead, if you think something could be made more complex in a full-fledged
+     app, leave a comment about it and move on with a solution which solves the problem at hand.
+   * For example, there is no need to implement a pluggable auth system which in the future would
+     let you easily switch between different auth methods. It is better to focus on implementing
+     a single auth method.
 * Avoid using unnecessary 3rd party dependencies.
 * Error handling. We pay extra attention to error handling. Make sure that they
   are properly handled and not ignored.
