@@ -162,7 +162,7 @@ deployment automation for an EKS target, or create any AWS resources.
 * HTTP health check verifying Kubernetes connectivity
 * Extend the API to support a difference between current and desired state
 * Extend the Server to support the ability to show the differences between current and desired state
-* Secure connections with mTLS
+* Secure connections between the HTTP API and caller with mTLS
 
 ### Automation
 
@@ -196,7 +196,7 @@ to an AWS EKS cluster. Please include security considerations as well.
 * HTTP health check verifying Kubernetes connectivity
 * Extend the API to support a difference between current and desired state
 * Extend the Server to support the ability to show the differences between current and desired state
-* Secure connections with mTLS
+* Secure connections between the HTTP API and caller with mTLS
 * Replace the HTTP API with gRPC
 * Extend the Server to support reconciling cluster state (i.e. an external actor changed the replica count manually)
 
