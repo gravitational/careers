@@ -361,7 +361,8 @@ machine.
 It's safe to assume a working Docker environment will be available locally as well.
 
 Additional external dependencies are acceptable such as Terraform and minikube/k3d,
-but please ensure your Makefile has targets to install these dependencies.
+but please ensure detecting or installing the required/missing dependencies
+is as low friction as possible for the user/reviewer.
 
 # Timing
 
