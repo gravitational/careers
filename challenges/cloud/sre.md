@@ -106,6 +106,7 @@ but, at a minimum, please include the following:
 ### Server
 
 * HTTP API to retrieve the replica count of the Kubernetes Deployment
+* One or two tests that cover happy and unhappy scenarios
 
 ### Automation
 
@@ -118,12 +119,14 @@ but, at a minimum, please include the following:
 
 * HTTP API to retrieve the replica count of the Kubernetes Deployment
 * HTTP API to set the replica count of the Kubernetes Deployment
+* One or two tests that cover happy and unhappy scenarios
 
 ### Automation
 
 * Write a Dockerfile to build an image for the server
 * Ability to run the server
 * Ability to execute integration tests against the local Kubernetes cluster
+* One or two tests that cover happy and unhappy scenarios
 
 ## Level 3
 
@@ -133,6 +136,7 @@ but, at a minimum, please include the following:
 * HTTP API to set the replica count of a the Kubernetes Deployment
 * HTTP API to get the list of available Deployments in the Kubernetes cluster
 * HTTP health check verifying Kubernetes connectivity
+* One or two tests that cover happy and unhappy scenarios
 
 ### Automation
 
@@ -163,6 +167,7 @@ deployment automation for an EKS target, or create any AWS resources.
 * Extend the API to support a difference between current and desired state
 * Extend the Server to support the ability to show the differences between current and desired state
 * Secure connections between the HTTP API and caller with mTLS
+* One or two tests that cover happy and unhappy scenarios
 
 ### Automation
 
@@ -198,6 +203,7 @@ to an AWS EKS cluster. Please include security considerations as well.
 * Secure connections between the HTTP API and caller with mTLS
 * Replace the HTTP API with gRPC
 * Extend the Server to support reconciling cluster state (i.e. an external actor changed the replica count manually)
+* One or two tests that cover happy and unhappy scenarios
 
 ### Automation
 
