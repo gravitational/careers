@@ -230,13 +230,6 @@ Teleport.
 Before writing the actual code, create a brief design document in markdown in Github
 and share with the team.
 
-This document should cover at least: design approach, trade-offs, scope,
-proposed API, resiliency, scalability and deployment considerations.
-
-Please avoid writing an overly detailed design document. Use this document to
-make sure the team could provide feedback on your design and demonstrate that
-you've investigated the problem space.
-
 Split your code submission using pull requests and give the team an opportunity
 to review the PRs. A good "rule of thumb" to follow is that the final PR
 submission is a formality adding a small feature set - it means that the team
