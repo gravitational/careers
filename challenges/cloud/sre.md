@@ -109,7 +109,7 @@ but, at a minimum, please include the following:
 
 ### Automation
 
-* Ability to build the server in a Docker container
+* Write a Dockerfile to build an image for the server
 * Ability to run the server
 
 ## Level 2
@@ -121,7 +121,7 @@ but, at a minimum, please include the following:
 
 ### Automation
 
-* Ability to build the server in a Docker container
+* Write a Dockerfile to build an image for the server
 * Ability to run the server
 * Ability to execute integration tests against the local Kubernetes cluster
 
@@ -136,7 +136,7 @@ but, at a minimum, please include the following:
 
 ### Automation
 
-* Ability to build the server in a Docker container
+* Write a Dockerfile to build an image for the server
 * Ability to run the server
 * Ability to execute integration tests against the local Kubernetes cluster
 * GitHub Actions for every commit that verifies code quality, ensures the software builds, and all tests pass
