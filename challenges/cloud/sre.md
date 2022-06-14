@@ -143,7 +143,7 @@ but, at a minimum, please include the following:
 
 ### Deployment
 
-* Create a helm chart for the service
+* Create a helm chart for the service that includes, a minimum: a Deployment, ServiceAccount and Service
 
 ## Level 4
 
@@ -174,10 +174,9 @@ deployment automation for an EKS target, or create any AWS resources.
 
 ### Deployment
 
-* Create a helm chart for the service
+* Create a helm chart for the service that includes, a minimum: a Deployment, ServiceAccount and Service
 * Deploy releases of the API Server to a Kubernetes cluster (and possible dependencies)
 * Upgrade releases of the API Server to a Kubernetes cluster (and possible dependencies)
-* Include a production Deployment of this service, including but not limited to: Deployment, ServiceAccount, Service
 
 
 ## Level 5
