@@ -165,7 +165,7 @@ deployment automation for an EKS target, or create any AWS resources.
 * HTTP API to get the list of available Deployments in the Kubernetes cluster
 * HTTP health check verifying Kubernetes connectivity
 * Extend the API to support a difference between current and desired state
-* Extend the Server to support the ability to show the differences between current and desired state
+* Extend the Server to support the ability to show the differences between current and desired state (implementation of state storage for the server is left as a design choice for the candidate)
 * Secure connections between the HTTP API and caller with mTLS
 * One or two tests that cover happy and unhappy scenarios
 
