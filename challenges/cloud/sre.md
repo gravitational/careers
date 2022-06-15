@@ -23,29 +23,33 @@ We appreciate your time and are looking forward to hacking on this project toget
 
 # Requirements
 
-This challenge covers 5 engineering levels at Teleport. Level 6 is only for internal promotions. Check the
-[engineering levels document](https://raw.githubusercontent.com/gravitational/careers/main/levels.pdf)
+In this challenge you'll extend a Go server by adding additional APIs that interact 
+with a Kubernetes environment; and add automation to build the server, create a 
+container image, run the server, and execute tests.
+
+The requirements vary depending on the level you are applying to. This challenge 
+covers 5 engineering levels at Teleport. Level 6 is only for internal promotions.
+Check the [engineering levels document](https://raw.githubusercontent.com/gravitational/careers/main/levels.pdf)
 for more details.
+
+An incomplete implementation of a Go server is located [here](sre-server.go).
+Start by creating a new Github repository. Then let the interview panel know the
+repository's location by pasting a link in your interview Slack channel. Invite
+interview panel participants as contributors to the new repository if you prefer 
+to keep your submission private.
 
 * Your submission will need to meet the requirements of the level you are applying for.
 * Split the submission into 2-3 pull requests for us to review. We will review
-  every pull request and provide our feedback.
-* We are going to inspect the repository, test it, and get back to you.
-
-## Server
-
-An incomplete implementation of a Go server is located [here](sre-server.go).
-You will extend this implementation by adding features described below depending
-on the level you are applying to. Start by creating a new Github repository. Then
-let the interview panel know the repository's location by pasting a link in your
-interview Slack channel. Invite interview panel participants as contributors to
-the new repository if you prefer to keep your submission private.
+  every pull request and provide our feedback. Open a single pull request at a time
+  and wait for at least 2 approvals before merging.
+* Each time you open a new pull request, share a link with the interview panel
+  on Slack.
+* After the last pull request is merged, we will clone your repository and test it.
 
 ## Design Doc
 
-Start with a brief design document that covers the edge cases and design approach. At
-Teleport, we prefer Markdown for
-[our designs](https://github.com/gravitational/teleport/blob/master/rfd/0000-rfds.md).
+The first pull request must be a brief design document that describes how you plan
+to implement the solution. At Teleport, we prefer Markdown for [our designs](https://github.com/gravitational/teleport/blob/master/rfd/0000-rfds.md).
 
 Be sure to cover the following in your design:
 
@@ -56,16 +60,13 @@ Be sure to cover the following in your design:
 * Level 4+: State management and Delivery
 * Level 5+: Reconciliation, Conflicts, and Automation
 
-Open a pull request with your design and share a link with the reviewers via Slack.
-After the document is approved by at least 2 reviewers, move on to the implementation.
-
 A few notes about the design document:
 
 * We expect the design document to be completed roughly within the first week.
   This is to ensure you have enough time to work on the implementation.
 * Avoid writing an overly detailed design document. 500-1500 words is
   sufficient.
-* Avoid sending us draft design documents, it is difficult to evaluate what
+* Avoid sending us draft design documents, because it is difficult to evaluate which
   parts are draft and which parts are complete. Instead we encourage asking
   questions in Slack and sharing a design document that is ready to be
   reviewed.
@@ -81,8 +82,8 @@ Expect the interview panel to clone the repository and execute one or more
 Make targets that build and test a working solution. 
 
 Add a couple of high quality tests that cover happy and unhappy scenarios. Keep
-external dependencies as low or clear as possible. Expect the reviewers to
-checkout the repository and execute the tests themselves.
+the number of external dependencies as low. Expect the reviewers to checkout the
+repository and execute the tests themselves.
 
 Do not try to achieve full test coverage. This will take too long. Write enough
 to exercise the different key components and show they are working as
@@ -128,7 +129,6 @@ but, at a minimum, please include the following:
 * Write a Dockerfile to build an image for the server
 * Ability to run the server
 * Ability to execute integration tests against the local Kubernetes cluster
-* One or two tests that cover happy and unhappy scenarios
 
 ## Level 3
 
@@ -145,9 +145,9 @@ but, at a minimum, please include the following:
 * Write a Dockerfile to build an image for the server
 * Ability to run the server
 * Ability to execute integration tests against the local Kubernetes cluster
-* GitHub Actions for every commit that verifies code quality, ensures the software builds, and all tests pass
-  * Unit testing and static analysis is in scope
-  * Integration testing can be omitted/skipped
+* GitHub Actions for every commit that verifies code quality, ensures the
+  software builds, and all tests pass. Include unit testing and static analysis.
+  Integration testing is not required.
 
 ### Deployment
 
@@ -178,9 +178,9 @@ deployment automation for an EKS target, or create any AWS resources.
 * Ability to build the server in a Docker container
 * Ability to run the server
 * Ability to execute integration tests against the local Kubernetes cluster
-* GitHub Actions for every commit that verifies code quality, ensures the software builds, and all tests pass
-  * Unit testing and static analysis is in scope
-  * Integration testing can be omitted/skipped
+* GitHub Actions for every commit that verifies code quality, ensures the
+  software builds, and all tests pass. Include unit testing and static analysis.
+  Integration testing is not required.
 * Produce production ready releases (binaries and docker image)
 
 ### Deployment
@@ -216,9 +216,9 @@ to an AWS EKS cluster. Please include security considerations as well.
 * Ability to build the server in a Docker container
 * Ability to run the server
 * Ability to execute integration tests against the local Kubernetes cluster
-* GitHub Actions for every commit that verifies code quality, ensures the software builds, and all tests pass
-  * Unit testing and static analysis is in scope
-  * Integration testing can be omitted/skipped
+* GitHub Actions for every commit that verifies code quality, ensures the
+  software builds, and all tests pass. Include unit testing and static analysis.
+  Integration testing is not required.
 * Produce production ready releases (binaries and docker image)
 * Deploy and manage a local Kubernetes Cluster
 * Deploy and upgrade to the local Kubernetes Cluster with no service interruption
