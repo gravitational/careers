@@ -24,8 +24,8 @@ We appreciate your time and are looking forward to hacking on this project toget
 # Requirements
 
 In this challenge you'll extend a Go server by adding additional APIs that interact 
-with a Kubernetes environment; and add automation to build the server, create a 
-container image, run the server, and execute tests.
+with a Kubernetes environment. You'll also add automation to build the server,
+create a container image, run the server, and execute tests.
 
 The requirements vary depending on the level you are applying to. This challenge 
 covers 5 engineering levels at Teleport. Level 6 is only for internal promotions.
