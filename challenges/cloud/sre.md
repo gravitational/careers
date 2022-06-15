@@ -14,7 +14,7 @@ This exercise has two goals:
   we're doing here.
 
 We believe this technique is not only better, but also is more fun compared to
-whiteboard/quiz interviews, so common in the industry. It's not without the
+whiteboard/quiz interviews so common in the industry. It's not without the
 downsides - it could take longer than traditional interviews.
 
 [Some of the best teams use coding challenges.](https://sockpuppet.org/blog/2015/03/06/the-hiring-post/)
@@ -133,7 +133,7 @@ but, at a minimum, please include the following:
 ### Server
 
 * HTTP API to retrieve the replica count of the Kubernetes Deployment
-* HTTP API to set the replica count of a the Kubernetes Deployment
+* HTTP API to set the replica count of the Kubernetes Deployment
 * HTTP API to get the list of available Deployments in the Kubernetes cluster
 * HTTP health check verifying Kubernetes connectivity
 * One or two tests that cover happy and unhappy scenarios
@@ -164,7 +164,7 @@ AWS resources.
 ### Server
 
 * HTTP API to retrieve the replica count of the Kubernetes Deployment
-* HTTP API to set the replica count of a the Kubernetes Deployment
+* HTTP API to set the replica count of the Kubernetes Deployment
 * HTTP API to get the list of available Deployments in the Kubernetes cluster
 * HTTP health check verifying Kubernetes connectivity
 * Extend the API to support a difference between current and desired state
@@ -205,7 +205,7 @@ AWS resources.
 ### Server
 
 * HTTP API to retrieve the replica count of the Kubernetes Deployment
-* HTTP API to set the replica count of a the Kubernetes Deployment
+* HTTP API to set the replica count of the Kubernetes Deployment
 * HTTP API to get the list of available Deployments in the Kubernetes cluster
 * HTTP health check verifying Kubernetes connectivity
 * Extend the API to support a difference between current and desired state
