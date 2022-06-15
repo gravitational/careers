@@ -54,8 +54,8 @@ type healthzHandler struct {
 }
 
 // ServeHTTP implements http.Handler
-func (kc *healthzHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
-	pods, err := kc.clientset.CoreV1().Pods("").List(r.Context(), metav1.ListOptions{})
+func (h *healthzHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
+	pods, err := h.clientset.CoreV1().Pods("").List(r.Context(), metav1.ListOptions{})
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusServiceUnavailable)
 		return
