@@ -44,7 +44,6 @@ func run(args []string) error {
 
 	// add handlers
 	http.Handle("/healthz", &healthzHandler{clientset: clientset})
-	http.Handle("/metrics", http.NotFoundHandler()) // TODO: add metrics
 
 	return http.ListenAndServe(":"+port, nil)
 }
