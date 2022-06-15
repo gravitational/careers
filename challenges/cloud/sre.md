@@ -40,11 +40,11 @@ to keep your submission private.
 
 * Your submission will need to meet the requirements of the level you are applying for.
 * Split the submission into 2-3 pull requests for us to review. We will review
-  every pull request and provide our feedback. Open a single pull request at a time
+  every pull request and provide feedback. Open a single pull request at a time
   and wait for at least 2 approvals before merging.
-* Each time you open a new pull request, share a link with the interview panel
-  on Slack.
-* After the last pull request is merged, we will clone your repository and test it.
+* Share a link with the interview panel on Slack each time you open a new pull request.
+* The interview panel will clone your repository and test it after the last pull 
+  request is merged.
 
 ## Design Doc
 
@@ -53,6 +53,7 @@ to implement the solution. At Teleport, we prefer Markdown for [our designs](htt
 
 Be sure to cover the following in your design:
 
+* API structure
 * Developer workflow
   * Ease of contributing to the project from a fresh clone
   * Ease of building, running and testing the server
@@ -68,8 +69,7 @@ A few notes about the design document:
   sufficient.
 * Avoid sending us draft design documents, because it is difficult to evaluate which
   parts are draft and which parts are complete. Instead we encourage asking
-  questions in Slack and sharing a design document that is ready to be
-  reviewed.
+  questions in Slack.
 
 ## Server & Automation
 
@@ -79,15 +79,13 @@ is to produce a self-contained GitHub project that automates away as much as
 possible. This should include code quality, testing, build, and deployment.
 
 Expect the interview panel to clone the repository and execute one or more 
-Make targets that build and test a working solution. 
-
-Add a couple of high quality tests that cover happy and unhappy scenarios. Keep
-the number of external dependencies as low. Expect the reviewers to checkout the
-repository and execute the tests themselves.
+Make targets that build and test a working solution. Add a couple of high quality
+tests that cover happy and unhappy scenarios. Keep the number of external 
+dependencies low.
 
 Do not try to achieve full test coverage. This will take too long. Write enough
-to exercise the different key components and show they are working as
-intended, as well as to demonstrate your approach to automation.
+to exercise the different key components to show they are working as intendend 
+while demonstrating your approach to automation.
 
 ## Deployment
 
@@ -151,7 +149,7 @@ but, at a minimum, please include the following:
 
 ### Deployment
 
-* Create a helm chart for the service that includes, a minimum: a Deployment, ServiceAccount and Service
+* Create a helm chart for the service that includes at least: a Deployment, ServiceAccount and Service
 
 ## Level 4
 
@@ -159,8 +157,9 @@ but, at a minimum, please include the following:
 
 In addition to including details about the requirements below, the design
 document should include a section describing how this solution could be deployed
-to an AWS EKS cluster. Please note that you are not expected to implement any
-deployment automation for an EKS target, or create any AWS resources.
+to an AWS EKS cluster. Please include security considerations. Also, you are not 
+expected to implement any deployment automation for an EKS target or create any
+AWS resources.
 
 ### Server
 
@@ -169,7 +168,10 @@ deployment automation for an EKS target, or create any AWS resources.
 * HTTP API to get the list of available Deployments in the Kubernetes cluster
 * HTTP health check verifying Kubernetes connectivity
 * Extend the API to support a difference between current and desired state
-* Extend the Server to support the ability to show the differences between current and desired state (implementation of state storage for the server is left as a design choice for the candidate)
+  when setting replica count
+* Extend the Server to support the ability to show the differences between current
+  and desired state for replica count (implementation of state storage for the 
+  server is left as a design choice for the candidate)
 * Secure connections between the HTTP API and caller with mTLS
 * One or two tests that cover happy and unhappy scenarios
 
@@ -185,7 +187,7 @@ deployment automation for an EKS target, or create any AWS resources.
 
 ### Deployment
 
-* Create a helm chart for the service that includes, a minimum: a Deployment, ServiceAccount and Service
+* Create a helm chart for the service that includes at least: a Deployment, ServiceAccount and Service
 * Deploy releases of the API Server to a Kubernetes cluster (and possible dependencies)
 * Upgrade releases of the API Server to a Kubernetes cluster (and possible dependencies)
 
@@ -196,7 +198,9 @@ deployment automation for an EKS target, or create any AWS resources.
 
 In addition to including details about the requirements below, the design
 document should include a section describing how this solution could be deployed
-to an AWS EKS cluster. Please include security considerations as well.
+to an AWS EKS cluster. Please include security considerations. Also, you are not 
+expected to implement any deployment automation for an EKS target or create any
+AWS resources.
 
 ### Server
 
@@ -205,7 +209,10 @@ to an AWS EKS cluster. Please include security considerations as well.
 * HTTP API to get the list of available Deployments in the Kubernetes cluster
 * HTTP health check verifying Kubernetes connectivity
 * Extend the API to support a difference between current and desired state
-* Extend the Server to support the ability to show the differences between current and desired state
+  when setting replica count
+* Extend the Server to support the ability to show the differences between current
+  and desired state for replica count (implementation of state storage for the 
+  server is left as a design choice for the candidate)
 * Secure connections between the HTTP API and caller with mTLS
 * Replace the HTTP API with gRPC
 * Extend the Server to support reconciling cluster state (i.e. an external actor changed the replica count manually)
