@@ -50,6 +50,8 @@ Teleport, we prefer Markdown for
 Be sure to cover the following in your design:
 
 * Developer workflow
+  * Ease of contributing to the project from a fresh clone
+  * Ease of building, running and testing the server
 * Level 3+: Build, Release
 * Level 4+: State management and Delivery
 * Level 5+: Reconciliation, Conflicts, and Automation
@@ -144,6 +146,8 @@ but, at a minimum, please include the following:
 * Ability to run the server
 * Ability to execute integration tests against the local Kubernetes cluster
 * GitHub Actions for every commit that verifies code quality, ensures the software builds, and all tests pass
+  * Unit testing and static analysis is in scope
+  * Integration testing can be omitted/skipped
 
 ### Deployment
 
@@ -175,6 +179,8 @@ deployment automation for an EKS target, or create any AWS resources.
 * Ability to run the server
 * Ability to execute integration tests against the local Kubernetes cluster
 * GitHub Actions for every commit that verifies code quality, ensures the software builds, and all tests pass
+  * Unit testing and static analysis is in scope
+  * Integration testing can be omitted/skipped
 * Produce production ready releases (binaries and docker image)
 
 ### Deployment
@@ -211,6 +217,8 @@ to an AWS EKS cluster. Please include security considerations as well.
 * Ability to run the server
 * Ability to execute integration tests against the local Kubernetes cluster
 * GitHub Actions for every commit that verifies code quality, ensures the software builds, and all tests pass
+  * Unit testing and static analysis is in scope
+  * Integration testing can be omitted/skipped
 * Produce production ready releases (binaries and docker image)
 * Deploy and manage a local Kubernetes Cluster
 * Deploy and upgrade to the local Kubernetes Cluster with no service interruption
