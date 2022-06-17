@@ -29,14 +29,14 @@ Systems developers on the platform team leverage a strong background in software
 See [levels.pdf](../../levels.pdf)
 
 
-## Operations Focus: Devops / DevSecOps / SREs / Production engineers / etc
-Team members with experience in various operations focused disciplines are focussed on the day to day delivery of platform components, such as build/testing automation of infrastructure as code, deploying and configuring our metrics, alarming and logging systems, automating build pipeliness, and other day to day activities to enable our cloud infrastructure.
+## Operations Focus: Devops / SREs / Production engineers / etc
+Team members with experience in various operations focused disciplines are focused on the day to day delivery of platform components, such as build/testing automation of infrastructure as code, deploying and configuring our metrics, alarming and logging systems, automating build pipeliness, and other day to day activities to enable our cloud infrastructure.
 
 
 ### Challenge
-We use two interviews for team members with operational backgrounds, the first is a lightweight scripting / programming challenge, and the second is a troubleshooting production test. See the following links for outlines of each challenge.
-1. [Automation development challenge](automation.md)
-2. [Troubleshooting challenge](troubleshooting.md)
+Our interview focuses on extending a prototype service that provides an API for Kubernetes resources. It is aimed to not only cover technologies that we typically use, but also mimic the asynchronous nature of how we work. 
+
+See the [SRE Challenge](sre.md) document for more details.
 
 ### Levels
 <table style="min-width: 1000px;">
@@ -302,8 +302,6 @@ We use two interviews for team members with operational backgrounds, the first i
 Note: These levels are used as a guide, not every engineer specifically matches every skill in every focus area of the guide. Higher level engineers are expected to have a broader set of skills than junior team members. Engineers that focus on certain disciplines do not require as broad an area of skills, such as team members focussing on Tooling may not require as deep network understanding. All team members are expected to meet Communications, Security, Oncall, and Operations requirements.
 <br />
 Note: Our production and operational culture is still new, and you will be expected to help us shape it
-
-
 
 
 ## Security Focus: DevSecOps / Security Infrastructure / etc

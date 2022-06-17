@@ -285,8 +285,7 @@ These are the areas we will be evaluating in the submission:
 
 * Use consistent coding style. We follow
   [Go Coding Style](https://github.com/golang/go/wiki/CodeReviewComments) for
-  the Go language. If you are going to other tools and/or languages, please pick
-  coding style guidelines and let us know what they are.
+  the Go language.
 * At the minimum, create tests for reading and writing, and an unhappy/error scenario.
 * Make sure builds are reproducible. Pick any vendoring/packaging system that
   will allow us to get consistent build results.
