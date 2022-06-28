@@ -302,12 +302,3 @@ See the [SRE Challenge](sre.md) document for more details.
 Note: These levels are used as a guide, not every engineer specifically matches every skill in every focus area of the guide. Higher level engineers are expected to have a broader set of skills than junior team members. Engineers that focus on certain disciplines do not require as broad an area of skills, such as team members focussing on Tooling may not require as deep network understanding. All team members are expected to meet Communications, Security, Oncall, and Operations requirements.
 <br />
 Note: Our production and operational culture is still new, and you will be expected to help us shape it
-
-
-## Security Focus: DevSecOps / Security Infrastructure / etc
-In the cloud team, we follow a philosophy of all engineers are responsible for the security of our customers. Security focussed engineers will contribute by enabling the other engineering teams to make sound security choices, and by focussing on the projects and capabilities, tools, and infrastructure that allows for a more secure environment that our customers can trust.
-
-
-### Challenge
-We use two interviews for team members with operational backgrounds. The first is a lightweight scripting / programming challenge, and the second is a troubleshooting production test. See the following link for outlines of the first challenge.
-1. [Automation development challenge](automation.md)
