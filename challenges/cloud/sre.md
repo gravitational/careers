@@ -29,7 +29,7 @@ create a container image, run the server, and execute tests.
 
 The requirements vary depending on the level you are applying to. This challenge 
 covers 5 engineering levels at Teleport. Level 6 is only for internal promotions.
-Check the [engineering levels document](https://raw.githubusercontent.com/gravitational/careers/main/levels.pdf)
+Check the [engineering levels document](https://github.com/gravitational/careers/blob/main/challenges/cloud/README.md#levels-1)
 for more details.
 
 An incomplete implementation of a Go server is located [here](sre-server.go).
