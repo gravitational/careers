@@ -1,6 +1,6 @@
 # Summary
 
-Implement a prototype job worker service that provides an API to run arbitrary Linux processes.
+Implement a prototype job worker library that provides an API to run arbitrary Linux processes.
 
 # Rationale
 
@@ -22,13 +22,7 @@ downsides - it could take longer than traditional interviews.
 We appreciate your time and are looking forward to hack on this project together.
 
 # Requirements
-
-There are 6 engineering levels at Teleport. It's possible to score on level 1-5 through coding challenge.
-
-Level 6 is only for internal promotions. See our
-[engineering levels](../../levels/systems-engineer.md) for more details.
-
-Split the submission into 2-3 pull requests for us to review. We will review
+Split the submission into 1-2 pull requests for us to review. We will review
 every pull request and provide our feedback.
 
 We are going to compile the program, test it and get back to you.
@@ -38,14 +32,6 @@ We are going to compile the program, test it and get back to you.
 Start with a brief doc that covers the edge cases and design approach. At
 Teleport, we prefer Markdown for
 [our designs](https://github.com/gravitational/teleport/blob/master/rfd/0000-rfds.md).
-
-Be sure to cover the following in your design:
-
-* CLI user experience: a couple examples of what it may look like to invoke a
-  command. This allows us an opportunity to envision how we will run the program.
-* Level 3+: Streaming approach, TLS setup (version, cipher suites, etc.)
-* Level 4+: Process execution lifecycle (how will you start and stop jobs, add
-  them to cgroups, etc.)
 
 Open a pull request with your design and share a link with the reviewers via
 Slack. After the doc is approved, implement interfaces and an example program
@@ -62,113 +48,10 @@ A few notes about the design document:
   questions in Slack and sharing a design document that is ready to be
   reviewed.
 
-## Testing
 
-Add a couple of high quality tests that cover happy and unhappy scenarios.
-
-Do not try to achieve full test coverage. This will take too long. Take two key
-components, e.g. authentication/authorization layer and networking and implement
-one or two test cases that demonstrate your approach to testing.
-
-## Level 1
-
-### Library
-
-* Worker library with methods to start/stop/query status and get the output of a job.
-
-### API
-
-* HTTPS API to start/stop/get status of a running process.
-* Use HTTP Basic Authentication.
-* Use a simple authorization scheme.
-
-### CLI
-
-* CLI should be able to connect to worker service and start, stop, get status, and output of a job.
-
-## Level 2
-
-### Library
-
-* Worker library with methods to start/stop/query status and get the output of a job.
-
-### API
-
-* HTTPS API to start/stop/get status of a running process.
-* Use mTLS authentication and verify client certificate. Set up strong set of
-  cipher suites for TLS and good crypto setup for certificates. Do not use any
-  other authentication protocols on top of mTLS.
-* Use a simple authorization scheme.
-
-### CLI
-
-* CLI should be able to connect to worker service and start, stop, get status, and output of a job.
-
-## Level 3
-
-### Library
-
-* Worker library with methods to start/stop/query status and get the output of a job.
-* Library should be able to stream the output of a running job.
-  * Output should be from start of process execution.
-  * Multiple concurrent clients should be supported.
-
-### API
-
-* [GRPC](https://grpc.io) API to start/stop/get status/stream output of a running process.
-* Use mTLS authentication and verify client certificate. Set up strong set of
-  cipher suites for TLS and good crypto setup for certificates. Do not use any
-  other authentication protocols on top of mTLS.
-* Use a simple authorization scheme.
-
-### Client
-
-* CLI should be able to connect to worker service and start, stop, get status, and stream output of a job.
-
-## Level 4
-
-### Library
-
-* Worker library with methods to start/stop/query status and get the output of a job.
-* Library should be able to stream the output of a running job.
-  * Output should be from start of process execution.
-  * Multiple concurrent clients should be supported.
-* Add resource control for CPU, Memory and Disk IO per job using cgroups.
-
-### API
-
-* [GRPC](https://grpc.io) API to start/stop/get status/stream output of a running process.
-* Use mTLS authentication and verify client certificate. Set up strong set of
-  cipher suites for TLS and good crypto setup for certificates. Do not use any
-  other authentication protocols on top of mTLS.
-* Use a simple authorization scheme.
-
-### Client
-
-* CLI should be able to connect to worker service and start, stop, get status, and stream output of a job.
-
-## Level 5
-
-### Library
-
-* Worker library with methods to start/stop/query status and get the output of a job.
-* Library should be able to stream the output of a running job.
-  * Output should be from start of process execution.
-  * Multiple concurrent clients should be supported.
-* Add resource control for CPU, Memory and Disk IO per job using cgroups.
-* Add resource isolation for using PID, mount, and networking namespaces.
-
-### API
-
-* [GRPC](https://grpc.io) API to start/stop/get status/stream output of a running process.
-* Use mTLS authentication and verify client certificate. Set up strong set of
-  cipher suites for TLS and good crypto setup for certificates. Do not use any
-  other authentication protocols on top of mTLS.
-* Use a simple authorization scheme.
-
-### Client
-
-* CLI should be able to connect to worker service and start, stop, get status, and stream output of a job.
+## Libary
+Write a library with methods to start/stop/query status and get an output of
+a running job.
 
 # Guidance
 
@@ -179,8 +62,8 @@ engineers who will be working with you. Ask them about the engineering culture,
 work and life balance, or anything else that you would like to learn about
 Teleport.
 
-Before writing the actual code, create a brief design document in Google Docs or
-markdown in Github and share with the team.
+Before writing the actual code, create a brief design document in Markdown
+in Github and share with the team.
 
 This document should cover at least: design approach, trade-offs, scope,
 proposed API, and security considerations. For security, please include
@@ -227,17 +110,11 @@ These are the areas we will be evaluating in the submission:
   [Go Coding Style](https://github.com/golang/go/wiki/CodeReviewComments) for
   the Go language. If you are going to use a different language, please pick
   coding style guidelines and let us know what they are.
-* At the minimum, create tests for authentication, networking, and an
-  unhappy/error scenario.
-* Make sure builds are reproducible. Pick any vendoring/packaging system that
-  will allow us to get consistent build results.
 * Ensure error handling and error reporting is consistent. The system should
   report clear errors and not crash under non-critical conditions.
 * Avoid concurrency and networking errors. Most of the issues we've seen in
   production are related to data races, networking error handling or goroutine
   leaks. We will be looking for those errors in your code.
-* Security. Use strong authentication and simplest, but robust authorization.
-  Set up the strongest transport encryption you can. Test it.
 
 ## Trade-offs
 
@@ -273,7 +150,8 @@ Here are some other trade-offs that will help you to spend less time on the task
 
 ## Pitfalls and Gotchas
 
-To help you out, we've composed a list of things that previously resulted in a no-pass from the interview team:
+To help you out, we've composed a list of things that previously resulted in a
+no-pass from the interview team:
 
 * Scope creep. Candidates have tried to implement too much and ran out of time
   and energy. To avoid this pitfall, use the simplest solution that will work.
@@ -294,10 +172,6 @@ To help you out, we've composed a list of things that previously resulted in a n
   branch without raising pull requests, which does not give us the ability to
   provide feedback on the various implementation phases. We are a distributed
   team, so structured, asynchronous communication is critical to us.
-* Implementing custom security algorithms/authentication schemes is always a bad
-  idea unless you are a trained security researcher/engineer. It is definitely a
-  bad idea for this task - try to stick to industry proven security methods as
-  much as possible.
 
 ## Questions
 
@@ -307,9 +181,8 @@ questions to ask and questions we expect candidates to figure out on their own.
 
 Here is a great question to ask:
 
-> Is it OK to pre-generate secret data and put the secrets in the repository for
-> a proof of concept? I will add a note that we will auto-generate secrets in
-> the future.
+> Is it OK to discard the output of a process that exceeds a predefined
+> hardcoded value?.
 
 It demonstrates that you thought about this problem domain, recognize the trade
 off and are saving you and the team time by not implementing it.
@@ -322,15 +195,18 @@ Unless specified in the requirements, pick the solution that works best for you.
 
 # Tools
 
-This task should be implemented in Go or Rust and should work on 64-bit Linux machines.
+This task should be implemented in Go, C++, Rust or Java and should work on
+64-bit Linux machines.
 
 # Timing
+
+It should take you from 4 to 24 full hours to complete the challenge.
 
 You can split coding over a couple of weekdays or weekends and find time to ask
 questions and receive feedback.
 
-Once you join the Slack channel, you have between 1 to 2 weeks complete the
-challenge depending on the challenge you choose.
+Once you join the Slack channel, you have a maximum of 1 week to complete the
+challenge.
 
 Within this timeframe, we don't give higher scores to challenges submitted more
 quickly. We only evaluate the quality of the submission.

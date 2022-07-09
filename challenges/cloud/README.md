@@ -26,7 +26,7 @@ Systems developers on the platform team leverage a strong background in software
 1. [Systems developer challenge](../systems/challenge.md)
 
 ### Levels
-See [levels.pdf](../../levels.pdf)
+See [levels](../../levels/systems-engineer.md) for more details.
 
 
 ## Operations Focus: Devops / SREs / Production engineers / etc
