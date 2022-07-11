@@ -148,31 +148,6 @@ We use the following technologies to build Teleport Cloud:
 - Prometheus / Alertmanager / Loki internally and on Grafana Cloud
 - Drone.io
 
-### Cloud Security Infrastructure
-
-Our Cloud Security Infrastructure team is still being defined. Our philosophy is
-we want all team members to be responsible for security of their work, however,
-at the same time we want to begin building a team that is able to build common
-security infrastructure and tackle the security initiatives that other teams are
-not prepared to drive forward. We also want to act as consultants, involved in
-the development process to ensure new features and patches meet our security
-objectives.
-
-As this is a new team, we're still defining how this team will contribute to our
-overall objectives. A security background isn't strictly necessary to excel in
-this role, we're looking for professionals from DevOps or Systems Engineering
-type backgrounds that integrate security critical thinking into their thought
-process.
-
-Types of projects this team may handle:
-
-- Securing SRE access to production, ensuring the tooling, audit, and security
-  controls are in place for production access.
-- Look at tough problems, like our software supply chain, and how code is
-  protected from developer to production.
-- Working with our consultants, well known experts in the security field, to
-  deliver the best security value for our customers.
-
 ### Cloud Reliability
 
 Our Cloud Reliability Team defines and builds a culture around production,
@@ -215,3 +190,18 @@ on:
   improving our security posture
   audit trail for generated and published assets and ensuring we're using
   encryption at rest in the right places.
+
+## Security
+
+At Teleport each and every engineers are responsible for security of their work.
+In addition to this individual mandate, we maintain a dedicated security team
+of specialist focused on organization wide efforts. We're currently working
+on the following areas:
+
+- Software supply chain security. We ensure infrastructure and code is protected
+  and auditable from developer to production.
+- Initial roll out of Teleport's bug bounty program.
+- Working with consultants and independent experts to perform black box, white
+  box and red team validation of our code and security controls.
+- Updating compliance documentation, internal controls, and our corporate policies.
+
