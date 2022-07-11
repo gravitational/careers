@@ -1,0 +1,245 @@
+# Summary
+
+We use a two part hiring challenge for application security engineers:
+
+Part One: Peer review. You'll receive a brief Request for Discussion (RFD) and
+architecture diagram of a service similar to docker. You have two hours to provide
+written PR feedback.
+
+Part Two: Development. You'll receive prototype code for the service reviewed
+in part one. Building off this prototype codebase, implement authentication and
+authorization.
+
+# Rationale
+
+These exercises have several goals:
+
+* It helps us to understand what to expect from you as a developer, what security
+  issues you find important, how you communicate those issues to peers and how you
+  write production code.
+* It helps you get a feel for what it would be like to work at Teleport, as this
+  exercise aims to simulate our day-as-usual and expose you to the type of work
+  we're doing here.
+* We aim to keep the process light. When there are time limits, it is to keep
+  exercises from consuming undue amounts of your time, and not to test performance
+  under pressure.
+
+We believe this technique is not only better, but also is more fun compared to
+whiteboard/quiz interviews so common in the industry.
+
+[Some of the best teams use coding challenges.](https://sockpuppet.org/blog/2015/03/06/the-hiring-post/)
+
+We appreciate your time and are looking forward to hack on this project together.
+
+# Leveling
+There are 6 engineering levels at Teleport. It's possible to earn level 4-5 via
+this interview process.
+
+We are not currently hiring L1-L3 security engineers and level 6 is only available
+via internal promotion. See the [engineering levels document](https://raw.githubusercontent.com/gravitational/careers/main/levels.pdf)
+for more details.
+
+We expect different performance at different engineering levels. These expectations
+are explicitly documented below.
+
+
+# Part 1: Peer Review
+You will be given a GitHub repo containing a PR that includes a RFD and architecture
+diagram for a service similar to docker.
+
+You will have two hours to read through the RFD and provide feedback. Please
+focus on security concerns, though you're welcome to provide input in any area
+where you see room for improvement.
+
+## Level 4
+Review the service as written, assuming it will run on a single server.
+
+## Level 5
+The service will run in multiple geographies with unreliable network connections
+between them. Please address the security and business tradeoffs between
+authentication and authorization consistency architectures.
+
+
+# Part 2: Development
+You will be given a prototype implementation of the RFD reviewed in part 1.
+
+Write a single PR implementing an authorization and authentication scheme.
+
+We will review the pull request and leave feedback, and provide you a chance to
+respond to or incorporate the feedback.
+
+After PR discussion, we will compile and run the program, test it and get back to you.
+
+This prototype is expected to run on only a single machine. The distributed
+state considerations of Part 1 L5 need not be considered.
+
+## Testing
+
+Add two high quality tests that cover that demonstrate your approach to testing.
+Please cover one happy and one unhappy scenario, and test the most important part
+of the logic you develop.
+
+Do not write additional tests or try to achieve full test coverage. This will take
+too long.
+
+## Level 4
+
+Add authentication and authorization to the Library, API, and client codebase.
+
+Separate actors should not be able to view or interact with other actors jobs.
+
+Log all actions and the actor performing them.
+
+## Level 5
+
+Add authentication and authorization to the Library, API, and client codebase.
+
+Separate users should not be able to view or interact with other user's jobs.
+
+Log all actions and the actor performing them.
+
+Certain actors with an "admin" permission should be able to impersonate
+another user.  In this case, log both the impersonator and the account being impersonated.
+
+Please document how to grant an actor admin privileges as well as
+how to use the impersonation feature.
+
+# Guidance
+
+## Interview process
+
+The interview team will join the Slack channel. The team consists of the
+engineers who will be working with you. Ask them about the engineering culture,
+work and life balance, or anything else that you would like to learn about
+at Teleport.
+
+Our team will do their best to provide a high quality review of the submitted
+pull requests in a reasonable time frame. You are spending your time on this, we
+are going to contribute our time too.
+
+After the final submission, the interview team will assemble and vote using a
+"+1, -2" anonymous voting system: +1 is submitted whenever a team member accepts
+the submission, -2 otherwise.
+
+In case of a positive result, we will connect you to our HR and recruiting
+teams, who will work out the details and present an offer.
+
+In case of a negative score result, hiring manager will contact you and share a
+list of the key observations from the team that affected the result.
+
+## Code and project ownership
+
+This is a test challenge and we have no intent of using the code you've
+submitted in production. This is your work, and you are free to do whatever you
+feel is reasonable with it. In the scenario where you don't pass, you can open
+source it with any license and use it as a portfolio project.
+
+## Areas of focus
+
+Teleport focuses on networking, infrastructure and security.
+
+These are the areas we will be evaluating in the submission:
+
+* Use consistent coding style. We follow
+  [Go Coding Style](https://github.com/golang/go/wiki/CodeReviewComments) for
+  the Go language.
+* Ensure error handling and error reporting is consistent. The system should
+  report clear errors and not crash under non-critical conditions.
+* Avoid concurrency and networking errors. Most of the issues we've seen in
+  production are related to data races, networking error handling or goroutine
+  leaks. We will be looking for those errors in your code.
+* Security. Use strong authentication and robust authorization.
+  Set up the strongest transport encryption you can. Test it.
+
+## Trade-offs
+
+Write as little code as possible, otherwise this task will consume too much time
+and code quality will suffer.
+
+Please cut corners, for example configuration tends to take a lot of time, and
+is not important for this task.
+
+Use hardcoded values as much as possible and simply add TODO items showing your
+thinking, for example:
+
+```
+  // TODO: Add configuration system.
+  // Consider using CLI library to support both
+  // environment variables and reasonable default values,
+  // for example https://github.com/alecthomas/kingpin
+```
+
+Comments like this one are really helpful to us. They save yourself a lot of
+time and demonstrate that you've spent time thinking about this problem and
+provide a clear path to a solution.
+
+Consider making other reasonable trade-offs. Make sure you communicate them to
+the interview team.
+
+Here are some other trade-offs that will help you to spend less time on the task:
+
+* Do not implement a system that scales or is highly performing. Describe which
+  performance improvements you would add in the future.
+* It is OK if the system is not highly available. Write down how you would make
+  the system highly available and why your system is not.
+
+## Pitfalls and Gotchas
+
+To help you out, we've composed a list of things that previously resulted in a
+no-pass from the interview team:
+
+* Scope creep. Candidates have tried to implement too much and ran out of time
+  and energy. To avoid this pitfall, use the simplest solution that will work.
+  Avoid writing too much code. We've seen candidates' code introducing caching
+  and making many mistakes in the caching layer validation logic. Not having
+  caching would have solved this problem.
+* Data races. We will scan the code with a race detector and do our best to find
+  data races in the code. Avoid global state as much as possible; if using
+  global state, write down a good description why it is necessary and protect it
+  against data races.
+* Deadlocks. When using mutexes, channels or any other synchronization
+  primitives, make sure the system won't deadlock. We've seen candidates' code
+  holding a mutex and making a network call without timeouts in place. Be extra
+  careful with networking and sync primitives.
+* Unstructured code. We've seen candidates leaving commented chunks of code,
+  having one large file with all the code, not having code structure at all.
+* Not communicating. Some candidates have submitted all their code to the master
+  branch without raising pull requests, which does not give us the ability to
+  provide feedback on the various implementation phases. We are a distributed
+  team, so structured, asynchronous communication is critical to us.
+
+## Questions
+
+It is OK to ask the interview team questions. Some folks stay away from asking
+questions to avoid appearing less experienced, so we provide examples of
+questions to ask and questions we expect candidates to figure out on their own.
+
+Here is a great question to ask:
+
+> Is it OK to pre-generate secret data and put the secrets in the repository for
+> a proof of concept? I will add a note that we will auto-generate secrets in
+> the future.
+
+It demonstrates that you thought about this problem domain, recognize the trade
+off and are saving you and the team time by not implementing it.
+
+This is the question we expect candidates to figure out on their own:
+
+> Which logging library should I use?
+
+Unless specified in the requirements, pick the solution that works best for you.
+
+# Tools
+
+The prototype codebase will be provided in go and the final version should build
+and run on 64-bit Linux machines.
+
+# Timing
+
+You can split coding over a couple of weekdays or weekends and find time to ask
+questions and receive feedback.
+
+Once you join the Slack channel, you have between 1 week complete the challenge.
+
+Within this timeframe, we don't give higher scores to challenges submitted more
+quickly. We only evaluate the quality of the submission.
