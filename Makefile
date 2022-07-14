@@ -1,23 +1,12 @@
-export TEXINPUTS := $(TEXINPUTS):$(abspath styles)
-
-TEX_SOURCES := $(shell find -name '*.tex')
-GENERATED_PDFS := $(TEX_SOURCES:.tex=.pdf)
-
 .PHONY: all
-all: $(GENERATED_PDFS)
-
-%.pdf: %.tex
-	cd $(@D) && pdflatex $(abspath $<)
-
-.PHONY: install-ubuntu
-install-ubuntu:
-	sudo add-apt-repository ppa:jonathonf/texlive-2019
-	sudo apt-get update
-	sudo apt-get install texlive xzdec
-	cd $(HOME) && tlmgr init-usertree
-	tlmgr option repository ftp://tug.org/historic/systems/texlive/2017/tlnet-final
-	tlmgr install listings csquotes
+all:
+	docker build -t latexbox -f Dockerfile .
+	docker run -v $$(pwd)/levels:/tmp -t latexbox pdflatex /tmp/systems.tex
+	docker run -v $$(pwd)/levels:/tmp -t latexbox pdflatex /tmp/fullstack.tex
+	$(MAKE) clean
 
 .PHONY: clean
 clean:
-	rm -f $(GENERATED_PDFS)
+	rm -f $$(pwd)/levels/*.aux
+	rm -f $$(pwd)/levels/*.log
+	rm -f $$(pwd)/levels/*.out

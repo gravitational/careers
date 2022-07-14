@@ -1,0 +1,322 @@
+\documentclass{article}
+
+\usepackage[table]{xcolor}
+\usepackage[paperwidth=800mm, paperheight=500mm]{geometry}
+
+% Don't show page numbers.
+\pagenumbering{gobble}
+
+% Column settings for skills able.
+\newcolumntype{C}{p{18em}}
+
+\begin{document}
+
+% Title of matrix.
+\begin{center}
+\begin{huge}
+Fullstack Engineering
+\end{huge}
+\end{center}
+
+\bigbreak
+
+% Alternating row colors.
+\rowcolors{2}{gray!80!gray!50}{gray!50!gray!20}
+
+% Padding for each cell.
+{\renewcommand{\arraystretch}{2}
+
+% Skills table.
+\begin{center}
+\begin{tabular}{|C|C|C|C|C|C|C|C|}
+  \hline
+  \rowcolor{blue!60!black!10}
+    \textbf{Level/Skill}
+    &
+    \cellcolor{blue!25}
+    \textbf{Product Output}
+    &
+    \textbf{Communication/Writing}
+    &
+    \textbf{Data structures/Performance}
+    &
+    \textbf{Security}
+    &
+    \textbf{Networking}
+    &
+    \textbf{Fullstack Engineering}
+    &
+    \textbf{Tooling}
+    \\
+  \hline
+    % Level
+    1
+    &
+
+    % Product Output
+    \cellcolor{blue!25}
+    Collaborates with product through designs, mockups, and demos of product
+    features before implementation.
+    &
+
+    % Communication/Writing
+    Reports progress on a regular basis as required by the team's operational
+    requirements. Actively solicits feedback. Participates on interview panels.
+    &
+
+    % Data structures/Performance
+    Demonstrates good understanding of basic data structures like hash tables,
+    linked lists, and trees. Can reason about algorithm complexity. Applies relevant
+    data structures in day to day activity.
+
+    \bigbreak
+
+    Can implement a production quality software - it might be not the most
+    efficient or secure, but correct.
+    &
+
+    % Security
+    Understands basics of web security (can configure TLS on a standalone web
+    server like nginx).
+    &
+
+    % Networking
+    Understands and reasons about browser networking concepts. Understands
+    common networking issues and can troubleshoot issues using the developer
+    console.
+    &
+
+    % Fullstack Engineering
+    Understands Javascript, HTML, CSS, and DOM. Can fix bugs or add small
+    features to frontend applications.
+    &
+
+    % Tooling
+    Understands and can use build tools (like npm and yarn), Docker, and
+    Makefiles.
+    \\ [13em]
+  \hline
+    % Level
+    2
+    &
+
+    % Product Output
+    \cellcolor{blue!25}
+    Can write high quality user and product focused documentation.
+    &
+
+    % Communication/Writing
+    Provides constructive review on peers' code and design. Helps new team
+    members during their first weeks.
+    &
+
+    % Data structures/Performance
+    &
+
+    % Security
+    Understands how to utilize browser security features (like headers and
+    cookie attributes) to secure web applications.
+    &
+
+    % Networking
+    Has more granular understanding of the networking design, for example can
+    reason about using gRPC vs HTTP/JSON and websockets and their networking
+    and scalability trade-offs.
+    &
+
+    % Fullstack Engineering
+    Can write frontend applications applications.
+    &
+
+    % Tooling
+    Understands and can use transpilers (TypeScript to Javascript) and SPA
+    frameworks (React, Angular). Can leverage components and styles from
+    third-party libraries to implement designs.
+    \\ [13em]
+  \hline
+    % Level
+    3
+    &
+
+    % Product Output
+    \cellcolor{blue!25}
+    Collaborates with the team to scope requirements, based on good
+    understanding of existing longer term product vision and estimates of the
+    system design of a feature of a product.
+    &
+
+    % Communication/Writing
+    Supports less experienced peers' technical skills, answering questions and
+    being a resource. Documents and improves team practices.
+    &
+
+    % Data structures/Performance
+    Understands browser-based event handling and event propagation.
+    Understands the use and implications of closures.
+    &
+
+    % Security
+    Can use frameworks to mitigate common attack vectors for server side (like
+    secure password storage) or client side web applications (like XSS, CSRF, and
+    SSRF) security vulnerabilities.
+    &
+
+    % Networking
+    Understands scalability and resilience aspects of practical implementation
+    of systems leveraging networking.
+
+    \bigbreak
+
+    Understands certificate-based mutual authentication network protocols like
+    mTLS and SSH.
+
+    \bigbreak
+
+    Frontend designs are informed by scalable backends, networking techniques
+    such as pagination, connection pooling, backpressure and other aspects of the
+    application design.
+    &
+
+    % Fullstack Engineering
+    Can write web applications that have frontend and backend components.
+    Understands web application session and state management techniques.
+
+    \bigbreak
+
+    Writes high quality design documents with few to no critical system design
+    errors.
+    &
+
+    % Tooling
+    Strong understanding of CSS and TypeScript. Can build and style components
+    to spec without leveraging third-party libraries.
+    \\ [13em]
+  \hline
+    % Level
+    4
+    &
+
+    % Product Output
+    \cellcolor{blue!25}
+    Leads the implementation of the isolated feature/improvement that
+    measurably and significantly impacts business outcomes from gathering
+    requirements to getting to the market stage.
+    &
+
+    % Communication/Writing
+    Writes technical articles/blog posts, delivers tech and lightning talks
+    representing the company's technical vision.
+    &
+
+    % Data structures/Performance
+    Can profile web applications and understands how to minimize webpage
+    re-rendering and painting.
+    &
+
+    % Security
+    Understands and can implement mitigations for common attack vectors for
+    server side (like secure password storage) or client side web applications
+    (like XSS, CSRF, and SSRF) security vulnerabilities from scratch.
+
+    \bigbreak
+
+    Can build secure systems that will pass quality security audit that will
+    uncover few to no critical system design errors.
+    &
+
+    % Networking
+    &
+
+    % Fullstack Engineering
+    Understands how to build consistent end-to-end user experiences.
+    Understands principals of information architecture.
+
+    \bigbreak
+
+    Can write data-race and deadlock free code. Can implement safe and
+    concurrent and/or parallel systems using minimum amount of shared state,
+    granular locking - systems that are easy to read, extend and troubleshoot.
+    &
+
+    % Tooling
+    Expert level understanding of TypeScript. Could add typings to a untyped
+    package. Understands when it is appropriate to leverage advanced TypeScript
+    features.
+    \\ [13em]
+  \hline
+    % Level
+    5
+    &
+
+    % Product Output
+    \cellcolor{blue!25}
+    Leads the implementation of a new product line, like native applications,
+    or significant part of the product to deliver it to the market in collaboration
+    with all other teams.
+    &
+
+    % Communication/Writing
+    Writes advanced technical articles/blog posts, gaining significant industry
+    traction or delivers technical talks on major conferences representing the
+    company's vision.
+    &
+
+    % Data structures/Performance
+    Posesses a deep understanding of web frameworks like React, Angular, or Vue.
+    Can use this understanding to reason about the performance of web applications.
+    Can contribute fixes and improvements to upstream projects.
+    &
+
+    % Security
+    Has a deep understanding of the browser security model and the web.
+    Understands how browsers make network requests (and which requests they will
+    refuse to make) as well as cross-origin authentication.
+    &
+
+    % Networking
+    &
+
+    % Fullstack Engineering
+    Applies system level design to deliver new products or significant new
+    components of an existing product to the market.
+    &
+
+    % Tooling
+    \\ [13em]
+  \hline
+    % Level
+    6
+    &
+
+    % Product Output
+    \cellcolor{blue!25}
+    &
+
+    % Communication/Writing
+    Produces peer-reviewed research papers or patent applications.
+    &
+
+    % Data structures/Performance
+    Designs new data structures and algorithms solving relevant business
+    problems and creating competitive advantage for the company.
+    &
+
+    % Security
+    Researches and designs new security systems, cryptography and protocols.
+    &
+
+    % Networking
+    &
+
+    % Fullstack Engineering
+    &
+
+    % Tooling
+    \\ [13em]
+\end{tabular}
+\end{center}
+
+% End renewcommand wrapping.
+}
+
+\end{document}
