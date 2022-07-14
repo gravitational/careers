@@ -7,5 +7,5 @@ Thank you for visiting the Teleport Engineering recruiting, promotion and traini
 * [Open Positions](https://jobs.lever.co/teleport)
 * [Our Engineering Teams](./teams.md)
 * [Coding Challenges](./challenges)
-* [Engineering Levels](./levels.pdf)
+* [Engineering Levels](./levels)
 * [Team Leaders Training](./plans/teamleads.md)
