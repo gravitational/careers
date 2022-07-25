@@ -45,7 +45,7 @@ Implement an application that allows a user to browse directory content on a rem
 
 This application should have the following functionality:
 
-* A directory viewer client with client-side search and sorting capabilities (level 1) and url-based navigation (level 2).
+* A directory viewer client with client-side filtering and sorting capabilities (level 1) and url-based navigation (level 2).
 * A server for serving the webassets, containerized using Docker (level 2).
 * Authentication with a login screen and backend API to browse a directory (level 3+).
 
@@ -56,7 +56,8 @@ This level focuses on JS/CSS/DOM knowledge and does not require any server-side 
 Create a directory viewer with the following functionality:
 
 * An interface for viewing and browsing directory content.
-* Searching on filename and sorting on filename, type, and size within the current directory.
+* Filtering on filename within the current directory (basic string matching).
+* Sorting on filename, type, and size within the current directory.
 * Unlike simlar interfaces such as Google Drive and Dropbox, **file preview is _not_ required**. Clicking on a file should be a no-op.
 
 Directions:
