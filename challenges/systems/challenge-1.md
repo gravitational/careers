@@ -21,7 +21,7 @@ downsides - it could take longer than traditional interviews.
 
 We appreciate your time and are looking forward to hack on this project together.
 
-# Requirements
+# Levels
 
 There are 6 engineering levels at Teleport. It's possible to score on level 1-5 through coding challenge.
 
@@ -29,16 +29,35 @@ Level 6 is only for internal promotions. Check the
 [engineering levels document](https://raw.githubusercontent.com/gravitational/careers/main/levels.pdf)
 for more details.
 
-Split the submission into 2-3 pull requests for us to review. We will review
-every pull request and provide our feedback.
+# Interview Process
 
-We are going to compile the program, test it and get back to you.
+The interview process will start with you receiving an invite to a private
+Slack channel. That channel will contain the interview panel. You can ask them
+about the engineering culture, work-life balance, or anything else that you
+would like to learn about Teleport.
 
 ## Design Doc
 
-Start with a brief doc that covers the edge cases and design approach. At
-Teleport, we prefer Markdown for
+Before writing any actual code, we ask that you write a brief design document.
+The design document should cover: design approach, scope, proposed API, security
+considerations, CLI UX, and implementation details where appropriate. Start with
+a brief doc that covers the edge cases and design approach. At Teleport, we
+prefer Markdown for
 [our designs](https://github.com/gravitational/teleport/blob/master/rfd/0000-rfds.md).
+
+Please submit the design document and all code in a GitHub repository. Public
+or private is your choice. Please submit the design document as a Pull Request
+to allow us to provide you feedback on the proposed design.
+
+A few notes about the design document:
+
+* Try to get the design document approved within the first 2-3 days. This is to
+  ensure you have enough time to work on the implementation.
+* Avoid writing an overly detailed design document. Two to three pages is
+  sufficient.
+* Avoid sending us draft design documents. It is difficult to evaluate which
+  parts are draft and which parts are complete. Instead we encourage asking
+  questions in Slack and sharing a design document that is ready to be reviewed.
 
 Be sure to cover the following in your design:
 
@@ -48,28 +67,44 @@ Be sure to cover the following in your design:
 * Level 4+: Process execution lifecycle (how will you start and stop jobs, add
   them to cgroups, etc.)
 
-Open a pull request with your design and share a link with the reviewers via
-Slack. After the doc is approved, implement interfaces and an example program
-using the library.
+Once the design document has been approved by two reviewers, move on to the
+implementation.
 
-A few notes about the design document:
+## Implementation
 
-* We expect the design document to be complete roughly within the first week.
-  This is to ensure you have enough time to work on the implementation.
-* Avoid writing an overly detailed design document. Two to three pages is
-  sufficient.
-* Avoid sending us draft design documents, it is difficult to evaluate what
-  parts are draft and which parts are complete. Instead we encourage asking
-  questions in Slack and sharing a design document that is ready to be
-  reviewed.
+Split your code submission into roughly 3-5 Pull Requests to give the team an
+opportunity to review your code and provide feedback. Feel free to merge each
+PR after you have two approvals.
 
-## Testing
+Our team will do their best to provide a high quality review of the submitted
+Pull Requests in a reasonable time frame. You are spending your time on this,
+we are going to contribute our time too.
+
+After the final submission, the interview team will assemble and vote using a
+"+1, -2" anonymous voting system: +1 is submitted whenever a team member
+accepts the submission, -2 otherwise.
+
+In case of a positive result, we will connect you to our HR and recruiting
+teams, who will work out the details and present an offer.
+
+In case of a negative score result, the hiring manager will contact you and share a
+list of the key observations from the team that affected the result.
+
+### Testing
 
 Add a couple of high quality tests that cover happy and unhappy scenarios.
 
 Do not try to achieve full test coverage. This will take too long. Take two key
 components, e.g. authentication/authorization layer and networking and implement
 one or two test cases that demonstrate your approach to testing.
+
+# Requirements
+
+The project is broken down into 3 components:
+
+1. A reusable library implementing the functionality for working with jobs.
+2. An API server that wraps the functionality of the library.
+3. A command line interface (CLI) that communicates with the API server.
 
 ## Level 1
 
@@ -172,44 +207,6 @@ one or two test cases that demonstrate your approach to testing.
 * CLI should be able to connect to worker service and start, stop, get status, and stream output of a job.
 
 # Guidance
-
-## Interview process
-
-The interview team will join the Slack channel. The team consists of the
-engineers who will be working with you. Ask them about the engineering culture,
-work and life balance, or anything else that you would like to learn about
-Teleport.
-
-Before writing the actual code, create a brief design document in Google Docs or
-markdown in Github and share with the team.
-
-This document should cover at least: design approach, trade-offs, scope,
-proposed API, and security considerations. For security, please include
-considerations for transport layer, authentication, and authorization.
-
-Please avoid writing an overly detailed design document. Use this document to
-make sure the team could provide feedback on your design and demonstrate that
-you've investigated the problem space.
-
-Split your code submission using pull requests and give the team an opportunity
-to review the PRs. A good "rule of thumb" to follow is that the final PR
-submission is a formality adding a small feature set - it means that the team
-had an opportunity to contribute the feedback during multiple well defined
-stages of your work.
-
-Our team will do their best to provide a high quality review of the submitted
-pull requests in a reasonable time frame. You are spending your time on this, we
-are going to contribute our time too.
-
-After the final submission, the interview team will assemble and vote using a
-"+1, -2" anonymous voting system: +1 is submitted whenever a team member accepts
-the submission, -2 otherwise.
-
-In case of a positive result, we will connect you to our HR and recruiting
-teams, who will work out the details and present an offer.
-
-In case of a negative score result, hiring manager will contact you and share a
-list of the key observations from the team that affected the result.
 
 ## Code and project ownership
 
