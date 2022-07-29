@@ -1,6 +1,6 @@
 # Summary
 
-Implement a prototype job worker library that provides an API to run arbitrary Linux processes.
+Implement a prototype job worker service that provides an API to run arbitrary Linux processes.
 
 # Rationale
 
@@ -21,77 +21,70 @@ downsides - it could take longer than traditional interviews.
 
 We appreciate your time and are looking forward to hack on this project together.
 
-# Requirements
-Split the submission into 1-2 pull requests for us to review. We will review
-every pull request and provide our feedback.
+# Interview Process
 
-We are going to compile the program, test it and get back to you.
+The interview process will start with you receiving an invite to a private
+Slack channel. That channel will contain the interview panel. You can ask them
+about the engineering culture, work-life balance, or anything else that you
+would like to learn about Teleport.
 
 ## Design Doc
 
-Start with a brief doc that covers the edge cases and design approach. At
-Teleport, we prefer Markdown for
+Before writing any actual code, we ask that you write a brief design document.
+The design document should cover: design approach, scope, proposed API, security
+considerations, and implementation details where appropriate. Start with
+a brief doc that covers the edge cases and design approach. At Teleport, we
+prefer Markdown for
 [our designs](https://github.com/gravitational/teleport/blob/master/rfd/0000-rfds.md).
 
-Open a pull request with your design and share a link with the reviewers via
-Slack. After the doc is approved, implement interfaces and an example program
-using the library.
+Please submit the design document and all code in a GitHub repository. Public
+or private is your choice. Please submit the design document as a Pull Request
+to allow us to provide you feedback on the proposed design.
 
 A few notes about the design document:
 
-* We expect the design document to be complete roughly within the first week.
-  This is to ensure you have enough time to work on the implementation.
+* Try to get the design document approved within the first 2-3 days. This is to
+  ensure you have enough time to work on the implementation.
 * Avoid writing an overly detailed design document. Two to three pages is
   sufficient.
-* Avoid sending us draft design documents, it is difficult to evaluate what
+* Avoid sending us draft design documents. It is difficult to evaluate which
   parts are draft and which parts are complete. Instead we encourage asking
-  questions in Slack and sharing a design document that is ready to be
-  reviewed.
+  questions in Slack and sharing a design document that is ready to be reviewed.
 
+## Implementation
 
-## Libary
-Write a library with methods to start/stop/query status and get an output of
-a running job.
-
-# Guidance
-
-## Interview process
-
-The interview team will join the Slack channel. The team consists of the
-engineers who will be working with you. Ask them about the engineering culture,
-work and life balance, or anything else that you would like to learn about
-Teleport.
-
-Before writing the actual code, create a brief design document in Markdown
-in Github and share with the team.
-
-This document should cover at least: design approach, trade-offs, scope,
-proposed API, and security considerations. For security, please include
-considerations for transport layer, authentication, and authorization.
-
-Please avoid writing an overly detailed design document. Use this document to
-make sure the team could provide feedback on your design and demonstrate that
-you've investigated the problem space.
-
-Split your code submission using pull requests and give the team an opportunity
-to review the PRs. A good "rule of thumb" to follow is that the final PR
-submission is a formality adding a small feature set - it means that the team
-had an opportunity to contribute the feedback during multiple well defined
-stages of your work.
+Split your code submission into roughly 1-2 Pull Requests to give the team an
+opportunity to review your code and provide feedback. Feel free to merge each
+PR after you have two approvals.
 
 Our team will do their best to provide a high quality review of the submitted
-pull requests in a reasonable time frame. You are spending your time on this, we
-are going to contribute our time too.
+Pull Requests in a reasonable time frame. You are spending your time on this,
+we are going to contribute our time too.
 
 After the final submission, the interview team will assemble and vote using a
-"+1, -2" anonymous voting system: +1 is submitted whenever a team member accepts
-the submission, -2 otherwise.
+"+1, -2" anonymous voting system: +1 is submitted whenever a team member
+accepts the submission, -2 otherwise.
 
 In case of a positive result, we will connect you to our HR and recruiting
 teams, who will work out the details and present an offer.
 
-In case of a negative score result, hiring manager will contact you and share a
+In case of a negative score result, the hiring manager will contact you and share a
 list of the key observations from the team that affected the result.
+
+### Testing
+
+Add a couple of high quality tests that cover happy and unhappy scenarios.
+
+Do not try to achieve full test coverage. This will take too long. Take two key
+components, e.g. networking and program execution and implement one or two test
+cases that demonstrate your approach to testing.
+
+## Library
+
+Write a worker library with methods to start/stop/query status and get the
+output of a job.
+
+# Guidance
 
 ## Code and project ownership
 
@@ -181,8 +174,9 @@ questions to ask and questions we expect candidates to figure out on their own.
 
 Here is a great question to ask:
 
-> Is it OK to discard the output of a process that exceeds a predefined
-> hardcoded value?.
+> Is it OK to pre-generate secret data and put the secrets in the repository
+> for a proof of concept? I will add a note that we will auto-generate secrets
+> in the future.
 
 It demonstrates that you thought about this problem domain, recognize the trade
 off and are saving you and the team time by not implementing it.
@@ -191,11 +185,12 @@ This is the question we expect candidates to figure out on their own:
 
 > What version of Go should I use? What dependency manager should I use?
 
-Unless specified in the requirements, pick the solution that works best for you.
+Unless specified in the requirements, pick the solution that works best for
+you.
 
 # Tools
 
-This task should be implemented in Go, C++, Rust or Java and should work on
+This task should be implemented in Go, C++, Rust, or Java and should work on
 64-bit Linux machines.
 
 # Timing
@@ -211,4 +206,5 @@ challenge.
 Within this timeframe, we don't give higher scores to challenges submitted more
 quickly. We only evaluate the quality of the submission.
 
-We only start the coding challenge if there are several open positions available.
+We only start the coding challenge if there are several open positions
+available.
