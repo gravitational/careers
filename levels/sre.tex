@@ -1,0 +1,373 @@
+\documentclass{article}
+
+\usepackage[table]{xcolor}
+\usepackage[paperwidth=800mm, paperheight=575mm]{geometry}
+
+% Don't show page numbers.
+\pagenumbering{gobble}
+
+% TODO(russjones): Make all columns for all challenges 20em.
+% Column settings for skills table.
+\newcolumntype{C}{p{20em}}
+
+\begin{document}
+
+% Title of matrix.
+\begin{center}
+\begin{huge}
+Site Reliability Engineering (SRE)
+\end{huge}
+\end{center}
+
+% TODO(russjones): Apply this to other levels guides as well.
+\bigbreak
+
+% Alternating row colors.
+\rowcolors{2}{gray!80!gray!50}{gray!50!gray!20}
+
+% Padding for each cell.
+{\renewcommand{\arraystretch}{2}
+
+% Skills table.
+% TODO(russjones): Apply this to other levels guides as well.
+\begin{center}
+% TODO(russjones): Apply this to other levels guides as well.
+\begin{tabular}{|C|C|C|C|C|C|C|C|}
+\hline
+\rowcolor{blue!60!black!10}
+    \textbf{Level/Skill}
+    &
+    \cellcolor{blue!25}
+    \textbf{Product Output}
+    &
+    % TODO(russjones): Update ordering to be product->comm for other guides as well.
+    \textbf{Communication/Writing}
+    &
+    \textbf{Networking}
+    &
+    \textbf{Security}
+    &
+    \textbf{Systems Engineering}
+    &
+    \textbf{Site Reliability Engineering (SRE)}
+    \\
+\hline
+    % Level
+    1
+    &
+
+    % Product Output
+    \cellcolor{blue!25}
+    Creates a design document based on well-defined scoped requirements and
+    implements it.
+    &
+
+    % Communication
+    Reports progress on a regular basis as required by the team's operational
+    requirements. Actively solicits feedback.Participates on interview panels.
+    &
+
+    % Networking
+    Understands common networking issues and troubleshooting techniques.
+
+    \bigbreak
+
+    Understands different networking layers (OSI model).
+
+    \bigbreak
+
+    Understands and can deploy overlay networks with routing and DNS resolution.
+    &
+
+    % Security
+    Understands operating systems security principles like iptables,
+    users/groups, file permissions, and capabilities. Can apply operating system
+    hardening guides like CIS Benchmarks.
+
+    \bigbreak
+
+    Understands basic security principles like SSH keys and TLS certificates.
+    &
+
+    % Systems Engineering
+    &
+
+    % SRE
+    Understands and can make changes to existing Makefiles, shell scripts, and
+    Dockerfiles.
+
+    \bigbreak
+
+    Understands declarative configuration and can use tooling like Terraform or
+    a Kubernetes operator to make changes to existing infrastructure and
+    applications.
+
+    \bigbreak
+
+    May have certification like Certified Kubernetes Administrator (CKA).
+    \\ [13em]
+\hline
+    % Level
+    2
+    &
+
+    % Product Output
+    \cellcolor{blue!25}
+    Can write high quality user and product focused documentation.
+    &
+
+    % Communication
+    Provides constructive review on peers' code and design. Helps new team
+    members during their first weeks.
+    &
+
+    % Networking
+    Can independently troubleshoot most network issues.
+
+    \bigbreak
+
+    Can setup and configure production quality network infrastructure like DNS,
+    Load Balancers, and encrypted networks (like IPsec or WireGuard). Can reason
+    about their reliability.
+    &
+
+    % Security
+    Understands and can apply basic cryptographic principles. Can configure SSH
+    and TLS for a server (chooses appropriate key sizes, algorithms, and versions),
+    pick strong authentication and authorization primitives, and appropriate
+    encryption for data in transit and rest.
+
+    \bigbreak
+
+    Can setup production quality encrypted networking (like IPsec or
+    WireGuard). Can reason about their reliability.
+    &
+
+    % Systems Engineering
+    &
+
+    % SRE
+    Excellent systems troubleshooter.
+
+    \bigbreak
+
+    Familiar with and can configure alerts for system performance (CPU, memory,
+    disk, networking utilization). Uses modern BPF tools for troubleshooting.
+
+    \bigbreak
+
+    Is a member of on-call rotation and can resolve issues outlined in
+    runbooks.
+
+    \bigbreak
+
+    Demonstrates knowledge of AWS. May have certification like AWS Certified
+    SysOps Administrator.
+    \\ [13em]
+\hline
+    % Level
+    3
+    &
+
+    % Product
+    \cellcolor{blue!25}
+    Collaborates with the team to scope requirements, based on good
+    understanding of existing longer term product vision and estimates of the
+    system design of a feature of a product.
+    &
+
+    % Communication
+    Supports less experienced peers' technical skills, answering questions and
+    being a resource. Documents and improves team practices.
+    &
+
+    % Networking
+    Can setup and operate a multi-region infrastructure and networking
+    environment. Can reason about it's performance, reliability, and failure modes.
+
+    \bigbreak
+
+    Has in-depth understanding of container networking. Can write own CNI plugin
+    utilizing IPSec or WireGuard on Kubernetes.
+
+    \bigbreak
+
+    Understands advanced networking concepts such as network namespaces, NAT
+    traversal, and BPG.
+    &
+
+    % Security
+    Can build secure systems that will pass quality security audit that will
+    uncover few to no critical system design errors.
+
+    \bigbreak
+
+    Can apply security principals when building systems. Can utilize access
+    control primitives (like IAM and RBAC) to limit access to infrastructure.
+    Understands secret life cycle management in production environments. Understand
+    API authentication systems, can reason about trade-offs between use of JWT,
+    OIDC, and mTLS. Can setup alerting on security systems like CloudWatch.
+
+    \bigbreak
+
+    Understands advanced operating system security concepts. Can utilize
+    Mandatory Access Control (MAC) systems like as SELinux or AppArmor. Understands
+    container security. Can utilize control groups and namespaces to isolate and
+    application.
+    &
+
+    % Systems Engineering
+    &
+
+    % SRE
+    Can use declarative languages like Terraform to build and manage infrastructure.
+
+    \bigbreak
+
+    Demonstrates advanced knowledge of Kubernetes deployments (CRDs, ingress
+    controllers, Load Balancers).
+
+    \bigbreak
+
+    Can build and maintain reliable production CI/CD pipelines for build, test,
+    and release.
+
+    \bigbreak
+
+    Demonstrates advanced knowledge of AWS. May have certification like AWS
+    Certified Solutions Architect.
+    \\ [13em]
+\hline
+    % Level
+    4
+    &
+
+    % Product
+    \cellcolor{blue!25}
+    Leads the implementation of the isolated feature/improvement that
+    measurably and significantly impacts business outcomes from gathering
+    requirements to getting to the market stage.
+    &
+
+    % Communication
+    Writes technical articles/blog posts, delivers tech and lightning talks
+    representing the company's technical vision.
+    &
+
+    % Networking
+    Can write (or heavily modify) network infrastructure tooling (like Cilium)
+    to provide service level load balancing, multi-region connectivity, and
+    observability.
+    &
+
+    % Security
+    Writes technical articles on security aspects of the system, implements
+    significant security product innovations in the area delivered to customers.
+
+    \bigbreak
+
+    Understands and can apply advanced cryptographic principles. Understands
+    hashing (including for anonymization), when to use symmetric and asymmetric
+    cryptography, cipher modes, and TLS versions.
+
+    \bigbreak
+
+    Understands and can apply advanced network security principles. Understands
+    data extrusion prevention. Understands DDoS mitigation. Understands how to
+    monitor systems for rootkits and can deploy mitigation strategies when a system
+    is under attack.
+    &
+
+    % Systems Engineering
+    Can write data-race and deadlock free code. Can implement safe and
+    concurrent and/or parallel systems using minimum amount of shared state,
+    granular locking - systems that are easy to read, extend and troubleshoot.
+    &
+
+    % SRE
+    Can build and operate large scale, stable, and reliable production platform
+    environments like Kubernetes.
+
+    \bigbreak
+
+    Not expected to find any faults or provide any further suggestions in the
+    design document submitted by an Level 4 engineer.
+    \\ [13em]
+\hline
+    % Level
+    5
+    &
+
+    % Product
+    \cellcolor{blue!25}
+    Leads the implementation of a new product line or significant part of the
+    product to deliver it to the market in collaboration with all other teams.
+    &
+
+    % Communication
+    Writes advanced technical articles/blog posts, gaining significant industry
+    traction or delivers technical talks on major conferences representing the
+    company's vision.
+    &
+
+    % Networking
+    &
+
+    % Security
+    Researches and designs new security systems and protocols.
+    &
+
+    % Systems Engineering
+    Can implement production grade systems leveraging advanced low-level and/or
+    novel components like eBPF, control groups, or Noise Protocol Framework.
+    &
+
+    % SRE
+    Understands and use use advanced system performance troubleshooting
+    techniques like ptrace, strace, flamegraphs, or writing custom bpftrace
+    programs.
+
+    \bigbreak
+
+    Can deploy and operate databases at large scale. Understands index
+    compaction, failover, sharing, and query performance analysis.
+
+    \bigbreak
+
+    Can build advanced monitoring and anomaly detection systems.
+    \\ [13em]
+\hline
+    % Level
+    6
+    &
+
+    % Product
+    \cellcolor{blue!25}
+    Designs new data structures and algorithms solving relevant business
+    problems and creating competitive advantage for the company.
+    &
+
+    % Communication
+    Produces peer-reviewed research papers or patent applications.
+    &
+
+    % Networking
+    &
+
+    % Security
+    &
+
+    % Systems Engineering
+    Can build system for container orchestration and management like
+    Kubernetes.
+    &
+
+    % SRE
+    \\ [11em]
+\end{tabular}
+\end{center}
+
+% End renewcommand wrapping.
+}
+
+\end{document}
