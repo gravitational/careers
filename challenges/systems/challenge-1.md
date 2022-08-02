@@ -25,9 +25,8 @@ We appreciate your time and are looking forward to hack on this project together
 
 There are 6 engineering levels at Teleport. It's possible to score on level 1-5 through coding challenge.
 
-Level 6 is only for internal promotions. Check the
-[engineering levels document](https://raw.githubusercontent.com/gravitational/careers/main/levels.pdf)
-for more details.
+Level 6 is only for internal promotions. Check
+[Systems Engineering Levels](../../levels/systems.pdf) for more details.
 
 # Interview Process
 
