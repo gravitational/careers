@@ -4,6 +4,7 @@ all:
 	docker run -v $$(pwd)/levels:/tmp -t latexbox pdflatex /tmp/systems.tex
 	docker run -v $$(pwd)/levels:/tmp -t latexbox pdflatex /tmp/fullstack.tex
 	docker run -v $$(pwd)/levels:/tmp -t latexbox pdflatex /tmp/sre.tex
+	docker run -v $$(pwd)/levels:/tmp -t latexbox pdflatex /tmp/security.tex
 	$(MAKE) clean
 
 .PHONY: clean
