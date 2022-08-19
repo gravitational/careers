@@ -34,13 +34,16 @@ The Application and Database Access team works on providing access to [web appli
 
 ### Product Security
 
-The Product Security team is focused on application security for the entire
+The Product Security team is focused on application security for the Teleport
 product. This team implements security controls and works with security
 researchers to find and fix security vulnerabilities.
 
 The team is focused on releasing a preview of passwordless support, which will
 allow users to log in to Teleport using biometric proof of identity in
 conjunction with a proof of presence.
+
+Teleport Engineering also has a general [Security team](#security) which focuses
+on holistic security across the organization.
 
 ### Performance and Scaling
 
@@ -194,14 +197,24 @@ on:
 ## Security
 
 At Teleport each and every engineers are responsible for security of their work.
-In addition to this individual mandate, we maintain a dedicated security team
-of specialist focused on organization wide efforts. We're currently working
-on the following areas:
+In addition to this individual mandate and our
+[Product Security Team](#product-security), we maintain a security team
+focused on organization wide efforts. We're currently working on the following areas:
 
 - Software supply chain security. We ensure infrastructure and code is protected
   and auditable from developer to production.
-- Initial roll out of Teleport's bug bounty program.
+- Teleport's bug bounty program.
 - Working with consultants and independent experts to perform black box, white
   box and red team validation of our code and security controls.
 - Updating compliance documentation, internal controls, and our corporate policies.
 
+### What is the difference between the "Product Security" and "Security" teams?
+The Product Security team works primarily in the Teleport codebase, developing
+new security features and fixing bugs in for the next Teleport release. The
+Security team addresses all elements of corporate security including cloud
+security, IT security, GRC, policies, training, our bug bounty.
+
+To illustrate, you'd find a Product Security team member hacking on issues like
+[#10375](https://github.com/gravitational/teleport/issues/10375). You might find
+a Security team member improving our internal Okta terraform or improving the
+policies and infrastructure backing our promises at https://goteleport.com/security/.
