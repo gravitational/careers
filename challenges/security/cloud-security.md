@@ -1,109 +1,146 @@
 # Summary
 
-We use a two part hiring challenge for cloud security engineers:
+We use a synchronous, remote, one day hiring challenge for cloud
+security engineers. The challenge consists of the following sections:
 
-Part One: Peer review. You'll receive a Request for Discussion (RFD) and
-architecture diagram for a service similar to docker. You have two hours to provide
-written PR feedback.
+1. Kick off with the hiring manager. 45 minutes. 09:15 - 10:00 PST
 
-Part Two: Development. You'll receive prototype code for the service reviewed
-in part one. Implement either AWS or GCP Terraform to securely distribute and
-audit artifacts generated from this codebase.
+2. Peer review. You'll receive a brief Request for Discussion (RFD) and
+architecture diagram of a service. You will have 90 minutes to
+provide written PR feedback. 10:00 - 11:30 PST.
+
+3. After the peer review, section, there is a 30 minute break for lunch.
+
+4. Development. You'll receive prototype code for the service reviewed
+in part one. Building off this prototype codebase, we ask you develop
+some changes and open a pull request over 3 hours. 12:00 - 15:00 PST
+
+5. Attack & defense discussion.  This is a 60 minute video call with future
+peers where we ask you to show your depth of knowledge in hypothetically
+attacking a service, and defending against those attacks.
+You will also have a chance to ask us questions about working at Teleport.
+15:00 - 16:00 PST.
+
+Throughout the day, the interview team will join you in a slack channel, where
+we'll provide relevant links, and you're welcome to ask any questions.
 
 # Rationale
 
 These exercises have several goals:
 
-* It helps us to understand what to expect from you as a developer, what security
-  issues you find important, how you communicate those issues to peers and how you
-  write production code.
+* It helps us to understand what to expect from you as a developer, what
+  security issues you find important, how you communicate those issues to peers
+  and how you write production code.
 * It helps you get a feel for what it would be like to work at Teleport, as this
   exercise aims to simulate our day-as-usual and expose you to the type of work
-  we're doing here.
-* We aim to keep the process light. When there are time limits, it is to keep
-  exercises from consuming undue amounts of your time, and not to test performance
-  under pressure.
+  and communication you can expect if you join Teleport.
+* We aim to keep the process light. While there are time limits, it is to keep
+  exercises from consuming undue amounts of your time, and not to test
+  performance under pressure.
 
 We believe this technique is not only better, but also is more fun compared to
 whiteboard/quiz interviews so common in the industry.
 
 [Some of the best teams use coding challenges.](https://sockpuppet.org/blog/2015/03/06/the-hiring-post/)
 
-We appreciate your time and are looking forward to hack on this project together.
+We appreciate your time and are looking forward to the interview.
 
 # Leveling
 There are 6 engineering levels at Teleport. It's possible to earn level 4-5 via
 this interview process.
 
-We are not currently hiring L1-L3 security engineers and level 6 is only available
-via internal promotion. See the [engineering levels document](https://raw.githubusercontent.com/gravitational/careers/main/levels.pdf)
+We are not currently hiring L1-L3 security engineers and level 6 is only
+available via internal promotion. See our
+[security engineering levels](https://github.com/gravitational/careers/blob/main/levels/security.pdf)
 for more details.
 
-We expect different performance at different engineering levels. These expectations
-are explicitly documented below.
+We expect different performance at different engineering levels. These
+expectations are explicitly documented below.
+
+# Part 1: Hiring Manager Kick Off
+The hiring manager will discuss your background and approach to security with
+you.
 
 
-# Part 1: Peer Review
-You will be given a GitHub repo containing a PR that includes a RFD and architecture
-diagram for a service similar to docker.
+# Part 2: Peer Review
+You will be given a GitHub repo containing a PR that includes a
+[RFD](https://github.com/gravitational/teleport/blob/master/rfd/0000-rfds.md)
+and architecture diagram for a cloud hosted binary distribution service.
 
-You will have two hours to read through the RFD and provide feedback. Please
-focus on security concerns, though you're welcome to provide input in any area
-where you see room for improvement.
+You will have 90 minutes of asynchronous time to read through the RFD and
+provide written PR feedback in GitHub.
 
-## Level 4
-Review the service as written, assuming it will run on a single server.
-
-## Level 5
-The service will run in multiple geographies with unreliable network connections
-between them. Please address the security and business tradeoffs between
-authentication and authorization consistency architectures.
-
-
-# Part 2: Development
-You will be given a prototype implementation of the RFD reviewed in part 1.
-
-Write a single PR implementing AWS or GCP Terraform that securely distributes
-and provides an audit trail for artifacts generated from this codebase.
-
-We will review the pull request and leave feedback, and provide you a chance to
-respond to or incorporate the feedback.
-
-After PR discussion, we will apply the terraform in a sandboxed account, test it
-and get back to you.
+Please be sure to cover security concerns, though you're welcome to provide
+input in any area where you see room for improvement.
 
 ## Level 4
-
-A Make target should be able to store built artifacts using a least-privilege
-service account.
-
-Authenticated users should be able to download any of these blobs, but not change
-any data.
-
-Configure your cloud provider to log artifact any artifact write and retain these
-logs for at least 90 days.
+Review the service as written, assuming it will run in a single availability
+zone of a single region.
 
 ## Level 5
+The service will run in multiple regions with unreliable network connections
+between them. Please address the security and business tradeoffs of different
+consistency architectures.
 
-TBD.
+# Part 3: Break
+Grab a bite of food and some water. Take a breather before we continue to the
+next section.
 
+# Part 4: Development
+You will be given a prototype AWS terraform implementation of the RFD reviewed in
+part 1. You will have 3 hours to develop and submit a single PR securing the
+service. Please implement as many of the following security features as you
+find time for. Implement the ones that you believe provide the best security
+return on investment.
+
+ - Tamper-resitant audit logs
+ - Principle of least privilege, role based IAMS for:
+   - uploading new artifacts
+   - reading artifacts
+   - viewing audit logs
+ - Encryption at Rest
+ - Encryption in Transit
+ - [Write Once Read Many](https://en.wikipedia.org/wiki/Write_once_read_many)
+   or similar data retention protections to avoid data loss
+ - Cloud provider specific security services such as:
+   - AWS: CloudTrail, GuardDuty, WAF
+
+This is asynchronous. You'll develop on your machine and you're welcome to
+use whatever tools you're comfortable with to develop the changes. We'll be
+available in the interview slack channel to answer any questions.
+
+We will review your PR, inculding running terraform plan. Make sure to write
+good commit messages, as well as a helpful PR description.
+
+# Part 5: Red Team & Blue Team discussion
+After your development PR is posted, you'll join a synchronous video call with
+future peers to finish the day. During this hour long discussion, we'll present
+you with a hypothetical service, and ask the following:
+
+1. How would you attack this service, specifically to exfiltrate the core data?
+2. How would you defend against the attacks you outlined earlier.
+
+At the end of this discussion, you'll have an opportunity to ask peers
+questions about working at Teleport.
 
 # Guidance
 
 ## Interview process
 
-The interview team will join the Slack channel. The team consists of the
-engineers who will be working with you. Ask them about the engineering culture,
-work and life balance, or anything else that you would like to learn about
-at Teleport.
+Although the interview is scheduled for a single day, the only in-person
+discussions are the video calls at the beginning and end of the day. Both the
+peer review and development portion are on your own machine without anyone
+hovering over your shoulder--as we work in our day-to-day at Teleport.
 
-Our team will do their best to provide a high quality review of the submitted
-pull requests in a reasonable time frame. You are spending your time on this, we
-are going to contribute our time too.
+Please make sure you have an environment set up for go development. The tools
+needed can be found in the [Tools](#Tools) section below.
 
-After the final submission, the interview team will assemble and vote using a
-"+1, -2" anonymous voting system: +1 is submitted whenever a team member accepts
-the submission, -2 otherwise.
+Should you have any questions during the day, please ask the interview team
+Slack channel.
+
+After you interview, a panel of engineers with review the submitted
+pull requests and vote using a "+1, -2" anonymous voting system: +1 is
+submitted whenever a team member accepts the submission, -2 otherwise.
 
 In case of a positive result, we will connect you to our HR and recruiting
 teams, who will work out the details and present an offer.
@@ -111,19 +148,22 @@ teams, who will work out the details and present an offer.
 In case of a negative score result, hiring manager will contact you and share a
 list of the key observations from the team that affected the result.
 
+We're actively improving this interview process, and we would be glad to hear
+your feedback about the experience.
+
 ## Code and project ownership
 
-This is a test challenge and we have no intent of using the code you've
-submitted in production. This is your work, and you are free to do whatever you
-feel is reasonable with it. In the scenario where you don't pass, you can open
-source it with any license and use it as a portfolio project.
+This is a contrived challenge and we have no intent of using the code you've
+submitted in production. However, we retain all rights to
+*our example code and RFD*. We ask that you do not publish our code to avoid
+giving future candidates an unfair advantage by allowing them develop a solution
+ahead of time.
 
 ## Areas of focus
 
 These are the areas we will be evaluating in the submission:
 
-* Ensure the Terraform applies cleanly from scratch and contains
-  all resources needed.
+* Ensure the Terraform contains all resources needed.
 * Use consistent coding style. We follow `terraform fmt` and
   [tfsec](https://github.com/aquasecurity/tfsec) for our Terraform.
 * Follow the [principle of least privilege](https://en.wikipedia.org/wiki/Principle_of_least_privilege)
@@ -132,11 +172,11 @@ These are the areas we will be evaluating in the submission:
 
 ## Trade-offs
 
-Write as little code as possible, otherwise this task will consume too much time
-and code quality will suffer.
+Write as little code as possible, otherwise this task will take too much time
+and PR quality will suffer.
 
-Please cut corners, for example cross account IAMs tend to take a lot of time, and
-are not important for this task.
+Please cut corners, for example configuration tends to take a lot of time, and
+is not important for this task.
 
 Use hardcoded values as much as possible and simply add TODO items showing your
 thinking, for example:
@@ -147,18 +187,17 @@ thinking, for example:
   // but for demo purposes we use IAM users.
 ```
 
-Comments like this one are really helpful to us. They save yourself a lot of
-time and demonstrate that you've spent time thinking about this problem and
-provide a clear path to a solution.
+Comments like this one are helpful to us. They save you time and demonstrate
+that you've though about this problem and can provide a clear path to a
+solution.
 
-Consider making other reasonable trade-offs. Make sure you communicate them to
-the interview team.
+Making other reasonable trade-offs. Please communicate them to the interview
+team.
 
-Here are some other trade-offs that will help you to spend less time on the task:
+Here are some other trade-offs that will help you:
 
-* Do not implement a system that has multi-geography fault tolerance. Describe
+* Do not implement a system that has multi-az or region fault tolerance. Describe
   which improvements you would add in the future.
-* 
 
 ## Pitfalls and Gotchas
 
@@ -170,15 +209,11 @@ no-pass from the interview team:
   Avoid writing too much code.
 * Unstructured code. We've seen candidates leaving commented chunks of code,
   having one large file with all the code, not having code structure at all.
-* Not communicating. Some candidates have submitted all their code to the master
-  branch without raising pull requests, which does not give us the ability to
-  provide feedback on the various implementation phases. We are a distributed
-  team, so structured, asynchronous communication is critical to us.
 
 ## Questions
 
-It is OK to ask the interview team questions. Some folks stay away from asking
-questions to avoid appearing less experienced, so we provide examples of
+It is encouraged to ask the interview team questions. Some folks stay away from
+asking questions to avoid appearing less experienced, so we provide examples of
 questions to ask and questions we expect candidates to figure out on their own.
 
 Here is a great question to ask:
@@ -196,17 +231,11 @@ This is the question we expect candidates to figure out on their own:
 
 Unless specified in the requirements, pick the solution that works best for you.
 
+
 # Tools
 
-Use Terraform 1.0+. The final version should build and run on 64-bit Mac or
-Linux machines.
+Your codebase should target 64-bit Linux or Mac machines.
 
-# Timing
+Please have the following available in your development environment:
 
-You can split coding over a couple of weekdays or weekend and find time to ask
-questions and receive feedback.
-
-Once you join the Slack channel, you have 1 week complete the challenge.
-
-Within this timeframe, we don't give higher scores to challenges submitted more
-quickly. We only evaluate the quality of the submission.
+* [terraform](https://www.terraform.io/downloads) 1.2+
