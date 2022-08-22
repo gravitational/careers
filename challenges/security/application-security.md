@@ -38,7 +38,7 @@ These exercises have several goals:
   exercises from consuming undue amounts of your time, and not to test
   performance under pressure.
 
-We believe this technique is not only better, but also is more fun compared to
+We believe this technique is not only better but also is more fun compared to
 whiteboard/quiz interviews so common in the industry.
 
 [Some of the best teams use coding challenges.](https://sockpuppet.org/blog/2015/03/06/the-hiring-post/)
@@ -65,7 +65,7 @@ you.
 # Part 2: Peer Review
 You will be given a GitHub repo containing a PR that includes a
 [RFD](https://github.com/gravitational/teleport/blob/master/rfd/0000-rfds.md)
-and architecture diagram for a service similar to docker.
+and architecture diagram for a service similar to Docker.
 
 You will have 90 minutes of asynchronous time to read through the RFD and
 provide written PR feedback in GitHub.
@@ -78,7 +78,7 @@ Review the service as written, assuming it will run on a single server.
 
 ## Level 5
 The service will run in multiple geographies with unreliable network connections
-between them. Please address the security and business tradeoffs between
+between them. Please address the security and business trade-offs between
 authentication and authorization consistency architectures.
 
 # Part 3: Break
@@ -153,8 +153,8 @@ submitted whenever a team member accepts the submission, -2 otherwise.
 In case of a positive result, we will connect you to our HR and recruiting
 teams, who will work out the details and present an offer.
 
-In case of a negative score result, hiring manager will contact you and share a
-list of the key observations from the team that affected the result.
+In case of a negative score result, the hiring manager will contact you and share
+a list of the key observations from the team that affected the result.
 
 We're actively improving this interview process, and we would be glad to hear
 your feedback about the experience.
@@ -185,10 +185,10 @@ These are the areas we will be evaluating in the submission:
 
 ## Trade-offs
 
-Write as little code as possible, otherwise this task will take too much time
+Write as little code as possible. Otherwise this task will take too much time
 and PR quality will suffer.
 
-Please cut corners, for example configuration tends to take a lot of time, and
+Please cut corners. For example configuration tends to take a lot of time, and
 is not important for this task.
 
 Use hardcoded values as much as possible and simply add TODO items showing your
@@ -229,7 +229,7 @@ no-pass from the interview team:
   data races in the code. Avoid global state as much as possible; if using
   global state, write down a good description why it is necessary and protect it
   against data races.
-* Deadlocks. When using mutexes, channels or any other synchronization
+* Deadlocks. When using mutexes, channels, or any other synchronization
   primitives, make sure the system won't deadlock. We've seen candidates' code
   holding a mutex and making a network call without timeouts in place. Be extra
   careful with networking and sync primitives.

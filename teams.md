@@ -196,16 +196,16 @@ on:
 
 ## Security
 
-At Teleport each and every engineers are responsible for security of their work.
+At Teleport, each and every engineer is responsible for security of their work.
 In addition to this individual mandate and our
 [Product Security Team](#product-security), we maintain a security team
-focused on organization wide efforts. We're currently working on the following areas:
+focused on organization-wide efforts. We're currently working on the following areas:
 
 - Software supply chain security. We ensure infrastructure and code is protected
   and auditable from developer to production.
 - Teleport's bug bounty program.
-- Working with consultants and independent experts to perform black box, white
-  box and red team validation of our code and security controls.
+- Working with consultants and independent experts to perform blackbox, whitebox,
+  and red team validation of our code and security controls.
 - Updating compliance documentation, internal controls, and our corporate policies.
 
 ### What is the difference between the "Product Security" and "Security" teams?

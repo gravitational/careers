@@ -79,7 +79,7 @@ zone of a single region.
 
 ## Level 5
 The service will run in multiple regions with unreliable network connections
-between them. Please address the security and business tradeoffs of different
+between them. Please address the security and business trade-offs of different
 consistency architectures.
 
 # Part 3: Break
@@ -145,8 +145,8 @@ submitted whenever a team member accepts the submission, -2 otherwise.
 In case of a positive result, we will connect you to our HR and recruiting
 teams, who will work out the details and present an offer.
 
-In case of a negative score result, hiring manager will contact you and share a
-list of the key observations from the team that affected the result.
+In case of a negative score result, the hiring manager will contact you and share
+a list of the key observations from the team that affected the result.
 
 We're actively improving this interview process, and we would be glad to hear
 your feedback about the experience.
@@ -172,11 +172,11 @@ These are the areas we will be evaluating in the submission:
 
 ## Trade-offs
 
-Write as little code as possible, otherwise this task will take too much time
+Write as little code as possible. Otherwise this task will take too much time
 and PR quality will suffer.
 
-Please cut corners, for example configuration tends to take a lot of time, and
-is not important for this task.
+Please cut corners. For example cross-account IAMs tend to take a lot of time
+and are not important for this task.
 
 Use hardcoded values as much as possible and simply add TODO items showing your
 thinking, for example:
