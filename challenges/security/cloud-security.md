@@ -138,7 +138,7 @@ needed can be found in the [Tools](#Tools) section below.
 Should you have any questions during the day, please ask the interview team
 Slack channel.
 
-After you interview, a panel of engineers with review the submitted
+After your interview, a panel of engineers will review the submitted
 pull requests and vote using a "+1, -2" anonymous voting system: +1 is
 submitted whenever a team member accepts the submission, -2 otherwise.
 
@@ -188,7 +188,7 @@ thinking, for example:
 ```
 
 Comments like this one are helpful to us. They save you time and demonstrate
-that you've though about this problem and can provide a clear path to a
+that you've thought about this problem and can provide a clear path to a
 solution.
 
 Making other reasonable trade-offs. Please communicate them to the interview
