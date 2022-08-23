@@ -94,7 +94,7 @@ find time for. Implement the ones that you believe provide the best security
 return on investment.
 
  - Tamper-resitant audit logs
- - Principle of least privilege, role-based IAMs for:
+ - Principle of least privilege, role-based IAM for:
    - uploading new artifacts
    - reading artifacts
    - viewing audit logs
@@ -167,7 +167,7 @@ These are the areas we will be evaluating in the submission:
 * Use consistent coding style. We follow `terraform fmt` and
   [tfsec](https://github.com/aquasecurity/tfsec) for our Terraform.
 * Follow the [principle of least privilege](https://en.wikipedia.org/wiki/Principle_of_least_privilege)
-  when configuring IAMs.
+  when configuring IAM.
 * Show your breadth and depth of knowledge for either AWS or GCP.
 
 ## Trade-offs
@@ -175,7 +175,7 @@ These are the areas we will be evaluating in the submission:
 Write as little code as possible. Otherwise this task will take too much time
 and PR quality will suffer.
 
-Please cut corners. For example cross-account IAMs tend to take a lot of time
+Please cut corners. For example cross-account IAM tend to take a lot of time
 and are not important for this task.
 
 Use hardcoded values as much as possible and simply add TODO items showing your
