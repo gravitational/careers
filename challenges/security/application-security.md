@@ -1,27 +1,27 @@
 # Summary
 
-We use a synchronous, remote, one day hiring challenge for application
+We use a synchronous, remote, one-day hiring challenge for application
 security engineers. The challenge consists of the following sections:
 
-1. Kick off with the hiring manager. 45 minutes. 09:15 - 10:00 PST
+1. Kick off with the hiring manager. 45 minutes. 09:15 - 10:00 PT
 
-2. Peer review. You'll receive a brief Request for Discussion (RFD) and
+2. Peer Review. You'll receive a brief Request for Discussion (RFD) and
 architecture diagram of a service. You will have 90 minutes to
-provide written PR feedback. 10:00 - 11:30 PST.
+provide written PR feedback. 10:00 - 11:30 PT.
 
-3. After the peer review, section, there is a 30 minute break for lunch.
+3. After the peer review section, there is a 30 minute break for lunch.
 
-4. Development. You'll receive prototype code for the service reviewed
-in part one. Building off this prototype codebase, we ask you develop
-some changes and open a pull request over 3 hours. 12:00 - 15:00 PST
+4. Development. You'll receive prototype code for the service you reviewed
+earlier. Building off this prototype codebase, we ask you develop some changes
+and open a pull request over 3 hours. 12:00 - 15:00 PT
 
-5. Attack & defense discussion.  This is a 60 minute video call with future
+5. Attack & defense discussion. This is a 60 minute video call with future
 peers where we ask you to show your depth of knowledge in hypothetically
 attacking a service, and defending against those attacks.
 You will also have a chance to ask us questions about working at Teleport.
-15:00 - 16:00 PST.
+15:00 - 16:00 PT.
 
-Throughout the day, the interview team will join you in a slack channel, where
+Throughout the day, the interview team will join you in a Slack channel, where
 we'll provide relevant links, and you're welcome to ask any questions.
 
 # Rationale
@@ -29,10 +29,10 @@ we'll provide relevant links, and you're welcome to ask any questions.
 These exercises have several goals:
 
 * It helps us to understand what to expect from you as a developer, what
-  security issues you find important, how you communicate those issues to peers
+  security issues you find important, how you communicate those issues to peers,
   and how you write production code.
 * It helps you get a feel for what it would be like to work at Teleport, as this
-  exercise aims to simulate our day-as-usual and expose you to the type of work
+  exercise aims to simulate our day-as-usual and exposes you to the type of work
   and communication you can expect if you join Teleport.
 * We aim to keep the process light. While there are time limits, it is to keep
   exercises from consuming undue amounts of your time, and not to test
@@ -86,20 +86,20 @@ Grab a bite of food and some water. Take a breather before we continue to the
 next section.
 
 # Part 4: Development
-You will be given a prototype go implementation of the RFD reviewed in
-part 1. You will have 3 hours to develop and submit a single PR implementing
+You will be given a prototype go implementation of the RFD you reviewed
+earlier. You will have 3 hours to develop and submit a single PR implementing
 an authorization and authentication scheme.
 
-This is asynchronous. You'll develop on your machine and you're welcome to
+This is asynchronous. You'll develop on your machine, and you're welcome to
 use whatever tools you're comfortable with to develop the changes. We'll be
-available in the interview slack channel to answer any questions.
+available in the interview Slack channel to answer any questions.
 
 We will review your PR, including compiling and run the program and testing
 it behavior. Make sure to write good commit messages, as well as a helpful
 PR description.
 
 This prototype is expected to run on only a single machine. The distributed
-state considerations of Part 2 L5 need not be considered.
+considerations of Part 2 Level 5 need not be considered.
 
 ## Level 4
 Add authentication and authorization to the Library, API, and client codebase.
