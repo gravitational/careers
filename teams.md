@@ -42,7 +42,7 @@ The team is focused on releasing a preview of passwordless support, which will
 allow users to log in to Teleport using biometric proof of identity in
 conjunction with a proof of presence.
 
-Teleport Engineering also has a general [Security team](#security) which focuses
+Teleport Engineering also has a general [Security team](#security) that focuses
 on holistic security across the organization.
 
 ### Performance and Scaling
@@ -198,7 +198,7 @@ on:
 
 At Teleport, each and every engineer is responsible for security of their work.
 In addition to this individual mandate and our
-[Product Security Team](#product-security), we maintain a security team
+[Product Security team](#product-security), we maintain a Security team
 focused on organization-wide efforts. We're currently working on the following areas:
 
 - Software supply chain security. We ensure infrastructure and code is protected
@@ -210,9 +210,9 @@ focused on organization-wide efforts. We're currently working on the following a
 
 ### What is the difference between the "Product Security" and "Security" teams?
 The Product Security team works primarily in the Teleport codebase, developing
-new security features and fixing bugs in for the next Teleport release. The
-Security team addresses all elements of corporate security including cloud
-security, IT security, GRC, policies, training, our bug bounty.
+new security features and fixing bugs for the next Teleport release. The
+Security team addresses all elements of information security, including cloud
+security, app security, IT security, GRC, policies, training, and our bug bounty.
 
 To illustrate, you'd find a Product Security team member hacking on issues like
 [#10375](https://github.com/gravitational/teleport/issues/10375). You might find
