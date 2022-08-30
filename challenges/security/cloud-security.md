@@ -13,7 +13,7 @@ provide written PR feedback.
 
 4. Development. 3 hours. 12:00 - 15:00 PT. You'll receive prototype code for
 the service you reviewed earlier. Building off this prototype codebase, we ask
-you develop some changes and open a pull request.
+you develop some changes and open one or more pull requests.
 
 5. Attack & Defense Discussion. 1 hour. 15:00 - 16:00 PT. A video call with
 future peers where we ask you to show your depth of knowledge in hypothetically
@@ -87,7 +87,7 @@ next section.
 
 # Part 4: Development
 You will be given a prototype AWS Terraform implementation of the RFD you
-reviewed earlier. You will have 3 hours to develop and submit a single PR
+reviewed earlier. You will have 3 hours to develop and submit one or more PRs
 securing the service. Please implement as many of the following security
 features as you find time for. Implement the ones that you believe provide the
 best security return on investment.

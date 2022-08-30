@@ -13,7 +13,7 @@ provide written PR feedback.
 
 4. Development. 3 hours. 12:00 - 15:00 PT. You'll receive prototype code for
 the service you reviewed earlier. Building off this prototype codebase, we ask
-you develop some changes and open a pull request.
+you develop some changes and open one or more pull requests.
 
 5. Attack & Defense Discussion. 1 hour. 15:00 - 16:00 PT. A video call with
 future peers where we ask you to show your depth of knowledge in hypothetically
@@ -86,8 +86,8 @@ next section.
 
 # Part 4: Development
 You will be given a prototype go implementation of the RFD you reviewed
-earlier. You will have 3 hours to develop and submit a single PR implementing
-an authorization and authentication scheme.
+earlier. You will have 3 hours to develop and submit one or more PRs
+implementing an authorization and authentication scheme.
 
 This is asynchronous. You'll develop on your machine, and you're welcome to
 use whatever tools you're comfortable with to develop the changes. We'll be
