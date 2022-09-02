@@ -1,0 +1,309 @@
+\documentclass{article}
+
+\usepackage[table]{xcolor}
+\usepackage[paperwidth=800mm, paperheight=500mm]{geometry}
+
+% Don't show page numbers.
+\pagenumbering{gobble}
+
+% Column settings for skills able.
+\newcolumntype{C}{p{18em}}
+
+\begin{document}
+
+% Title of matrix.
+\begin{center}
+\begin{huge}
+Systems Engineering
+\end{huge}
+\end{center}
+
+\bigbreak
+
+% Alternating row colors.
+\rowcolors{2}{gray!80!gray!50}{gray!50!gray!20}
+
+% Padding for each cell.
+{\renewcommand{\arraystretch}{2}
+
+% Skills table.
+\begin{tabular}{|C|C|C|C|C|C|C|C|}
+  \hline
+  \rowcolor{blue!60!black!10}
+    \textbf{Level/Skill}
+    &
+    \cellcolor{blue!25}
+    \textbf{Product Output}
+    &
+    \textbf{Communication/Writing}
+    &
+    \textbf{Data structures/Performance}
+    &
+    \textbf{Security}
+    &
+    \textbf{Networking}
+    &
+    \textbf{Systems Engineering}
+    &
+    \textbf{Tooling}
+    \\
+  \hline
+    % Level
+    1
+    &
+
+    % Product Output
+    \cellcolor{blue!25}
+    Creates a design document based on well-defined scoped requirements and
+    implements it.
+    &
+
+    % Communication/Writing
+    Reports progress on a regular basis as required by the team's operational
+    requirements. Actively solicits feedback. Participates on interview panels.
+    &
+
+    % Data structures/Performance
+    Demonstrates good understanding of basic data structures like hash tables,
+    linked lists, and trees. Can reason about algorithm complexity. Applies relevant
+    data structures in day to day activity.
+
+    \bigbreak
+
+    Can implement a production quality software - it might be not the most
+    efficient or secure, but correct.
+    &
+
+    % Security
+    Applies basic security principles to program design. For example, can set
+    up HTTPS and password based auth.
+    &
+
+    % Networking
+    Understands and reasons about networking concepts. Understands and can
+    write production quality web servers. Understands common networking issues and
+    troubleshooting techniques.
+    &
+
+    % Systems Engineering
+    Understands the usage of POSIX and other APIs for Linux systems.
+
+    Understands synchronization primitives and their application, including
+    reasoning about deadlocks and data races. Can write basic system-level code
+    using the different types of memory and allocation. Understands inter process
+    communication and can build systems leveraging it. Can implement data race and
+    deadlock free code using basic production guidelines - using synchronization
+    primitives and properly sharing state between components of the system.
+    &
+
+    % Tooling
+    Understands the usage of compilers, interpreters, build tools at the organization.
+    \\ [13em]
+  \hline
+    % Level
+    2
+    &
+
+    % Product Output
+    \cellcolor{blue!25}
+    Can write high quality user and product focused documentation.
+    &
+
+    % Communication/Writing
+    Provides constructive review on peers' code and design. Helps new team
+    members during their first weeks.
+    &
+
+    % Data structures/Performance
+    &
+
+    % Security
+    Applies industry best practices and security guidelines, like setting up
+    strong TLS, can pick strong authentication and authorization mechanisms.
+    &
+
+    % Networking
+    Has more granular understanding of the networking design, for example can
+    reason about using GRPC vs HTTPS-JSON and their networking and scalability
+    trade-offs. Can do the same for UDP vs TCP and lower level protocols.
+    &
+
+    % Systems Engineering
+    Can reason about performance implications and risks of using
+    synchronization primitives, understands granularity of locking, can debug and
+    troubleshoot memory and synchronization issues.
+    &
+
+    % Tooling
+    Understands tools and compilers as an advanced user - for example, can
+    refactor Makefiles to make them more efficient and parallel execution friendly
+    or select the optimal set of compiler flags for Linux and macOS.
+    \\ [13em]
+  \hline
+    % Level
+    3
+    &
+
+    % Product Output
+    \cellcolor{blue!25}
+    Collaborates with the team to scope requirements, based on good
+    understanding of existing longer term product vision and estimates of the
+    system design of a feature of a product.
+    &
+
+    % Communication/Writing
+    Supports less experienced peers' technical skills, answering questions and
+    being a resource. Documents and improves team practices.
+    &
+
+    % Data structures/Performance
+    Uses advanced data structures and algorithms, such as consensus, gossip
+    protocols to implement key product features.
+    &
+
+    % Security
+    Understands security aspects of protocols on a deeper level, for example
+    can explain differences between TLS 1.2 and 1.3 and security implications.
+    Understands common attack vectors for server side or client side applications.
+
+    \bigbreak
+
+    Can build secure systems that will pass quality security audit that will
+    uncover few to no critical system design errors.
+    &
+
+    % Networking
+    Understands scalability and resilience aspects of practical implementation
+    of systems leveraging networking.
+
+    \bigbreak
+
+    Can write fast, scalable servers and troubleshoot common networking issues
+    such as connection lifecycle, pooling, backpressure and other aspects of the
+    application design.
+    &
+
+    % Systems Engineering
+    Not only can write data-race and deadlock free code, but implements safe
+    and concurrent and/or parallel systems using minimum amount of shared state,
+    granular locking - systems that are easy to read, extend and troubleshoot.
+
+    \bigbreak
+
+    Writes high quality design documents with few to no critical system design
+    errors.
+    &
+
+    % Tooling
+    \\ [13em]
+  \hline
+    % Level
+    4
+    &
+
+    % Product Output
+    \cellcolor{blue!25}
+    Leads the implementation of the isolated feature/improvement that
+    measurably and significantly impacts business outcomes from gathering
+    requirements to getting to the market stage.
+    &
+
+    % Communication/Writing
+    Writes technical articles/blog posts, delivers tech and lightning talks
+    representing the company's technical vision.
+    &
+
+    % Data structures/Performance
+    Leads implementation of products and standalone systems using advanced data
+    structures and algorithms, such as upgrade/install distributed framework.
+    &
+
+    % Security
+    Can apply production quality novel cryptographic to build security systems.
+    For example, can implement strong security support for the system with eBPF
+    from scratch.
+    &
+
+    % Networking
+    &
+
+    % Systems Engineering
+    Can implement production grade systems leveraging advanced low-level and
+    novel components of the Linux design like BPF, control groups.
+    &
+
+    % Tooling
+    \\ [13em]
+  \hline
+    % Level
+    5
+    &
+
+    % Product Output
+    \cellcolor{blue!25}
+    Leads the implementation of a new product line or significant part of the
+    product to deliver it to the market in collaboration with all other teams.
+    &
+
+    % Communication/Writing
+    Writes advanced technical articles/blog posts, gaining significant industry
+    traction or delivers technical talks on major conferences representing the
+    company's vision.
+    &
+
+    % Data structures/Performance
+    Implements customer facing features and systems using advanced data
+    structures and algorithms.
+    &
+
+    % Security
+    Writes technical articles on security aspects of the system, implements
+    significant security product innovations in the area delivered to customers.
+    &
+
+    % Networking
+    &
+
+    % Systems Engineering
+    Applies system level design to deliver new products or significant new
+    components of an existing product to the market.
+    &
+
+    % Tooling
+    \\ [13em]
+  \hline
+    % Level
+    6
+    &
+
+    % Product Output
+    \cellcolor{blue!25}
+    Designs new data structures and algorithms solving relevant business
+    problems and creating competitive advantage for the company.
+    &
+
+    % Communication/Writing
+    Produces peer-reviewed research papers or patent applications.
+    &
+
+    % Data structures/Performance
+    &
+
+    % Security
+    Researches and designs new security systems, cryptography and protocols.
+    &
+
+    % Networking
+    &
+
+    % Systems Engineering
+    &
+
+    % Tooling
+    \\ [12em]
+\end{tabular}
+
+% End renewcommand wrapping.
+}
+
+\end{document}
