@@ -266,3 +266,10 @@ Please have the following available in your development environment:
 * Make
 * [protoc](https://grpc.io/docs/protoc-installation/) v3.13+
 * [protoc-gen-go](https://developers.google.com/protocol-buffers/docs/gotutorial#compiling-your-protocol-buffers) v1.28+
+* [git](https://git-scm.com/downloads)
+
+You will also need a [GitHub](https://github.com/) account.  If you haven't used
+GitHub before, we recommend you get familiar with
+[creating PRs](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request)
+and [reviewing PRs](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/about-pull-request-reviews),
+as you will need to use GitHub to do both of these during the interview.

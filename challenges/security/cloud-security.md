@@ -237,3 +237,10 @@ Your codebase should target 64-bit Linux or Mac machines.
 Please have the following available in your development environment:
 
 * [Terraform](https://www.terraform.io/downloads) 1.2+
+* [git](https://git-scm.com/downloads)
+
+You will also need a [GitHub](https://github.com/) account.  If you haven't used
+GitHub before, we recommend you get familiar with
+[creating PRs](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request)
+and [reviewing PRs](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/about-pull-request-reviews),
+as you will need to use GitHub to do both of these during the interview.
