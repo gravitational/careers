@@ -22,3 +22,4 @@ security are based on the coding challenge.
 * [Systems Engineering](./systems.pdf)
 * [Fullstack Engineering](./fullstack.pdf)
 * [Site Reliability Engineering](./sre.pdf)
+* [Engineering Management](./management.pdf)

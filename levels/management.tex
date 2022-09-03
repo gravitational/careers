@@ -1,0 +1,238 @@
+\documentclass{article}
+
+\usepackage[table]{xcolor}
+\usepackage[paperwidth=525mm, paperheight=325mm]{geometry}
+
+% Don't show page numbers.
+\pagenumbering{gobble}
+
+% Column settings for skills able.
+\newcolumntype{C}{p{20em}}
+
+\begin{document}
+
+% Title of matrix.
+\begin{center}
+\begin{huge}
+Engineering Managment
+\end{huge}
+\end{center}
+
+\bigbreak
+
+% Alternating row colors.
+\rowcolors{2}{gray!80!gray!50}{gray!50!gray!20}
+
+% Padding for each cell.
+{\renewcommand{\arraystretch}{2}
+
+% Skills table.
+\begin{center}
+\begin{tabular}{|C|C|C|C|C|}
+\hline
+    \rowcolor{blue!60!black!10}
+    \textbf{Level}
+    &
+    \cellcolor{blue!25}
+    \textbf{Product Output}
+    &
+    \textbf{Communication/Writing}
+    &
+    \textbf{Team Development}
+    &
+    \textbf{People Development}
+    \\
+\hline
+    % Level
+    Team Lead
+    &
+
+    % Product Output
+    \cellcolor{blue!25}
+    Team ships software on time with low regressions. When delays occur, they
+    are communicated early and transparently.
+
+    \bigbreak
+
+    Team consistently assesses and front-loads risk.
+
+    \bigbreak
+
+    Team has low firefighting load.
+
+    \bigbreak
+
+    Proposes quarterly goals based on customer feedback, platform performance,
+    and operational toil.
+    &
+
+    % Communication
+    Understands and can communicate team mission and quarterly focus to
+    engineers. Engineers all understand team and individual success criteria.
+
+    \bigbreak
+
+    Can deliver cross-team projects on time.
+
+    \bigbreak
+
+    Runs effective 1x1s with the team. Effective 1x1s should have a meeting log
+    attached to the meeting invite which is used to provide feedback with links to
+    the levels guide and development plans. At a minimum, 1x1s should cover what is
+    is being worked on, review tasks others are waiting on, and career development.
+    &
+
+    % Team Development
+    Manages a single team.
+
+    \bigbreak
+
+    Team works together effectively as demonstrated by consistently delivering
+    on quarterly goals.
+
+    \bigbreak
+
+    Team has a low attrition rate.
+
+    \bigbreak
+
+    Leads interview panels and hires for team needs.
+
+    \bigbreak
+
+    Engineers that are underperforming are identified early and provided
+    actionable feedback to improve performance. If performance is not improved,
+    underperformers are provided a Performance Improvement Plan (PIP) with clear
+    deliverables and deadlines for improvement.
+    &
+
+    % People Development
+    Identifies and develops future team leads.
+
+    \bigbreak
+
+    Can effectively delegate tasks to reports by articulating scope of the
+    project, success criteria, and timeline.
+
+    \bigbreak
+
+    Provides actionable feedback to reports that is objective and focused,
+    timely, helps them improve, and avoid anti-patterns.
+
+    \bigbreak
+
+    Writes clear and concrete development plans for all reports.
+    \\ [13em]
+\hline
+    % Level
+    Director of Engineering
+    &
+
+    % Product Output
+    \cellcolor{blue!25}
+    Teams all ship software at a regular cadence (quarterly, monthly, weekly).
+
+    \bigbreak
+
+    Teams effectively prioritize work. Teams focus on items that make the
+    product commercially successful, with high adoption, and happy customers.
+
+    \bigbreak
+
+    Works closely with Director of Product to make Teleport commercially successful.
+
+    \bigbreak
+
+    Proposes quarterly goals based on customer feedback, strategic needs, and
+    market trends.
+    &
+
+    % Communication
+    Leads feedback and support sessions with high profile customers.
+
+    \bigbreak
+
+    Effectively communicates problems and solutions to peer teams in
+    Engineering and Product.
+
+    \bigbreak
+
+    Presents at Engineering All Hands.
+    &
+
+    % Team Development
+    Manages multiple teams. Maintains appropriate distribution of junior and
+    senior engineers on teams.
+
+    \bigbreak
+
+    The team is not afraid to speak up and provide feedback.
+
+    \bigbreak
+
+    Maintains a high performance bar for new and existing engineers.
+
+    \bigbreak
+
+    Fixes and improves issues that span the entire engineering organization.
+    For example, develops interview challenges, improves levels guides, fixes and
+    scales tool usage.
+    &
+
+    % People Development
+    Identifies and develops future Directors of Engineering.
+    \\ [13em]
+\hline
+    % Level
+    VP of Engineering
+    &
+
+    % Product Output
+    \cellcolor{blue!25}
+    Works closely with the VP of Product to make Teleport commercially
+    successful, has high adoption, and happy customers.
+
+    \bigbreak
+
+    Effective at communicating risks and mitigations to SLT.
+    &
+
+    % Communication
+    Communicates status of the engineering organization across the company in
+    weekly updates.
+
+    \bigbreak
+
+    Presents at Company All Hands.
+
+    \bigbreak
+
+    Effectively communicates with other parts of the organization (Sales,
+    Marketing, BizOps).
+
+    \bigbreak
+
+    Works with CTO to define engineering levels, engineering practices,
+    compensation, and team structure (mission and focus).
+    &
+
+    % Team Development
+    Manages entire Engineering organization.
+
+    \bigbreak
+
+    Responsible for engineering hiring. Works with recruiting to build and
+    track hiring pipeline.
+    &
+
+    % People Development
+    Identifies and develops future VPs of Engineering.
+    \\ [13em]
+\hline
+\end{tabular}
+\end{center}
+
+% End renewcommand wrapping.
+}
+
+\end{document}
