@@ -233,9 +233,13 @@ These are the areas we will be evaluating in the submission:
 * Avoid concurrency and networking errors. Most of the issues we've seen in
   production are related to data races, networking error handling or goroutine
   leaks. We will be looking for those errors in your code.
-* Security. Use strong authentication and simplest, but robust authorization.
+* Security. Use strong authentication and a simple, but secure, authorization scheme.
   Set up the strongest transport encryption you can. Test it.
 
+The primary factor in the team's decision is overall code quality. We are looking for
+the highest possible quality with the smallest possible scope that meets the requirements
+of the challenge.
+  
 ## Trade-offs
 
 Write as little code as possible, otherwise this task will consume too much time
