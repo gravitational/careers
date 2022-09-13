@@ -233,7 +233,7 @@ These are the areas we will be evaluating in the submission:
 * Avoid concurrency and networking errors. Most of the issues we've seen in
   production are related to data races, networking error handling or goroutine
   leaks. We will be looking for those errors in your code.
-* Security. Use strong authentication and simplest, but robust authorization.
+* Security. Use strong authentication and a simple, but secure, authorization scheme.
   Set up the strongest transport encryption you can. Test it.
 
 ## Trade-offs

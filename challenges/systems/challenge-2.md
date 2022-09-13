@@ -104,7 +104,9 @@ The project is broken down into 2 components:
 
 ### Library
 
-* Implement a request forwarder to forward requests to an upstream.
+* Implement a connection forwarder to forward connections to an upstream server.
+  Your connection forwarder should copy data in both directions (from the LB to
+  the upstream server, and from the upstream server back to the client of the LB)
 
 ### Server
 
@@ -113,13 +115,13 @@ The project is broken down into 2 components:
   for authentication
 * Develop a simple authorization scheme that defines what clients can use the
   load balancer; this scheme can be statically defined in code
-* Accept and forward requests to upstreams using the library
+* Accept and forward connections to upstreams using the library
 
 ## Level 2
 
 ### Library
 
-* Implement a round-robin request forwarder to forward requests to
+* Implement a round-robin connection forwarder to forward connections to
   multiple upstreams.
 
 ### Server
@@ -127,13 +129,13 @@ The project is broken down into 2 components:
 * Use mTLS authentication to verify the client's identity
 * Develop a simple authorization scheme that defines what upstreams are
   available to which clients; this scheme can be statically defined in code
-* Accept and forward requests to upstreams using library
+* Accept and forward connections to upstreams using library
 
 ## Level 3
 
 ### Library
 
-* Implement a least connections request forwarder that tracks the number of
+* Implement a least connections connection forwarder that tracks the number of
   connections per upstream.
 
 ### Server
@@ -142,13 +144,13 @@ The project is broken down into 2 components:
   client of the server
 * Develop a simple authorization scheme that defines what upstreams are
   available to which clients; this scheme can be statically defined in code
-* Accept and forward requests to upstreams using library
+* Accept and forward connections to upstreams using library
 
 ## Level 4
 
 ### Library
 
-* Implement a least connections request forwarder that tracks the number of
+* Implement a least connections connection forwarder that tracks the number of
   connections per upstream.
 * Implement a per-client connection rate limiter
 
@@ -158,18 +160,18 @@ The project is broken down into 2 components:
   client of the server
 * Develop a simple authorization scheme that defines what upstreams are
   available to which clients; this scheme can be statically defined in code
-* Accept and forward requests to upstreams using library
+* Accept and forward connections to upstreams using library
 
 ## Level 5
 
 ## Library
 
-* Implement a least connections request forwarder that tracks the number of
+* Implement a least connections forwarder that tracks the number of
   connections per upstream.
 * Implement a per-client connection rate limiter that tracks the number of
   client connections.
-* Implement a health checking request forwarder that removes unhealthy
-  upstreams.
+* Add health checking: unhealthy upstreams should not be eligible to receive
+  connections until they are determined to be healthy.
 
 ## Server
 
@@ -177,7 +179,7 @@ The project is broken down into 2 components:
   client of the server
 * Develop a simple authorization scheme that defines what upstreams are
   available to which clients; this scheme can be statically defined in code
-* Accept and forward requests to upstreams using library
+* Accept and forward connections to upstreams using library
 
 # Guidance
 
