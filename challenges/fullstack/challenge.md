@@ -232,6 +232,10 @@ These are the areas we will be evaluating in the submission:
   clear errors and not crash under non-critical conditions.
 * Ensure that your app is secure.
 
+The primary factor in the team's decision is overall code quality. We are looking for
+the highest possible quality with the smallest possible scope that meets the requirements
+of the challenge.
+
 ## Pitfalls and Gotchas
 
 To help you out, we’ve composed a list of things that previously resulted in a

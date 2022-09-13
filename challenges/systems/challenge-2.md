@@ -214,6 +214,10 @@ These are the areas we will be evaluating in the submission:
 * Security. Use strong authentication and simple but robust authorization.
   Set up the strongest transport encryption you can. Test it.
 
+The primary factor in the team's decision is overall code quality. We are looking for
+the highest possible quality with the smallest possible scope that meets the requirements
+of the challenge.
+
 ## Trade-offs
 
 Write as little code as possible, otherwise this task will consume too much
