@@ -1,220 +1,267 @@
 # Summary
 
-This is meant to be a general guide to learn about the different kinds of
-projects our engineering teams are working on at Teleport and to help decide
-which may be the best fit for those looking to join.
+This page is meant to be a general guide to learn about the different teams at
+Teleport to help candidates decide which may be the best fit for them.
 
 ## Core
 
-The Teleport Core team is focused on design and development of the core product:
-Teleport. It is split into multiple sub-teams that work on specific areas of the
-product.
+The Teleport Core team is focused on design and development of the core
+product: Teleport. It is split into multiple sub-teams that work on specific
+areas of the product.
 
-### Server and Kubernetes Access
+### Technologies
 
-The Server and Kubernetes Access team works on
-[SSH](https://goteleport.com/ssh-server-access/) and
-[Kubernetes](https://goteleport.com/kubernetes-access/) servers and proxies. For
-Server Access, the team is working on automatic user provisioning and
-configuration, as well as IP-based restrictions. For Kubernetes access, the team
-is building out features to support Teleport deployments that don't require
-static tokens.
+We use the following technologies to build Teleport.
 
-### Application and Database Access
-
-The Application and Database Access team works on providing access to [web applications](https://goteleport.com/docs/application-access) and [databases](https://goteleport.com/docs/database-access/) behind NATs and firewalls with security and compliance needs. The team has recently worked on adding [certificate based authentication support to CLI applications](https://github.com/gravitational/teleport/pull/5918) and adding support for the [MongoDB protocol](https://github.com/gravitational/teleport/pull/7213) to Database Access.
-
-#### Here are the examples of projects you may be working on:
-
-- Adding support for more database access [protocols](https://github.com/gravitational/teleport/issues?q=is%3Aopen+is%3Aissue+label%3Adatabase-access+label%3Adb%2Frequested) and improving the existing ones.
-- Working on [features](https://github.com/gravitational/teleport/issues?q=is%3Aissue+is%3Aopen+label%3Aapplication-access+label%3Afeature-request) for application access identity-aware proxy.
-- Building advanced access controls such as [session recording](https://github.com/gravitational/teleport/issues/5799), [data masking](https://github.com/gravitational/teleport/issues/7150) and [per-session MFA](https://github.com/gravitational/teleport/issues/6172).
-- Implementing cloud access solutions for AWS, GCP and Azure.
-- Improving the UX of application and database access products.
-
-### Product Security
-
-The Product Security team is focused on application security for the Teleport
-product. This team implements security controls and works with security
-researchers to find and fix security vulnerabilities.
-
-The team is focused on releasing a preview of passwordless support, which will
-allow users to log in to Teleport using biometric proof of identity in
-conjunction with a proof of presence.
-
-Teleport Engineering also has a general [Security team](#security) that focuses
-on holistic security across the organization.
+* Go
+* Rust
+* GitHub Actions
+* Docker
 
 ### Performance and Scaling
 
 The Performance and Scaling team is focused on scaling, performance, and
 robustness of Teleport in large deployments.
 
-The team is currently working on scaling Teleport to
-[100k node clusters](https://github.com/gravitational/teleport/issues/4173) and
-[secure automatic upgrades](https://github.com/gravitational/teleport/pull/6691)
-of large fleets of servers.
+Recent projects:
 
-### Machine ID
+* Improve `tsh` initial connection latency
+  [#16257](https://github.com/gravitational/teleport/pull/16257)
+  [#16456](https://github.com/gravitational/teleport/pull/16456)
+* Improve performance of Teleport on large clusters
+  [#16636](https://github.com/gravitational/teleport/pull/16636)
 
-The [Machine ID](https://goteleport.com/blog/machine-to-machine-access/) team is
-focused on bringing all the advantages and convenience that Teleport provides
-for human users to machine use cases.
+### Platform Security
 
-The team is currently working on:
+The Platform Security team is focused on application security for the Teleport
+product. This team implements security controls and works with security
+researchers to find and fix security vulnerabilities.
 
-- support for database access, kubernetes access, and application access
-- simplifying setup and configuration
-- support for issuing host certificates
-- CA rotation
+Teleport Engineering also has a general [Security
+team](https://github.com/gravitational/careers/blob/main/teams.md#security)
+that focuses on holistic security across the organization.
+
+Recent projects:
+
+* Add support for passwordless authentication
+  [#9296](https://github.com/gravitational/teleport/pull/9296)
+* Add support for searching for resource
+  [#11261](https://github.com/gravitational/teleport/pull/11261)
+
+### Server Access and Kubernetes Access
+
+The Server and Kubernetes Access teams work on secure access using short-lived
+credentials to SSH servers and Kubernetes clusters.
+
+Recent projects:
+
+* Add support for non-disk based certificate support to `tsh`
+  [#14774](https://github.com/gravitational/teleport/pull/14774)
+  [#15334](https://github.com/gravitational/teleport/pull/15334)
+  [#15335](https://github.com/gravitational/teleport/pull/15335)
+  [#15336](https://github.com/gravitational/teleport/pull/15336)
+* Switch from scp to sftp
+  [#13216](https://github.com/gravitational/teleport/pull/13216)
+  [#13491](https://github.com/gravitational/teleport/pull/13491)
+  [#16601](https://github.com/gravitational/teleport/pull/16601)
+* Automatic discovery and enrollment of servers on AWS
+  [#12410](https://github.com/gravitational/teleport/pull/12410)
+
+### Application Access
+
+The Application Access team works on providing access to web and console
+applications behind NATs and firewalls with security and compliance
+needs.
+
+Recent projects:
+
+* Add certificate-based authentication support to CLI applications
+  [#5918](https://github.com/gravitational/teleport/pull/5918)
+
+### Database Access
+
+The Database Access team works on providing access to databases behind NATs and
+firewalls with security and compliance needs.
+
+Recent projects:
+
+* Added support for mTLS over an AWS ALB
+  [#14369](https://github.com/gravitational/teleport/issues/14369)
+  [#15669](https://github.com/gravitational/teleport/pull/15669)
+* Added support for Redis
+  [#10053](https://github.com/gravitational/teleport/pull/10053)
+* Added support for Snowflake
+  [#12006](https://github.com/gravitational/teleport/pull/12006)
+* Added support for MongoDB
+  [#7213](https://github.com/gravitational/teleport/pull/7213)
 
 ### Desktop Access
 
-The Teleport Desktop Access team is focused on secure and user-friendly remote desktop access.
+The Teleport Desktop Access team is focused on secure and user-friendly remote
+desktop access.
 
-The team is currently working on browser-based Windows Desktop Access, including:
+Recent projects:
 
-- MFA
-- Shared clipboard
-- Session recording
-- Performance optimization and security hardening
+* Add support for non-AD hosts
+* Added support for file system sharing
+  [#16022](https://github.com/gravitational/teleport/pull/16022)
 
-### Teleport Connect
+### Machine ID
 
-The [Teleport Connect](https://goteleport.com/blog/teleport-connect/) team is
-focused on creating desktop applications that make Teleport easier to use and
-more secure.
+The Machine ID team is focused on bringing all the advantages and convenience
+that Teleport provides for human users to machine use cases.
 
-The team is working towards the first release of Teleport Connect, adding
-support for SSO, Server Access, Database Access, and Kubernetes Access.
+Recent projects:
 
-### Frontend Applications
+* Added Kubernetes Access support
+  [#14269](https://github.com/gravitational/teleport/pull/14269)
+* Added Application Access support
+  [#14551](https://github.com/gravitational/teleport/pull/14551)
+* Added Database Access support
+  [#11596](https://github.com/gravitational/teleport/pull/11596)
+  [#11904](https://github.com/gravitational/teleport/pull/11904)
+* Added host certificate support
+  [#15592](https://github.com/gravitational/teleport/pull/15593)
 
-The Teleport Frontend Applications team is focused on building user-friendly web
-applications.
+### Access Provider
 
-- An updated web UI for passwordless logins
-- Advanced filtering and clickable labels
-- Improved UI for access requests
+The Access Provider team is focused on web and desktop applications that make
+Teleport easier to use and more secure.
 
-### Internal Tools
+Recent projects:
 
-The Core Tooling team contributes force multiplication efforts to help engineers
-developing Teleport and across the org. This team is the backbone to ensuring
-the rest of the development team remains incredibly productive, and that we
-operate in the open, with an open source code base.
+* Added support for passwordless
+  [#724](https://github.com/gravitational/webapps/pull/724)
+* Added support for server-side paginating and filtering
+  [#9633](https://github.com/gravitational/teleport/pull/9633)
 
-This team is responsible for the tooling necessary to build and release Teleport
-artifacts, including container images, AMIs, Helm Charts, and
+### Access Manager
+
+The Access Manager team is focused on simplifying connecting and configuring
+Teleport.
+
+Recent projects:
+
+* Teleport Discover
+  [#13440](https://github.com/gravitational/teleport/pull/13440)
+
+### Integrations
+
+The Integration team is focused on building strong integrations with tools like
+Kubernetes, Terraform, Ansible, and more.
+
+Recent projects:
+
+* Added support for Microsoft Teams to Access Requests
+* Added Teleport Kubernetes Operator
+  [#13331](https://github.com/gravitational/teleport/pull/13331)
+
+### Tools
+
+The Core Tooling team contributes force multiplication efforts to help
+engineers developing Teleport and across the org. This team is the backbone to
+ensuring the rest of the development team remains incredibly productive, and
+that we operate in the open, with an open source code base.
+
+This team is responsible for the tooling necessary to build and release
+Teleport artifacts, including container images, AMIs, Helm Charts, and
 integration/distribution to package managers.
 
-The team is currently working on:
+Recent projects:
 
-- Redefining our CI tooling, to ensure high confidence that the CI tooling is
-  not a security liability, while making the development teams more productive.
-- Building robust and essential Release engineering tooling, so the code we
-  produce can get into our customers hands in a secure manner.
-- Internal automation, bots, and integrations that keep the team members
-  autonomous.
-
-### Teleport Devops
-
-The Teleport codebase is used by DevOps teams around the world. These customers
-and OSS users use a variety of tools in their day to day jobs. This role is all
-about ensuring that we provide stable and reliable integrations with the
-configuration management tools that are most important to our community. We want
-to ensure that whether it's Kubernetes or Ansible, we have a fully realized way
-to deploy and maintain Teleport. This is a great opportunity to work with
-Kubernetes, Terraform (on various cloud providers), Ansible, Salt, Puppet, and
-so much more!
+* Create multi-arch container images
+  [#16688](https://github.com/gravitational/teleport/pull/16688)
+* Build package distribution infrastructure for apt/deb
+  [#10746](https://github.com/gravitational/teleport/pull/10746)
+* Secure build infrastructure
 
 ## Cloud
 
-The Teleport Cloud offering is new; we're on a journey of defining and building
-a culture around production services, offering a secure and reliable hosted
-version of Teleport. Our mandate is straightforward; we need to be prepared to
-secure, develop, monitor, maintain, scale, investigate, and automate the cloud
-hosted version of Teleport and the systems that support our work. Our work
-varies from the mundane to the remarkable, ensuring that the cloud version of
-Teleport is a compelling option for our customers.
+The Teleport Cloud team develops and operates Teleport Cloud for customers as
+service. Cloud exists to help alleviate the burden of running and maintaining
+secure global low-latency access to infrastructure.
 
 ### Technologies
 
 We use the following technologies to build Teleport Cloud:
 
-- Golang
-- Typescript & React
-- PostgreSQL
-- Terraform and Packer
-- Amazon Web Services
-- Kubernetes
-- Prometheus / Alertmanager / Loki internally and on Grafana Cloud
-- Drone.io
+* Go
+* Typescript & React
+* PostgreSQL
+* Terraform and Packer
+* Amazon Web Services (AWS)
+* Kubernetes
+* Prometheus/Alertmanager/Loki/Grafana
 
-### Cloud Reliability
+### Product User Experience
 
-Our Cloud Reliability Team defines and builds a culture around production,
-ensuring scaling of our product offering against company/product growth.
+The team is focused on delivering a great user experience for Cloud users.
 
-Some projects we're working on right now:
+Recent projects:
 
-- Expanding Teleport Cloud to multiple regions, reducing latency between users
-  and their infrastructure.
-- Defining SLOs, and developing centralized monitoring and alerting based on them
-- Evaluating and implementing database and storage solutions that match or
-  exceed our SLOs and growth demands
-- Developing procedures and automation to ensure reliable and safe rollouts
+* Add support for Upgrade Windows
+* Simplify the Teleport Downloads page
+* User journey tracking
 
-### Cloud Applications
+### Product Infrastructure
 
-As the applications team for Teleport Cloud, we manage the Teleport deployments
-for our cloud customers and provide a stable, easy-to-use product.
+The team is focused on scalability, security, and analytics of Teleport on our
+Cloud platform.
 
-The team intersects with almost all other departments in the company and offers
-a broad range of projects. For example:
+Recent projects:
 
-- Building Kubernetes operators
-- Developing subscription & billing logic
-- Contributing UI & UX improvements for Teleport
-- Rewriting Teleport core networking to work better for cloud use cases.
-- Asset distribution
+* Reduce tenant on-boarding time
+* Build reporting and analytics platform
 
-### Cloud Tooling
+### Platform Metrics & CI/CD
 
-The Cloud Tooling team contributes force multiplication efforts to help
-engineers developing Teleport Cloud and across the org. We're currently working
-on:
+The team is focused on release automation, observability, and developer
+experience.
 
-- Building and maintaining Teleport clusters that engineers use to securely
-  access our infrastructure backing Teleport Cloud.
-- Improving static analysis and automated tests.
-- Developing security conscious CI guidelines and tooling.
-- While we build up the Cloud Security team, tooling is heavily invested in
-  improving our security posture
-  audit trail for generated and published assets and ensuring we're using
-  encryption at rest in the right places.
+Recent projects:
+
+* CI/CD with GitHub Actions
+* Develop more sophisticated resource growth alerts
+* Automate manual processes
+* Improve platform monitoring and alerting
+
+### Platform Infrastructure
+
+The team is focused on building secure, reliable, and low latency
+infrastructure for the Cloud platform.
+
+Recent projects:
+
+* Reduce connection latency for geo-distributed infrastructure
+* Build next-generation Cloud platform infrastructure
+* Update disaster recovery and backups infrastructure
+* Multi-region support for Kubernetes operator
 
 ## Security
 
 At Teleport, each and every engineer is responsible for security of their work.
-In addition to this individual mandate and our
-[Product Security team](#product-security), we maintain a Security team
-focused on organization-wide efforts. We're currently working on the following areas:
+In addition to this individual mandate and our [Product Security
+team](#product-security), we maintain a Security team focused on
+organization-wide efforts. We're currently working on the following areas:
 
-- Software supply chain security. We ensure infrastructure and code is protected
-  and auditable from developer to production.
-- Teleport's bug bounty program.
-- Working with consultants and independent experts to perform blackbox, whitebox,
-  and red team validation of our code and security controls.
-- Updating compliance documentation, internal controls, and our corporate policies.
+* Software supply chain security. We ensure infrastructure and code is
+  protected and auditable from developer to production.
+* Teleport's bug bounty program.
+* Working with consultants and independent experts to perform blackbox,
+  whitebox, and red team validation of our code and security controls.
+* Updating compliance documentation, internal controls, and our corporate
+  policies.
 
 ### What is the difference between the "Product Security" and "Security" teams?
+
 The Product Security team works primarily in the Teleport codebase, developing
 new security features and fixing bugs for the next Teleport release. The
 Security team addresses all elements of information security, including cloud
-security, app security, IT security, GRC, policies, training, and our bug bounty.
+security, app security, IT security, GRC, policies, training, and our bug
+bounty.
 
 To illustrate, you'd find a Product Security team member hacking on issues like
-[#10375](https://github.com/gravitational/teleport/issues/10375). You might find
-a Security team member improving our internal Okta terraform or improving the
-policies and infrastructure backing our promises at https://goteleport.com/security/.
+[#10375](https://github.com/gravitational/teleport/issues/10375). You might
+find a Security team member improving our internal Okta terraform or improving
+the policies and infrastructure backing our promises at
+https://goteleport.com/security/.
