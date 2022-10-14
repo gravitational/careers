@@ -101,14 +101,14 @@ This prototype is expected to run on only a single machine. The distributed
 considerations of Part 2, Level 5 need not be considered.
 
 ## Level 4
-Add authentication and authorization to the Library, API, and client codebase.
+Add authentication and authorization to the server, API, and client codebase.
 
 Separate actors should not be able to view or interact with other actors jobs.
 
 Log all actions and the actor performing them.
 
 ## Level 5
-Add authentication and authorization to the Library, API, and client codebase.
+Add authentication and authorization to the server, API, and client codebase.
 
 Separate users should not be able to view or interact with other user's jobs.
 
