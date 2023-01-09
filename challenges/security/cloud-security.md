@@ -6,8 +6,7 @@ security engineers. The challenge consists of the following sections:
 1. Kick off with the hiring manager. 45 minutes. 09:15 - 10:00 PT
 
 2. Peer Review. 90 minutes. 10:00 - 11:30 PT. You'll receive a brief Request
-for Discussion (RFD) and an architecture diagram of a service. You will
-provide written PR feedback.
+for Discussion (RFD) for a service. You will provide written PR feedback.
 
 3. Break/Lunch. 30 minutes. 11:30 - 12:00 PT
 
@@ -64,7 +63,7 @@ you.
 # Part 2: Peer Review
 You will be given a GitHub repo containing a PR that includes a
 [RFD](https://github.com/gravitational/teleport/blob/master/rfd/0000-rfds.md)
-and architecture diagram for a cloud-hosted binary distribution service.
+for a cloud-hosted binary distribution service.
 
 You will have 90 minutes of asynchronous time to read through the RFD and
 provide written PR feedback in GitHub.
