@@ -166,7 +166,7 @@ These are the areas we will be evaluating in the submission:
   [tfsec](https://github.com/aquasecurity/tfsec) for our Terraform.
 * Follow the [principle of least privilege](https://en.wikipedia.org/wiki/Principle_of_least_privilege)
   when configuring IAM.
-* Show your breadth and depth of knowledge for either AWS or GCP.
+* Show the breadth and depth of your AWS knowledge.
 
 ## Trade-offs
 
