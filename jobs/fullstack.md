@@ -34,7 +34,7 @@ TypeScript with React.
 
 **The projects you may be working on**
 
-* Teleport Terminal, a desktop app providing quick access to Teleport resources
+* Teleport Connect, a desktop app providing quick access to Teleport resources
 * Making Teleport more efficient by adding server-side pagination and filtering
   [capabilities](https://github.com/gravitational/teleport/blob/master/rfd/0055-webui-ss-paginate-filter.md)
 * Making Teleport easier to use by desigining experiences that guide the user
@@ -45,7 +45,7 @@ TypeScript with React.
 
 ## Requirements
 
-* Ability to work in the U.S., Europe or Canada without a visa.
+* Ability to work in the US, Canada, Australia, England, Ireland, or Poland without a visa.
 * Experience with JavaScript, TypeScript, and React
 * [Web security](https://developer.mozilla.org/en-US/docs/Web/Security) experience is a plus.
 
@@ -59,8 +59,7 @@ What to expect once you apply:
 * We will send you a 20-30 minute programming quiz.
 * You will join 30 minute intro call and we will walk you through the
   compensation, interview process and requirements.
-* You join a slack channel and submit a coding challenge in Typescript or
-  JavaScript using Github.
+* You join a slack channel and submit a coding challenge in Go and Typescript using GitHub.
 
 [Apply Here](https://jobs.lever.co/teleport/2ec21642-ae90-4765-b9e3-b8b3ea312b3c)
 

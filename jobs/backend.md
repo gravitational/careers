@@ -42,8 +42,8 @@ TypeScript with React.
 
 ## Requirements
 
-* Ability to work in the U.S., Europe or Canada without a visa.
-* Golang or Rust experience.
+* Ability to work in the US, Canada, Australia, England, Ireland, or Poland without a visa.
+* Go or Rust experience.
 * Linux systems engineering experience.
 * Cryptography engineering experience is a plus.
 
@@ -57,8 +57,8 @@ What to expect once you apply:
 * We will send you a 20-30 minute programming quiz.
 * You will join 30 minute intro call and we will walk you through the
   compensation, interview process and requirements.
-* You join a slack channel and submit a coding challenge in Golang or Rust using
-  Github.
+* You join a slack channel and submit a coding challenge in Go or Rust using
+  GitHub.
 
 [Apply Here](https://jobs.lever.co/teleport/8a3ba43b-ae42-4225-aaf0-7f54713202d6)
 

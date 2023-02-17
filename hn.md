@@ -19,7 +19,7 @@ We offer:
   * Competitive salary and equity.
   * 401k with company match.
   * Excellent health insurance.
-  * Work anywhere in the U.S, Canada or Europe
+  * Work anywhere in the US, Canada, Australia, England, Ireland, or Poland.
 
 Apply: https://jobs.lever.co/teleport
 
@@ -30,5 +30,5 @@ What to expect once you apply:
   * We will send you a 20-30 minute programming quiz
   * You will join 30 minute intro call and we will walk you through the compensation,
     interview process and requirements.
-  * You join a slack channel and submit a coding challenge in Golang or Rust using Github.
+  * You join a slack channel and submit a coding challenge in Go or Rust using GitHub.
 
