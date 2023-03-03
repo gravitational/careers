@@ -30,6 +30,12 @@ GitHub's file browser.
 <img src="./assets/google.jpg" height="300" />
 <img src="./assets/github.jpg" height="200" />
 
+When you are ready to begin, we will invite you to a GitHub repository where you
+will collaborate with a few members of the team on the challenge. The repository
+has some starter code to save you some time in bootstrapping a project. You are
+welcome to replace any of this code if you choose, so long as you continue to
+meet the requirements of the challenge.
+
 ## Tools
 
 In order to provide an experience similar to working on Teleport itself, we've
@@ -63,17 +69,44 @@ This application should have the following functionality:
   and URL-based navigation.
 * Strong authentication
 
+Additionally, we are a security-focused company and place an extra emphasis on
+security for senior engineering candidates. We will expect your solution to have
+a strong security posture as it pertains to authentication, encryption, and
+overall web security.
+
 ### API
 
-This repository includes just enough starter code to serve up both the web app
-and a sample API endpoint.
+The repository we invite you to includes just enough starter code to serve up
+both the web app and a sample API endpoint.
 
 The starter code here only listens for plain-text HTTP. At Teleport, we avoid
 plain-text connections and prefer to encrypt all data in transit. You will be
 responsible for adding TLS.
 
-Your API only needs to return information about a single directory. There is no
-need to recurse into subdirectories.
+Your API only needs to return the contents of the specified directory and does
+not need to recurse into subdirectories. The following is an example of an
+acceptable API response:
+
+```json
+{
+  "name": "example",
+  "type": "dir",
+  "size": 0,
+
+  "contents": [
+    {
+      "name": "README.md",
+      "type": "file",
+      "size": 12345,
+    },
+    {
+      "name": "images",
+      "type": "dir",
+      "size": 0,
+    }
+  ]
+}
+```
 
 When you add authentication (the requirements for which are outlined later in
 this document), the API will also need to support session management (logging in
@@ -88,7 +121,7 @@ file should not do anything.
 
 The following features are required:
 
-* [ ] Display the filename, type (file or director), and human-readable size for files.
+* [ ] Display the filename, type (file or directory), and human-readable size for files.
 * [ ] Add support for filtering the directory contents based on filename.
   Filtering should be performed client-side, and a simple substring match is
   sufficient.
