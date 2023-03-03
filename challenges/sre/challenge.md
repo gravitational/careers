@@ -35,7 +35,7 @@ promotions. Check [Site Reliability Engineering (SRE) Levels](../../levels/sre.p
 An incomplete implementation of a Go server is located at
 [sre-server/main.go](./sre-server/main.go).
 
-Start by creating a new Github repository. Then let the interview panel know the
+Start by creating a new GitHub repository. Then let the interview panel know the
 repository's location by pasting a link in your interview Slack channel. Invite
 interview panel participants as contributors to the new repository if you prefer
 to keep your submission private.
@@ -249,7 +249,7 @@ engineers who will be working with you. Ask them about the engineering culture,
 work and life balance, or anything else that you would like to learn about
 Teleport.
 
-Before writing the actual code, create a brief design document in markdown in Github
+Before writing the actual code, create a brief design document in markdown in GitHub
 and share with the team.
 
 Split your code submission using pull requests and give the team an opportunity

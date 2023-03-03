@@ -1,13 +1,8 @@
 # Fullstack Application Developer
 
-## Summary
+Welcome!
 
-Implement an application that allows a user to browse directory content on a
-remote server.
-
-## Rationale
-
-We would like to evaluate your skill in the following areas:
+We will use this project in order to evaluate your skill in the following areas:
 
 * Taking existing high-level requirements and translating them to a functional
   application
@@ -19,148 +14,157 @@ We would like to evaluate your skill in the following areas:
 We believe this technique is not only better but also more fun compared to
 whiteboard/quiz interviews so common in the industry. It’s not without the
 downsides - it could take longer than traditional interviews. That said, it's
-our view that this type of challenge gives us a more accurate assessment of
-your ability to work well on the types of projects we’re working on day-to-day
-here at Teleport. [Some of the best teams use coding
-challenges](https://sockpuppet.org/blog/2015/03/06/the-hiring-post/).  We
+our view that this type of challenge gives us a more accurate assessment of your
+ability to work well on the types of projects we’re working on day-to-day here
+at Teleport. [Some of the best teams use coding
+challenges](https://sockpuppet.org/blog/2015/03/06/the-hiring-post/). We
 appreciate your time and are looking forward to hacking on this project
 together.
 
+## Summary
+
+In this challenge, you will build an application that allows a user to browse
+directory content on a remote server. Think Google Drive, Dropbox, or even
+GitHub's file browser.
+
+<img src="./assets/google.jpg" height="300" />
+<img src="./assets/github.jpg" height="200" />
+
+When you are ready to begin, we will invite you to a GitHub repository where you
+will collaborate with a few members of the team on the challenge. The repository
+has some starter code to save you some time in bootstrapping a project. You are
+welcome to replace any of this code if you choose, so long as you continue to
+meet the requirements of the challenge.
+
 ## Tools
 
-* CSS: any
-* Frontend: React, React Router
-* Backend: NodeJS, Go, Rust
-* Version Control: GitHub
+In order to provide an experience similar to working on Teleport itself, we've
+selected tools that align with our internal development environment.
+
+* Version control and code review performed via GitHub
+* The backend API is written in Go
+* The frontend is a React app written in TypeScript
+
+At Teleport, we use [styled components](https://styled-components.com) for
+styling, but you are not required to use them for this challenge.
 
 ## Levels
 
-There are 6 engineering levels at Teleport. Levels 1-4 are open through the
-fullstack challenge.
+There are 6 engineering levels at Teleport. Levels 1-4 are open to external candidates.
 
 For fullstack engineers, levels 5 and 6 are only for internal promotions. Check
 [Fullstack Engineering Levels](../../levels/fullstack.pdf) for more details.
 
-## Requirements
+At this time, we are seekling level 4 full stack engineers only.
+
+## Requirements - Level 4
 
 Implement an application that allows a user to browse directory content on a
 remote server.
 
 This application should have the following functionality:
 
-* A directory viewer client with client-side filtering and sorting capabilities
-  (level 1) and url-based navigation (level 2).
-* A server for serving the webassets, containerized using Docker (level 2).
-* Authentication with a login screen and backend API to browse a directory
-  (level 3+).
+* A Go backend that serves the webapp and an API
+* The UI, which should include client-side filtering and sorting capabilities
+  and URL-based navigation.
+* Strong authentication
 
-### Level 1
+Additionally, we are a security-focused company and place an extra emphasis on
+security for senior engineering candidates. We will expect your solution to have
+a strong security posture as it pertains to authentication, encryption, and
+overall web security.
 
-This level focuses on JS/CSS/DOM knowledge and does not require any server-side
-knowledge to implement.
+### API
 
-Create a directory viewer with the following functionality:
+The repository we invite you to includes just enough starter code to serve up
+both the web app and a sample API endpoint.
 
-* An interface for viewing and browsing directory content.
-* Filtering on filename within the current directory (basic string matching).
-* Sorting on filename, type, and size within the current directory.
-* Unlike simlar interfaces such as Google Drive and Dropbox, **file preview is
-  _not_ required**. Clicking on a file should be a no-op.
+The starter code here only listens for plain-text HTTP. At Teleport, we avoid
+plain-text connections and prefer to encrypt all data in transit. You will be
+responsible for adding TLS.
 
-Directions:
+Your API only needs to return the contents of the specified directory and does
+not need to recurse into subdirectories. The following is an example of an
+acceptable API response:
 
-*  Build your own components.
-*  Display the `name`, `size`, and `type` file attributes.
-*  Use human readable format to display the `size` of a file.
-*  Use below JSON structure to mock real directory.
+```json
+{
+  "name": "example",
+  "type": "dir",
+  "size": 0,
 
-```js
-const directory = {
-  name: "teleport",
-  size: 0, // bytes
-  type: "dir",
-  items: [
+  "contents": [
     {
-      name: "lib",
-      size: 0, // bytes
-      type: "dir",
-      items: [
-        {
-          name: "teleport.go",
-          size: 320000, // bytes
-          type: "file",
-        },
-        {
-          name: "test.go",
-          size: 3320000, // bytes
-          type: "file",
-        },
-      ],
+      "name": "README.md",
+      "type": "file",
+      "size": 12345,
     },
     {
-      name: "README.md",
-      size: 4340000, // bytes
-      type: "file",
-    },
-  ],
-};
+      "name": "images",
+      "type": "dir",
+      "size": 0,
+    }
+  ]
+}
 ```
 
-You can use a design of similar viewers like Google Drive or Github as a
-starting point and then add missing pieces to it. For example, you can borrow
-CSS from these design systems:
-[Github](https://primer.style/components/getting-started) or
-[Google](https://material-ui.com/getting-started/usage/) if you like.
+When you add authentication (the requirements for which are outlined later in
+this document), the API will also need to support session management (logging in
+and out).
 
-<img src="./assets/google.jpg" height="300" />
-<img src="./assets/github.jpg" height="200" />
+### UI
 
-### Level 2
+The UI should allow a user to view the contents of a single directory. Clicking
+on a subdirectory should navigate to that directory and refresh the contents.
+Unlike other commercial tools, _file preview is not required_. Clicking on a
+file should not do anything.
 
-This level focuses on serving web assets. In addition to the Level 1
-requirements, you will:
+The following features are required:
 
-* Serve web assets from a web server.
-* Containerize your application using Docker.
-* Implement URL Navigation
+* [ ] Display the filename, type (file or directory), and human-readable size for files.
+* [ ] Add support for filtering the directory contents based on filename.
+  Filtering should be performed client-side, and a simple substring match is
+  sufficient.
+* [ ] Add support for sorting directory contents based on filename, type, and
+  size.
+* [ ] Include breadcrumbs that show the current location in the directory. The
+  breadcrums should be clickable for easy navigation to parent directories.
+* [ ] Implement URL navigation. The state of the app should be encoded in the
+  URL. No state should be lost upon a page refresh.
 
-Directions:
+While third-party dependencies are acceptable, we prefer to minimize the use of
+dependencies where possible. For example:
 
-* You can use a basic server (like nginx) to serve web assets or write a small
-  NodeJS/Go application to serve them.
-* Ensure that the path of the directory/file being viewed is part of the URL.
-  Refreshing the page should show the same state/content as before.
+* We prefer you use native browser APIs like
+  [fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) over
+  third-party libraries like Axios.
+* We're happy to see borrowed CSS from other projects to get a nice look and feel,
+  but we do want the opportunity to evaluate how you design reusable components.
+  Please implement your own components rather than using large frameworks that
+  already provide components for breadcrumbs, tree-views, etc.
 
-### Level 3
+### Authentication
 
-This level focuses on backend knowledge and a basic understanding of web
-security.  At this level, you'll implement the UI from the Level 2 challenge,
-and add a backend with the following features:
+The app should also present directory information only to authenticated users.
+This will require changes to both the API and the UI.
 
-* An API that allows authenticated users to browse a server directory 1-level
-  deep at a time. Update the UI to use this API instead of a static JSON
-  object.
-* Add support for session management for login/logout.
-* A login screen where an unauthenticated user is automatically redirected to
-  (and then taken back to original URL).
+The following features are required:
 
-Directions:
+* [ ] The API should reject requests from unauthenticated users
+* [ ] The UI should redirect unauthenticated users to a login page. After a
+  succesful login, users should be directed back to the page they initially
+  requested.
+* [ ] The UI should provide a way for users to log out.
 
-* You can store user sessions in the memory, no need to use a database.
-* You can hardcode some parameters such as a directory location, or
-  username/hash.
-* Use native/standard libraries. Avoid using out-of-the-box solutions like
-  passportjs, or lodash
-* Use native browser APIs for networking.
+User sessions can be stored in memory, there is no need for a database of any
+kind.
 
-### Level 4
+User registration / enrollment is not required. You are welcome to hard-code one
+or two valid users, just let us know what their credentials are for testing
+purposes.
 
-This level focuses on the quality of the submission and a comprehensive
-understanding of software security.
-
-* Make sure your application is not vulnerable to any web security
-  vulnerabilities.
-* Make sure you have strong TLS setup.
+Please do not use a third party solution that provides authentication out of
+the box.
 
 # Guidance
 
@@ -174,9 +178,16 @@ Before writing the actual code, create a brief design document and share with
 the team. At Teleport, we prefer Markdown for
 [our designs](https://github.com/gravitational/teleport/blob/master/rfd/0000-rfds.md).
 
-This document should include proposed UX of the app (wireframes are great),
-tools and libraries that will be used, proposed API, implementation details
-where appropriate (for example: session management), and security.
+This document should include:
+
+- the proposed UX of the app (wireframes are great)
+- the proposed API
+- URL structure (how will you encode the app state in the URL?)
+- security, including:
+  - authentication
+  - TLS setup
+  - protection against common web security vulnerabilities
+- implementation details where appropriate (for example, session management)
 
 A few notes about the design document:
 
@@ -191,11 +202,9 @@ A few notes about the design document:
 * When you feel it's ready, create a PR for this document to allow the team to
   review and comment on it.
 
-Split your code submission using pull requests and give the team an opportunity
-to review the PRs. A good “rule of thumb” to follow is that the final PR
-submission is a formality adding a small feature set - it means that the team
-had an opportunity to contribute the feedback during multiple well defined
-stages of your work.
+Split your code submission into a series of pull requests that are easy for the
+team to review in a single sitting. A good “rule of thumb” is to aim to complete
+the project in 3-4 PRs.
 
 Our team will do their best to provide a high quality review of the submitted
 pull requests in a reasonable time frame. You are spending your time on this, we
@@ -243,18 +252,17 @@ no-pass from the interview team:
 
 * Scope creep. Candidates have tried to implement too much and ran out of time.
    * Avoid implementing an overly complex solution just to show that you are
-     capable of writing a complex feature. Instead, if you think something
-     could be made more complex in a full-fledged app, leave a comment about it and
+     capable of writing a complex feature. Instead, if you think something could
+     be made more complex in a full-fledged app, leave a comment about it and
      move on with a solution which solves the problem at hand.
-   * For example, there is no need to implement a pluggable auth system which
-     in the future would let you easily switch between different auth methods.
-     It is better to focus on implementing a single auth method.
-* Avoid using unnecessary 3rd party dependencies.
+   * For example, there is no need to implement a pluggable auth system which in
+     the future would let you easily switch between different auth methods. It
+     is better to focus on implementing a single auth method.
 * Error handling. We pay extra attention to error handling. Make sure that they
   are properly handled and not ignored.
-* URL navigation is a big part of great UX, do not ignore it.
-* Keep your CSS simple but not simpler. Do not waste your time on animations,
-  instead make sure that an extra character does not destroy your layout.
+* Keep your CSS simple. We are not looking for animations or complex themes, but
+  do want to see a responsive app that looks good on various screen sizes. Make
+  sure that a long directory name doesn't break your layout.
 * Make sure that your code is secured and your application is not vulnerable to
   common web security vulnerabilities.
     * Recommended resources:
@@ -298,14 +306,15 @@ This is the question we expect candidates to figure out on their own:
 
 Unless specified in the requirements, pick the solution that works best for you.
 
-# Timing
+## Timing
 
 You can split coding over a couple of weekdays or weekends and find time to ask
 questions and receive feedback.
 
 Once you join the Slack channel, you have 2 weeks complete the challenge.
 
-Within this time frame, we don't give higher scores to challenges submitted
-more quickly. We only evaluate the quality of the submission.
+Within this time frame, we don't give higher scores to challenges submitted more
+quickly. We only evaluate the quality of the submission.
 
-We only start the coding challenge if there are several open positions available.
+We only start the coding challenge if there are several open positions
+available.
