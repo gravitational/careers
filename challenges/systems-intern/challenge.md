@@ -206,6 +206,3 @@ challenge.
 
 Within this timeframe, we don't give higher scores to challenges submitted more
 quickly. We only evaluate the quality of the submission.
-
-We only start the coding challenge if there are several open positions
-available.
