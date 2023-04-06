@@ -15,6 +15,7 @@ We use the following technologies to build Teleport.
 
 * Go
 * Rust
+* Typescript, React, and Vite
 * GitHub Actions
 * Docker
 
@@ -25,11 +26,10 @@ robustness of Teleport in large deployments.
 
 Recent projects:
 
-* Improve `tsh` initial connection latency
-  [#16257](https://github.com/gravitational/teleport/pull/16257)
-  [#16456](https://github.com/gravitational/teleport/pull/16456)
-* Improve performance of Teleport on large clusters
-  [#16636](https://github.com/gravitational/teleport/pull/16636)
+* Add support for automatic agent upgrades
+* Improve `tsh` connection latency
+* Optimize the connection process when per-session MFA is enabled
+  [#23865](https://github.com/gravitational/teleport/pull/23865)
 
 ### Platform Security
 
@@ -43,10 +43,8 @@ that focuses on holistic security across the organization.
 
 Recent projects:
 
-* Add support for passwordless authentication
-  [#9296](https://github.com/gravitational/teleport/pull/9296)
-* Add support for searching for resource
-  [#11261](https://github.com/gravitational/teleport/pull/11261)
+* [Teleport Device Trust](https://goteleport.com/docs/access-controls/guides/device-trust/)
+* Add support for a new S3-based audit log
 
 ### Server Access and Kubernetes Access
 
@@ -55,17 +53,11 @@ credentials to SSH servers and Kubernetes clusters.
 
 Recent projects:
 
-* Add support for non-disk based certificate support to `tsh`
-  [#14774](https://github.com/gravitational/teleport/pull/14774)
-  [#15334](https://github.com/gravitational/teleport/pull/15334)
-  [#15335](https://github.com/gravitational/teleport/pull/15335)
-  [#15336](https://github.com/gravitational/teleport/pull/15336)
-* Switch from scp to sftp
-  [#13216](https://github.com/gravitational/teleport/pull/13216)
-  [#13491](https://github.com/gravitational/teleport/pull/13491)
-  [#16601](https://github.com/gravitational/teleport/pull/16601)
-* Automatic discovery and enrollment of servers on AWS
-  [#12410](https://github.com/gravitational/teleport/pull/12410)
+* Add support for headless login [#21005](https://github.com/gravitational/teleport/pull/21005)
+* Add agentless mode for OpenSSH nodes [#19261](https://github.com/gravitational/teleport/pull/19261)
+* Automatic discovery and enrollment of servers on Azure
+  [#21087](https://github.com/gravitational/teleport/pull/21087)
+* Cache per-session MFA taps for Kubernetes Access users
 
 ### Application Access
 
@@ -75,8 +67,7 @@ needs.
 
 Recent projects:
 
-* Add certificate-based authentication support to CLI applications
-  [#5918](https://github.com/gravitational/teleport/pull/5918)
+* Teleport as a [SAML Identity Provider](https://goteleport.com/docs/access-controls/idps/?scope=enterprise)
 
 ### Database Access
 
@@ -85,15 +76,8 @@ firewalls with security and compliance needs.
 
 Recent projects:
 
-* Added support for mTLS over an AWS ALB
-  [#14369](https://github.com/gravitational/teleport/issues/14369)
-  [#15669](https://github.com/gravitational/teleport/pull/15669)
-* Added support for Redis
-  [#10053](https://github.com/gravitational/teleport/pull/10053)
-* Added support for Snowflake
-  [#12006](https://github.com/gravitational/teleport/pull/12006)
-* Added support for MongoDB
-  [#7213](https://github.com/gravitational/teleport/pull/7213)
+* Added support Oracle databases [#23227](https://github.com/gravitational/teleport/pull/23227)
+* Added support for connecting to database resources across multiple AWS accounts
 
 ### Desktop Access
 
@@ -102,9 +86,9 @@ desktop access.
 
 Recent projects:
 
-* Add support for non-AD hosts
-* Added support for file system sharing
-  [#16022](https://github.com/gravitational/teleport/pull/16022)
+* Add passwordless login for local users
+* Add suppor for automatic user creation
+* Optimize the desktop encoding process
 
 ### Machine ID
 
@@ -113,27 +97,33 @@ that Teleport provides for human users to machine use cases.
 
 Recent projects:
 
-* Added Kubernetes Access support
-  [#14269](https://github.com/gravitational/teleport/pull/14269)
-* Added Application Access support
-  [#14551](https://github.com/gravitational/teleport/pull/14551)
-* Added Database Access support
-  [#11596](https://github.com/gravitational/teleport/pull/11596)
-  [#11904](https://github.com/gravitational/teleport/pull/11904)
-* Added host certificate support
-  [#15592](https://github.com/gravitational/teleport/pull/15593)
+* Added support for FIPS builds
+  [#23563](https://github.com/gravitational/teleport/pull/23563)
+* Added support for securely joining bots running on Azure
+  [#23112](https://github.com/gravitational/teleport/pull/23112)
+* Added support for securely joining bots running on GitLab CI
+  [#22705](https://github.com/gravitational/teleport/pull/22705)
 
-### Access Provider
+### Web Applications
 
-The Access Provider team is focused on web and desktop applications that make
+The Access Provider team is focused on web applications that make
 Teleport easier to use and more secure.
 
 Recent projects:
 
-* Added support for passwordless
-  [#724](https://github.com/gravitational/webapps/pull/724)
-* Added support for server-side paginating and filtering
-  [#9633](https://github.com/gravitational/teleport/pull/9633)
+* Added support for joining moderated sessions from the UI
+* Added support for session locking in the web UI
+* Added a light theme to the Teleport web IU
+
+### Teleport Connect
+
+The Teleport Connect team is focused on building a great desktop experience
+for users who prefer not to use CLI-driven workflows.
+
+Recent projects:
+
+* Allow users to customize terminal fonts and keyboard shortcuts
+* Add a new cross-cluster search experience
 
 ### Access Manager
 
@@ -142,8 +132,7 @@ Teleport.
 
 Recent projects:
 
-* Teleport Discover
-  [#13440](https://github.com/gravitational/teleport/pull/13440)
+* Add a simplified onboarding flow for AWS RDS databases
 
 ### Integrations
 
@@ -169,11 +158,8 @@ integration/distribution to package managers.
 
 Recent projects:
 
-* Create multi-arch container images
-  [#16688](https://github.com/gravitational/teleport/pull/16688)
-* Build package distribution infrastructure for apt/deb
-  [#10746](https://github.com/gravitational/teleport/pull/10746)
-* Secure build infrastructure
+* Create hardened container images
+* Add universal binaries to our build infrastructure
 
 ## Cloud
 
