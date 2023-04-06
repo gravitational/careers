@@ -239,7 +239,7 @@ These are the areas we will be evaluating in the submission:
 The primary factor in the team's decision is overall code quality. We are looking for
 the highest possible quality with the smallest possible scope that meets the requirements
 of the challenge.
-  
+
 ## Trade-offs
 
 Write as little code as possible, otherwise this task will consume too much time
@@ -335,5 +335,3 @@ challenge depending on the challenge you choose.
 
 Within this timeframe, we don't give higher scores to challenges submitted more
 quickly. We only evaluate the quality of the submission.
-
-We only start the coding challenge if there are several open positions available.
