@@ -24,7 +24,7 @@ Because the hardest troubleshooting we have to do in customer environments is us
 
 # Guidance
 ## Interview Process
-The interview team and candidate will join a scheduled zoom call for the troubleshooting session, scheduled for 2.5 hours.
+The troubleshooting session is scheduled for 2.5 hours, with the following agenda:
 
 - 5m - Intro and Setup
 - 60m - Troubleshooting
