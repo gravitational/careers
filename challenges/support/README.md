@@ -17,7 +17,9 @@ We believe this technique is better and is more fun compared to whiteboard/quiz 
 We appreciate your time and are looking forward to hacking on this challenge together.
 
 # Requirements
-The challenge is set up as a remote troubleshooting session. The candidate and Teleport engineers in similar roles will join a live troubleshooting session via zoom screen sharing. The candidate will be required to solve several faults created in a simulated customer environment. 
+The challenge is set up as a remote troubleshooting session.
+Several Teleport engineers will join you in a Zoom call where you will
+work to solve several faults in a simulated customer environment.
 
 Because the hardest troubleshooting we have to do in customer environments is using remote hands without direct access to the system, this challenge is set up to simulate that worst-case experience of walking remote hands by troubleshooting the problems in the environment with only a shared screen.
 
