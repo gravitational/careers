@@ -59,7 +59,7 @@ As this is meant to test the way we normally work, you may use any resource you 
 ## Pitfalls and Gotchas
 Some of the challenges exercise some of the hardest problems we've seen in the wild, so it's common to get stuck on one problem. If you do find you're not making progress on an issue, it's fine to move on and skip a problem and come back to it later.
 
-While this is a simulated environment, the candidate should treat the challenge as troubleshooting a live customer or production system.
+While this is a simulated environment, you should treat the challenge as troubleshooting a live customer or production system.
 
 It's OK to ask the interview team questions; we'll do our best to provide hints or help steer the investigation if the investigation is going in the wrong direction.
 
