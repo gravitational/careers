@@ -1,11 +1,9 @@
 # Summary
 
-The Solutions and Support Engineer sysadmin challenge is a simulated troubleshooting
+The Solutions and Technical Support Engineer sysadmin challenge is a simulated troubleshooting
 session where you will investigate and remediate several faults in a simulated
 customer environment.
 
-
-> **Note:** For SREs/Devops without a backend development background, the on-call sysadmin challenges are used, but instead of remote hands, shell access to the nodes will be provided by provisioning a public ssh key.
 
 # Rationale
 
