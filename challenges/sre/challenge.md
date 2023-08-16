@@ -169,11 +169,11 @@ AWS resources.
 * HTTP API to set the replica count of the Kubernetes Deployment
 * HTTP API to get the list of available Deployments in the Kubernetes cluster
 * HTTP health check verifying Kubernetes connectivity
-* Extend the API to support a difference between current and desired state
-  when setting replica count
-* Extend the Server to support the ability to show the differences between current
-  and desired state for replica count (implementation of state storage for the
-  server is left as a design choice for the candidate)
+* Extend the API to support tracking the current replica count and a desired
+  replica count. The implementation of state storage for current and desired
+  replica counts is left as a design choice for the candidate.
+  Hypothetically, if someone updated replica count with kubectl, would the
+  server know that it is out of sync?
 * Secure connections between the HTTP API and caller with mTLS
 * One or two tests that cover happy and unhappy scenarios
 
@@ -210,11 +210,11 @@ AWS resources.
 * HTTP API to set the replica count of the Kubernetes Deployment
 * HTTP API to get the list of available Deployments in the Kubernetes cluster
 * HTTP health check verifying Kubernetes connectivity
-* Extend the API to support a difference between current and desired state
-  when setting replica count
-* Extend the Server to support the ability to show the differences between current
-  and desired state for replica count (implementation of state storage for the
-  server is left as a design choice for the candidate)
+* Extend the API to support tracking the current replica count and a desired
+  replica count. The implementation of state storage for current and desired
+  replica counts is left as a design choice for the candidate.
+  Hypothetically, if someone updated replica count with kubectl, would the
+  server know that it is out of sync?
 * Secure connections between the HTTP API and caller with mTLS
 * Replace the HTTP API with gRPC
 * Extend the Server to support reconciling cluster state (i.e. an external actor changed the replica count manually)
