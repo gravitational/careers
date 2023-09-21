@@ -114,7 +114,7 @@ but, at a minimum, please include the following:
 ### Automation
 
 * Write a Dockerfile to build an image for the server
-* Ability to run the server
+* Ability to run the server (inside and outside Kubernetes)
 
 ## Level 2
 
@@ -127,7 +127,7 @@ but, at a minimum, please include the following:
 ### Automation
 
 * Write a Dockerfile to build an image for the server
-* Ability to run the server
+* Ability to run the server (inside and outside Kubernetes)
 * Ability to execute integration tests against the local Kubernetes cluster
 
 ## Level 3
@@ -143,7 +143,7 @@ but, at a minimum, please include the following:
 ### Automation
 
 * Write a Dockerfile to build an image for the server
-* Ability to run the server
+* Ability to run the server (inside and outside Kubernetes)
 * Ability to execute integration tests against the local Kubernetes cluster
 * GitHub Actions for every commit that verifies code quality, ensures the
   software builds, and all tests pass. Include unit testing and static analysis.
@@ -180,7 +180,7 @@ AWS resources.
 ### Automation
 
 * Ability to build the server in a Docker container
-* Ability to run the server
+* Ability to run the server (inside and outside Kubernetes)
 * Ability to execute integration tests against the local Kubernetes cluster
 * GitHub Actions for every commit that verifies code quality, ensures the
   software builds, and all tests pass. Include unit testing and static analysis.
@@ -223,7 +223,7 @@ AWS resources.
 ### Automation
 
 * Ability to build the server in a Docker container
-* Ability to run the server
+* Ability to run the server (inside and outside Kubernetes)
 * Ability to execute integration tests against the local Kubernetes cluster
 * GitHub Actions for every commit that verifies code quality, ensures the
   software builds, and all tests pass. Include unit testing and static analysis.
