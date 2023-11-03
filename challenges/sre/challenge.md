@@ -60,7 +60,7 @@ Be sure to cover the following in your design:
   * Ease of contributing to the project from a fresh clone
   * Ease of building, running and testing the server
 * Level 3+: Build, Release
-* Level 4+: State management and Delivery
+* Level 4+: Caching, mTLS, and Delivery
 * Level 5+: Reconciliation, Conflicts, and Automation
 
 A few notes about the design document:
@@ -145,9 +145,6 @@ but, at a minimum, please include the following:
 * Write a Dockerfile to build an image for the server
 * Ability to run the server (inside and outside Kubernetes)
 * Ability to execute integration tests against the local Kubernetes cluster
-* GitHub Actions for every commit that verifies code quality, ensures the
-  software builds, and all tests pass. Include unit testing and static analysis.
-  Integration testing is not required.
 
 ### Deployment
 
@@ -155,25 +152,14 @@ but, at a minimum, please include the following:
 
 ## Level 4
 
-### Design
-
-In addition to including details about the requirements below, the design
-document should include a section describing how this solution could be deployed
-to an AWS EKS cluster. Please include security considerations. Also, you are not
-expected to implement any deployment automation for an EKS target or create any
-AWS resources.
-
 ### Server
 
 * HTTP API to retrieve the replica count of the Kubernetes Deployment
 * HTTP API to set the replica count of the Kubernetes Deployment
 * HTTP API to get the list of available Deployments in the Kubernetes cluster
 * HTTP health check verifying Kubernetes connectivity
-* Extend the API to support tracking the current replica count and a desired
-  replica count. The implementation of state storage for current and desired
-  replica counts is left as a design choice for the candidate.
-  Hypothetically, if someone updated replica count with kubectl, would the
-  server know that it is out of sync?
+* HTTP API must cache the replica count by watching for changes to Deployments.
+  Read-only requests should not each trigger a request to the cluster.
 * Secure connections between the HTTP API and caller with mTLS
 * One or two tests that cover happy and unhappy scenarios
 
@@ -182,9 +168,6 @@ AWS resources.
 * Ability to build the server in a Docker container
 * Ability to run the server (inside and outside Kubernetes)
 * Ability to execute integration tests against the local Kubernetes cluster
-* GitHub Actions for every commit that verifies code quality, ensures the
-  software builds, and all tests pass. Include unit testing and static analysis.
-  Integration testing is not required.
 * Produce production ready releases (binaries and docker image)
 
 ### Deployment
@@ -193,31 +176,19 @@ AWS resources.
 * Deploy releases of the API Server to a Kubernetes cluster (and possible dependencies)
 * Upgrade releases of the API Server to a Kubernetes cluster (and possible dependencies)
 
-
 ## Level 5
-
-### Design
-
-In addition to including details about the requirements below, the design
-document should include a section describing how this solution could be deployed
-to an AWS EKS cluster. Please include security considerations. Also, you are not
-expected to implement any deployment automation for an EKS target or create any
-AWS resources.
 
 ### Server
 
-* HTTP API to retrieve the replica count of the Kubernetes Deployment
-* HTTP API to set the replica count of the Kubernetes Deployment
-* HTTP API to get the list of available Deployments in the Kubernetes cluster
-* HTTP health check verifying Kubernetes connectivity
-* Extend the API to support tracking the current replica count and a desired
-  replica count. The implementation of state storage for current and desired
-  replica counts is left as a design choice for the candidate.
-  Hypothetically, if someone updated replica count with kubectl, would the
-  server know that it is out of sync?
+* gRPC API to retrieve the replica count of the Kubernetes Deployment
+* gRPC API to set the replica count of the Kubernetes Deployment
+* gRPC API to get the list of available Deployments in the Kubernetes cluster
+* gRPC or HTTP health check verifying Kubernetes connectivity
+* gRPC API must cache the replica count by watching for changes to Deployments.
+  Read-only requests should not each trigger a request to the cluster.
 * Secure connections between the HTTP API and caller with mTLS
-* Replace the HTTP API with gRPC
-* Extend the Server to support reconciling cluster state (i.e. an external actor changed the replica count manually)
+* Server must store the desired state in a CRD (per-deployment) and reconcile the deployment to that state.
+  (gRPC API endpoints only need to read the real, current value.) 
 * One or two tests that cover happy and unhappy scenarios
 
 ### Automation
@@ -225,13 +196,9 @@ AWS resources.
 * Ability to build the server in a Docker container
 * Ability to run the server (inside and outside Kubernetes)
 * Ability to execute integration tests against the local Kubernetes cluster
-* GitHub Actions for every commit that verifies code quality, ensures the
-  software builds, and all tests pass. Include unit testing and static analysis.
-  Integration testing is not required.
 * Produce production ready releases (binaries and docker image)
 * Deploy and manage a local Kubernetes Cluster
 * Deploy and upgrade to the local Kubernetes Cluster with no service interruption
-* GitHub Action driven workflows for Deployment
 
 ### Deployment
 
@@ -295,6 +262,10 @@ These are the areas we will be evaluating in the submission:
   report clear errors and not crash under non-critical conditions.
 * Production readiness. Once completed, the code itself, even if incomplete, should
   be sufficiently solid and robust to make it to a real production cluster.
+* API design. Please include your proposed HTTP API or gRPC API in the design doc.
+  For the gRPC API, you should include a complete proto file in the design doc.
+* Security. Describe your mTLS setup in the design doc, including choosen cipher suites.
+  Ensure that your implementation is secure.
 
 The primary factor in the team's decision is overall code quality. We are looking for
 the highest possible quality with the smallest possible scope that meets the requirements
