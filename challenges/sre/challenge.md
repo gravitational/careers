@@ -160,7 +160,7 @@ but, at a minimum, please include the following:
 * HTTP health check verifying Kubernetes connectivity
 * HTTP API must cache the replica count by watching for changes to Deployments.
   Read-only requests should not each trigger a request to the cluster.
-  It is acceptable to use either go-client or controller-runtime to implement this.
+  It is acceptable to use either client-go or controller-runtime to implement this.
 * Secure connections between the HTTP API and caller with mTLS
 * One or two tests that cover happy and unhappy scenarios
 
@@ -186,7 +186,7 @@ but, at a minimum, please include the following:
 * gRPC or HTTP health check verifying Kubernetes connectivity
 * gRPC API must cache the replica count by watching for changes to Deployments.
   Read-only requests should not each trigger a request to the cluster.
-  It is acceptable to use either go-client or controller-runtime to implement this.
+  It is acceptable to use either client-go or controller-runtime to implement this.
 * Secure connections between the gRPC API and caller with mTLS
 * Server must store the desired state in a CRD (per-deployment) and reconcile the deployment to that state.
   (gRPC API endpoints only need to read the real, current value.) 
