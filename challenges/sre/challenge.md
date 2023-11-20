@@ -89,6 +89,10 @@ Do not try to achieve full test coverage. This will take too long. Write enough
 to exercise the different key components to show they are working as intendend 
 while demonstrating your approach to automation.
 
+For level 4+, please research Kubernetes controllers and the recommended Go
+libraries carefully. Understanding how existing controllers cache resources
+is key to implementing a straightforward solution.
+
 ## Deployment
 
 For evaluation purposes, your solution should be deployable to a local
@@ -341,7 +345,7 @@ machine.
 
 It's safe to assume a working Docker environment will be available locally as well.
 
-Additional external dependencies are acceptable such as Terraform and minikube/k3d,
+Additional external dependencies are acceptable,
 but please ensure detecting or installing the required/missing dependencies
 is as low friction as possible for the user/reviewer.
 
