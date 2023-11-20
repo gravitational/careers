@@ -261,7 +261,7 @@ These are the areas we will be evaluating in the submission:
   be sufficiently solid and robust to make it to a real production cluster.
 * API design. Please include your proposed HTTP API or gRPC API in the design doc.
   For the gRPC API, you should include a complete proto file in the design doc.
-* Security. Describe your mTLS setup in the design doc, including choosen cipher suites.
+* Security. Describe your mTLS setup in the design doc, including chosen cipher suites.
   Ensure that your implementation is secure.
 
 The primary factor in the team's decision is overall code quality. We are looking for
