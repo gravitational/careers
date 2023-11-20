@@ -91,9 +91,10 @@ while demonstrating your approach to automation.
 
 ## Deployment
 
-Levels 3+ include a deployment step which should deploy the solution to a local
+For evaluation purposes, your solution should be deployable to a local
 Kubernetes cluster. The choice of which Kubernetes cluster is up to you, but
 please choose one that has the ability to run on macOS and Linux.
+We suggest [KIND](https://kind.sigs.k8s.io/).
 
 ## Key Dependencies
 
@@ -114,7 +115,7 @@ but, at a minimum, please include the following:
 ### Automation
 
 * Write a Dockerfile to build an image for the server
-* Ability to run the server (inside and outside Kubernetes)
+* Ability to deploy the server to Kubernetes by following documentation
 
 ## Level 2
 
@@ -127,8 +128,8 @@ but, at a minimum, please include the following:
 ### Automation
 
 * Write a Dockerfile to build an image for the server
-* Ability to run the server (inside and outside Kubernetes)
-* Ability to execute integration tests against the local Kubernetes cluster
+* Ability to deploy the server to Kubernetes by following documentation
+* Ability to execute integration tests against the local Kubernetes cluster by following documentation
 
 ## Level 3
 
@@ -143,8 +144,8 @@ but, at a minimum, please include the following:
 ### Automation
 
 * Write a Dockerfile to build an image for the server
-* Ability to run the server (inside and outside Kubernetes)
-* Ability to execute integration tests against the local Kubernetes cluster
+* Ability to deploy the server to Kubernetes by following documentation
+* Ability to execute integration tests against the local Kubernetes cluster by following documentation
 
 ### Deployment
 
@@ -166,15 +167,12 @@ but, at a minimum, please include the following:
 
 ### Automation
 
-* Ability to build the server in a Docker container
-* Ability to run the server (inside and outside Kubernetes)
-* Ability to execute integration tests against the local Kubernetes cluster
-* Produce production ready releases (binaries and docker image)
+* Ability to build and deploy all artifacts to a Kubernetes cluster using make
+* Ability to execute integration tests against the local Kubernetes cluster using make
 
 ### Deployment
 
 * Create a helm chart for the service that includes at least: a Deployment, ServiceAccount and Service
-* Deploy releases of the API Server to a Kubernetes cluster along with any dependencies
 
 ## Level 5
 
@@ -194,16 +192,13 @@ but, at a minimum, please include the following:
 
 ### Automation
 
-* Ability to build the server in a Docker container
-* Ability to run the server (inside and outside Kubernetes)
-* Ability to execute integration tests against the local Kubernetes cluster
-* Produce production ready releases (binaries and docker image)
+* Ability to build and deploy all artifacts to a Kubernetes cluster using make
+* Ability to execute integration tests against the local Kubernetes cluster using make
 
 ### Deployment
 
 * Create a helm chart for the service
 * Include production-level packaging for this service, including but not limited to: Deployment, Role, RoleBinding, ServiceAccount, Service
-* Deploy releases of the API Server to a Kubernetes cluster along with any dependencies
 
 # Guidance
 
