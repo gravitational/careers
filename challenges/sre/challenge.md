@@ -89,8 +89,8 @@ Do not try to achieve full test coverage. This will take too long. Write enough
 to exercise the different key components to show they are working as intendend 
 while demonstrating your approach to automation.
 
-For level 4+, please research Kubernetes controllers and the recommended Go
-libraries carefully. Understanding how existing controllers cache resources
+For level 4+, please research Kubernetes controllers and the recommended Go client
+libraries carefully. Understanding how controllers commonly cache resources
 is key to implementing a straightforward solution.
 
 ## Deployment
