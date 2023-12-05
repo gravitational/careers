@@ -89,11 +89,16 @@ Do not try to achieve full test coverage. This will take too long. Write enough
 to exercise the different key components to show they are working as intendend 
 while demonstrating your approach to automation.
 
+For level 4+, please research Kubernetes controllers and the recommended Go client
+libraries carefully. Understanding how controllers commonly cache resources
+is key to implementing a straightforward solution.
+
 ## Deployment
 
-Levels 3+ include a deployment step which should deploy the solution to a local
+For evaluation purposes, your solution should be deployable to a local
 Kubernetes cluster. The choice of which Kubernetes cluster is up to you, but
 please choose one that has the ability to run on macOS and Linux.
+We suggest [KIND](https://kind.sigs.k8s.io/).
 
 ## Key Dependencies
 
@@ -114,7 +119,7 @@ but, at a minimum, please include the following:
 ### Automation
 
 * Write a Dockerfile to build an image for the server
-* Ability to run the server (inside and outside Kubernetes)
+* Ability to deploy the server to Kubernetes by following documentation
 
 ## Level 2
 
@@ -127,8 +132,8 @@ but, at a minimum, please include the following:
 ### Automation
 
 * Write a Dockerfile to build an image for the server
-* Ability to run the server (inside and outside Kubernetes)
-* Ability to execute integration tests against the local Kubernetes cluster
+* Ability to deploy the server to Kubernetes by following documentation
+* Ability to execute integration tests against the local Kubernetes cluster by following documentation
 
 ## Level 3
 
@@ -143,8 +148,8 @@ but, at a minimum, please include the following:
 ### Automation
 
 * Write a Dockerfile to build an image for the server
-* Ability to run the server (inside and outside Kubernetes)
-* Ability to execute integration tests against the local Kubernetes cluster
+* Ability to deploy the server to Kubernetes by following documentation
+* Ability to execute integration tests against the local Kubernetes cluster by following documentation
 
 ### Deployment
 
@@ -166,15 +171,12 @@ but, at a minimum, please include the following:
 
 ### Automation
 
-* Ability to build the server in a Docker container
-* Ability to run the server (inside and outside Kubernetes)
-* Ability to execute integration tests against the local Kubernetes cluster
-* Produce production ready releases (binaries and docker image)
+* Ability to build and deploy all artifacts to a Kubernetes cluster using make
+* Ability to execute integration tests against the local Kubernetes cluster using make
 
 ### Deployment
 
 * Create a helm chart for the service that includes at least: a Deployment, ServiceAccount and Service
-* Deploy releases of the API Server to a Kubernetes cluster along with any dependencies
 
 ## Level 5
 
@@ -194,16 +196,13 @@ but, at a minimum, please include the following:
 
 ### Automation
 
-* Ability to build the server in a Docker container
-* Ability to run the server (inside and outside Kubernetes)
-* Ability to execute integration tests against the local Kubernetes cluster
-* Produce production ready releases (binaries and docker image)
+* Ability to build and deploy all artifacts to a Kubernetes cluster using make
+* Ability to execute integration tests against the local Kubernetes cluster using make
 
 ### Deployment
 
 * Create a helm chart for the service
 * Include production-level packaging for this service, including but not limited to: Deployment, Role, RoleBinding, ServiceAccount, Service
-* Deploy releases of the API Server to a Kubernetes cluster along with any dependencies
 
 # Guidance
 
@@ -262,7 +261,7 @@ These are the areas we will be evaluating in the submission:
   be sufficiently solid and robust to make it to a real production cluster.
 * API design. Please include your proposed HTTP API or gRPC API in the design doc.
   For the gRPC API, you should include a complete proto file in the design doc.
-* Security. Describe your mTLS setup in the design doc, including choosen cipher suites.
+* Security. Describe your mTLS setup in the design doc, including chosen cipher suites.
   Ensure that your implementation is secure.
 
 The primary factor in the team's decision is overall code quality. We are looking for
@@ -346,7 +345,7 @@ machine.
 
 It's safe to assume a working Docker environment will be available locally as well.
 
-Additional external dependencies are acceptable such as Terraform and minikube/k3d,
+Additional external dependencies are acceptable,
 but please ensure detecting or installing the required/missing dependencies
 is as low friction as possible for the user/reviewer.
 
