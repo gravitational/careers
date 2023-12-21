@@ -32,9 +32,6 @@ The requirements vary depending on the level you are applying to. This
 challenge covers 5 engineering levels at Teleport. Level 6 is only for internal
 promotions. Check [Site Reliability Engineering (SRE) Levels](../../levels/sre.pdf) for more details.
 
-An incomplete implementation of a Go server is located at
-[sre-server/main.go](./sre-server/main.go).
-
 Start by creating a new GitHub repository. Then let the interview panel know the
 repository's location by pasting a link in your interview Slack channel. Invite
 interview panel participants as contributors to the new repository if you prefer
