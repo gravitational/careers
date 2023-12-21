@@ -154,6 +154,7 @@ but, at a minimum, please include the following:
 ### Deployment
 
 * Create a helm chart for the service that includes at least: a Deployment, ServiceAccount and Service
+* Upgrading the helm chart should not result in unavailability of the service.
 
 ## Level 4
 
@@ -177,6 +178,7 @@ but, at a minimum, please include the following:
 ### Deployment
 
 * Create a helm chart for the service that includes at least: a Deployment, ServiceAccount and Service
+* Upgrading the helm chart should not result in unavailability of the service.
 
 ## Level 5
 
@@ -203,6 +205,7 @@ but, at a minimum, please include the following:
 
 * Create a helm chart for the service
 * Include production-level packaging for this service, including but not limited to: Deployment, Role, RoleBinding, ServiceAccount, Service
+* Upgrading the helm chart should not result in unavailability of the HTTP API portion of the service.
 
 # Guidance
 
@@ -293,12 +296,8 @@ provide a clear path to a solution.
 Consider making other reasonable trade-offs. Make sure you communicate them to
 the interview team.
 
-Here are some other trade-offs that will help you to spend less time on the task:
-
-* Do not implement a system that scales or is highly performing. Describe which
-  performance improvements you would add in the future.
-* It is OK if the system is not highly available. Write down how you would make
-  the system highly-available and why your system is not.
+Do not implement a system that scales outside of the scope of this challenge.
+For example, it is not necessary to deploy a shared cached or support deployment to multiple regions or AZs.
 
 ## Pitfalls and Gotchas
 
