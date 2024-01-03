@@ -32,9 +32,6 @@ The requirements vary depending on the level you are applying to. This
 challenge covers 5 engineering levels at Teleport. Level 6 is only for internal
 promotions. Check [Site Reliability Engineering (SRE) Levels](../../levels/sre.pdf) for more details.
 
-An incomplete implementation of a Go server is located at
-[sre-server/main.go](./sre-server/main.go).
-
 Start by creating a new GitHub repository. Then let the interview panel know the
 repository's location by pasting a link in your interview Slack channel. Invite
 interview panel participants as contributors to the new repository if you prefer
@@ -154,6 +151,7 @@ but, at a minimum, please include the following:
 ### Deployment
 
 * Create a helm chart for the service that includes at least: a Deployment, ServiceAccount and Service
+* Upgrading the helm chart should not result in unavailability of the service.
 
 ## Level 4
 
@@ -177,6 +175,7 @@ but, at a minimum, please include the following:
 ### Deployment
 
 * Create a helm chart for the service that includes at least: a Deployment, ServiceAccount and Service
+* Upgrading the helm chart should not result in unavailability of the service.
 
 ## Level 5
 
@@ -203,6 +202,7 @@ but, at a minimum, please include the following:
 
 * Create a helm chart for the service
 * Include production-level packaging for this service, including but not limited to: Deployment, Role, RoleBinding, ServiceAccount, Service
+* Upgrading the helm chart should not result in unavailability of the HTTP API portion of the service.
 
 # Guidance
 
@@ -293,12 +293,8 @@ provide a clear path to a solution.
 Consider making other reasonable trade-offs. Make sure you communicate them to
 the interview team.
 
-Here are some other trade-offs that will help you to spend less time on the task:
-
-* Do not implement a system that scales or is highly performing. Describe which
-  performance improvements you would add in the future.
-* It is OK if the system is not highly available. Write down how you would make
-  the system highly-available and why your system is not.
+Do not implement a system that scales outside of the scope of this challenge.
+For example, it is not necessary to deploy a shared cached or support deployment to multiple regions or AZs.
 
 ## Pitfalls and Gotchas
 
