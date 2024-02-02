@@ -37,9 +37,9 @@ The Platform Security team is focused on application security for the Teleport
 product. This team implements security controls and works with security
 researchers to find and fix security vulnerabilities.
 
-Teleport Engineering also has a general [Security
-team](https://github.com/gravitational/careers/blob/main/teams.md#security)
-that focuses on holistic security across the organization.
+Teleport also has a general [Security
+team](https://github.com/gravitational/careers/blob/main/teams.md#security) that
+focuses on holistic security across the organization.
 
 Recent projects:
 

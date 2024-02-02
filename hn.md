@@ -19,7 +19,6 @@ We offer:
   * Competitive salary and equity.
   * 401k with company match.
   * Excellent health insurance.
-  * Work anywhere in the US, Canada, Australia, England, Ireland, or Poland.
 
 Apply: https://jobs.lever.co/teleport
 
