@@ -55,7 +55,59 @@ There are 6 engineering levels at Teleport. Levels 1-4 are open to external cand
 For fullstack engineers, levels 5 and 6 are only for internal promotions. Check
 [Fullstack Engineering Levels](../../levels/fullstack.pdf) for more details.
 
-At this time, we are seekling level 4 full stack engineers only.
+## Requirements - Level 1
+
+Implement the frontend for an application that allows a user to browse directory content.
+
+For level 1, we will provide you with fake test data that simulates a filesystem.
+
+The UI should allow the user to view the contents of a single directory.
+Clicking on a subdirectory should navigate to that directory and refresh the
+contents. Unlike other commercial tools, _file preview is not required_.
+Clicking on a file should not do anything.
+
+The following features are required:
+
+- [ ] Build a login page that prompts the user for a username and password. For
+  this exercise, you will simulate a login by validating credentials
+  client-side. If the credentials are valid, render the directory contents.
+  Since we are simulating logins here, there is no requirement to implement log
+  out.
+- [ ] Display the filename, type, and *human-readable* size for files.
+- [ ] Add support for filtering the directory contents based on filename. A
+  simple substring match is sufficient.
+- [ ] Add support for sorting directory contents based on filename, type, and size.
+- [ ] Include breadcrumbs that show the current location in the directory. The
+  breadcrumbs should be clickable for easy navigation to parent directories.
+- [ ] Implement URL navigation. The state of the app should be encoded in the
+  URL. No state should be lost upon a page refresh.
+
+## Requirements - Level 2
+
+At level 2, the challenge requirements are similar to level 1, with one notable
+difference: you will be required to make network calls. We will provide you with
+a backend API, corresponding API docs, and a set of credentials that our API is
+hard-coded to accept. The API will occaisionally add a delay before serving the
+repsonse, and may inject artificial errors.
+
+The UI should allow the user to view the contents of a single directory.
+Clicking on a subdirectory should navigate to that directory and refresh the
+contents. Unlike other commercial tools, _file preview is not required_.
+Clicking on a file should not do anything.
+
+- [ ] Build a login page that prompts the user for a username and password.
+  Submit these credentials to the backend API, and render the directory contents
+  if the login is accepted.
+- [ ] Add the ability to log out.
+- [ ] Display the filename, type, and *human-readable* size for files.
+- [ ] Add support for filtering the directory contents based on filename. A
+  simple substring match is sufficient.
+- [ ] Add support for sorting directory contents based on filename, type, and size.
+- [ ] Include breadcrumbs that show the current location in the directory. The
+  breadcrumbs should be clickable for easy navigation to parent directories.
+- [ ] Implement URL navigation. The state of the app should be encoded in the
+  URL. No state should be lost upon a page refresh.
+- [ ] Ensure that your app correctly displays loading and error states.
 
 ## Requirements - Level 4
 
@@ -174,15 +226,24 @@ The interview team joins the Slack channel. The team consists of the engineers
 who will be working with you. Ask them about the engineering culture, work and
 life balance, or anything else that you would like to learn about Teleport.
 
-Before writing the actual code, create a brief design document and share with
-the team. At Teleport, we prefer Markdown for
+### Design Document
+
+Successful engineers at Teleport have great written communication skills. You
+will get a chance to demonstrate these skills before sending us any code by
+writing a design document. At Teleport, we prefer Markdown for
 [our designs](https://github.com/gravitational/teleport/blob/master/rfd/0000-rfds.md).
 
-This document should include:
+For levels 1-2, your design document should include:
 
-- the proposed UX of the app (wireframes are great)
-- the proposed API
+- the proposed UX of the app (wireframes are great!)
+- a description of the components you will build in order to deliver the UI
+- a project roadmap, outlining how you will split up the work and in what
+  order you expect to complete it
 - URL structure (how will you encode the app state in the URL?)
+
+For levels 3-4, your design document should include everything above, as well as:
+
+- an overview of your backend API
 - security, including:
   - authentication
   - TLS setup
@@ -201,6 +262,10 @@ A few notes about the design document:
   reviewed.
 * When you feel it's ready, create a PR for this document to allow the team to
   review and comment on it.
+
+Once you've received 2 approvals, you can merge the PR and start sending us code.
+
+### Implementation
 
 Split your code submission into a series of pull requests that are easy for the
 team to review in a single sitting. A good “rule of thumb” is to aim to complete
@@ -229,11 +294,8 @@ source it with any license and use it as a portfolio project.
 
 These are the areas we will be evaluating in the submission:
 
-* Use consistent coding style. We use the recommended
-  [ESLint](https://eslint.org/docs/user-guide/configuring/configuration-files#using-eslintrecommended)
-  and
-  [eslint-plugin-react](https://github.com/yannickcr/eslint-plugin-react#configuration)
-  rules for JS, and format our code with [prettier](https://prettier.io/).
+* Use consistent coding style. We use ESLint and format our code with
+  [prettier](https://prettier.io/).
 * Create a few unit-tests for scenarios you think make sense.
 * Make sure builds are reproducible. Pick any vendoring/packaging system that
   will allow us to get consistent build results.

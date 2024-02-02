@@ -3,7 +3,7 @@
 ## About us
 
 Our mission is to enable engineers to quickly access any resource anywhere. Our
-open source products provide a Unified Access Plane for developers and security
+product is an Open Infrastructure Access Platform for developers and security
 professionals seeking to simplify secure access to servers, applications, and
 data across all environments.
 
@@ -45,7 +45,7 @@ TypeScript with React.
 
 ## Requirements
 
-* Ability to work in the US, Canada, Australia, England, Ireland, or Poland without a visa.
+* You must meet the requirements of the job posting listed on https://goteleport.com/careers
 * Experience with JavaScript, TypeScript, and React
 * [Web security](https://developer.mozilla.org/en-US/docs/Web/Security) experience is a plus.
 
