@@ -125,6 +125,17 @@ Recent projects:
 * Allow users to customize terminal fonts and keyboard shortcuts
 * Add a new cross-cluster search experience
 
+### Access Graph
+
+The Access Graph team specializes in analyzing resource access patterns, 
+providing valuable insights and enhanced visibility into infrastructure 
+by examining various access paths.
+
+Recent projects:
+
+* Import of Teleport RBAC and AWS IAM into a unified representation.
+* Implementing SQL-like query language for querying the access paths.
+
 ### Access Manager
 
 The Access Manager team is focused on simplifying connecting and configuring
