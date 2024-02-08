@@ -82,13 +82,24 @@ Recent projects:
 ### Desktop Access
 
 The Teleport Desktop Access team is focused on secure and user-friendly remote
-desktop access.
+desktop access, with a focus on Windows hosts.
+
+This team's work spans across several domains:
+
+* High performance browser rendering: our remote desktop client is implemented
+  in the browser with an HTML5 canvas and web assembly
+* Rust: while Teleport is primarily written in Go, the RDP client is written in
+  Rust and called via CGo.
+* Windows authentication: Teleport's RDP client is
+  [unique](https://goteleport.com/blog/secure-rdp-client/) in that user logins
+  are passwordless. This work often requires research into little known and/or
+  poorly documented areas of Windows.
 
 Recent projects:
 
-* Add passwordless login for local users
-* Add suppor for automatic user creation
-* Optimize the desktop encoding process
+* Optimize the desktop decoding process
+* Add support for resizing the desktop window on the fly
+* Add support for additional keyboard layouts
 
 ### Machine ID
 
