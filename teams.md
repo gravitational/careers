@@ -21,15 +21,14 @@ We use the following technologies to build Teleport.
 
 ### Performance and Scaling
 
-The Performance and Scaling team is focused on scaling, performance, and
-robustness of Teleport in large deployments.
+The Performance and Scaling team is focused on scaling, performance,
+reliability and robustness of Teleport in large deployments.
 
 Recent projects:
 
-* Add support for automatic agent upgrades
+* Add support for transparent session resumption
+* Add support for optimistic locking and atomic write operations for all supported backends
 * Improve `tsh` connection latency
-* Optimize the connection process when per-session MFA is enabled
-  [#23865](https://github.com/gravitational/teleport/pull/23865)
 
 ### Platform Security
 
@@ -45,19 +44,34 @@ Recent projects:
 
 * [Teleport Device Trust](https://goteleport.com/docs/access-controls/guides/device-trust/)
 * Add support for a new S3-based audit log
+* Enable storing private key material in AWS and GCP KMS
 
-### Server Access and Kubernetes Access
+### Server Access
 
-The Server and Kubernetes Access teams work on secure access using short-lived
-credentials to SSH servers and Kubernetes clusters.
+The Server Access team works on secure access to SSH servers using short-lived
+credentials. A few of the teams responsibilities include enhanced auditing via
+BPF, simplifying provisioning via automatic host user creation, integrating
+with PAM, moderated SSH sessions and supporting agentless connections.
 
 Recent projects:
 
-* Add support for headless login [#21005](https://github.com/gravitational/teleport/pull/21005)
-* Add agentless mode for OpenSSH nodes [#19261](https://github.com/gravitational/teleport/pull/19261)
-* Automatic discovery and enrollment of servers on Azure
-  [#21087](https://github.com/gravitational/teleport/pull/21087)
-* Cache per-session MFA taps for Kubernetes Access users
+* Add support for remote port forwarding in tsh
+* Automatic discovery and enrollment of servers on Azure and GCP
+* Add support for headless login
+* Add agentless mode for OpenSSH nodes
+
+### Kubernetes Access
+
+The Kubernetes Access teams work on secure access to Kubernetes clusters using
+short-lived credentials. A few of the teams responsibilities include ensuring
+compatability with supported Kubernetes versions, moderated Kubernetes
+sessions, improve performance and reliability for Kubernetes access.
+
+Recent projects:
+
+* Automatic discovery and enrollment of AWS EKS clusters
+* Automatic discovery and enrollment of applications running within Kubernetes
+* Extend Teleport RBAC to control access to resources in Kubernetes
 
 ### Application Access
 
