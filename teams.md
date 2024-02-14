@@ -127,9 +127,10 @@ Recent projects:
 
 ### Access Graph
 
-The Access Graph team specializes in analyzing resource access patterns, 
-providing valuable insights and enhanced visibility into infrastructure 
-by examining various access paths.
+The team is responsible for the design and implementation of Access Graph,
+a tool that provides Teleport users with insights and enhanced visibility
+into their infrastructure by visualizing access paths to cluster resources
+in a unified graph view with querying capabilities.
 
 Recent projects:
 
