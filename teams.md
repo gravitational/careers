@@ -136,6 +136,19 @@ Recent projects:
 * Allow users to customize terminal fonts and keyboard shortcuts
 * Add a new cross-cluster search experience
 
+### Access Graph
+
+The team is responsible for the design and implementation of [Access Graph](https://goteleport.com/platform/policy/),
+a tool that provides Teleport users with insights and enhanced visibility
+into their infrastructure by visualizing access paths to cluster resources
+in a unified graph view with querying capabilities.
+
+Recent projects:
+
+* Import of Teleport RBAC and AWS IAM into a unified representation.
+* Implementing SQL-like query language for querying the access paths.
+* Designing scalable graph UI that can display hundreds of resources while maintaining responsiveness and user-friendliness.
+
 ### Access Manager
 
 The Access Manager team is focused on simplifying connecting and configuring
