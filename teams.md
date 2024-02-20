@@ -203,49 +203,59 @@ We use the following technologies to build Teleport Cloud:
 * Kubernetes
 * Prometheus/Alertmanager/Loki/Grafana
 
-### Product User Experience
+### Product Growth
+
+The team is focused on customer acquisition, user experience, usage reporting,
+billing, and internal customer support tooling. They build a frictionless
+UX while driving prospects to become new enterprise customers. 
+
+In recent
+quarters this team has delivered a new usage reporting platform, the team plan,
+PQAs, onboarding questionnaire, upgrade to enterprise features, Machine ID UI.
 
 The team is focused on delivering a great user experience for Cloud users.
 
 Recent projects:
 
-* Add support for Upgrade Windows
-* Simplify the Teleport Downloads page
-* User journey tracking
+* Usage-based reporting/user journey tracking
+* New product plans
+* Onboarding questionnaire
+* Product conversions
+* Machine ID UI
+* Usage limits
 
-### Product Infrastructure
+### Cloud Platform
 
-The team is focused on scalability, security, and analytics of Teleport on our
-Cloud platform.
+The team architects a highly performant and scalable cloud platform that
+realizes the promise of a SaaS product. The team is focused on scalability,
+security, and analytics of Teleport on our Cloud platform. They build
+multi-cluster Kubernetes controllers that manage tenants, networking services,
+enhance platform monitoring, and zero-downtime upgrades.
 
 Recent projects:
 
-* Reduce tenant on-boarding time
-* Build reporting and analytics platform
+* Migration to EKS
+* Multi-cluster tenant operator
+* Reduce onboarding time
+* Zero-downtime upgrades
+* New ingress stack
 
-### Platform Metrics & CI/CD
+### Cloud Operations
 
-The team is focused on release automation, observability, and developer
-experience.
+The team ensures the cloud platform is reliable and secure while
+also optimizing the cloud development and deployment experience for all
+engineers. They focus on monitoring, release engineering, service levels,
+vulnerability management, CI/CD, and developing automation for component
+upgrades.
 
 Recent projects:
 
 * CI/CD with GitHub Actions
-* Develop more sophisticated resource growth alerts
-* Automate manual processes
-* Improve platform monitoring and alerting
-
-### Platform Infrastructure
-
-The team is focused on building secure, reliable, and low latency
-infrastructure for the Cloud platform.
-
-Recent projects:
-
-* Reduce connection latency for geo-distributed infrastructure
-* Build next-generation Cloud platform infrastructure
-* Update disaster recovery and backups infrastructure
-* Multi-region support for Kubernetes operator
+* Moniting enhancements
+* Security vulnerabilities
+* Disaster recovery drill
+* AMI migration
+* Regional customer data
 
 ## Security
 
