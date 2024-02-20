@@ -22,7 +22,11 @@ We use the following technologies to build Teleport.
 ### Performance and Scaling
 
 The Performance and Scaling team is focused on scaling, performance,
-reliability and robustness of Teleport in large deployments.
+reliability and robustness of Teleport in large deployments. This team often
+works directly with our customers to diagnose and remediate performance issues.
+They also consult with other Teleport teams on matters related to scaling and
+performance, and ensure that we have appropriate monitoring and tracing in
+place to investigate performance problems.
 
 Recent projects:
 
@@ -49,9 +53,10 @@ Recent projects:
 ### Server Access
 
 The Server Access team works on secure access to SSH servers using short-lived
-credentials. A few of the teams responsibilities include enhanced auditing via
-BPF, simplifying provisioning via automatic host user creation, integrating
-with PAM, moderated SSH sessions and supporting agentless connections.
+credentials. The team is responsible for learning the SSH protocol and related
+protocols (i.e. SFTP) and various aspects of Linux (i.e. PAM, BPF, auditd,
+cgroups) to ensure that Teleport is able to provide seamless access to SSH
+servers.
 
 Recent projects:
 
@@ -62,10 +67,10 @@ Recent projects:
 
 ### Kubernetes Access
 
-The Kubernetes Access teams work on secure access to Kubernetes clusters using
-short-lived credentials. A few of the teams responsibilities include ensuring
-compatability with supported Kubernetes versions, moderated Kubernetes
-sessions, improve performance and reliability for Kubernetes access.
+The Kubernetes Access team works on secure access to Kubernetes clusters using
+short-lived credentials. The team is responsible for learning Kubernetes RBAC
+and Kubernetes APIs to ensure that Teleport is able to provide seamless access
+to all resources running in Kubernetes.
 
 Recent projects:
 
@@ -221,7 +226,7 @@ We use the following technologies to build Teleport Cloud:
 
 The team is focused on customer acquisition, user experience, usage reporting,
 billing, and internal customer support tooling. They build a frictionless
-UX while driving prospects to become new enterprise customers. 
+UX while driving prospects to become new enterprise customers.
 
 In recent
 quarters this team has delivered a new usage reporting platform, the team plan,
