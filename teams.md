@@ -226,19 +226,19 @@ Recent projects:
 
 ### Cloud Platform
 
-The team architects a highly performant and scalable cloud platform that
-realizes the promise of a SaaS product. The team is focused on scalability,
+The team architects a performant and scalable cloud platform that
+realizes the promise of Teleport as a SaaS product. The team is focused on scalability,
 security, and analytics of Teleport on our Cloud platform. They build
-multi-cluster Kubernetes controllers that manage tenants, networking services,
-enhance platform monitoring, and zero-downtime upgrades.
+multi-cluster Kubernetes controllers, networking services, platform monitoring tools,
+and more.
 
 Recent projects:
 
+* Multi-cluster Kubernetes operators for managing Teleport at scale
+* Zero-downtime upgrades for services with long-lived tunnels
+* Global ingress stack with Envoy, Gateway API, and ALPN routing
+* Reduced onboarding time for new customer instances
 * Migration to EKS
-* Multi-cluster tenant operator
-* Reduce onboarding time
-* Zero-downtime upgrades
-* New ingress stack
 
 ### Cloud Operations
 
