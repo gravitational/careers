@@ -89,7 +89,6 @@ The faults may be present in the following areas.
 * kernel / systemd / cgroups
 * filesystem or volumes
 * networking
-* SELinux
 * TLS connectivity
 
 We use the following software to represent applications on the host, which are
@@ -97,19 +96,12 @@ experiencing faults.
 
 * nginx
 * etcd
-* docker
-* ipvs
 
 As this is meant to test the way we normally work, you may use any resource you
 would normally use when troubleshooting a system; for example, using Google as
 a reference is normal and expected.
 
 ## Pitfalls and Gotchas
-
-Some of the challenges exercise some of the hardest problems we've seen in the
-wild, so it's common to get stuck on one problem. If you find that you're not
-making progress on an issue, it's fine to move on, skip a problem, and come
-back to it later.
 
 While this is a simulated environment, you should treat the challenge as
 troubleshooting a live customer or production system.
