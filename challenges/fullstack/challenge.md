@@ -87,8 +87,8 @@ The following features are required:
 At level 2, the challenge requirements are similar to level 1, with one notable
 difference: you will be required to make network calls. We will provide you with
 a backend API, corresponding API docs, and a set of credentials that our API is
-hard-coded to accept. The API will occaisionally add a delay before serving the
-repsonse, and may inject artificial errors.
+hard-coded to accept. The API will occasionally add a delay before serving the
+response, and may inject artificial errors.
 
 The UI should allow the user to view the contents of a single directory.
 Clicking on a subdirectory should navigate to that directory and refresh the
@@ -180,7 +180,7 @@ The following features are required:
 * [ ] Add support for sorting directory contents based on filename, type, and
   size.
 * [ ] Include breadcrumbs that show the current location in the directory. The
-  breadcrums should be clickable for easy navigation to parent directories.
+  breadcrumbs should be clickable for easy navigation to parent directories.
 * [ ] Implement URL navigation. The state of the app should be encoded in the
   URL. No state should be lost upon a page refresh.
 
@@ -204,7 +204,7 @@ The following features are required:
 
 * [ ] The API should reject requests from unauthenticated users
 * [ ] The UI should redirect unauthenticated users to a login page. After a
-  succesful login, users should be directed back to the page they initially
+  successful login, users should be directed back to the page they initially
   requested.
 * [ ] The UI should provide a way for users to log out.
 
@@ -329,7 +329,7 @@ no-pass from the interview team:
   common web security vulnerabilities.
     * Recommended resources:
         * [Authentication Cheat
-          Sheat](https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html)
+          Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html)
         * [OWASP Top Ten](https://owasp.org/www-project-top-ten/)
 * For a senior level, make sure you have a good crypto setup and secure session
   management.

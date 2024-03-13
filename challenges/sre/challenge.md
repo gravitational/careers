@@ -82,7 +82,7 @@ tests that cover happy and unhappy scenarios. Keep the number of external
 dependencies low.
 
 Do not try to achieve full test coverage. This will take too long. Write enough
-to exercise the different key components to show they are working as intendend 
+to exercise the different key components to show they are working as intended 
 while demonstrating your approach to automation.
 
 For level 4+, please research Kubernetes controllers and the recommended Go client

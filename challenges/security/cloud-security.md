@@ -91,7 +91,7 @@ securing the service. Please implement as many of the following security
 features as you find time for. Implement the ones that you believe provide the
 best security return on investment.
 
- - Tamper-resitant audit logs
+ - Tamper-resistant audit logs
  - Principle of least privilege, role-based IAM for:
    - Uploading new artifacts
    - Reading artifacts
