@@ -270,7 +270,7 @@ upgrades.
 Recent projects:
 
 * CI/CD with GitHub Actions
-* Moniting enhancements
+* Monitoring enhancements
 * Security vulnerabilities
 * Disaster recovery drill
 * AMI migration

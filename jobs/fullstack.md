@@ -37,7 +37,7 @@ TypeScript with React.
 * Teleport Connect, a desktop app providing quick access to Teleport resources
 * Making Teleport more efficient by adding server-side pagination and filtering
   [capabilities](https://github.com/gravitational/teleport/blob/master/rfd/0055-webui-ss-paginate-filter.md)
-* Making Teleport easier to use by desigining experiences that guide the user
+* Making Teleport easier to use by designing experiences that guide the user
   through the setup and onboarding process.
 * Building user interfaces that support our
   [passwordless](https://github.com/gravitational/teleport/blob/master/rfd/0052-passwordless.md)
