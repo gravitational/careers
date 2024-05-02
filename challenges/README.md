@@ -2,12 +2,10 @@
 
 ### Systems Engineering
 
-Teleport has two systems engineering challenges.
+Teleport has one systems engineering challenge.
 
 * [Job Worker](systems/challenge-1.md): A challenge that demonstrates understanding of
   Linux internals.
-* [TCP Load Balancer](systems/challenge-2.md): A challenge that demonstrates
-  understanding of networking and Load Balancers.
 
 We also maintain a [systems engineering challenge for interns](systems-intern/challenge.md).
 
