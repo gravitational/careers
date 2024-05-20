@@ -226,8 +226,7 @@ These are the areas we will be evaluating in the submission:
   coding style guidelines and let us know what they are.
 * At the minimum, create tests for authentication, networking, and an
   unhappy/error scenario.
-* Make sure builds are reproducible. Pick any vendoring/packaging system that
-  will allow us to get consistent build results.
+* Make sure builds are reproducible.
 * Ensure error handling and error reporting is consistent. The system should
   report clear errors and not crash under non-critical conditions.
 * Avoid concurrency and networking errors. Most of the issues we've seen in
