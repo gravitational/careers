@@ -97,6 +97,17 @@ Do not try to achieve full test coverage. This will take too long. Take two key
 components, e.g. authentication/authorization layer and networking and implement
 one or two test cases that demonstrate your approach to testing.
 
+### Dependencies
+
+Please write as much of your own code as possible. Avoid relying on third
+party dependencies for key components of the challenge. The server should
+also not rely on any shell scripts, external binaries or use containers
+to execute jobs.
+
+You may use any components from the standard library, gRPC(L3+), and
+whichever CLI library you are most familiar with. If there is a dependency
+that you want to use but are unsure about please ask first.
+
 # Requirements
 
 The project is broken down into 3 components:
