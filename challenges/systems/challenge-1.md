@@ -333,7 +333,7 @@ Unless specified in the requirements, pick the solution that works best for you.
 
 # Tools
 
-This task should be implemented in Go or Rust and should work on 64-bit Linux machines.
+This task should be implemented in Go and should work on 64-bit Linux machines.
 
 # Timing
 
