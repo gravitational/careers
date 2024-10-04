@@ -208,7 +208,7 @@ Here is a great question to ask:
 > WebAuthn) even if it requires the purchase of additional hardware?
 
 It demonstrates that you understand the problem domain (phishing risks of
-passwords and one-time passwords), have a solution (unphisable authentication),
+passwords and one-time passwords), have a solution (unphishable authentication),
 and the trade-offs (additional costs). Our answer would be: do it.
 
 This is the question we expect candidates to figure out on their own:
