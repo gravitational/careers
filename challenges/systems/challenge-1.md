@@ -91,16 +91,14 @@ list of the key observations from the team that affected the result.
 
 ### Testing
 
-Add a couple of high quality tests that cover happy and unhappy scenarios.
-
-Do not try to achieve full test coverage. This will take too long. Take two key
-components, e.g. authentication/authorization layer and networking and implement
-one or two test cases that demonstrate your approach to testing.
+Key components of the challenge (i.e. authorization, output streaming, cgroups) should
+have tests that cover the happy and unhappy scenarious. Do not try to achieve 100% test
+coverage as that will take too long.
 
 ### Dependencies
 
 Please write as much of your own code as possible. Avoid relying on third
-party dependencies for key components of the challenge(cgroups, output 
+party dependencies for key components of the challenge (i.e., cgroups, output 
 streaming, authorization). The server should also not rely on any shell scripts,
 external binaries or use containers to execute jobs.
 
@@ -235,8 +233,7 @@ These are the areas we will be evaluating in the submission:
   [Go Coding Style](https://github.com/golang/go/wiki/CodeReviewComments) for
   the Go language. If you are going to use a different language, please pick
   coding style guidelines and let us know what they are.
-* At the minimum, create tests for authentication, networking, and an
-  unhappy/error scenario.
+* Tests exist for happy path and error scenarios for key components of the challenge.
 * Make sure builds are reproducible.
 * Ensure error handling and error reporting is consistent. The system should
   report clear errors and not crash under non-critical conditions.
