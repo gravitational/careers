@@ -160,8 +160,7 @@ You may use additional external dependencies, but ensure that detecting or insta
   Read-only requests should not each trigger a request to the cluster.
   It is acceptable to use either client-go or controller-runtime to implement this.
 * Secure connections between the gRPC API and caller with mTLS
-* Server must store the desired state in a CRD (per-deployment) and reconcile the deployment to that state.
-  (gRPC API endpoints only need to read the real, current value.)
+* Server must store the desired state in a CRD (per-deployment) and reconcile the deployment to that state. (gRPC API endpoints only need to read the real, current value.)
 * One or two tests that cover happy and unhappy scenarios
 
 ### Automation
