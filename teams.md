@@ -122,15 +122,15 @@ Recent projects:
 
 ### Machine ID
 
-The Machine ID team is focused on bringing all the advantages and convenience
-that Teleport provides for human users to machine use cases.
+The Machine ID team is building the easiest and most secure way to issue
+machines secure cryptographic identities and grant them access to
+infrastructure.
 
 Recent projects:
 
-* Added support for FIPS builds
-  [#23563](https://github.com/gravitational/teleport/pull/23563)
-* Added support for securely joining bots running on Azure
-  [#23112](https://github.com/gravitational/teleport/pull/23112)
+* Launching a SPIFFE-compatible workload identity issuer
+* Securely identifying workloads running in Kubernetes without the use of
+  secrets [#44209](https://github.com/gravitational/teleport/pull/44209)
 * Added support for securely joining bots running on GitLab CI
   [#22705](https://github.com/gravitational/teleport/pull/22705)
 
