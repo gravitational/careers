@@ -111,7 +111,7 @@ You may use additional external dependencies, but ensure that detecting or insta
 ### Security
 * Create a service account for the API and limit access to only read/list secrets and configmap resources.
 * Create a network policy that limits egress from your API service to only that which is needed.
-* Create doc that outlines the requirements in the [threat model](#threat-model) section.
+* Create a document that outlines the requirements in the [threat model](#threat-model) section.
 
 ## Level 5
 
@@ -132,7 +132,7 @@ You may use additional external dependencies, but ensure that detecting or insta
 ### Security
 * Create a service account for the API and limit access to only read secrets and configmap resources.
 * Create a network policy that limits egress from your API service to only that which is needed.
-* Create doc that outlines the requirements in the [threat model](#threat-model) section.
+* Create a document that outlines the requirements in the [threat model](#threat-model) section.
 
 ## Threat Model
 Imagine your API has matured into a public facing service and has been extended to include additional API endpoints that may return sensitive data. The service authenticates users via an API token, exposes the endpoint over a network load balancer that terminates TLS at the LB, and writes data to an externally managed database (see example diagram).  
