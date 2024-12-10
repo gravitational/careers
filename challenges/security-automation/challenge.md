@@ -7,8 +7,8 @@ applications, and users to an Auth0 tenant.
 
 This exercise has two goals:
 
-* It helps us to understand what to expect from you as a IT Automation &
-  Security Engineer, how you securely configure infrastructure and write code
+* It helps us to understand what to expect from you as a Security and Automation
+  Engineer, how you securely configure infrastructure and write code
   and scripts.
 * It helps you get a feel for what it would be like to work at Teleport, as
   this exercise aims to simulate our day-as-usual and expose you to the type of
@@ -25,8 +25,8 @@ together.
 
 # Levels
 
-There are 6 levels for IT Automation & Security at Teleport. We are only
-interviewing for P3 and P4 at the moment.
+There are 6 levels for Security and Automation at Teleport. We are only
+interviewing for P4 at the moment.
 
 # Interview Process
 
@@ -111,7 +111,7 @@ merged.
 ## Level 4
 
 Use [Temporal](https://temporal.io) to build MVP workflows that can do the
-following. Use Go programming language and Temporal Go SDK to implement workflows.
+following. Use Go (or Python) Temporal SDK to the implement workflows.
 
 * Create a [Docker Compose](https://docs.docker.com/compose) stack that will
   be used to run Temporal.
@@ -222,7 +222,7 @@ you.
 # Tools
 
 This task should be implemented using GitHub Actions or Temporal/Docker,
-Terraform, and shell scripts or Go.
+Terraform, and shell scripts or Go/Python.
 
 # Timing
 

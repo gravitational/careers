@@ -25,9 +25,9 @@ Teleport has one site reliability engineering challenge.
 * [Deploy a service in Kubernetes](sre/challenge.md): A challenge that
   demonstrates the ability to deploy and monitor a service in Kubernetes.
 
-### IT Automation & Security
+### Security and Automation
 
-Teleport has one IT Automation & Security challenge.
+Teleport has one Security and Automation challenge.
 
-* [Workflow Automation](it-automation/challenge.md): A challenge that
-demonstrates the ability to build secure IT workflow automation tooling.
+* [Workflow Automation](security-automation/challenge.md): A challenge that
+demonstrates the ability to build secure workflow automation tooling.
