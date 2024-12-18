@@ -1,0 +1,18 @@
+HSET user:41a94 name "John Doe" email "john.doe@example.com" phone "+1234567890" primary_payment "payment:5b7d3"
+HSET payment:5b7d3 email "john.doe@example.com" type "credit_card" card_number "4242424242424242" expiry_date "12/26" payment_date "2024-01-15"
+HSET payment:6e8a2 email "john.doe@example.com" type "debit_card" card_number "4111111111111111" expiry_date "11/25" payment_date "2024-02-10"
+
+HSET user:0e1b0 name "Jane Smith" email "jane.smith@example.com" phone "+9876543210" primary_payment "payment:92f3d"
+HSET payment:92f3d email "jane.smith@example.com" type "credit_card" card_number "4000056655665556" expiry_date "10/27" payment_date "2024-02-10"
+HSET payment:ad095 email "jane.smith@example.com" type "credit_card" card_number "378282246310005" expiry_date "03/28" payment_date "2024-03-05"
+HSET payment:c4d16 email "jane.smith@example.com" type "paypal" account_email "jane.smith@paypal.com" payment_date "2024-04-15"
+
+HSET user:ad090 name "Alice Johnson" email "alice.johnson@example.com" phone "+1122334455" primary_payment "payment:ee7b9"
+HSET payment:ee7b9 email "alice.johnson@example.com" type "credit_card" card_number "5555555555554444" expiry_date "05/25" payment_date "2024-03-05"
+
+HSET user:c7147 name "Robert Brown" email "robert.brown@example.com" phone "+4455667788" primary_payment "payment:f9d81"
+HSET payment:f9d81 email "robert.brown@example.com" type "credit_card" card_number "4012888888881881" expiry_date "09/24" payment_date "2024-04-20"
+HSET payment:df60c email "robert.brown@example.com" type "credit_card" card_number "6011111111111117" expiry_date "07/26" payment_date "2024-06-10"
+
+HSET user:77d80 name "Emily Davis" email "emily.davis@example.com" phone "+5566778899" primary_payment "payment:4f2d9"
+HSET payment:4f2d9 email "emily.davis@example.com" type "credit_card" card_number "4222222222222" expiry_date "06/28" payment_date "2024-05-15"
