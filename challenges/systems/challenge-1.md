@@ -92,7 +92,7 @@ list of the key observations from the team that affected the result.
 ### Testing
 
 Key components of the challenge (i.e. authorization, output streaming, cgroups) should
-have tests that cover the happy and unhappy scenarious. Do not try to achieve 100% test
+have tests that cover the happy and unhappy scenarios. Do not try to achieve 100% test
 coverage as that will take too long.
 
 ### Dependencies
