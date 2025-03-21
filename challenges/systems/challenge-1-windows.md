@@ -1,6 +1,7 @@
 # Summary
 
 Implement a prototype job worker service that provides an API to run arbitrary processes.
+These processes can be any executable program that is available on the machine running the service.
 
 # Rationale
 
@@ -154,10 +155,11 @@ The project is broken down into 3 components:
 
 ### Library
 
-* Worker library with methods to start/stop/query status and get the output of a process.
+* Worker library with methods to start/stop/query status of a process.
 * Library should be able to stream the output of a running process.
   * Output should be from start of process execution.
   * Multiple concurrent clients should be supported.
+  * Do not make any assumptions about the process's output - it may be text or raw binary data.
 
 ### API
 
@@ -175,10 +177,11 @@ The project is broken down into 3 components:
 
 ### Library
 
-* Worker library with methods to start/stop/query status and get the output of a process.
+* Worker library with methods to start/stop/query status of a process.
 * Library should be able to stream the output of a running process.
   * Output should be from start of process execution.
   * Multiple concurrent clients should be supported.
+  * Do not make any assumptions about the process's output - it may be text or raw binary data.
 * Add resource control for CPU, Memory and Disk IO per-process using Windows job objects.
 
 ### API
@@ -197,10 +200,13 @@ The project is broken down into 3 components:
 
 ### Library
 
-* Worker library with methods to start/stop/query status and get the output of a process.
+* Worker library with methods to start/stop/query status of a process.
+  * When stopping a job, care should be taken to ensure that the job's child processes
+    (if any) are also terminated.
 * Library should be able to stream the output of a running process.
   * Output should be from start of process execution.
   * Multiple concurrent clients should be supported.
+  * Do not make any assumptions about the process's output - it may be text or raw binary data.
 * Add resource control for CPU, Memory and Disk IO per process using Windows job objects.
 * Add resource isolation for process ID space, filesystem, and network ports.
 
