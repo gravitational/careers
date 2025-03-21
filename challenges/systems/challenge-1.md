@@ -1,6 +1,7 @@
 # Summary
 
 Implement a prototype job worker service that provides an API to run arbitrary Linux processes.
+These processes can be any executable program that is available on the machine running the service.
 
 # Rationale
 
@@ -99,11 +100,11 @@ coverage as that will take too long.
 ### Dependencies
 
 Please write as much of your own code as possible. Avoid relying on third
-party dependencies for key components of the challenge (i.e., cgroups, output 
+party dependencies for key components of the challenge (i.e., cgroups, output
 streaming, authorization). The server should also not rely on any shell scripts,
 external binaries or use containers to execute jobs.
 
-You may use any components from the standard library, gRPC(L3+), and
+You may use any components from the standard library, gRPC (L3+), and
 whichever CLI library you are most familiar with. If there is a dependency
 that you want to use but are unsure about please ask first.
 
@@ -153,10 +154,11 @@ The project is broken down into 3 components:
 
 ### Library
 
-* Worker library with methods to start/stop/query status and get the output of a job.
+* Worker library with methods to start/stop/query status of a job.
 * Library should be able to stream the output of a running job.
   * Output should be from start of process execution.
   * Multiple concurrent clients should be supported.
+  * Do not make any assumptions about the process's output - it may be text or raw binary data.
 
 ### API
 
@@ -174,10 +176,11 @@ The project is broken down into 3 components:
 
 ### Library
 
-* Worker library with methods to start/stop/query status and get the output of a job.
+* Worker library with methods to start/stop/query status of a job.
 * Library should be able to stream the output of a running job.
   * Output should be from start of process execution.
   * Multiple concurrent clients should be supported.
+  * Do not make any assumptions about the process's output - it may be text or raw binary data.
 
 ### API
 
@@ -195,10 +198,13 @@ The project is broken down into 3 components:
 
 ### Library
 
-* Worker library with methods to start/stop/query status and get the output of a job.
+* Worker library with methods to start/stop/query status of a job.
+  * When stopping a job, care should be taken to ensure that the job's child processes
+    (if any) are also terminated.
 * Library should be able to stream the output of a running job.
   * Output should be from start of process execution.
   * Multiple concurrent clients should be supported.
+  * Do not make any assumptions about the process's output - it may be text or raw binary data.
 * Add resource control for CPU, Memory and Disk IO per job using cgroups.
 
 ### API
