@@ -62,8 +62,9 @@ Be sure to cover the following in your design:
 
 * CLI user experience: a couple examples of what it may look like to invoke a
   command. This allows us an opportunity to envision how we will run the program.
-* Level 3+: Streaming approach, TLS setup (version, cipher suites, etc.)
-* Level 4+: Process execution lifecycle (how will you start and stop jobs, add
+* Level 3+: TLS setup (version, cipher suites, etc.)
+* Level 4+: Output streaming
+* Level 5: Process execution lifecycle (how will you start and stop jobs, add
   them to cgroups, etc.)
 
 Once the design document has been approved by two reviewers, move on to the
@@ -177,7 +178,6 @@ The project is broken down into 3 components:
 * Library should be able to stream the output of a running job.
   * Output should be from start of process execution.
   * Multiple concurrent clients should be supported.
-* Add resource control for CPU, Memory and Disk IO per job using cgroups.
 
 ### API
 
@@ -200,7 +200,6 @@ The project is broken down into 3 components:
   * Output should be from start of process execution.
   * Multiple concurrent clients should be supported.
 * Add resource control for CPU, Memory and Disk IO per job using cgroups.
-* Add resource isolation for using PID, mount, and networking namespaces.
 
 ### API
 
