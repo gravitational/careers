@@ -153,14 +153,11 @@ The project is broken down into 3 components:
 
 ### Library
 
-* Worker library with methods to start/stop/query status and get the output of a job.
-* Library should be able to stream the output of a running job.
-  * Output should be from start of process execution.
-  * Multiple concurrent clients should be supported.
+* Worker library with methods to start/stop/query status of a job.
 
 ### API
 
-* [GRPC](https://grpc.io) API to start/stop/get status/stream output of a running process.
+* [GRPC](https://grpc.io) API to start/stop/get status of a running process.
 * Use mTLS authentication and verify client certificate. Set up strong set of
   cipher suites for TLS and good crypto setup for certificates. Do not use any
   other authentication protocols on top of mTLS.
@@ -168,7 +165,7 @@ The project is broken down into 3 components:
 
 ### Client
 
-* CLI should be able to connect to worker service and start, stop, get status, and stream output of a job.
+* CLI should be able to connect to worker service and start, stop, and get status of a job.
 
 ## Level 4
 
