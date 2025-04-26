@@ -1,7 +1,7 @@
 # Summary
 
-Implement a prototype job worker service that provides an API to run arbitrary Linux processes.
-These processes can be any executable program that is available on the machine running the service.
+Implement a prototype service and CLI tool which allows users to perform
+web-based OIDC authentication and return credentials to the CLI tool.
 
 # Rationale
 
@@ -24,17 +24,15 @@ We appreciate your time and are looking forward to hack on this project together
 
 # Levels
 
-There are 6 engineering levels at Teleport. It's possible to score on level 1-5 through coding challenge.
-
-Level 6 is only for internal promotions. Check
-[Systems Engineering Levels](../../levels/systems.pdf) for more details.
+There are 6 engineering levels at Teleport. This challenge only applies to P4
+applicants.
 
 # Interview Process
 
-The interview process will start with you receiving an invite to a private
-Slack channel. That channel will contain the interview panel. You can ask them
-about the engineering culture, work-life balance, or anything else that you
-would like to learn about Teleport.
+The interview process will start with you receiving an invite to a private Slack
+channel. That channel will contain the interview panel. You can ask them about
+R&D culture, work-life balance, or anything else that you would like to learn
+about Teleport.
 
 ## Design Doc
 
@@ -58,15 +56,6 @@ A few notes about the design document:
   parts are draft and which parts are complete. Instead we encourage asking
   questions in Slack and sharing a design document that is ready to be reviewed.
 
-Be sure to cover the following in your design:
-
-* CLI user experience: a couple examples of what it may look like to invoke a
-  command. This allows us an opportunity to envision how we will run the program.
-* Level 3+: TLS setup (version, cipher suites, etc.)
-* Level 4+: Output streaming
-* Level 5: Process execution lifecycle (how will you start and stop jobs, add
-  them to cgroups, etc.)
-
 Once the design document has been approved by two reviewers, move on to the
 implementation.
 
@@ -87,140 +76,80 @@ accepts the submission, -2 otherwise.
 In case of a positive result, we will connect you to our HR and recruiting
 teams, who will work out the details and present an offer.
 
-In case of a negative score result, the hiring manager will contact you and share a
-list of the key observations from the team that affected the result.
+In case of a negative score result, the hiring manager will contact you and
+share a list of the key observations from the team that affected the result.
 
 ### Tools
 
-This task should be implemented in Go and should work on 64-bit Linux machines.
-
-### Testing
-
-Key components of the challenge (i.e. authorization, output streaming, cgroups) should
-have tests that cover the happy and unhappy scenarios. Do not try to achieve 100% test
-coverage as that will take too long.
+This task should be implemented in Go.
 
 ### Dependencies
 
-Please write as much of your own code as possible. Avoid relying on third
-party dependencies for key components of the challenge (i.e., cgroups, output
-streaming, authorization). The server should also not rely on any shell scripts,
-external binaries or use containers to execute jobs.
-
-You may use any components from the standard library, gRPC (L3+), and
-whichever CLI library you are most familiar with. If there is a dependency
-that you want to use but are unsure about please ask first.
+Please write as much of your own code as possible. Avoid relying on
+non-reputable dependencies for key components of the challenge.
 
 # Requirements
 
-The project is broken down into 3 components:
-
-1. A reusable library implementing the functionality for working with jobs.
-2. An API server that wraps the functionality of the library.
-3. A command line interface (CLI) that communicates with the API server.
-
-## Level 1
-
-### Library
-
-* Worker library with methods to start/stop/query status and get the output of a job.
-
-### API
-
-* HTTPS API to start/stop/get status of a running process.
-* Use HTTP Basic Authentication.
-* Use a simple authorization scheme.
-
-### CLI
-
-* CLI should be able to connect to worker service and start, stop, get status, and output of a job.
-
-## Level 2
-
-### Library
-
-* Worker library with methods to start/stop/query status and get the output of a job.
-
-### API
-
-* HTTPS API to start/stop/get status of a running process.
-* Use mTLS authentication and verify client certificate. Set up strong set of
-  cipher suites for TLS and good crypto setup for certificates. Do not use any
-  other authentication protocols on top of mTLS.
-* Use a simple authorization scheme.
-
-### CLI
-
-* CLI should be able to connect to worker service and start, stop, get status, and output of a job.
-
-## Level 3
-
-### Library
-
-* Worker library with methods to start/stop/query status of a job.
-* Library should be able to stream the output of a running job.
-  * Output should be from start of process execution.
-  * Multiple concurrent clients should be supported.
-  * Do not make any assumptions about the process's output - it may be text or raw binary data.
-
-### API
-
-* [GRPC](https://grpc.io) API to start/stop/get status/stream output of a running process.
-* Use mTLS authentication and verify client certificate. Set up strong set of
-  cipher suites for TLS and good crypto setup for certificates. Do not use any
-  other authentication protocols on top of mTLS.
-* Use a simple authorization scheme.
-
-### Client
-
-* CLI should be able to connect to worker service and start, stop, get status, and stream output of a job.
-
 ## Level 4
 
-### Library
+Implement a CLI tool and backend (relying party) that can perform OIDC
+Authorization Code Flow with PKCE against an OpenID Provider (also known as an
+identity provider or IdP) to obtain and print out a valid JWT that can be used for
+authentication.
 
-* Worker library with methods to start/stop/query status of a job.
-* Library should be able to stream the output of a running job.
-  * Output should be from start of process execution.
-  * Multiple concurrent clients should be supported.
-  * Do not make any assumptions about the process's output - it may be text or raw binary data.
+### Host and IdP configuration
 
-### API
+Update DNS or `/etc/hosts` with the following entries:
 
-* [GRPC](https://grpc.io) API to start/stop/get status/stream output of a running process.
-* Use mTLS authentication and verify client certificate. Set up strong set of
-  cipher suites for TLS and good crypto setup for certificates. Do not use any
-  other authentication protocols on top of mTLS.
-* Use a simple authorization scheme.
+```
+127.0.0.1 backend.example.com
+127.0.0.1 idp.example.com
+```
 
-### Client
+Use [Dex](https://dexidp.io) for your IdP using the below configuration and
+Docker one-liner with username/password: `foo`/`bar`.
 
-* CLI should be able to connect to worker service and start, stop, get status, and stream output of a job.
+Save the configuration below as `dex-config.yaml`.
 
-## Level 5
+```yaml
+issuer: "http://idp.example.com:5557"
 
-### Library
+storage:
+  type: "sqlite3"
+  config:
+    file: "/etc/dex/dex.db"
 
-* Worker library with methods to start/stop/query status of a job.
-  * When stopping a job, care should be taken to ensure that the job's child processes
-    (if any) are also terminated.
-* Library should be able to stream the output of a running job.
-  * Output should be from start of process execution.
-  * Multiple concurrent clients should be supported.
-  * Do not make any assumptions about the process's output - it may be text or raw binary data.
-* Add resource control for CPU, Memory and Disk IO per job using cgroups.
+staticClients:
+  - id: "oidc-client-id"
+    redirectURIs:
+      - "http://backend.example.com:8000/callback"
+    name: "OIDC CLI"
+    public: true
 
-### API
+staticPasswords:
+  - email: "foo"
+    username: "foo"
+    userID: "00000000-0000-0000-0000-000000000000"
+    # Generate hash of "bar": echo $(echo bar | htpasswd -BinC 10 admin | cut -d: -f2)
+    hash: "$2y$10$.Tx0T8URLvW.uMBPIZkJnuk7msXSTNWwJIajiOmuy4sLWysOtYOjW"
 
-* [GRPC](https://grpc.io) API to start/stop/get status/stream output of a running process.
-* Use mTLS authentication and verify client certificate. Set up strong set of
-  cipher suites for TLS and good crypto setup for certificates. Do not use any
-  other authentication protocols on top of mTLS.
-* Use a simple authorization scheme.
+enablePasswordDB: true
 
-### Client
+oauth2:
+  passwordConnector: local
+```
 
-* CLI should be able to connect to worker service and start, stop, get status, and stream output of a job.
+Run Dex with the following Docker one-liner:
+
+```
+$ docker run --rm \
+    -p 5557:5557 \
+    -v $(pwd)/dex-config.yaml:/etc/dex/config.yaml \
+    ghcr.io/dexidp/dex:v2.37.0 \
+    dex serve --web-http-addr=0.0.0.0:5557 /etc/dex/config.yaml
+```
+
+Dex will now be available at http://idp.example.com:5557.
 
 # Guidance
 
@@ -240,19 +169,19 @@ These are the areas we will be evaluating in the submission:
 * Use consistent coding style. We follow
   [Go Coding Style](https://github.com/golang/go/wiki/CodeReviewComments) for
   the Go language.
-* Tests exist for happy path and error scenarios for key components of the challenge.
+* Tests exist for happy path and error scenarios for key components of the
+  challenge.
 * Make sure builds are reproducible.
 * Ensure error handling and error reporting is consistent. The system should
   report clear errors and not crash under non-critical conditions.
 * Avoid concurrency and networking errors. Most of the issues we've seen in
   production are related to data races, networking error handling or goroutine
   leaks. We will be looking for those errors in your code.
-* Security. Use strong authentication and a simple, but secure, authorization scheme.
-  Set up the strongest transport encryption you can. Test it.
+* Security. Mitigate common security vulnerabilities in OIDC flows.
 
-The primary factor in the team's decision is overall code quality. We are looking for
-the highest possible quality with the smallest possible scope that meets the requirements
-of the challenge.
+The primary factor in the team's decision is overall code quality. We are
+looking for the highest possible quality with the smallest possible scope that
+meets the requirements of the challenge.
 
 ## Trade-offs
 
@@ -266,10 +195,9 @@ Use hardcoded values as much as possible and simply add TODO items showing your
 thinking, for example:
 
 ```
-  // TODO: Add configuration system.
-  // Consider using CLI library to support both
-  // environment variables and reasonable default values,
-  // for example https://github.com/alecthomas/kingpin
+// TODO: Add configuration system.
+// Consider using CLI library to support both environment variables and
+// reasonable default values, for example https://github.com/alecthomas/kingpin
 ```
 
 Comments like this one are really helpful to us. They save yourself a lot of
@@ -279,7 +207,8 @@ provide a clear path to a solution.
 Consider making other reasonable trade-offs. Make sure you communicate them to
 the interview team.
 
-Here are some other trade-offs that will help you to spend less time on the task:
+Here are some other trade-offs that will help you to spend less time on the
+task:
 
 * Do not implement a system that scales or is highly performing. Describe which
   performance improvements you would add in the future.
@@ -323,9 +252,9 @@ questions to ask and questions we expect candidates to figure out on their own.
 
 Here is a great question to ask:
 
-> Is it OK to pre-generate secret data and put the secrets in the repository for
-> a proof of concept? I will add a note that we will auto-generate secrets in
-> the future.
+> Is it OK for the backend service to be served over HTTP? For a production
+> system I would use Let's Encrypt to obtain TLS certificates and serve it over
+> HTTPS. However, as a corner to cut I would like to serve it over HTTP.
 
 It demonstrates that you thought about this problem domain, recognize the trade
 off and are saving you and the team time by not implementing it.
@@ -336,14 +265,12 @@ This is the question we expect candidates to figure out on their own:
 
 Unless specified in the requirements, pick the solution that works best for you.
 
-
 # Timing
 
 You can split coding over a couple of weekdays or weekends and find time to ask
 questions and receive feedback.
 
-Once you join the Slack channel, you have between 1 to 2 weeks complete the
-challenge depending on the challenge you choose.
+Once you join the Slack channel, you have 2 weeks to complete the challenge.
 
 Within this timeframe, we don't give higher scores to challenges submitted more
 quickly. We only evaluate the quality of the submission.
