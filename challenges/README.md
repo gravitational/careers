@@ -6,17 +6,17 @@ Teleport has one systems engineering challenge.
 
 * [Job Worker](systems/challenge-1.md): A challenge that demonstrates
   understanding of Linux internals.
+* [OIDC CLI](systems/challenge-2.md): A challenge that demonstrates write
+  secure software.
 
 We also maintain a [systems engineering challenge for interns](systems-intern/challenge.md).
 
 ### Fullstack Engineering
 
-Teleport has two fullstack engineering challenge.
+Teleport has one fullstack engineering challenge.
 
 * [Directory Browser](fullstack/challenge.md): A challenge that demonstrates
   understanding of frontend and backend engineering.
-* [Graph Browser](fullstack/challenge-policy.md): A challenge that demonstrates
-  understanding of graph algorithms, frontend, and backend engineering.
 
 ### Site Reliability Engineering
 
