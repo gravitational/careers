@@ -34,19 +34,8 @@ During the 2 hours allotted for the interview, you will be given access to the
 hosts you will be debugging. Please ensure you are in the private Slack channel
 during this time, as this is where you will get the invite link.
 
-You will connect to the two faulty hosts using Teleport. You can access these
-hosts in your web browser or the CLI. If you want to use the CLI, make sure you
-[download and install](https://goteleport.com/download/) `tsh` ahead of time.
-Your cluster will be running Teleport 14.3, make sure to download the correct
-version of Teleport.
-
-You will use the three commands below during the interview process.
-
-* `tsh --proxy=interview-NAME.teleport.careers --user=interview-NAME login` to
-  login to the Teleport cluster.
-* `tsh ls` to see the list of (faulty) hosts you can connect to.
-* `tsh ssh user@interview-NAME-0` or `tsh ssh user@interview-NAME-1` to connect
-  to the faulty hosts.
+You will connect to the two faulty hosts using Teleport. You do not need to
+install any software and can access these hosts from your web browser.
 
 Each system has two issues that you will need to investigate, troubleshoot, and
 resolve. They will be outlined in `problem-*.txt` files in the user's home
