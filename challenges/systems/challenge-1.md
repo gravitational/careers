@@ -181,6 +181,7 @@ The project is broken down into 3 components:
 
 * Worker library with methods to start/stop/query status of a job.
 * Library should be able to stream the output of a running job.
+  * Discovering new output should be efficient, avoid busy-waiting or polling.
   * Output should be from start of process execution.
   * Multiple concurrent clients should be supported.
   * Do not make any assumptions about the process's output - it may be text or raw binary data.
@@ -205,6 +206,7 @@ The project is broken down into 3 components:
   * When stopping a job, care should be taken to ensure that the job's child processes
     (if any) are also terminated.
 * Library should be able to stream the output of a running job.
+  * Discovering new output should be efficient, avoid busy-waiting or polling.
   * Output should be from start of process execution.
   * Multiple concurrent clients should be supported.
   * Do not make any assumptions about the process's output - it may be text or raw binary data.
