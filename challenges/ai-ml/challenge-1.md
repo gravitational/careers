@@ -39,20 +39,19 @@ would like to learn about Teleport.
 
 Before writing any actual code, we ask that you write a brief design document.
 The design document should cover: design approach, scope, proposed API, security
-considerations, CLI UX, and implementation details where appropriate. Start with
-a brief doc that covers the edge cases and design approach.
+considerations, CLI UX, and implementation details where appropriate.
 
-Please submit the design document and all code in a GitHub repository. Public
-or private is your choice. Please submit the design document written in
-markdown as a Pull Request to allow us to provide you feedback on the proposed
-design.
+Include approaches you have evaluated and reasoning for picking the approach
+you're planning to go with.
+
+Please submit the design document and all code in a private GitHub repository.
+Please submit the design document written in markdown as a Pull Request to allow
+us to provide you feedback on the proposed design.
 
 A few notes about the design document:
 
-* Try to get the design document approved within the first 2-3 days. This is to
+* Try to get the design document approved within the first week. This is to
   ensure you have enough time to work on the implementation.
-* Avoid writing an overly detailed design document. Two to three pages is
-  sufficient.
 * Avoid sending us draft design documents. It is difficult to evaluate which
   parts are draft and which parts are complete. Instead we encourage asking
   questions in Slack and sharing a design document that is ready to be reviewed.
@@ -96,16 +95,6 @@ Key components of the challenge should have tests that cover the happy and
 unhappy scenarios. Do not try to achieve 100% test coverage as that will take
 too long.
 
-### Dependencies
-
-Please write as much of your own code as possible. Avoid relying on third
-party dependencies for key components of the challenge where possible. Do not
-rely on any shell scripts or external binaries.
-
-Prefer the standard library and whichever CLI library you are most familiar
-with. If there is a dependency that you want to use but are unsure about please
-ask first.
-
 # Requirements
 
 ## Level 4
@@ -144,18 +133,11 @@ Teleport focuses on networking, infrastructure and security.
 
 These are the areas we will be evaluating in the submission:
 
-* Use consistent coding style. We follow
-  [Go Coding Style](https://github.com/golang/go/wiki/CodeReviewComments) for
-  the Go language.
+* Use consistent coding style.
 * Tests exist for happy path and error scenarios for key components of the challenge.
 * Make sure builds are reproducible.
 * Ensure error handling and error reporting is consistent. The system should
   report clear errors and not crash under non-critical conditions.
-* Avoid concurrency and networking errors. Most of the issues we've seen in
-  production are related to data races, networking error handling or goroutine
-  leaks. We will be looking for those errors in your code.
-* Security. Use strong authentication and a simple, but secure, authorization scheme.
-  Set up the strongest transport encryption you can. Test it.
 
 The primary factor in the team's decision is overall code quality. We are looking for
 the highest possible quality with the smallest possible scope that meets the requirements
@@ -198,46 +180,12 @@ no-pass from the interview team:
   Avoid writing too much code. We've seen candidates' code introducing caching
   and making many mistakes in the caching layer validation logic. Not having
   caching would have solved this problem.
-* Data races. We will scan the code with a race detector and do our best to find
-  data races in the code. Avoid global state as much as possible; if using
-  global state, write down a good description why it is necessary and protect it
-  against data races.
-* Deadlocks. When using mutexes, channels or any other synchronization
-  primitives, make sure the system won't deadlock. We've seen candidates' code
-  holding a mutex and making a network call without timeouts in place. Be extra
-  careful with networking and sync primitives.
 * Unstructured code. We've seen candidates leaving commented chunks of code,
   having one large file with all the code, not having code structure at all.
 * Not communicating. Some candidates have submitted all their code to the master
   branch without raising pull requests, which does not give us the ability to
   provide feedback on the various implementation phases. We are a distributed
   team, so structured, asynchronous communication is critical to us.
-* Implementing custom security algorithms/authentication schemes is always a bad
-  idea unless you are a trained security researcher/engineer. It is definitely a
-  bad idea for this task - try to stick to industry proven security methods as
-  much as possible.
-
-## Questions
-
-It is OK to ask the interview team questions. Some folks stay away from asking
-questions to avoid appearing less experienced, so we provide examples of
-questions to ask and questions we expect candidates to figure out on their own.
-
-Here is a great question to ask:
-
-> Is it OK to pre-generate secret data and put the secrets in the repository for
-> a proof of concept? I will add a note that we will auto-generate secrets in
-> the future.
-
-It demonstrates that you thought about this problem domain, recognize the trade
-off and are saving you and the team time by not implementing it.
-
-This is the question we expect candidates to figure out on their own:
-
-> What version of Go should I use? What dependency manager should I use?
-
-Unless specified in the requirements, pick the solution that works best for you.
-
 
 # Timing
 
