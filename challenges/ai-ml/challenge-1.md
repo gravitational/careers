@@ -1,6 +1,6 @@
 # Summary
 
-Implement a CLI tool that detects reconnaisance activity in a body of CloudTrail
+Implement a CLI tool that detects reconnaissance activity in a body of CloudTrail
 logs.
 
 # Rationale
@@ -106,7 +106,7 @@ anomaly detection and/or machine learning techniques.
 https://summitroute.com/blog/2020/10/09/public_dataset_of_cloudtrail_logs_from_flaws_cloud/
 https://summitroute.com/downloads/flaws_cloudtrail_logs.tar
 
-Reconnaisance activity may include enumeration of AWS services and resources,
+Reconnaissance activity may include enumeration of AWS services and resources,
 permissions probing and brute-force attempts, unusual API call frequencies.
 
 After analyzing the logs, the tool should output the following information:
