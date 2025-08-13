@@ -1,38 +1,31 @@
 # Full Stack Engineer
 
-## About us
+## About Us
 
-Our mission is to enable engineers to quickly access any resource anywhere. Our
-product is an Open Infrastructure Access Platform for developers and security
-professionals seeking to simplify secure access to servers, applications, and
-data across all environments.
+Teleport is the Infrastructure Identity Company, modernizing identity, access,
+and policy for infrastructure, improving engineering velocity and resiliency of
+critical infrastructure against human factors and/or compromise.
 
-Teleport is a fast-growing, well-funded Y-Combinator company. We value our
-craft, are strong supporters of work/life balance, and embrace a culture of
-humility, honesty, and transparency.
-
-- [Teleport Repository](https://github.com/gravitational/teleport)
-- [Careers Page](https://goteleport.com/careers/)
-- [Apply Here](https://jobs.lever.co/teleport/2ec21642-ae90-4765-b9e3-b8b3ea312b3c)
+We are a fast-growing, well-funded Y-Combinator company. We value our craft,
+are strong supporters of work/life balance, and embrace a culture of humility,
+honesty, and transparency.
 
 ## About this job
 
-You will be joining the Teleport engineering team, responsible for building our
-unified access plane for SSH servers, Kubernetes clusters, databases, and other
-infrastructure.
+We are looking for product focused full stack engineers to work on Teleport
+itself.
 
-Teleport is an open source project, written in Go and Rust with web-based UIs in
-TypeScript with React.
+You will build the user interfaces and backend APIs to implement them for all
+parts of Teleport.
 
-**We love this job, and hope you will enjoy it too**
+You will work on the full product lifecycle from working with customers to
+understand their problems, writing RFDs for your proposed design,
+implementation, testing, and documentation.
 
-* The range of problem solving includes networking, performance, security and integrations with existing systems.
-* Most of the code you will write will be open source.
-* Our products are loved by their users, you’ll get to talk to some of them on Slack.
-* We practice [thorough code reviews](https://github.com/gravitational/teleport/pull/4769) and
-  have an [open design process](https://github.com/gravitational/teleport/tree/master/rfd).
+Teleport is an open source project and most of the code you will write will be
+open source and written in Go (or Rust), TypeScript, React.
 
-**The projects you may be working on**
+## Projects you may work on
 
 * Teleport Connect, a desktop app providing quick access to Teleport resources
 * Making Teleport more efficient by adding server-side pagination and filtering
@@ -45,30 +38,22 @@ TypeScript with React.
 
 ## Requirements
 
-* You must meet the requirements of the job posting listed on https://goteleport.com/careers
-* Experience with JavaScript, TypeScript, and React
-* [Web security](https://developer.mozilla.org/en-US/docs/Web/Security) experience is a plus.
+* Go experience
+* TypeScript and React experience
+* Strong understanding of [web
+  security](https://developer.mozilla.org/en-US/docs/Web/Security)
 
 As we are a startup, you should be comfortable changing the area of focus and
 working directly with customers.
 
-## Apply
+## Interview Process
 
 What to expect once you apply:
 
-* We will send you a 20-30 minute programming quiz.
 * You will join 30 minute intro call and we will walk you through the
   compensation, interview process and requirements.
-* You join a slack channel and submit a coding challenge in Go and Typescript using GitHub.
+* You join a Slack channel and submit a [coding challenge in Go and
+  TypeScript](https://github.com/gravitational/careers/blob/main/challenges/fullstack/challenge.md)
+using GitHub.
 
-[Apply Here](https://jobs.lever.co/teleport/2ec21642-ae90-4765-b9e3-b8b3ea312b3c)
-
-## Equal Opportunity
-
-We offer competitive compensation and benefits, platinum level healthcare
-insurance, 401k matching, equity, and a great place to work.
-
-Teleport is an equal opportunity employer and does not discriminate against any
-employee or applicant on the basis of age, color, disability, gender, national
-origin, race, religion, sexual orientation, veteran status, or any
-classifications protected by federal, state, or local law.
+[Apply Here](https://jobs.lever.co/teleport/0c51a43a-8721-4379-ab6c-022e0ff72cb1)
