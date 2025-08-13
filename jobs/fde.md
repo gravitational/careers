@@ -6,18 +6,14 @@ Teleport is the Infrastructure Identity Company, modernizing identity, access,
 and policy for infrastructure, improving engineering velocity and resiliency of
 critical infrastructure against human factors and/or compromise.
 
-We are a fast-growing, well-funded Y-Combinator company. We value our craft, are
-strong supporters of work/life balance, and embrace a culture of humility,
+We are a fast-growing, well-funded Y-Combinator company. We value our craft,
+are strong supporters of work/life balance, and embrace a culture of humility,
 honesty, and transparency.
-
-- [Teleport Repository](https://github.com/gravitational/teleport)
-- [Careers Page](https://goteleport.com/careers/)
-- [Apply Here](https://jobs.lever.co/teleport/c0725c54-c4af-46d5-9ba8-85dfe6becb8d)
 
 ## About this job
 
-You will work directly with customers to ensure successful Teleport
-deployments.
+We're looking for a customer-focused engineer that will work directly with
+customers to ensure successful Teleport deployments.
 
 You will meet regularly with customers, understand pain points blocking
 deployments and remove roadblocks. This includes writing and fixing IaC
@@ -28,7 +24,7 @@ For more complex issues, you will work with customers to articulate the problem
 they are trying to solve, gather requirements, and make the business case to
 the product and engineering teams to invest in resolving the issue.
 
-**We love this job, and hope you will enjoy it too**
+## Responsibilities
 
 * This job sits at the intersection of product, engineering, and revenue.
 * You won't just work closely with the engineering team, you will be on the
@@ -40,9 +36,6 @@ the product and engineering teams to invest in resolving the issue.
 
 ## Requirements
 
-You must meet the requirements of the job posting listed on
-https://goteleport.com/careers
-
 * Excellent communication skills.
 * Willing to travel to customer sites.
 * Infrastructure as Code (IaC) experience (like Terraform, Ansible, Helm).
@@ -52,7 +45,7 @@ https://goteleport.com/careers
 As we are a startup, you should be comfortable changing the area of focus and
 working directly with customers.
 
-## Apply
+## Interview Process
 
 What to expect once you apply:
 
@@ -63,13 +56,3 @@ What to expect once you apply:
   using GitHub.
 
 [Apply Here](https://jobs.lever.co/teleport/c0725c54-c4af-46d5-9ba8-85dfe6becb8d)
-
-## Equal Opportunity
-
-We offer competitive compensation and benefits, platinum level healthcare
-insurance, 401k matching, equity, and a great place to work.
-
-Teleport is an equal opportunity employer and does not discriminate against any
-employee or applicant on the basis of age, color, disability, gender, national
-origin, race, religion, sexual orientation, veteran status, or any
-classifications protected by federal, state, or local law.
