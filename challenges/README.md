@@ -36,3 +36,10 @@ Teleport has one Security and Automation challenge.
 
 * [Workflow Automation](security-automation/challenge.md): A challenge that
 demonstrates the ability to build secure workflow automation tooling.
+
+### AI/ML
+
+Teleport has one AI/ML challenge.
+
+* [Anomaly Detector](ai-ml/challenge-1.md): A challenge that demonstrates the
+  ability to apply AL/ML understanding to detect anomalous behavior.
