@@ -26,7 +26,7 @@ together.
 # Levels
 
 There are 6 levels for Security and Automation at Teleport. We are only
-interviewing for P4 at the moment.
+interviewing for P3 and P4 at the moment.
 
 # Interview Process
 
