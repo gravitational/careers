@@ -128,7 +128,7 @@ The project is broken down into 3 components:
 ### API
 
 * HTTPS API to start/stop/get status of a running process.
-* Use HTTP Basic Authentication.
+* Use Bearer Token Authentication.
 * Use a simple authorization scheme.
 
 ### CLI
