@@ -111,7 +111,7 @@ merged.
 ## Level 4
 
 Use [Temporal](https://temporal.io) to build MVP workflows that can do the
-following. Use Go (or Python) Temporal SDK to the implement workflows.
+following. Use the Go Temporal SDK to the implement workflows.
 
 * Create a [Docker Compose](https://docs.docker.com/compose) stack that will
   be used to run Temporal.
@@ -222,7 +222,7 @@ you.
 # Tools
 
 This task should be implemented using GitHub Actions or Temporal/Docker,
-Terraform, and shell scripts or Go/Python.
+Terraform, and shell scripts or Go.
 
 # Timing
 
