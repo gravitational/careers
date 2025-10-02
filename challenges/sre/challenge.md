@@ -203,8 +203,14 @@ Comments like this one are really helpful. They save yourself time and demonstra
 Consider making other reasonable trade-offs. Make sure you communicate them to the interview team.
 
 ### Pitfalls and Gotchas
-To help you out, we've composed a list of things that previously resulted in a no-pass from the interview team:
 
+To help you out, we've composed a list of things that previously resulted in a
+no-pass from the interview team:
+
+* Use of AI. Don't outsource your thinking to an AI. We recommend using AI for
+  use cases like learning about a new problem space, exploring APIs, and
+  finding missing edge cases. However, we strongly recommend you write the design
+  document and all code yourself.
 * Scope creep. Candidates have tried to implement too much and ran out of time
   and energy. To avoid this pitfall, use the simplest solution that will work.
   Avoid writing too much code. For example, it is not necessary to deploy a shared cached or support deployment to multiple regions or AZs.

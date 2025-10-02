@@ -12,10 +12,10 @@ We will use this project in order to evaluate your skill in the following areas:
 * Handling feedback
 
 We believe this technique is not only better but also more fun compared to
-whiteboard/quiz interviews so common in the industry. It’s not without the
+whiteboard/quiz interviews so common in the industry. It's not without the
 downsides - it could take longer than traditional interviews. That said, it's
 our view that this type of challenge gives us a more accurate assessment of your
-ability to work well on the types of projects we’re working on day-to-day here
+ability to work well on the types of projects we're working on day-to-day here
 at Teleport. [Some of the best teams use coding
 challenges](https://sockpuppet.org/blog/2015/03/06/the-hiring-post/). We
 appreciate your time and are looking forward to hacking on this project
@@ -287,7 +287,7 @@ a list of key observations from the team that affected the result.
 
 This is a test challenge and we have no intent of using the code you've
 submitted in production. This is your work, and you are free to do whatever you
-feel is reasonable with it. In the scenario where you don’t pass, you can open
+feel is reasonable with it. In the scenario where you don't pass, you can open
 source it with any license and use it as a portfolio project.
 
 ## Areas of focus
@@ -309,9 +309,13 @@ of the challenge.
 
 ## Pitfalls and Gotchas
 
-To help you out, we’ve composed a list of things that previously resulted in a
+To help you out, we've composed a list of things that previously resulted in a
 no-pass from the interview team:
 
+* Use of AI. Don't outsource your thinking to an AI. We recommend using AI for
+  use cases like learning about a new problem space, exploring APIs, and
+  finding missing edge cases. However, we strongly recommend you write
+  the design document and all code yourself.
 * Scope creep. Candidates have tried to implement too much and ran out of time.
    * Avoid implementing an overly complex solution just to show that you are
      capable of writing a complex feature. Instead, if you think something could

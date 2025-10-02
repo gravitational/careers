@@ -6,7 +6,7 @@ This exercise has two goals:
 
 It helps us understand what to expect from you as a technical leader, and
 whether you have the technical aptitude to engage with highly technical
-customers. It gives you a feel for what it’s like to work at Teleport. The
+customers. It gives you a feel for what it's like to work at Teleport. The
 exercise simulates day-to-day work, helping you better understand the team and
 our hiring process.
 
@@ -103,13 +103,20 @@ Teleport focuses on networking, infrastructure and security.
 To help you prepare, here are some common reasons candidates have failed to pass
 our interviews:
 
-- *Jumping into implementation without clarifying requirements or narrowing the scope.*
-   We expect product leaders to conduct customer interviews, negotiate scope, and identify the right MVP.
-   We want you to take the same approach during the design phase.
-- *Scope creep.* Candidates have tried to design too much and ran out of time and energy.
-  To avoid this pitfall, use the simplest solution that will work.
-- *Suggesting custom security algorithms/authentication schemes* is always a bad idea unless you are a trained security researcher/engineer.
-  It is definitely a bad idea for this task - try to stick to industry proven security methods as much as possible.
+* *Use of AI.* Don't outsource your thinking to an AI. We recommend using AI for
+  use cases like learning about a new problem space, exploring APIs, and
+  finding missing edge cases. However, we strongly recommend you write the design
+  document and all code yourself.
+* *Jumping into implementation without clarifying requirements or narrowing the
+  scope.* We expect product leaders to conduct customer interviews, negotiate
+  scope, and identify the right MVP. We want you to take the same approach
+  during the design phase.
+* *Scope creep.* Candidates have tried to design too much and ran out of time
+  and energy.  To avoid this pitfall, use the simplest solution that will work.
+* *Suggesting custom security algorithms/authentication schemes* is always a
+  bad idea unless you are a trained security researcher/engineer. It is
+  definitely a bad idea for this task - try to stick to industry proven security
+  methods as much as possible.
 
 ### Questions
 
