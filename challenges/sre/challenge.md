@@ -1,52 +1,70 @@
-# SRE
+# Summary
 
-The interview process is divided into two main sections: a walkthrough and a challenge. In the walkthrough, led by the hiring manager, you’ll have an opportunity to share your work history, review our leveling matrix, and discuss the upcoming challenge. Following the walkthrough, the challenge will assess your skills and fit for this position.
+Implement a Go server that interacts with a Kubernetes cluster, incorporating
+automated builds, containerization, deployment, and testing.
 
-We will use the challenge in order to evaluate your skill in the following areas:
-* Translating high-level requirements into a simple, functional design.
-* Writing production level code that does not have extensive or insecure dependencies.
-* Understanding of Go, Kubernetes, release engineering, and security.
-* Communicating with the team and handling feedback.
+# Rationale
 
-We believe this technique is not only better but also more fun compared to
-whiteboard/quiz interviews so common in the industry. It’s not without the
-downsides - it could take longer than traditional interviews. That said, it's
-our view that this type of challenge gives us a more accurate assessment of your
-ability to work well on the types of projects we’re working on day-to-day here
-at Teleport. [Some of the best teams use coding
-challenges](https://sockpuppet.org/blog/2015/03/06/the-hiring-post/). We
-appreciate your time and are looking forward to hacking on this project
+This exercise has two goals:
+
+* It helps us to understand what to expect from you as a developer, how you
+  write production code, how you reason about API design and how you
+  communicate when trying to understand a problem before you solve it.
+* It helps you get a feel for what it would be like to work at Teleport, as
+  this exercise aims to simulate our day-as-usual and expose you to the type of
+  work we're doing here.
+
+We believe this technique is not only better, but also is more fun compared to
+whiteboard/quiz interviews so common in the industry. It's not without the
+downsides - it could take longer than traditional interviews.
+
+[Some of the best teams use coding challenges.](https://sockpuppet.org/blog/2015/03/06/the-hiring-post/)
+
+We appreciate your time and are looking forward to hack on this project
 together.
 
-Please come prepared to the walkthrough having reviewed:
-* [Site Reliability Engineering (SRE) Levels](../../levels/sre.pdf)
-* [Challenge documentation](../sre/challenge.md)
+# Levels
 
-# Challenge
+There are 6 engineering levels at Teleport. It's possible to score on level 1-5
+through coding challenge.
 
-In this challenge, you will create a Go server that interacts with a Kubernetes cluster, incorporating automated builds, containerization, deployment, and testing.
+Level 6 is only for internal promotions. Check
+[Systems Engineering Levels](../../levels/systems.pdf) for more details.
 
-## Getting Started
+# Interview Process
 
-First, create a new private GitHub repository, invite the interview panel as contributors, and share the link with the team in Slack.
-
-> [!IMPORTANT]
-> You’ll have up to 2 weeks from the agreed start date to complete the challenge. Please allow 24-48 hours for each PR submission to give the team ample time for review and feedback during business hours.
-
-### PR Submissions
-The repository you created be used for each PR submission during the challenge.  For each submission, please ensure the following:
-
-* Your submissions meets the requirements of the level you are applying for.
-* Split the work into ~3 pull requests: one for the design document, one for the server code, and one for deployment & automation.
-* After submitting, the team will review and provide feedback. Open one PR at a time and wait for two approvals before proceeding with submitting another. You can continue working locally while waiting for feedback on the current PR.
+The interview process will start with you receiving an invite to a private
+Slack channel. That channel will contain the interview panel. You can ask them
+about the engineering culture, work-life balance, or anything else that you
+would like to learn about Teleport.
 
 ## Design Doc
-The first pull request must be a brief design document that describes how you plan to implement the solution. At Teleport, we prefer Markdown for [our designs](https://github.com/gravitational/teleport/blob/master/rfd/0000-rfds.md).
 
-### Requirements
+Before writing any actual code, we ask that you write a brief design document.
+The design document should cover: design approach, scope, proposed APIs,
+security considerations, CLI UX, and implementation details where appropriate.
+Start with a brief doc that covers the edge cases and design approach.
 
-Please be sure to cover the following design topics:
+Please submit the design document and all code in a GitHub repository. Public
+or private is your choice. Please submit the design document written in
+markdown as a Pull Request to allow us to provide you feedback on the proposed
+design.
+
+A few notes about the design document:
+
+* Try to get the design document approved within the first 2-3 days. This is to
+  ensure you have enough time to work on the implementation.
+* Avoid writing an overly detailed design document. Two to three pages is
+  sufficient.
+* Avoid sending us draft design documents. It is difficult to evaluate which
+  parts are draft and which parts are complete. Instead we encourage asking
+  questions in Slack and sharing a design document that is ready to be reviewed.
+
+Be sure to cover the following in your design:
+
 * API structure
+* Pod Lifecycle
+* TLS Configuration
 * Developer workflow
   * Ease of contributing to the project from a fresh clone
   * Ease of building, running and testing the server
@@ -54,28 +72,51 @@ Please be sure to cover the following design topics:
 * Level 4+: Caching and mTLS
 * Level 5+: Reconciliation, Conflicts, and Automation
 
-### Suggestions
-* Complete (roughly) the design document within the first week.  This is to ensure you have enough time to work on implementation.
-* Avoid writing an overly detailed design document. 500-1500 words is a good target.
-* We encourage you to ask questions in Slack.
-* Avoid sending draft PRs for feedback as it is difficult to evaluate which parts are draft or complete.
+Once the design document has been approved by two reviewers, move on to the
+implementation.
 
-## Server, Automation, & Deployment
-Once the design document is approved, the next PR should include your server implementation, along with build automation to simplify testing. The interview panel will clone the repository and run Make targets to build and test your server code. Be sure to include a couple of high-quality tests that cover both happy and unhappy scenarios, and minimize external dependencies.
+## Implementation
 
-> [!NOTE]
-> For level 4+, please research Kubernetes controllers and the recommended Go client libraries carefully. Understanding how controllers cache resources is key to implementing a straightforward solution.
+Split your code submission into roughly 3-5 Pull Requests to give the team an
+opportunity to review your code and provide feedback. Feel free to merge each
+PR after you have two approvals.
 
-After the server code is reviewed, submit a final PR that includes the remaining automation, deployment features, or any remaining success criteria. A key aspect of this challenge is to produce a self-contained GitHub project that automates as much as possible, including build artifacts, code testing, and deployment.
+Our team will do their best to provide a high quality review of the submitted
+Pull Requests in a reasonable time frame. You are spending your time on this,
+we are going to contribute our time too.
 
-### Tooling
-For evaluation purposes, your solution should be written in Go and is deployable to a local Kubernetes cluster. The choice of which local Kubernetes cluster is up to you, but please ensure compatibility with both macOS and Linux. We suggest [KIND](https://kind.sigs.k8s.io/).
+After the final submission, the interview team will assemble and vote using a
+"+1, -2" anonymous voting system: +1 is submitted whenever a team member
+accepts the submission, -2 otherwise.
 
-You may use additional external dependencies, but ensure that detecting or installing these are straightforward for the reviewer. At a minimum, your solution should include the following dependencies:
+In case of a positive result, we will connect you to our HR and recruiting
+teams, who will work out the details and present an offer.
+
+In case of a negative score result, the hiring manager will contact you and
+share a list of the key observations from the team that affected the result.
+
+### Tools
+
+This task should be written in Go and is deployable to a local Kubernetes
+cluster. The choice of which local Kubernetes cluster is up to you, but please
+ensure compatibility with both macOS and Linux. We suggest
+[KIND](https://kind.sigs.k8s.io/).
+
+You may use additional external dependencies, but ensure that detecting or
+installing these are straightforward for the reviewer. At a minimum, your
+solution should include the following dependencies:
 
 * Go
 * make
 * Docker
+
+### Testing
+
+Key components of the challenge should have tests that cover the happy and
+unhappy scenarios. Do not try to achieve 100% test coverage as that will take
+too long.
+
+# Requirements
 
 ## Level 1
 
@@ -101,7 +142,8 @@ You may use additional external dependencies, but ensure that detecting or insta
 
 * Write a Dockerfile to build an image for the server
 * Ability to deploy the server to Kubernetes by following documentation
-* Ability to execute integration tests against the local Kubernetes cluster by following documentation
+* Ability to execute integration tests against the local Kubernetes cluster by
+  following documentation
 
 ## Level 3
 
@@ -117,11 +159,13 @@ You may use additional external dependencies, but ensure that detecting or insta
 
 * Write a Dockerfile to build an image for the server
 * Ability to deploy the server to Kubernetes by following documentation
-* Ability to execute integration tests against the local Kubernetes cluster by following documentation
+* Ability to execute integration tests against the local Kubernetes cluster by
+  following documentation
 
 ### Deployment
 
-* Create a helm chart for the service that includes at least: a Deployment, ServiceAccount and Service
+* Create a helm chart for the service that includes at least: a Deployment,
+  ServiceAccount and Service
 * Upgrading the helm chart should not result in unavailability of the service.
 
 ## Level 4
@@ -133,19 +177,21 @@ You may use additional external dependencies, but ensure that detecting or insta
 * HTTP API to get the list of available Deployments in the Kubernetes cluster
 * HTTP health check verifying Kubernetes connectivity
 * HTTP API must cache the replica count by watching for changes to Deployments.
-  Read-only requests should not each trigger a request to the cluster.
-  It is acceptable to use either client-go or controller-runtime to implement this.
+  Read-only requests should not each trigger a request to the cluster.  It is
+  acceptable to use either client-go or controller-runtime to implement this.
 * Secure connections between the HTTP API and caller with mTLS
 * One or two tests that cover happy and unhappy scenarios
 
 ### Automation
 
 * Ability to build and deploy all artifacts to a Kubernetes cluster using make
-* Ability to execute integration tests against the local Kubernetes cluster using make
+* Ability to execute integration tests against the local Kubernetes cluster
+  using make
 
 ### Deployment
 
-* Create a helm chart for the service that includes at least: a Deployment, ServiceAccount and Service
+* Create a helm chart for the service that includes at least: a Deployment,
+  ServiceAccount and Service
 * Upgrading the helm chart should not result in unavailability of the service.
 
 ## Level 5
@@ -157,52 +203,94 @@ You may use additional external dependencies, but ensure that detecting or insta
 * gRPC API to get the list of available Deployments in the Kubernetes cluster
 * gRPC or HTTP health check verifying Kubernetes connectivity
 * gRPC API must cache the replica count by watching for changes to Deployments.
-  Read-only requests should not each trigger a request to the cluster.
-  It is acceptable to use either client-go or controller-runtime to implement this.
+  Read-only requests should not each trigger a request to the cluster.  It is
+  acceptable to use either client-go or controller-runtime to implement this.
 * Secure connections between the gRPC API and caller with mTLS
-* Server must store the desired state in a CRD (per-deployment) and reconcile the deployment to that state. (gRPC API endpoints only need to read the real, current value.)
+* Server must store the desired state in a CRD (per-deployment) and reconcile
+  the deployment to that state. (gRPC API endpoints only need to read the real,
+  current value.)
 * One or two tests that cover happy and unhappy scenarios
 
 ### Automation
 
 * Ability to build and deploy all artifacts to a Kubernetes cluster using make
-* Ability to execute integration tests against the local Kubernetes cluster using make
+* Ability to execute integration tests against the local Kubernetes cluster
+  using make
 
 ### Deployment
 
 * Create a helm chart for the service
-* Include production-level packaging for this service, including but not limited to: Deployment, Role, RoleBinding, ServiceAccount, Service
-* Upgrading the helm chart should not result in unavailability of the HTTP API portion of the service.
+* Include production-level packaging for this service, including but not
+  limited to: Deployment, Role, RoleBinding, ServiceAccount, Service
+* Upgrading the helm chart should not result in unavailability of the HTTP API
+  portion of the service.
 
 # Guidance
 
+## Code and project ownership
+
+This is a test challenge and we have no intent of using the code you've
+submitted in production. This is your work, and you are free to do whatever you
+feel is reasonable with it. In the scenario where you don't pass, you can open
+source it with any license and use it as a portfolio project.
+
 ## Areas of focus
 
-The primary factor in the team's decision is overall code quality. We are looking for the highest possible quality with the smallest possible scope that meets the requirements of the challenge.
+Teleport focuses on networking, infrastructure and security.
 
-* Use consistent coding style. Internally we follow [Go Coding Style](https://github.com/golang/go/wiki/CodeReviewComments).
-* Make sure builds are reproducible and allow consistent build results.
-* Ensure error handling and error reporting is consistent. The system should report clear errors and not crash under non-critical conditions.
-* Production readiness. Once completed, the code itself, even if incomplete, should be sufficiently solid and robust to make it to a real production cluster.
-* API design. Please include your proposed HTTP API or gRPC API in the design doc. For the gRPC API, you should include a complete proto file in the design doc.
-* Security. Describe your mTLS setup in the design doc, including chosen cipher suites. Ensure that your implementation is secure.
-* Project management and scope. Manage your time wisely and ensure that the project scope aligns with the criteria for the level you're applying for. Avoid unnecessary complexity.
+These are the areas we will be evaluating in the submission:
+
+* Use consistent coding style. We follow [Go Coding
+  Style](https://github.com/golang/go/wiki/CodeReviewComments) for the Go
+  language.
+* Tests exist for happy path and error scenarios for key components of the
+  challenge.
+* Make sure builds are reproducible.
+* Ensure error handling and error reporting is consistent. The system should
+  report clear errors and not crash under non-critical conditions.
+* Production readiness. Once completed, the code itself, even if incomplete,
+  should be sufficiently solid and robust to make it to a real production
+  cluster.
+* API design. Please include your proposed HTTP API or gRPC API in the design
+  doc. For the gRPC API, you should include a complete proto file in the design
+  doc.
+* Security. Describe your mTLS setup in the design doc, including chosen cipher
+  suites. Ensure that your implementation is secure.
+* Project management and scope. Manage your time wisely and ensure that the
+  project scope aligns with the criteria for the level you're applying for.
+  Avoid unnecessary complexity.
+
+The primary factor in the team's decision is overall code quality. We are
+looking for the highest possible quality with the smallest possible scope that
+meets the requirements of the challenge.
 
 ## Trade-offs
-Write as little code as possible to avoid letting the project consume too much time, which can impact code quality. Cut corners where appropriate; for example, avoid complex configuration and use hardcoded values. Add TODO items to indicate future enhancements or considerations, such as:
 
+Write as little code as possible, otherwise this task will consume too much
+time and code quality will suffer.
+
+Please cut corners, for example configuration tends to take a lot of time, and
+is not important for this task.
+
+Use hardcoded values as much as possible and simply add TODO items showing your
+thinking, for example:
+
+```go
+// TODO: Add configuration system. Consider using CLI library to support
+// both environment variables and reasonable default values, for example
+// https://github.com/alecthomas/kingpin
+
+// TODO: Add retry logic.
 ```
-  // TODO: Add configuration system.
-  // environment variables and reasonable default values,
-  // for example https://github.com/alecthomas/kingpin
-  // TODO: Add retry logic
-```
 
-Comments like this one are really helpful. They save yourself time and demonstrate that you've spent time thinking about this problem and provide a clear path toward a longer-term solution.
+Comments like this one are really helpful to us. They save yourself a lot of
+time and demonstrate that you've spent time thinking about this problem and
+provide a clear path to a solution.
 
-Consider making other reasonable trade-offs. Make sure you communicate them to the interview team.
+Consider making other reasonable trade-offs. Make sure you communicate them to
+the interview team.
 
-### Pitfalls and Gotchas
+## Pitfalls and Gotchas
 
 To help you out, we've composed a list of things that previously resulted in a
 no-pass from the interview team:
@@ -213,16 +301,17 @@ no-pass from the interview team:
   document and all code yourself.
 * Scope creep. Candidates have tried to implement too much and ran out of time
   and energy. To avoid this pitfall, use the simplest solution that will work.
-  Avoid writing too much code. For example, it is not necessary to deploy a shared cached or support deployment to multiple regions or AZs.
-* Overly complex designs. Keep things simple and try and eliminate as many moving
-  parts as possible. This is not only going to help in reviewing the solution,
-  but is also often a way to distill a design to its essential parts.
+  Avoid writing too much code. For example, it is not necessary to deploy a
+  shared cached or support deployment to multiple regions or AZs.
+* Overly complex designs. Keep things simple and try and eliminate as many
+  moving parts as possible. This is not only going to help in reviewing the
+  solution, but is also often a way to distill a design to its essential parts.
 * Unstructured code. We've seen candidates leaving commented chunks of code,
   having one large file with all the code, not having code structure at all.
-* Not communicating. Some candidates have submitted all their code to the master
-  branch without raising pull requests, which does not give us the ability to
-  provide feedback on the various implementation phases. We are a distributed
-  team, so structured, asynchronous communication is critical to us.
+* Not communicating. Some candidates have submitted all their code to the
+  master branch without raising pull requests, which does not give us the
+  ability to provide feedback on the various implementation phases. We are a
+  distributed team, so structured, asynchronous communication is critical to us.
 
 ## Questions
 
@@ -232,17 +321,27 @@ questions to ask and questions we expect candidates to figure out on their own.
 
 Here is a great question to ask:
 
-> Is it OK to assume there will be only a single target kubernetes cluster for
-this service? I will add a note on how support for multiple clusters could be
-implemented, but it feels like an unnecessary complexity.
+> Is it OK to pre-generate secret data and put the secrets in the repository
+> for a proof of concept? I will add a note that we will auto-generate secrets
+> in the future.
+
+It demonstrates that you thought about this problem domain, recognize the trade
+off and are saving you and the team time by not implementing it.
 
 This is the question we expect candidates to figure out on their own:
 
 > What version of Go should I use? What dependency manager should I use? What
-framework/tool should I use to automate testing and deployment ?
+> framework/tool should I use to automate testing and deployment?
 
-Unless specified in the requirements, pick the solution that works best for you.
+Unless specified in the requirements, pick the solution that works best for
+you.
 
-## Code and project ownership
+# Timing
 
-This is a test challenge, and we have no intention of using the code in production. The work is yours, and you’re free to handle it as you see fit. If you don’t pass, you’re welcome to open-source it under any license and use it as a portfolio project.
+You can split coding over a couple of weekdays or weekends and find time to ask
+questions and receive feedback.
+
+Once you join the Slack channel, you will have 2 weeks complete the challenge.
+
+Within this timeframe, we don't give higher scores to challenges submitted more
+quickly. We only evaluate the quality of the submission.
