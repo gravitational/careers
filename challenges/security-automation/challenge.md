@@ -180,6 +180,10 @@ Make reasonable trade-offs and communicate them to the interview team.
 To help you out, we've composed a list of things that previously resulted in a
 no-pass from the interview team:
 
+* Use of AI. Don't outsource your thinking to an AI. We recommend using AI for
+  use cases like learning about a new problem space, exploring APIs, and
+  finding missing edge cases. However, we strongly recommend you write the design
+  document and all code yourself.
 * Scope creep. Candidates have tried to implement too much and ran out of time
   and energy. To avoid this pitfall, use the simplest solution that will work.
 * Buggy submissions. You are writing a MVP, but that does not mean your
