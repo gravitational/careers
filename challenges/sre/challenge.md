@@ -166,7 +166,7 @@ too long.
 
 * Create a helm chart for the service that includes at least: a Deployment,
   ServiceAccount and Service
-* Upgrading the helm chart should not result in unavailability of the service.
+* Upgrading the helm chart should not result in unavailability of the service
 
 ## Level 4
 
@@ -178,7 +178,7 @@ too long.
 * HTTP health check verifying Kubernetes connectivity
 * HTTP API must cache the replica count by watching for changes to Deployments.
   Read-only requests should not each trigger a request to the cluster.  It is
-  acceptable to use either client-go or controller-runtime to implement this.
+  acceptable to use either client-go or controller-runtime to implement this
 * Secure connections between the HTTP API and caller with mTLS
 * One or two tests that cover happy and unhappy scenarios
 
@@ -190,9 +190,9 @@ too long.
 
 ### Deployment
 
-* Create a helm chart for the service that includes at least: a Deployment,
-  ServiceAccount and Service
-* Upgrading the helm chart should not result in unavailability of the service.
+* Create a configurable Helm chart for the service
+* Includes at a minimum: a Deployment, ServiceAccount, and Service
+* Upgrading the helm chart should not result in unavailability of the service
 
 ## Level 5
 
@@ -219,9 +219,9 @@ too long.
 
 ### Deployment
 
-* Create a helm chart for the service
+* Create a configurable Helm chart for the service
 * Include production-level packaging for this service, including but not
-  limited to: Deployment, Role, RoleBinding, ServiceAccount, Service
+  limited to: Deployment, Role, RoleBinding, ServiceAccount, and Service
 * Upgrading the helm chart should not result in unavailability of the HTTP API
   portion of the service.
 
