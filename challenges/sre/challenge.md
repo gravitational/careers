@@ -164,9 +164,9 @@ too long.
 
 ### Deployment
 
-* Create a helm chart for the service that includes at least: a Deployment,
+* Create a Helm chart for the service that includes at least: a Deployment,
   ServiceAccount and Service
-* Upgrading the helm chart should not result in unavailability of the service
+* Upgrading the Helm chart should not result in unavailability of the service
 
 ## Level 4
 
@@ -192,7 +192,7 @@ too long.
 
 * Create a configurable Helm chart for the service
 * Includes at a minimum: a Deployment, ServiceAccount, and Service
-* Upgrading the helm chart should not result in unavailability of the service
+* Upgrading the Helm chart should not result in unavailability of the service
 
 ## Level 5
 
@@ -221,7 +221,7 @@ too long.
 * Create a configurable Helm chart for the service
 * Include production-level packaging for this service, including but not
   limited to: Deployment, Role, RoleBinding, ServiceAccount, and Service
-* Upgrading the helm chart should not result in unavailability of the HTTP API
+* Upgrading the Helm chart should not result in unavailability of the HTTP API
   portion of the service.
 
 # Guidance
@@ -274,9 +274,9 @@ Use hardcoded values as much as possible and simply add TODO items showing your
 thinking, for example:
 
 ```go
-// TODO: Add configuration system. Consider using CLI library to support
-// both environment variables and reasonable default values, for example
-// https://github.com/alecthomas/kingpin
+// TODO: Add configuration system.
+// Consider using CLI library to support both environment variables and
+// reasonable default values, for example https://github.com/alecthomas/kingpin
 
 // TODO: Add retry logic.
 ```
