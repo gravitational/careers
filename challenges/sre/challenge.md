@@ -175,10 +175,10 @@ too long.
 * HTTP API to retrieve the replica count of the Kubernetes Deployment
 * HTTP API to set the replica count of the Kubernetes Deployment
 * HTTP API to get the list of available Deployments in the Kubernetes cluster
-* HTTP health check verifying Kubernetes connectivity
 * HTTP API must cache the replica count by watching for changes to Deployments.
   Read-only requests should not each trigger a request to the cluster.  It is
   acceptable to use either client-go or controller-runtime to implement this
+* HTTP health check verifying Kubernetes connectivity
 * Secure connections between the HTTP API and caller with mTLS
 * One or two tests that cover happy and unhappy scenarios
 
@@ -201,14 +201,13 @@ too long.
 * gRPC API to retrieve the replica count of the Kubernetes Deployment
 * gRPC API to set the replica count of the Kubernetes Deployment
 * gRPC API to get the list of available Deployments in the Kubernetes cluster
-* gRPC or HTTP health check verifying Kubernetes connectivity
 * gRPC API must cache the replica count by watching for changes to Deployments.
   Read-only requests should not each trigger a request to the cluster.  It is
   acceptable to use either client-go or controller-runtime to implement this.
+* Implement a controller to store the desired state in a CRD (per-deployment)
+  and reconcile the deployment to that state.
+* gRPC or HTTP health check verifying Kubernetes connectivity
 * Secure connections between the gRPC API and caller with mTLS
-* Server must store the desired state in a CRD (per-deployment) and reconcile
-  the deployment to that state. (gRPC API endpoints only need to read the real,
-  current value.)
 * One or two tests that cover happy and unhappy scenarios
 
 ### Automation
@@ -248,9 +247,8 @@ These are the areas we will be evaluating in the submission:
 * Make sure builds are reproducible.
 * Ensure error handling and error reporting is consistent. The system should
   report clear errors and not crash under non-critical conditions.
-* Production readiness. Once completed, the code itself, even if incomplete,
-  should be sufficiently solid and robust to make it to a real production
-  cluster.
+* Production readiness. Once completed, the code itself should be bug free and
+  reliable. Cut scope, but not quality.
 * API design. Please include your proposed HTTP API or gRPC API in the design
   doc. For the gRPC API, you should include a complete proto file in the design
   doc.
