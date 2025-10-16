@@ -194,7 +194,7 @@ is not important for this task.
 Use hardcoded values as much as possible and simply add TODO items showing your
 thinking, for example:
 
-```
+```go
 // TODO: Add configuration system.
 // Consider using CLI library to support both environment variables and
 // reasonable default values, for example https://github.com/alecthomas/kingpin
