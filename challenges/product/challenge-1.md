@@ -24,7 +24,7 @@ through SSO IDP of of any kind in order to access a WireGuard network.
 
 After authenticating, the client and server exchange keys and configure Wireguard.
 The client should then be able to access a service that is only available on the
-server's WireGuard interface (nginx or any other web sedrvice will do).
+server's WireGuard interface (nginx or any other web service will do).
 
 ## Requirements
 
@@ -36,8 +36,8 @@ server's WireGuard interface (nginx or any other web sedrvice will do).
 - Explain the business and technical value of the proposed solution.
 
 Here is an example command-line tool `wg` that will let users sign in with SSO.
-After a succesful login users get a WireGuard key registered in the provisioned
-WireGuard newtork.
+After a successful login users get a WireGuard key registered in the provisioned
+WireGuard network.
 
 ```
 $ wg login
