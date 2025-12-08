@@ -240,7 +240,7 @@ Teleport focuses on networking, infrastructure and security.
 These are the areas we will be evaluating in the submission:
 
 * Use consistent coding style. We follow [Go Coding
-  Style](https://github.com/golang/go/wiki/CodeReviewComments) for the Go
+  Style](https://go.dev/wiki/CodeReviewComments) for the Go
   language.
 * Tests exist for happy path and error scenarios for key components of the
   challenge.
