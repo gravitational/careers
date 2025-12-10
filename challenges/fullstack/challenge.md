@@ -381,3 +381,8 @@ Once you join the Slack channel, you have 2 weeks complete the challenge.
 
 Within this time frame, we don't give higher scores to challenges submitted more
 quickly. We only evaluate the quality of the submission.
+
+We always aim to provide 1-2 rounds of feedback on all work that is submitted. 
+In order to be respectful of your time, we may opt to end the challenge early
+if the submission does not improve after this feedback is suggested or if we
+identify a large number of issues.
