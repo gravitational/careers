@@ -153,6 +153,11 @@ quickly. We only evaluate the quality of the submission.
 
 We only start the challenge if there are several open positions available and let all candidates finish the submission.
 
+We always aim to provide 1-2 rounds of feedback on all work that is submitted. 
+In order to be respectful of your time, we may opt to end the challenge early
+if the submission does not improve after this feedback is suggested or if we
+identify a large number of issues.
+
 ### Setup
 
 Create a GitHub repository, either throwaway or in your GitHub account, feel
