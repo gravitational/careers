@@ -204,8 +204,8 @@ These are the areas we will be evaluating in the submission:
 
 * Use consistent coding style.
 * Create a few unit-tests for scenarios you think make sense.
-* Make sure builds are reproducible. Pick any vendoring/packaging system that
-  will allow us to get consistent build results.
+* Make sure builds are reproducible and provide instructions on how to run your app. Pick any
+  vendoring/packaging system that will allow us to get consistent build results.
 * Ensure error handling and error reporting is consistent. The app should report
   clear errors and not crash under non-critical conditions.
 * Ensure that your app is secure.
