@@ -26,7 +26,7 @@ together.
 In this challenge, you will build a mobile app that allows a user to browse
 directory content on a remote server. Think Google Drive, Files, or Dropbox.
 
-| <img src="./assets/files.png" alt="Files" /> | <img src="./assets/google-drive.png" alt="Google Drive" /> |
+| <img src="./assets/files.png" height="350" alt="Files" /> | <img src="./assets/google-drive.png" height="350" alt="Google Drive" /> |
 | --- | --- |
 
 When you are ready to begin, we will invite you to a GitHub repository where you
