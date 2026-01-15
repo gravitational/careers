@@ -50,7 +50,7 @@ For mobile engineers, levels 5 and 6 are only for internal promotions. Check
 
 ## Requirements - Level 4
 
-Implement an application that allows a user to browse directory content on a
+Implement an iOS application that allows a user to browse directory content on a
 remote server.
 
 This application should have the following functionality:
@@ -234,7 +234,7 @@ no-pass from the interview team:
 * Error handling. We pay extra attention to error handling. Make sure that they
   are properly handled and not ignored.
 * Keep your UI simple. We are not looking for animations or complex themes, but
-  do want to see an app that functions well on mobile screen sizes. Make
+  do want to see an app that functions well on mobile phone screen sizes. Make
   sure that a long directory name doesn't break your layout.
 * Make sure that your code is secured and your application is not vulnerable to
   common security vulnerabilities.
