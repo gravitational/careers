@@ -233,9 +233,8 @@ no-pass from the interview team:
      is better to focus on implementing a single auth method.
 * Error handling. We pay extra attention to error handling. Make sure that they
   are properly handled and not ignored.
-* Keep your UI simple. We are not looking for animations or complex themes, but
-  do want to see an app that functions well on mobile phone screen sizes. Make
-  sure that a long directory name doesn't break your layout.
+* Keep your UI simple. The app does not have to be pretty but it has to feel
+  nice to use on mobile phones. The layout does not need to support iPads.
 * Make sure that your code is secured and your application is not vulnerable to
   common security vulnerabilities.
     * Recommended resources:
