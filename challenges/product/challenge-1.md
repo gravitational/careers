@@ -16,7 +16,6 @@ than the whiteboard or quiz-style interviews common in the industry.
 We appreciate your time and look forward to hacking on this little project
 together.
 
-
 ## Objective
 
 Create a design document and implement a service that will let users sign on
@@ -35,12 +34,12 @@ server's WireGuard interface (nginx or any other web service will do).
   or docker-compose that sets up a demo environment.
 - Explain the business and technical value of the proposed solution.
 
-Here is an example command-line tool `wg` that will let users sign in with SSO.
-After a successful login users get a WireGuard key registered in the provisioned
+Here is an example command-line tool that will let users sign in with SSO. After
+a successful login users get a WireGuard key registered in the provisioned
 WireGuard network.
 
 ```
-$ wg login
+$ vpn login
 # ...opens browser with login page
 # ...on successful login
 You are logged in. WireGuard is activated.
@@ -56,17 +55,20 @@ peers who will be working with you.
 Ask them about the culture, work and life balance, or anything else that you
 would like to learn about Teleport.
 
-Before writing the actual code, create a brief design document in Google Docs or
-markdown in GitHub and share with the team.
+Before writing the actual code, create a brief design document in markdown and
+share with the team via a GitHub pull request.
 
 This document should consist of key trade-offs and key design approaches. Please
 avoid writing an overly detailed design document. Use this document to make sure
-the team could provide feedback on your design and demonstrate that you've
-investigated the problem space.
+demonstrate that you've investigated the problem space. The team will review your
+design and provide feedback by commenting on the pull request.
 
-After the submission, prepare the presentation and a demo and schedule a 45
-minute demo call with the interview team, present your solution to the audience
-and answer any questions.
+After the team has approved your design document, you may begin submitting pull
+requests with the implementation.
+
+After the implementation is complete, prepare a presentation and demo and
+schedule a 45 minute call with the interview team. During this call you will
+present your solution to the audience and answer any questions.
 
 After the demo, the interview team will assemble and vote using +1, -2 anonymous
 voting system: +1 is submitted whenever a team member accepts the submission, -2
@@ -153,7 +155,7 @@ quickly. We only evaluate the quality of the submission.
 
 We only start the challenge if there are several open positions available and let all candidates finish the submission.
 
-We always aim to provide 1-2 rounds of feedback on all work that is submitted. 
+We always aim to provide 1-2 rounds of feedback on all work that is submitted.
 In order to be respectful of your time, we may opt to end the challenge early
 if the submission does not improve after this feedback is suggested or if we
 identify a large number of issues.
