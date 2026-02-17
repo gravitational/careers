@@ -50,8 +50,8 @@ for you.
 * Have strong experience in Linux systems, networking, containers, and
   troubleshooting.
 * Have solid Go and Kubernetes development experience, building automation, modifying controllers, and contributing to the product codebase.
-* Participate in on-call rotations, between 1/4 - 1/3 of the time.
-* Operate in a team where sound security choices are critical.
+* Operate and support the observability platform to maintain visibility and reliability.
+* Own and operate the runtime of a secure, production distributed system.
 
 As we are a startup, you should be comfortable changing the area of focus and
 working directly with customers.
