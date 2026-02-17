@@ -49,7 +49,8 @@ for you.
 
 * Have strong experience in Linux systems, networking, containers, and
   troubleshooting.
-* Have solid Go and Kubernetes development experience, building automation, modifying controllers, and contributing to the product codebase.
+* Have solid Go and Kubernetes development experience, building automation, 
+  modifying controllers, and contributing to the product codebase.
 * Operate and support the observability platform to maintain visibility and reliability.
 * Own and operate the runtime of a secure, production distributed system.
 
