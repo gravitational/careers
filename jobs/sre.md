@@ -49,8 +49,7 @@ for you.
 
 * Have strong experience in Linux systems, networking, containers, and
   troubleshooting.
-* Have enough development experience to write scripts, automation, or
-  lightweight programs or submit patches to the product codebase.
+* Have solid Go and Kubernetes development experience, building automation, modifying controllers, and contributing to the product codebase.
 * Participate in on-call rotations, between 1/4 - 1/3 of the time.
 * Operate in a team where sound security choices are critical.
 
