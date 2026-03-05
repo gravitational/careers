@@ -43,7 +43,8 @@ would like to learn about Teleport.
 Before writing any actual code, we ask that you write a brief design document.
 The design document should cover: design approach, scope, proposed APIs,
 security considerations, CLI UX, and implementation details where appropriate.
-Start with a brief doc that covers the edge cases and design approach.
+Start with a brief doc that covers the edge cases and design approach. Consider 
+following Teleport's internal [RFD format](https://github.com/gravitational/teleport/blob/master/rfd/0000-rfds.md).
 
 Please submit the design document and all code in a GitHub repository. Public
 or private is your choice. Please submit the design document written in
@@ -77,7 +78,7 @@ implementation.
 
 ## Implementation
 
-Split your code submission into roughly 3-5 Pull Requests to give the team an
+Split your code submission into roughly 2-3 Pull Requests to give the team an
 opportunity to review your code and provide feedback. Feel free to merge each
 PR after you have two approvals.
 
