@@ -4,7 +4,7 @@ Thank you for visiting the Teleport Engineering recruiting, promotion and traini
 
 * [About Us](https://goteleport.com/about/)
 * [Careers](https://goteleport.com/careers/)
-* [Open Positions](https://jobs.lever.co/teleport)
+* [Open Positions](https://jobs.ashbyhq.com/goteleport)
 * [Our Engineering Teams](./teams.md)
 * [Coding Challenges](./challenges)
 * [Engineering Levels](./levels)
