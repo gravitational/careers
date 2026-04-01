@@ -222,8 +222,8 @@ too long.
 * Create a configurable Helm chart for the service
 * Include production-level packaging for this service, including but not
   limited to: Deployment, Role, RoleBinding, ServiceAccount, and Service
-* Upgrading the Helm chart should not result in unavailability of the HTTP API
-  portion of the service.
+* Upgrading the Helm chart should not result in unavailability of the gRPC API
+  portion of the service
 
 # Guidance
 
