@@ -101,9 +101,9 @@ Teleport focuses on networking, infrastructure and security.
 These are the areas we will be evaluating in the submission:
 
 * Use consistent coding style. We follow
-  [Go Coding Style](https://github.com/golang/go/wiki/CodeReviewComments) for
-  the Go language. If you are going to use a different language, please pick
-  coding style guidelines and let us know what they are.
+  [Go Coding Style](https://go.dev/wiki/CodeReviewComments) for the Go
+  language. If you are going to use a different language, please pick coding
+  style guidelines and let us know what they are.
 * Ensure error handling and error reporting is consistent. The system should
   report clear errors and not crash under non-critical conditions.
 * Avoid concurrency and networking errors. Most of the issues we've seen in

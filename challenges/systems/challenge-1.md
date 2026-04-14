@@ -127,7 +127,7 @@ The project is broken down into 3 components:
 
 ### API
 
-* HTTPS API to start/stop/get status of a running process.
+* HTTPS API to start/stop/get status of a job.
 * Use Bearer Token Authentication.
 * Use a simple authorization scheme.
 
@@ -143,7 +143,7 @@ The project is broken down into 3 components:
 
 ### API
 
-* HTTPS API to start/stop/get status of a running process.
+* HTTPS API to start/stop/get status of a job.
 * Use mTLS authentication and verify client certificate. Set up strong set of
   cipher suites for TLS and good crypto setup for certificates. Do not use any
   other authentication protocols on top of mTLS.
@@ -158,14 +158,14 @@ The project is broken down into 3 components:
 ### Library
 
 * Worker library with methods to start/stop/query status of a job.
-* Library should be able to stream the output of a running job.
+* Library should be able to stream the output of a job.
   * Output should be from start of process execution.
   * Multiple concurrent clients should be supported.
   * Do not make any assumptions about the process's output - it may be text or raw binary data.
 
 ### API
 
-* [GRPC](https://grpc.io) API to start/stop/get status/stream output of a running process.
+* [gRPC](https://grpc.io) API to start/stop/get status/stream output of a job.
 * Use mTLS authentication and verify client certificate. Set up strong set of
   cipher suites for TLS and good crypto setup for certificates. Do not use any
   other authentication protocols on top of mTLS.
@@ -180,7 +180,7 @@ The project is broken down into 3 components:
 ### Library
 
 * Worker library with methods to start/stop/query status of a job.
-* Library should be able to stream the output of a running job.
+* Library should be able to stream the output of a job.
   * Discovering new output should be efficient, avoid busy-waiting or polling.
   * Output should be from start of process execution.
   * Multiple concurrent clients should be supported.
@@ -188,7 +188,7 @@ The project is broken down into 3 components:
 
 ### API
 
-* [GRPC](https://grpc.io) API to start/stop/get status/stream output of a running process.
+* [gRPC](https://grpc.io) API to start/stop/get status/stream output of a job.
 * Use mTLS authentication and verify client certificate. Set up strong set of
   cipher suites for TLS and good crypto setup for certificates. Do not use any
   other authentication protocols on top of mTLS.
@@ -205,7 +205,7 @@ The project is broken down into 3 components:
 * Worker library with methods to start/stop/query status of a job.
   * When stopping a job, care should be taken to ensure that the job's child processes
     (if any) are also terminated.
-* Library should be able to stream the output of a running job.
+* Library should be able to stream the output of a job.
   * Discovering new output should be efficient, avoid busy-waiting or polling.
   * Output should be from start of process execution.
   * Multiple concurrent clients should be supported.
@@ -214,7 +214,7 @@ The project is broken down into 3 components:
 
 ### API
 
-* [GRPC](https://grpc.io) API to start/stop/get status/stream output of a running process.
+* [gRPC](https://grpc.io) API to start/stop/get status/stream output of a job.
 * Use mTLS authentication and verify client certificate. Set up strong set of
   cipher suites for TLS and good crypto setup for certificates. Do not use any
   other authentication protocols on top of mTLS.
@@ -240,8 +240,8 @@ Teleport focuses on networking, infrastructure and security.
 These are the areas we will be evaluating in the submission:
 
 * Use consistent coding style. We follow
-  [Go Coding Style](https://github.com/golang/go/wiki/CodeReviewComments) for
-  the Go language.
+  [Go Coding Style](https://go.dev/wiki/CodeReviewComments) for the Go
+  language.
 * Tests exist for happy path and error scenarios for key components of the challenge.
 * Make sure builds are reproducible.
 * Ensure error handling and error reporting is consistent. The system should
