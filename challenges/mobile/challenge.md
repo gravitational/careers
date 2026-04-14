@@ -154,12 +154,19 @@ writing a design document. At Teleport, we prefer Markdown for
 Your design document should include:
 
 - the proposed UX of the app (wireframes are great!)
+- an overview of the app architecture
 - an overview of your backend API
 - an overview of authentication and how the login process will work
 - implementation details where appropriate (for example, session management)
 
 A few notes about the design document:
 
+* We want to know not only _what_ you chose but also _why_. There are many ways
+  to solve the problem at hand and we want to know why you picked a certain
+  solution.
+* We are not mobile dev experts, you are. We're looking for someone who can come
+  up with ideas, make a strong case for them, and explain them clearly to a
+  non-expert audience — someone who's as strong a teacher as they are a developer.
 * We expect the design document to be complete roughly within the first week.
   This is to ensure you have enough time to work on the implementation.
 * Avoid writing an overly detailed design document. Two to three pages is
