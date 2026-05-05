@@ -62,7 +62,11 @@ Our team will do their best to provide a high quality review of the submitted
 Pull Requests in a reasonable time frame. You are spending your time on this,
 we are going to contribute our time too.
 
-After the final submission, the interview team will assemble and vote using a
+After the final submission, we will schedule a synchronous walkthrough call
+where you walk the interview team through your submission. The call includes
+a short Q&A about the design and implementation choices you made.
+
+After the walkthrough call, the interview team will assemble and vote using a
 "+1, -2" anonymous voting system: +1 is submitted whenever a team member
 accepts the submission, -2 otherwise.
 
