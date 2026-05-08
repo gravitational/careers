@@ -4,35 +4,45 @@
 
 This exercise has two goals:
 
-It helps us understand what to expect from you as a technical leader, and
-whether you have the technical aptitude to engage with highly technical
-customers. It gives you a feel for what it's like to work at Teleport. The
-exercise simulates day-to-day work, helping you better understand the team and
-our hiring process.
+- It helps us understand what to expect from you as a technical leader and
+  whether you have the technical aptitude to engage with highly technical
+  customers.
+- It gives you a feel for what it's like to work at Teleport. The exercise
+  simulates day-to-day work, helping you better understand the team and our
+  hiring process.
 
-We believe this approach is not only more effective, but also more enjoyable
+We believe this approach is not only more effective but also more enjoyable
 than the whiteboard or quiz-style interviews common in the industry.
 
-We appreciate your time and look forward to hacking on this little project
-together.
+We appreciate your time and look forward to hacking on this project together.
 
 ## Objective
 
-Create a design document and implement a service that will let users sign on
-through SSO IDP of of any kind in order to access a WireGuard network.
+Create a design document and implement a service that lets users authenticate
+through an SSO Identity Provider and then access a
+protected resource over a WireGuard VPN.
 
-After authenticating, the client and server exchange keys and configure Wireguard.
-The client should then be able to access a service that is only available on the
-server's WireGuard interface (nginx or any other web service will do).
+After authenticating, the client and server exchange WireGuard keys, configure
+the tunnel, and the client should be able to reach a service that
+is only available on the server's WireGuard network, not on the public internet.
 
 ## Requirements
 
-- Determine implementation, security and scope requirements for the document.
-- Present the design to the interview team - a mix of technical and business audience,
-  explain value proposition and answer technical questions to both.
-- Build the service. Your solution should include automation using Terraform, helm charts,
-  or docker-compose that sets up a demo environment.
-- Explain the business and technical value of the proposed solution.
+### Design Document
+
+Before writing code, produce a concise design document (Markdown) and submit it
+as a GitHub pull request for the team to review. The document should cover:
+
+- **Problem statement & success criteria.** Why does this product exist? What
+  user problem does it solve? How will you know the solution works?
+- **User journey.** Think through the end-to-end experience from the user's
+  perspective.
+- **API design.** Define the client-gateway interface.
+- **Key management.** Explain your strategy for WireGuard key lifecycle and
+  what trade-offs it introduces for security and user experience.
+- **Security model.** Identify your threat model and how your design addresses
+  common attack vectors.
+- **Scope & trade-offs.** State what is in and out of scope for your MVP.
 
 Here is an example command-line tool that will let users sign in with SSO. After
 a successful login users get a WireGuard key registered in the provisioned
@@ -45,129 +55,121 @@ $ vpn login
 You are logged in. WireGuard is activated.
 ```
 
+### Implementation
+
+- **Service.** Build the service and include automation that sets up a fully
+  working demo environment.
+- **Reproducibility.** A reviewer should be able to clone, build, and run the
+  demo with minimal steps.
+- **Presentation.** Present the design and demo to the interview team (45 min)
+  - explain the value proposition and answer technical questions from both
+  technical and business audience members.
+
+### Evaluation Criteria
+
+We evaluate submissions holistically across these dimensions:
+
+- **Product thinking.** Clear problem definition, user empathy, defined success criteria.
+- **CLI UX.** Precise, intuitive commands with helpful output and clear error messages.
+- **API design.** Well-defined contract with proper status codes, error handling, versioning.
+- **Key management.** Justified design with clear rationale for lifecycle, storage, and threat model.
+- **Security.** Correct use of proven protocols, defense in depth, no custom crypto.
+- **Error handling.** Graceful failures, actionable messages, no silent drops.
+- **Architecture.** Clean separation of concerns, reproducible builds, automation.
+- **Communication.** Concise design doc, clear demo delivery, good Q&A.
+
 ## Guidance
 
 ### Interview Process
 
-You will join a Slack channel with the interview team. The team consists of the
-peers who will be working with you.
+You will join a Slack channel with the interview team - the peers who will be
+working with you. Feel free to ask them about culture, work-life balance, or
+anything else you'd like to know about Teleport.
 
-Ask them about the culture, work and life balance, or anything else that you
-would like to learn about Teleport.
+1. Share your design document via a GitHub pull request. Keep it focused on key
+   trade-offs and design approaches - avoid excessive detail. The team will
+   review and comment on the PR.
+2. Once the design is approved, submit pull requests with the implementation.
+3. When the implementation is complete, schedule a 45-minute call with the
+   interview team for your presentation and demo.
 
-Before writing the actual code, create a brief design document in markdown and
-share with the team via a GitHub pull request.
+After the demo the team votes using a +1 / -2 anonymous system. On a positive
+result, our HR team will collect one or two references and extend an offer. On a
+negative result, the hiring manager will share the key observations that
+affected the outcome. You may start the reference collection process in parallel
+to speed things up.
 
-This document should consist of key trade-offs and key design approaches. Please
-avoid writing an overly detailed design document. Use this document to make sure
-demonstrate that you've investigated the problem space. The team will review your
-design and provide feedback by commenting on the pull request.
+### Timing
 
-After the team has approved your design document, you may begin submitting pull
-requests with the implementation.
+The challenge should take between 4 and 24 hours of focused work. You can split
+it over weekdays or weekends and use the time to ask questions and receive
+feedback.
 
-After the implementation is complete, prepare a presentation and demo and
-schedule a 45 minute call with the interview team. During this call you will
-present your solution to the audience and answer any questions.
+Once you join the Slack channel you have a maximum of 2 weeks to complete the
+challenge. We do not give higher scores to faster submissions - we only evaluate
+quality. We aim to provide 1–2 rounds of feedback on all work. To be respectful
+of your time, we may end the challenge early if the submission does not improve
+after feedback or if we identify a large number of issues.
 
-After the demo, the interview team will assemble and vote using +1, -2 anonymous
-voting system: +1 is submitted whenever a team member accepts the submission, -2
-otherwise.
+### Setup
 
-In case of a positive result, we will connect you to our HR team who will
-collect one-two references and will work out other details. You can start the
-reference collection process in parallel if you would like to speed up the
-process.
+Create a GitHub repository - either a throwaway or in your personal account.
+Feel free to open-source it and use it as a portfolio project later.
 
-After reference collection, our recruiting team will send you an offer.
+Do not hesitate to reach out if you get stuck or have questions. Communication
+is just as important for this exercise as the code.
 
-In case of a negative score result, the hiring manager will contact you and
-share a list of the key observations from the team that affected the result.
+### Areas of Focus
 
-### Code and project ownership
+Teleport focuses on networking, infrastructure, and security. Beyond the
+requirements above, keep the following in mind:
 
-This is a test challenge and we have no intent of using the design you've
-submitted in production. This is your work, and you are free to do whatever you
-feel is reasonable with it. In the scenario when you don't pass, you can open
-source it with any license and use it as a portfolio project.
+- **Demo delivery.** Product leaders communicate complex deployments in simple
+  terms. The demo should be clear, concise, and interesting to watch.
+- **Security justification.** Be prepared to justify your design choices in
+  terms of specific threats they address.
+- **Design-first approach.** The design doc should make the user journey and
+  API contract obvious before any code is written.
 
-### Areas of focus
+### Pitfalls
 
-Teleport focuses on networking, infrastructure and security.
+To help you prepare, here are common reasons candidates have not passed:
 
-- Reproducible builds. The team should be able to apply the configuration and reproduce your example easily.
-- Demo. Product leaders have to communicate complex technical deployments in simple terms. The demo should be interesting to watch and have a good delivery.
-- Security. Design the login flow that exchanges username/password for a wire guard keypair with security best practices in mind.  Consider common attack vectors, such as man-in-the-middle and replay attacks.
-- User Experience. The solution should be simple to understand and use to someone who sees it the first time.
-
-### Pitfalls & Gotchas
-
-To help you prepare, here are some common reasons candidates have failed to pass
-our interviews:
-
-* *Use of AI.* Don't outsource your thinking to an AI. We recommend using AI for
-  use cases like learning about a new problem space, exploring APIs, and
-  finding missing edge cases. However, we strongly recommend you write the design
-  document and all code yourself.
-* *Jumping into implementation without clarifying requirements or narrowing the
-  scope.* We expect product leaders to conduct customer interviews, negotiate
-  scope, and identify the right MVP. We want you to take the same approach
-  during the design phase.
-* *Scope creep.* Candidates have tried to design too much and ran out of time
-  and energy.  To avoid this pitfall, use the simplest solution that will work.
-* *Suggesting custom security algorithms/authentication schemes* is always a
-  bad idea unless you are a trained security researcher/engineer. It is
-  definitely a bad idea for this task - try to stick to industry proven security
-  methods as much as possible.
+- **Use of AI.** Don't outsource your thinking to an AI. We recommend using AI
+  for learning about a new problem space, exploring APIs, and finding edge
+  cases. However, write the design document and all code yourself.
+- **Jumping into code without a design.** We expect you to clarify
+  requirements, negotiate scope, and think through the user experience and API
+  before writing implementation code.
+- **Scope creep.** Candidates have tried to design too much and ran out of
+  time. Use the simplest solution that works, and clearly state what is out of
+  scope.
+- **Custom crypto.** Never invent security algorithms or authentication
+  schemes. Stick to industry-proven protocols.
 
 ### Questions
 
 It is OK to ask the interview team questions. Some folks stay away from asking
-questions to avoid appearing less experienced, so we provide examples of
-questions to ask and questions we expect candidates to figure out on their own.
+questions to avoid appearing less experienced, so here are examples.
 
-Here is a great question to ask:
+A great question to ask:
 
 > Is it OK to pre-generate secret data and put the secrets in the repository for
 > a proof of concept? I will add a note that we will auto-generate secrets in the
 > future.
 
-It demonstrates that you thought about this problem domain, recognized the trade
-off and are saving you and the team time by not implementing it.
+It demonstrates that you thought about the problem domain, recognized the
+trade-off, and are saving time by not implementing it yet.
 
-This is the question we expect candidates to figure out on their own:
+A question we expect candidates to figure out on their own:
 
 > What version of Go should I use? What dependency manager should I use?
 
 Unless specified in the requirements, pick the version that works best for you.
 
-### Timing
+### Code and Project Ownership
 
-It should take you from 4 and no more than 24 full hours to complete the
-challenge. You can split coding over a couple of weekdays or weekends and find
-time to ask questions and receive feedback.
-
-Once you join the Slack channel, you have a maximum of 2 weeks to complete the
-challenge.
-
-Within this timeframe, we don't give higher scores to challenges submitted more
-quickly. We only evaluate the quality of the submission.
-
-We only start the challenge if there are several open positions available and let all candidates finish the submission.
-
-We always aim to provide 1-2 rounds of feedback on all work that is submitted.
-In order to be respectful of your time, we may opt to end the challenge early
-if the submission does not improve after this feedback is suggested or if we
-identify a large number of issues.
-
-### Setup
-
-Create a GitHub repository, either throwaway or in your GitHub account, feel
-free to open source it and use it later.
-
-We understand that you will spend a couple of days on this project, so we know
-that it will take you 1-2 weeks to reserve the time for it.
-
-Do not hesitate to reach out in case you get stuck or have any kind of general
-questions or concerns. Please remember that communication is just as important
-for this exercise as the code.
+This is a test challenge and we have no intent of using your submission in
+production. This is your work, and you are free to do whatever you wish with it.
+If you don't pass, you can open-source it with any license and use it as a
+portfolio project.
