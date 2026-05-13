@@ -46,8 +46,9 @@ A few notes about the design document:
 
 * Try to get the design document approved within the first 2-3 days. This is to
   ensure you have enough time to work on the implementation.
-* Avoid writing an overly detailed design document. Two to three pages is
-  sufficient.
+* There is no required format or word count for the design document. The design
+  should convey your plan to satisfy the requirements, possible alternatives,
+  and the tradeoffs informing your approach.
 * Avoid sending us draft design documents. It is difficult to evaluate which
   parts are draft and which parts are complete. Instead we encourage asking
   questions in Slack and sharing a design document that is ready to be reviewed.

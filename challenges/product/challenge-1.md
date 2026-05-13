@@ -58,10 +58,10 @@ would like to learn about Teleport.
 Before writing the actual code, create a brief design document in markdown and
 share with the team via a GitHub pull request.
 
-This document should consist of key trade-offs and key design approaches. Please
-avoid writing an overly detailed design document. Use this document to make sure
-demonstrate that you've investigated the problem space. The team will review your
-design and provide feedback by commenting on the pull request.
+There is no required format or word count for the design document. The design
+should convey your plan to satisfy the requirements, possible alternatives, and
+the tradeoffs informing your approach. The team will review your design and
+provide feedback by commenting on the pull request.
 
 After the team has approved your design document, you may begin submitting pull
 requests with the implementation.
