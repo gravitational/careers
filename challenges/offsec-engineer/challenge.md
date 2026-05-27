@@ -36,7 +36,7 @@ See here: https://goteleport.com/download/client-tools/?os=linux
 ## During the Interview
 During the 2 hours allotted for the interview, you will be given SSH access to a lab node via Teleport.
 
-Your objective is to identify and exploit vulnerabilities in the environment. There are flags hidden across the environment — capture as many as you can.
+Your objective is to identify and exploit vulnerabilities in the environment. There are flags hidden across the environment, capture as many as you can.
 
 # After the Interview
 
