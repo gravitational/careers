@@ -16,7 +16,7 @@ We believe this technique is not only better, but also is more fun compared to
 whiteboard/quiz interviews so common in the industry. It's not without the
 downsides - it could take longer than traditional interviews.
 
-[Some of the best teams use coding challenges.](https://sockpuppet.org/blog/2015/03/06/the-hiring-post/)
+[Some of the best teams use coding challenges](https://sockpuppet.org/blog/2015/03/06/the-hiring-post/) — and we apply the same philosophy to non-coding roles.
 
 We appreciate your time and are looking forward to hack on this project
 together.
@@ -25,10 +25,7 @@ together.
 
 ## Before the Interview
 
-Several days before the interview process begins, you will receive an
-invitation to a private Slack channel. This channel will contain the interview
-panel. You can ask the interview panel about the engineering culture, work-life
-balance, or anything else that you would like to learn about Teleport.
+On the day of the interview, you will be added to a private Slack channel with the interview panel. Questions about the challenge can be asked there.
 
 We recommend installing the Teleport Client Tools on your local computer before this exercise.
 See here: https://goteleport.com/download/client-tools/?os=linux
@@ -36,24 +33,23 @@ See here: https://goteleport.com/download/client-tools/?os=linux
 ## During the Interview
 During the 2 hours allotted for the interview, you will be given SSH access to a lab node via Teleport.
 
-Your objective is to identify and exploit vulnerabilities in the environment. There are flags hidden across the environment, capture as many as you can.
+Your objective is to identify and exploit vulnerabilities in the environment. There are flags hidden across the environment, capture as many as you can. Your session will be recorded automatically by Teleport.
 
-# After the Interview
+# Report
 
-After the interview, for each vulnerability you identified and exploited, write
-a short explanation (half a page each) that covers the following:
+As part of the interview, you will write a red team report covering:
 
-* What the vulnerability was and where you found it
-* How you exploited it
-* How you would remediate it and prevent similar issues in the future
+* The attack chain you followed and the techniques you used
+* The vulnerabilities and flags you found
+* Brief remediation or prevention suggestions for each finding
 
-The panel will review your document and the session recording (captured by
-Teleport) and privately/anonymously submit +1/-2 to the hiring manager.
-Afterward, the panel will meet to discuss how the session went.
+The panel will review your report alongside the session recording and
+privately/anonymously submit +1/-2 to the hiring manager.
 
 ## Debrief
 
-In the case of a positive result, we will have a call to debrief. The purpose of this call is to understand your thought process during the exercise.
+Following the interview, we will schedule a call to walk through your report
+and discuss your approach with the panel.
 
 
 ## Pitfalls and Gotchas
