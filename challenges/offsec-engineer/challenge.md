@@ -37,7 +37,7 @@ Your objective is to identify and exploit vulnerabilities in the environment. Th
 
 # Report
 
-As part of the interview, you will write a red team report covering:
+After you complete the challenge, you will write a red team report covering:
 
 * The attack chain you followed and the techniques you used
 * The vulnerabilities and flags you found
