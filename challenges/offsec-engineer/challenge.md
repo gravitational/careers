@@ -1,12 +1,12 @@
 # Summary
 
-Investigate and discover security vulnerabilities in the kubernetes cluster.
+Investigate and exploit security vulnerabilities in a cloud-hosted Kubernetes cluster.
 
 # Rationale
 
 This exercise has two goals:
 
-* It helps us to understand what to expect from you as a Offensive Security
+* It helps us to understand what to expect from you as an Offensive Security
   Engineer, how you find security flaws in an environment
 * It helps you get a feel for what it would be like to work at Teleport, as
   this exercise aims to simulate our day-as-usual and expose you to the type of
@@ -30,25 +30,22 @@ invitation to a private Slack channel. This channel will contain the interview
 panel. You can ask the interview panel about the engineering culture, work-life
 balance, or anything else that you would like to learn about Teleport.
 
-You will need to setup the Teleport Client Tools on your local computer before this exercise.
+We recommend installing the Teleport Client Tools on your local computer before this exercise.
 See here: https://goteleport.com/download/client-tools/?os=linux
 
 ## During the Interview
-uring the 2 hours allotted for the interview, you will be given access to the hosts you will be debugging.
+During the 2 hours allotted for the interview, you will be given SSH access to a lab node via Teleport.
 
-You will connect to the hosts using Teleport. You do not need to
-install any software and can access these hosts from your web browser.
-
-There are 4 flags you can find and one bonus flag.
+Your objective is to identify and exploit vulnerabilities in the environment. There are flags hidden across the environment — capture as many as you can.
 
 # After the Interview
 
-After the interview, for each problem you were able to resolve, you will write
+After the interview, for each vulnerability you identified and exploited, write
 a short explanation (half a page each) that covers the following:
 
-* What was wrong with the system(s)
-* How you found the issue(s)
-* How would you resolve the security issue and prevent future vulnerabilities
+* What the vulnerability was and where you found it
+* How you exploited it
+* How you would remediate it and prevent similar issues in the future
 
 The panel will review your document and the session recording (captured by
 Teleport) and privately/anonymously submit +1/-2 to the hiring manager.
