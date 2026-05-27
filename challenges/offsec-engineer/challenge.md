@@ -25,6 +25,11 @@ together.
 
 ## Before the Interview
 
+Several days before the interview process begins, you will receive an
+invitation to a private Slack channel. This channel will contain the interview
+panel. You can ask the interview panel about the engineering culture, work-life
+balance, or anything else that you would like to learn about Teleport.
+
 You will need to setup the Teleport Client Tools on your local computer before this exercise.
 See here: https://goteleport.com/download/client-tools/?os=linux
 
