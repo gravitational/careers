@@ -7,7 +7,7 @@ Investigate and exploit security vulnerabilities in a cloud-hosted Kubernetes cl
 This exercise has two goals:
 
 * It helps us to understand what to expect from you as an Offensive Security
-  Engineer, how you find security flaws in an environment
+  Engineer and how you find security flaws in an environment.
 * It helps you get a feel for what it would be like to work at Teleport, as
   this exercise aims to simulate our day-as-usual and expose you to the type of
   work we're doing here.
