@@ -31,7 +31,7 @@ We recommend installing the Teleport Client Tools on your local computer before 
 See here: https://goteleport.com/download/client-tools/?os=linux
 
 ## During the Interview
-During the 2 hours allotted for the interview, you will be given SSH access to a lab node via Teleport.
+During the 2 hours allotted for the interview, you will be given SSH access to a server via Teleport.
 
 Your objective is to identify and exploit vulnerabilities in the environment. There are flags hidden across the environment, capture as many as you can. Your session will be recorded automatically by Teleport.
 
@@ -52,6 +52,13 @@ Following the interview, we will schedule a call to walk through your report
 and discuss your approach with the panel.
 
 
+## Areas of Focus
+
+Your scope is the Kubernetes environment running on the lab server. The following are out of scope:
+
+* Teleport infrastructure: the proxy, auth service, and web UI
+* Any systems or infrastructure outside the lab server
+
 ## Pitfalls and Gotchas
 
-* Use of AI. Don't outsource your thinking to an AI.
+* Use of AI. Don't outsource your thinking to an AI. While it is important to find the flags, its equally as important to be able to articulate what they were, how you found them and what the remediations should be.
