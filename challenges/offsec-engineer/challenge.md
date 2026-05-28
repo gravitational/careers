@@ -61,4 +61,5 @@ Your scope is the Kubernetes environment running on the lab server. The followin
 
 ## Pitfalls and Gotchas
 
-* Use of AI. Don't outsource your thinking to an AI. While it is important to find the flags, its equally as important to be able to articulate what they were, how you found them and what the remediations should be.
+* Use of AI. Don't outsource your thinking to an AI. 
+* While it is important to find the flags, its equally as important to be able to articulate what they were, how you found them and what the remediations should be.
