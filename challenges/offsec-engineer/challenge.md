@@ -25,7 +25,7 @@ together.
 
 ## Before the Interview
 
-On the day of the interview, you will be added to a private Slack channel with the interview panel. Questions about the challenge can be asked there.
+Several days before the interview process begins, you will receive an invitation to a private Slack channel. This channel will contain the interview panel. You can ask the interview panel about the engineering culture, work-life balance, or anything else that you would like to learn about Teleport.
 
 We recommend installing the Teleport Client Tools on your local computer before this exercise.
 See here: https://goteleport.com/download/client-tools/?os=linux
@@ -63,3 +63,4 @@ Your scope is the Kubernetes environment running on the lab server. The followin
 
 * Use of AI. Don't outsource your thinking to an AI. 
 * While it is important to find the flags, its equally as important to be able to articulate what they were, how you found them and what the remediations should be.
+* It's OK to ask the interview team questions; we'll do our best to provide hints or help steer the investigation if it's going in the wrong direction.
