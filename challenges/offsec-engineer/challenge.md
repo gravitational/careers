@@ -54,7 +54,7 @@ and discuss your approach with the panel.
 
 ## Areas of Focus
 
-Your scope is the Kubernetes environment running on the lab server. The following are out of scope:
+Your scope is the Kubernetes environment running on the server. The following are out of scope:
 
 * Teleport infrastructure: the proxy, auth service, and web UI
 * Any systems or infrastructure outside the lab server
