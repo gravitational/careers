@@ -56,8 +56,8 @@ and discuss your approach with the panel.
 
 We will be evaluating the following:
 
-* Cloud security - Identifying and exploiting misconfigurations in cloud environments.
-* Kubernetes - Familiarity with containerized environments and their security boundaries.
+* Cloud security - Identifying and exploiting misconfigurations in cloud environments
+* Kubernetes - Familiarity with containerized environments and their security boundaries
 * Stealthiness - Awareness of your footprint
 
 Your scope is the Kubernetes environment running on the server. The following are out of scope:
