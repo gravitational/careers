@@ -31,7 +31,7 @@ We recommend installing the Teleport Client Tools on your local computer before 
 See here: https://goteleport.com/download/client-tools
 
 ## During the Interview
-During the 2 hours allotted for the interview, you will be given SSH access to a server via Teleport.
+During the 3 hours allotted for the interview, you will be given SSH access to a server via Teleport.
 
 Your objective is to identify and exploit vulnerabilities in the environment. There are flags hidden across the environment, capture as many as you can. Your session will be recorded automatically by Teleport.
 
