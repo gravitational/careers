@@ -217,10 +217,10 @@ We use the following technologies to build Teleport Cloud:
 * Go
 * Typescript & React
 * PostgreSQL
-* Terraform and Packer
+* Terraform
 * Amazon Web Services (AWS)
 * Kubernetes
-* Prometheus/Alertmanager/Loki/Grafana
+* Prometheus, Loki, Pyroscope, Tempo, Grafana
 
 ### Product Growth
 
@@ -269,12 +269,11 @@ upgrades.
 
 Recent projects:
 
-* CI/CD with GitHub Actions
-* Monitoring enhancements
-* Security vulnerabilities
+* Incident response and breach exercise
+* Deployment of service levels
+* Progressive rollouts for new Teleport versions
+* Hardening of IaC platform
 * Disaster recovery drill
-* AMI migration
-* Regional customer data
 
 ## Security
 
