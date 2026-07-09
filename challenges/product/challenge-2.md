@@ -51,6 +51,10 @@ peers who will be working with you.
 Ask them about the culture, work and life balance, or anything else that you
 would like to learn about Teleport.
 
+Use GitHub to share your work with us. Create a GitHub repository, either
+throwaway or in your GitHub account, feel free to open source it and use it
+later.
+
 Before writing the actual code, create a brief design document in Markdown and
 share with the team via a GitHub Pull Request.
 
@@ -146,6 +150,10 @@ This is the question we expect candidates to figure out on their own:
 
 Unless specified in the requirements, pick the version that works best for you.
 
+Do not hesitate to reach out in case you get stuck or have any kind of general
+questions or concerns. Please remember that communication is just as important
+for this exercise as the code.
+
 ### Timing
 
 It should take you from 4 and no more than 24 full hours to complete the
@@ -165,15 +173,3 @@ We always aim to provide 1-2 rounds of feedback on all work that is submitted.
 In order to be respectful of your time, we may opt to end the challenge early
 if the submission does not improve after this feedback is suggested or if we
 identify a large number of issues.
-
-### Setup
-
-Create a GitHub repository, either throwaway or in your GitHub account, feel
-free to open source it and use it later.
-
-We understand that you will spend a couple of days on this project, so we know
-that it will take you 1-2 weeks to reserve the time for it.
-
-Do not hesitate to reach out in case you get stuck or have any kind of general
-questions or concerns. Please remember that communication is just as important
-for this exercise as the code.
