@@ -7,7 +7,7 @@ skills needed to build data pipelines and a data warehouse.
 
 This exercise has two goals:
 
-It helps us understand what to expect from you as a technical leader, and
+It helps us understand what to expect from you as a technical leader and
 whether you have the technical aptitude to engage with highly technical
 customers. It gives you a feel for what it's like to work at Teleport. The
 exercise simulates day-to-day work, helping you better understand the team and
@@ -23,8 +23,8 @@ together.
 
 Design and build a data warehouse for a fictional business.
 
-You will receive raw data about the business, build a data pipeline to process
-and import that data into a data warehouse, and then use that information to
+You will receive raw data about the business and must build a data pipeline to process
+and import the data into a data warehouse. Then you'll use the data to
 write a 1-page document that provides insight and suggests changes to that
 fictional business.
 
@@ -45,7 +45,7 @@ warehouse.
 
 ### Interview Process
 
-You will join a Slack channel with the interview team. The team consists of the
+You will join a Slack channel with the interview team that consists of
 peers who will be working with you.
 
 Ask them about the culture, work and life balance, or anything else that you
@@ -62,9 +62,9 @@ provide feedback by commenting on the pull request.
 After the team has approved your design document, you may begin submitting pull
 requests with the implementation.
 
-After the implementation is complete, prepare a presentation and demo and
+After the implementation is complete, prepare a presentation and demo, then
 schedule a 45 minute call with the interview team. During this call you will
-present your solution to the audience and answer any questions.
+present your solution to the interview team and answer any questions.
 
 After the demo, the interview team will assemble and vote using +1, -2 anonymous
 voting system: +1 is submitted whenever a team member accepts the submission, -2
