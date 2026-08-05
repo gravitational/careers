@@ -57,4 +57,3 @@ What to expect once you apply:
   Go](https://github.com/gravitational/careers/blob/main/challenges/data-engineer/challenge-1.md)
   using GitHub.
 
-[Apply Here](TODO-add-application-link)
