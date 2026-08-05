@@ -40,9 +40,8 @@ reliable, well-modeled data they can depend on.
 * Experience building data pipelines in Python or Go.
 * Experience with a cloud data warehouse (Snowflake, BigQuery, Redshift, or
   similar).
-* Familiarity with pipeline orchestration or transformation tooling (Airflow,
-  dbt, or similar) is a plus.
-* Comfort handling sensitive data responsibly, including access control and
+* Experience with pipeline orchestration or transformation tooling.
+* Experience handling sensitive data responsibly, including access control and
   data retention practices.
 
 As we are a startup, you should be comfortable changing the area of focus and

@@ -43,12 +43,20 @@ employee/HR exports, sales transactions, and pricing information. You must
 build a data pipeline that processes and imports this data into a data
 warehouse, modeling it so that it can be queried and analyzed.
 
+The company sells a small catalog of widget SKUs. Sales reps are credited for
+the deals they close, and finance wants to understand product profitability
+and rep performance on a monthly basis.
+
 ## Design Doc
 
 Before writing any actual code, we ask that you write a brief design document.
 The design document should cover: your data model, pipeline architecture,
-your approach to data validation and PII handling, and implementation
-details where appropriate.
+where each transformation happens and why, your approach to data validation
+and PII handling, and implementation details where appropriate. If you are
+targeting Level 4 or 5, also cover your plan for ingesting data that arrives
+in more than one batch over time. If you are targeting Level 5, also cover
+how you'd reconcile a later batch that isn't purely additive, including any
+schema changes.
 
 Include approaches you have evaluated and reasoning for picking the approach
 you're planning to go with.
@@ -118,103 +126,178 @@ levels do not build implicitly on lower levels - if you are targeting Level 5,
 read the Level 5 section for the complete scope, not just what's new relative
 to Level 4.
 
+Requirements are stated as the inputs you will be given, the outputs we
+expect, and the constraints those outputs have to satisfy. How you get from
+one to the other is your design decision. We are more interested in your
+reasoning and in whether the result holds up than in any particular
+implementation.
+
 Within a level, requirements are grouped into the two pull requests you'll
-submit, in order: an ingestion PR (load the provided raw data, normalize it,
-and handle bad records), followed by a business queries PR (build new tables
-on top of the ingested data to answer specific business questions).
+submit, in order: an ingestion PR that gets the source data into the
+warehouse, followed by a business queries PR that builds the tables an
+analyst would actually query.
+
+## Inputs (all levels)
+
+You will receive three files exported from the fictional company's
+operational systems: an HR/employee export, a CRM sales export, and a
+product pricing sheet.
+
+This data came out of systems that humans type into. Assume nothing about
+its quality. Do not assume fields are populated, that types or formats are
+consistent, that identifiers are unique, that keys join cleanly across
+files, or that every value is plausible. Working out what is actually wrong
+with this data, and deciding how to handle each case, is a substantial part 
+of the challenge.
+
+Level 4+: you will also receive a second CRM export covering a later
+period. You'll have it from the start, but treat it as arriving after the
+first batch has already been ingested - your pipeline should be able to
+take it on without reprocessing or duplicating what's already loaded.
+
+Level 5 only: you will also receive a third export covering a further
+period still, produced by a newer version of the upstream system. Treat it,
+too, as arriving after the earlier batches. It does not have the same
+schema as the first two, and later exports are not guaranteed to be purely
+additive relative to what came before.
 
 ## Level 3
 
 ### Ingestion
 
-* Ingest the provided raw data into DuckDB using a Go/SQL pipeline
-* Normalize the data, handling records with missing or incorrect-type fields
-  without crashing the pipeline
-* Pipeline re-runs must be idempotent - re-running against the same input must
-  not create duplicate rows
-* Tests covering happy path, malformed records, and duplicate-run scenarios
+* Load the provided source data into DuckDB and shape it into tables that
+  support the business queries below
+* Running the pipeline twice against the same input must leave the warehouse
+  in the same state as running it once.
+* Every input row must be accounted for after a run: you should be able to
+  say what happened to any given row and why. No single malformed input row
+  should crash or halt the run
+* If a downstream table is deleted or truncated, the pipeline must be able
+  to restore it correctly
+* The source data contains personal information. Identifying it is part of
+  the task. No table that an analyst or any downstream consumer can query
+  may expose it in readable form. Your design doc must state what you
+  classified as sensitive, what you plan to do about it, and what risk
+  remains
 
 ### Business Queries
 
-* Build tables that support basic business queries (for example, revenue by
-  sales rep, or units sold by product)
-* Design efficient tables and queries for analysis
-* Document the grain of each table you build (what one row represents)
-* The entire pipeline, from ingestion through the final queryable tables,
-  runs via a single Makefile target and is reproducible from a clean
-  checkout
+* Publish tables that answer, at minimum:
+  * revenue and units sold per product, per month
+  * revenue per sales rep, per month
+* An analyst must be able to answer each of those with a single SELECT
+  against one of your tables. They should not have to join across your
+  tables, filter out records you decided were untrustworthy, or know
+  anything about how the data was cleaned
+* Someone who has never read your pipeline code must be able to use your
+  published tables and get the right numbers
+* Your published totals must reconcile against the source. For any month,
+  it must be possible to explain the difference between the totals in your
+  tables and the totals in the raw input
+* Provide a simple way to run each required business query and see its
+  result, for example an additional `make` target
+* A single `make` target takes a clean checkout to a queryable warehouse
 
 ## Level 4
 
 ### Ingestion
 
-* Ingest the provided raw data into DuckDB using a Go/SQL pipeline
-* Normalize the data, handling records with missing or incorrect-type fields
-  without crashing the pipeline
-* Pipeline re-runs must be idempotent - re-running against the same input must
-  not create duplicate rows
-* Validate raw data to detect incorrect types, duplicates, missing data, and
-  magnitude errors (for example, an implausibly large order quantity)
-* Invalid records are quarantined for review rather than crashing the pipeline
-  or being silently dropped
-* Safely handle any PII present in the raw data (for example, employee names)
-  using a simple technique like hashing, so it is not exposed unprotected in
-  downstream tables
-* Tests covering happy path, malformed records, duplicate-run, and validation
-  edge cases
+* Load the provided source data into DuckDB and shape it into tables that
+  support the business queries below
+* Running the pipeline twice against the same input must leave the warehouse
+  in the same state as running it once.
+* Every input row must be accounted for after a run: you should be able to
+  say what happened to any given row and why. No single malformed input row
+  should crash or halt the run
+* If a downstream table is deleted or truncated, the pipeline must be able
+  to restore it correctly
+* The source data contains personal information. Identifying it is part of
+  the task. No table that an analyst or any downstream consumer can query
+  may expose it in readable form. Your design doc must state what you
+  classified as sensitive, what you plan to do about it, and what risk
+  remains
+* A second batch covering a later period must be ingested without
+  reprocessing or duplicating the first. After it arrives, both batches
+  must be queryable together, and your tables must make clear which batch
+  any given row came from
 
 ### Business Queries
 
-* Build tables that support basic business queries (for example, revenue by
-  sales rep, or units sold by product)
-* Design efficient tables and queries for analysis
-* Document the grain of each table you build (what one row represents)
-* Automated data quality checks (for example: row count thresholds, null
-  checks, referential checks between tables) that fail the pipeline loudly
-  rather than silently producing bad data
-* The entire pipeline, from ingestion through the final queryable tables,
-  runs via a single Makefile target and is reproducible from a clean
-  checkout
+* Publish tables that answer, at minimum:
+  * revenue and units sold per product, per month
+  * revenue per sales rep, per month
+  * gross margin per product
+* An analyst must be able to answer each of those with a single SELECT
+  against one of your tables. They should not have to join across your
+  tables, filter out records you decided were untrustworthy, or know
+  anything about how the data was cleaned
+* Someone who has never read your pipeline code must be able to use your
+  published tables and get the right numbers
+* Your published totals must reconcile against the source. For any month,
+  it must be possible to explain the difference between the totals in your
+  tables and the totals in the raw input
+* Provide a simple way to run each required business query and see its
+  result, for example an additional `make` target
+* A single `make` target takes a clean checkout to a queryable warehouse
+* When the pipeline produces output that can't be trusted, the run must
+  fail: non-zero exit, and a message saying what went wrong. Deciding what
+  "can't be trusted" means for this data is part of the design. A run that
+  quietly publishes wrong numbers is a failed run
 
 ## Level 5
 
 ### Ingestion
 
-* Ingest the provided raw data into DuckDB using a Go/SQL pipeline
-* Normalize the data, handling records with missing or incorrect-type fields
-  without crashing the pipeline
-* Pipeline re-runs must be idempotent - re-running against the same input must
-  not create duplicate rows
-* Validate raw data to detect incorrect types, duplicates, missing data, and
-  magnitude errors (for example, an implausibly large order quantity)
-* Invalid records are quarantined for review rather than crashing the pipeline
-  or being silently dropped
-* Safely handle any PII present in the raw data (for example, employee names)
-  using a simple technique like hashing, so it is not exposed unprotected in
-  downstream tables
-* Support ingesting a new batch of data where the schema has evolved (for
-  example, a new column or a new product category), without breaking the
-  pipeline or losing data
-* Design the ingestion layer so that adding a new data source would not
-  require rewriting the existing pipeline. Show this through a documented
-  interface or abstraction; a working new source is not required
-* Include performance considerations for scaling the pipeline to
-  substantially larger data volumes
-* Tests covering happy path, malformed records, duplicate-run, and validation
-  edge cases
+* Load the provided source data into DuckDB and shape it into tables that
+  support the business queries below
+* Running the pipeline twice against the same input must leave the warehouse
+  in the same state as running it once.
+* Every input row must be accounted for after a run: you should be able to
+  say what happened to any given row and why. No single malformed input row
+  should crash or halt the run
+* If a downstream table is deleted or truncated, the pipeline must be able
+  to restore it correctly
+* The source data contains personal information. Identifying it is part of
+  the task. No table that an analyst or any downstream consumer can query
+  may expose it in readable form. Your design doc must state what you
+  classified as sensitive, what you plan to do about it, and what risk
+  remains
+* A second batch covering a later period must be ingested without
+  reprocessing or duplicating the first. After it arrives, both batches
+  must be queryable together, and your tables must make clear which batch
+  any given row came from
+* A third batch introduces a schema change and is not guaranteed to be
+  purely additive relative to the batches that came before it. Ingesting it
+  must not break the pipeline or lose data from any batch; decide on and
+  document a policy for reconciling any overlap
+* In the design document only, describe how a new data source could plug
+  into your ingestion layer without a rewrite - you don't need to build one
+* In the design document only, describe what happens to this pipeline at
+  roughly 10^8 to 10^9 sales rows per year: what breaks first, what you
+  would change, and what you would keep as is
 
 ### Business Queries
 
-* Build tables that support basic business queries (for example, revenue by
-  sales rep, or units sold by product)
-* Design efficient tables and queries for analysis
-* Document the grain of each table you build (what one row represents)
-* Automated data quality checks (for example: row count thresholds, null
-  checks, referential checks between tables) that fail the pipeline loudly
-  rather than silently producing bad data
-* The entire pipeline, from ingestion through the final queryable tables,
-  runs via a single Makefile target and is reproducible from a clean
-  checkout
+* Publish tables that answer, at minimum:
+  * revenue and units sold per product, per month
+  * revenue per sales rep, per month
+  * gross margin per product
+* An analyst must be able to answer each of those with a single SELECT
+  against one of your tables. They should not have to join across your
+  tables, filter out records you decided were untrustworthy, or know
+  anything about how the data was cleaned
+* Someone who has never read your pipeline code must be able to use your
+  published tables and get the right numbers
+* Your published totals must reconcile against the source. For any month,
+  it must be possible to explain the difference between the totals in your
+  tables and the totals in the raw input
+* Provide a simple way to run each required business query and see its
+  result, for example an additional `make` target
+* A single `make` target takes a clean checkout to a queryable warehouse
+* When the pipeline produces output that can't be trusted, the run must
+  fail: non-zero exit, and a message saying what went wrong. Deciding what
+  "can't be trusted" means for this data is part of the design. A run that
+  quietly publishes wrong numbers is a failed run
 
 # Guidance
 
@@ -233,11 +316,10 @@ These are the areas we will be evaluating in the submission:
 
 * Reproducible pipelines. Scripts should be written in a way that allows
   reproduction of the environment.
-* Data models. Design performant tables. Keep queries fast, plan for schema
-  migration, and document the grain of each table so joins and aggregations
-  don't silently double- or under-count.
-* Data quality. Add validation and test coverage to all stages of your
-  pipeline.
+* Data models. Design tables that are fast to query and clear enough to use
+  without reading your pipeline code.
+* Data quality. Bad data should fail loudly instead of quietly reaching
+  downstream tables.
 * Security. Data should be processed and stored in a way that does not leak
   sensitive data.
 * Demo. The walkthrough should clearly explain your data model, pipeline
@@ -273,6 +355,10 @@ Comments like this one are really helpful to us. They save yourself a lot of
 time and demonstrate that you've spent time thinking about this problem and
 provide a clear path to a solution.
 
+It is okay if your pipeline is not optimized to handle very large data volumes.
+Where relevant (Level 5), describe what you would change to handle
+substantially more data rather than building it.
+
 Consider making other reasonable trade-offs. Make sure you communicate them to
 the interview team.
 
@@ -295,20 +381,26 @@ pass our interviews:
   moving parts as possible. This is not only going to help in reviewing the
   solution, but is also often a way to distill a design to its essential
   parts.
-* *Suggesting custom security algorithms* for handling PII is always a bad
-  idea unless you are a trained security researcher/engineer. Stick to
-  industry proven methods.
+* *Custom Security Algorithms.* Implementing custom security
+  algorithms/authentication schemes is always a bad idea unless you are a trained
+  security researcher/engineer. It is definitely a bad idea for this task.
+  Try to stick to industry proven security methods as much as possible.
+* *Not communicating.* Submitting all your code in a single PR, or
+  splitting PRs along different lines than the Ingestion/Business Queries
+  split we ask for, makes it harder for us to give you incremental
+  feedback. We are a distributed team, so structured, asynchronous
+  communication is critical to us.
 
 ## Questions
 
-It is OK to ask the interview team questions. Some folks stay away from asking
+It is okay to ask the interview team questions. Some folks stay away from asking
 questions to avoid appearing less experienced, so we provide examples of
 questions to ask and questions we expect candidates to figure out on their
 own.
 
 Here is a great question to ask:
 
-> Is it OK for everything to run locally? I would build a real data warehouse
+> Is it okay for everything to run locally? I would build a real data warehouse
 > using something like Redshift or Snowflake, but for this challenge
 > everything will be driven by a Makefile and run locally.
 
@@ -328,9 +420,9 @@ for this exercise as the code.
 
 # Timing
 
-It should take you from 4 and no more than 24 full hours to complete the
-challenge. You can split coding over a couple of weekdays or weekends and find
-time to ask questions and receive feedback.
+This should take between 4 and 24 hours of focused work to complete. You can
+split coding over a couple of weekdays or weekends and find time to ask
+questions and receive feedback.
 
 Once you join the Slack channel, you have a maximum of 2 weeks to complete the
 challenge.
