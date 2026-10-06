@@ -1,7 +1,14 @@
 # Summary
 
-Implement a Go server that interacts with a Kubernetes cluster, incorporating
-automated builds, containerization, deployment, and testing.
+Implement a Go service that provides an HTTP or gRPC API allowing users to list
+Kubernetes deployments and manage replica count for a specific Kubernetes
+deployment.
+
+Package the service as a Helm chart and write necessary automation scripts that
+allow to deploy this service into a local Kubernetes cluster and execute an 
+integration test suite.
+
+See the Requirements section below for more detailed technical requirements.
 
 # Rationale
 
@@ -25,11 +32,11 @@ together.
 
 # Levels
 
-There are 6 engineering levels at Teleport. It's possible to score on level 1-5
-through coding challenge.
+There are 6 engineering levels at Teleport. We currently offer challenges for
+levels 4 and 5.
 
-Level 6 is only for internal promotions. Check
-[Systems Engineering Levels](../../levels/systems.pdf) for more details.
+Level 6 is reserved for internal promotions. Check [Systems Engineering Levels](../../levels/systems.pdf)
+for more details.
 
 # Interview Process
 
@@ -43,8 +50,7 @@ would like to learn about Teleport.
 Before writing any actual code, we ask that you write a brief design document.
 The design document should cover: design approach, scope, proposed APIs,
 security considerations, CLI UX, and implementation details where appropriate.
-Start with a brief doc that covers the edge cases and design approach. Consider 
-following Teleport's internal [RFD format](https://github.com/gravitational/teleport/blob/master/rfd/0000-rfds.md).
+Start with a brief doc that covers the edge cases and design approach.
 
 Please submit the design document and all code in a GitHub repository. Public
 or private is your choice. Please submit the design document written in
@@ -62,17 +68,17 @@ A few notes about the design document:
   parts are draft and which parts are complete. Instead we encourage asking
   questions in Slack and sharing a design document that is ready to be reviewed.
 
-Be sure to cover the following in your design:
+In your design, be sure to provide implementation details for all of the requirements
+for your level, including but not limited to:
 
-* API structure
-* Pod Lifecycle
-* TLS Configuration
+* API
+* Pod lifecycle
+* TLS configuration
 * Developer workflow
   * Ease of contributing to the project from a fresh clone
   * Ease of building, running and testing the server
-* Level 3+: Build and Release
-* Level 4+: Caching and mTLS
-* Level 5+: Reconciliation, Conflicts, and Automation
+* Level 4+: Deployment, automation, caching, mTLS
+* Level 5+: Reconciliation, conflicts
 
 Once the design document has been approved by two reviewers, move on to the
 implementation.
@@ -106,7 +112,7 @@ share a list of the key observations from the team that affected the result.
 This task should be written in Go and is deployable to a local Kubernetes
 cluster. The choice of which local Kubernetes cluster is up to you, but please
 ensure compatibility with both macOS and Linux. We suggest
-[KIND](https://kind.sigs.k8s.io/).
+[kind](https://kind.sigs.k8s.io/) or minikube.
 
 You may use additional external dependencies, but ensure that detecting or
 installing these are straightforward for the reviewer. At a minimum, your
@@ -124,111 +130,46 @@ too long.
 
 # Requirements
 
-## Level 1
-
-### Server
-
-* HTTP API to retrieve the replica count of the Kubernetes Deployment
-* One or two tests that cover happy and unhappy scenarios
-
-### Automation
-
-* Write a Dockerfile to build an image for the server
-* Ability to deploy the server to Kubernetes by following documentation
-
-## Level 2
-
-### Server
-
-* HTTP API to retrieve the replica count of the Kubernetes Deployment
-* HTTP API to set the replica count of the Kubernetes Deployment
-* One or two tests that cover happy and unhappy scenarios
-
-### Automation
-
-* Write a Dockerfile to build an image for the server
-* Ability to deploy the server to Kubernetes by following documentation
-* Ability to execute integration tests against the local Kubernetes cluster by
-  following documentation
-
-## Level 3
-
-### Server
-
-* HTTP API to retrieve the replica count of the Kubernetes Deployment
-* HTTP API to set the replica count of the Kubernetes Deployment
-* HTTP API to get the list of available Deployments in the Kubernetes cluster
-* HTTP health check verifying Kubernetes connectivity
-* One or two tests that cover happy and unhappy scenarios
-
-### Automation
-
-* Write a Dockerfile to build an image for the server
-* Ability to deploy the server to Kubernetes by following documentation
-* Ability to execute integration tests against the local Kubernetes cluster by
-  following documentation
-
-### Deployment
-
-* Create a Helm chart for the service that includes at least: a Deployment,
-  ServiceAccount and Service
-* Upgrading the Helm chart should not result in unavailability of the service
-
 ## Level 4
 
-### Server
+### API & Security
 
-* HTTP API to retrieve the replica count of the Kubernetes Deployment
-* HTTP API to set the replica count of the Kubernetes Deployment
-* HTTP API to get the list of available Deployments in the Kubernetes cluster
-* HTTP API must cache the replica count by watching for changes to Deployments.
-  Read-only requests should not each trigger a request to the cluster.  It is
-  acceptable to use either client-go or controller-runtime to implement this
-* HTTP health check verifying Kubernetes connectivity
-* Secure connections between the HTTP API and caller with mTLS
-* One or two tests that cover happy and unhappy scenarios
+* HTTP API to list available Kubernetes Deployments.
+* HTTP API to scale up or down a specific Kubernetes Deployment.
+* mTLS authentication between server API and clients (self-signed CA acceptable).
 
-### Automation
+### Deployment & Automation
 
-* Ability to build and deploy all artifacts to a Kubernetes cluster using make
-* Ability to execute integration tests against the local Kubernetes cluster
-  using make
+* Use Helm to package the HTTP server and all other necessary Kubernetes resources.
+* Provide an easy way to deploy the chart to a local Kubernetes cluster (e.g. kind or minikube).
+* Provide an easy way to execute integration test suite against the deployed server.
 
-### Deployment
+### Availability
 
-* Create a configurable Helm chart for the service
-* Includes at a minimum: a Deployment, ServiceAccount, and Service
-* Upgrading the Helm chart should not result in unavailability of the service
+* Read-only API requests must not increase load on the Kubernetes API server.
+* The server must indicate its health and ability to serve API requests.
+* Upgrading the Helm chart should not impact availability of the server's API.
 
 ## Level 5
 
-### Server
+### API & Security
 
-* gRPC API to retrieve the replica count of the Kubernetes Deployment
-* gRPC API to set the replica count of the Kubernetes Deployment
-* gRPC API to get the list of available Deployments in the Kubernetes cluster
-* gRPC API must cache the replica count by watching for changes to Deployments.
-  Read-only requests should not each trigger a request to the cluster.  It is
-  acceptable to use either client-go or controller-runtime to implement this.
-* Implement a controller to store the desired state in a CRD (per-deployment)
-  and reconcile the deployment to that state.
-* gRPC or HTTP health check verifying Kubernetes connectivity
-* Secure connections between the gRPC API and caller with mTLS
-* One or two tests that cover happy and unhappy scenarios
+* gRPC API to list available Kubernetes Deployments.
+* gRPC API to scale up or down a specific Kubernetes Deployment.
+* Scaling API must store the desired state in a Custom Resource instead of updating Deployment directly.
+* mTLS authentication between server API and clients (self-signed CA acceptable).
 
-### Automation
+### Deployment & Automation
 
-* Ability to build and deploy all artifacts to a Kubernetes cluster using make
-* Ability to execute integration tests against the local Kubernetes cluster
-  using make
+* Use Helm to package the HTTP server and all other necessary Kubernetes resources.
+* Provide an easy way to deploy the chart to a local Kubernetes cluster (e.g. kind or minikube).
+* Provide an easy way to execute integration test suite against the deployed server.
 
-### Deployment
+### Availability
 
-* Create a configurable Helm chart for the service
-* Include production-level packaging for this service, including but not
-  limited to: Deployment, Role, RoleBinding, ServiceAccount, and Service
-* Upgrading the Helm chart should not result in unavailability of the gRPC API
-  portion of the service
+* Read-only API requests must not increase load on the Kubernetes API server.
+* The server must indicate its health and ability to serve API requests.
+* Upgrading the Helm chart should not impact availability of the server's API.
 
 # Guidance
 
