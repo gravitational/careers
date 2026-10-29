@@ -1,0 +1,370 @@
+\documentclass{article}
+
+\usepackage[table]{xcolor}
+\usepackage[paperwidth=800mm, paperheight=500mm]{geometry}
+
+% Don't show page numbers.
+\pagenumbering{gobble}
+
+% Column settings for skills table.
+\newcolumntype{C}{p{18em}}
+
+\begin{document}
+
+% Title of matrix.
+\begin{center}
+\begin{huge}
+Offensive Security Engineering
+\end{huge}
+\end{center}
+
+\bigbreak
+
+% Alternating row colors.
+\rowcolors{2}{gray!80!gray!50}{gray!50!gray!20}
+
+% Padding for each cell.
+{\renewcommand{\arraystretch}{2}
+
+% Skills table.
+\begin{center}
+\begin{tabular}{|C|C|C|C|C|C|C|C|}
+  \hline
+  \rowcolor{blue!60!black!10}
+    \textbf{Level}
+    &
+    \cellcolor{blue!25}
+    \textbf{Product Output}
+    &
+    \textbf{Decision Making / Supervision}
+    &
+    \textbf{Communication / Writing}
+    &
+    \textbf{Collaboration}
+    &
+    \textbf{Adversary Emulation and Tradecraft}
+    &
+    \textbf{Application and Cloud Security}
+    &
+    \textbf{Research and Tooling}
+    \\
+  \hline
+    % Level
+    1
+    &
+
+    % Product Output
+    \cellcolor{blue!25}
+    Applies specified techniques to well-scoped systems in order to achieve
+    previously defined objectives.
+    &
+
+    % Decision Making / Supervision
+    Normally receives general instruction on work and new assignments.
+    &
+
+    % Communication / Writing
+    Reports progress on a regular basis. Documents technical issues clearly and
+    accurately. Actively seeks assistance as needed.
+    &
+
+    % Collaboration
+    Works with peers to make progress on well-scoped tasks as part of a larger
+    engagement.
+    &
+
+    % Adversary Emulation and Tradecraft
+    Applies established techniques and tools to execute a defined adversary
+    scenario.
+
+    \bigbreak
+
+    Collects evidence and explains findings regarding controls and detections.
+    &
+
+    % Application and Cloud Security
+    Applies well-established application and cloud security fundamentals when
+    reviewing clearly scoped systems and configurations.
+
+    \bigbreak
+
+    Identifies security weaknesses and their implications in terms of specific
+    threats.
+    &
+
+    % Research and Tooling
+    Reads security research to learn from others.
+
+    \bigbreak
+
+    Attempts to replicate vulnerabilities and attacks.
+    \\ [13em]
+  \hline
+    % Level
+    2
+    &
+
+    % Product Output
+    \cellcolor{blue!25}
+    Chooses techniques to apply to well-scoped systems in order to achieve
+    previously defined objectives.
+    &
+
+    % Decision Making / Supervision
+    Normally receives little instruction on day-to-day work, general instructions
+    on new assignments.
+    &
+
+    % Communication / Writing
+    Effectively provides critical feedback to peers. Writes clear, reproducible
+    findings.
+    &
+
+    % Collaboration
+    Works independently alongside peers to accomplish well-scoped tasks as part
+    of a larger engagement.
+    &
+
+    % Adversary Emulation and Tradecraft
+    Selects relevant TTPs to emulate and explains what the results demonstrate
+    in the context of specific threat actors or risks.
+    &
+
+    % Application and Cloud Security
+    Reasons about how a system's behavior, identity, permissions, and
+    configuration enforce intended security boundaries.
+
+    \bigbreak
+
+    Traces weaknesses to underlying design and implementation decisions.
+    Develops remediation recommendations that take into account intended
+    functionality and requirements.
+    &
+
+    % Research and Tooling
+    Establishes how published research applies to Teleport's systems.
+
+    \bigbreak
+
+    Adapts published techniques to our needs.
+
+    \bigbreak
+
+    Writes scripts and internal tools to conduct attacks and facilitate testing.
+    \\ [13em]
+  \hline
+    % Level
+    3
+    &
+
+    % Product Output
+    \cellcolor{blue!25}
+    Chooses scenarios and techniques that emulate relevant threats in order to
+    achieve defined security objectives in multiple related systems.
+    &
+
+    % Decision Making / Supervision
+    Work is done independently and is reviewed at critical points.
+    &
+
+    % Communication / Writing
+    Clearly communicates project scope, limitations, threat models.
+    &
+
+    % Collaboration
+    Collaborates on a short feedback loop for detection engineering strategies
+    through automated and manual processes.
+    &
+
+    % Adversary Emulation and Tradecraft
+    Translates existing relevant threats and defined security objectives into
+    exercise plans with specific hypotheses about prevention and detection.
+
+    \bigbreak
+
+    Selects scenarios and decides the evidence needed to establish the
+    effectiveness of controls.
+    &
+
+    % Application and Cloud Security
+    Evaluates security controls across multiple related systems and connected
+    infrastructure. Identifies weaknesses resulting from incorrect assumptions
+    about controls.
+
+    \bigbreak
+
+    Chains multiple identified weaknesses to demonstrate their combined security
+    impact.
+    &
+
+    % Research and Tooling
+    Develops tools for security tasks relevant to Teleport and makes them useable
+    by other members of the team.
+    \\ [13em]
+  \hline
+    % Level
+    4
+    &
+
+    % Product Output
+    \cellcolor{blue!25}
+    Determines exercise goals and targets based on current threats and new risks
+    to the organization.
+
+    \bigbreak
+
+    Connects findings to tangible hardening recommendations with specific
+    suggested remediations.
+    &
+
+    % Decision Making / Supervision
+    Work is reviewed upon completion and is consistent with departmental
+    objectives.
+    &
+
+    % Communication / Writing
+    Communicates impact of work through well structured, easily understood
+    reporting to relevant parties.
+    &
+
+    % Collaboration
+    Provides strong technical recommendations for hardening systems backed by
+    clearly documented attack simulation results.
+    &
+
+    % Adversary Emulation and Tradecraft
+    Identifies and discovers relevant threats and defines security objectives
+    based on system architecture and gaps in understanding of detective controls.
+
+    \bigbreak
+
+    Prioritizes exercises to resolve uncertainty about critical defensive
+    controls and detection strategies.
+    &
+
+    % Application and Cloud Security
+    Develops well-researched architectural recommendations that address security
+    weaknesses across multiple systems working together.
+
+    \bigbreak
+
+    Develops alternative designs and explains their security and engineering
+    tradeoffs.
+    &
+
+    % Research and Tooling
+    Investigates security problems without an established answer.
+
+    \bigbreak
+
+    Publishes blog posts externally regarding their research work relevant to
+    the organization.
+
+    \bigbreak
+
+    Makes tooling useful to external security researchers.
+    \\ [13em]
+  \hline
+    % Level
+    5
+    &
+
+    % Product Output
+    \cellcolor{blue!25}
+    Builds and maintains the process for selection, development, execution of
+    advanced simulation exercises.
+
+    \bigbreak
+
+    Recognized as an expert in offensive security internally and externally.
+    &
+
+    % Decision Making / Supervision
+    Focuses on providing thought leadership and works on broader organization
+    projects, which requires understanding of wider business. Recognized
+    internally as a subject matter expert. May direct the activities of others.
+    &
+
+    % Communication / Writing
+    Educates colleagues on threats, attack scenarios, and defensive controls.
+
+    \bigbreak
+
+    Writes both internal and external facing technical and strategic content.
+
+    \bigbreak
+
+    Develops helpful frameworks for communicating complex concepts.
+    &
+
+    % Collaboration
+    Influences the engineering roadmap through clear demonstration of risk
+    accompanied by technically sound proposals for remediation and hardening.
+
+    \bigbreak
+
+    Influences detection engineering roadmap through the establishment of
+    collaborative processes.
+    &
+
+    % Adversary Emulation and Tradecraft
+    Validates operational effectiveness, identifies gaps, and develops practices
+    that improve the quality of the team's work over time.
+
+    \bigbreak
+
+    Uses threat intelligence and published research to identify important gaps
+    in the organization's understanding of adversaries.
+    &
+
+    % Application and Cloud Security
+    Continuously develops expertise in new platforms and technologies relevant
+    to the organization.
+    &
+
+    % Research and Tooling
+    Presents their work at conferences relevant to the organization.
+    \\ [13em]
+  \hline
+    % Level
+    6
+    &
+
+    % Product Output
+    \cellcolor{blue!25}
+    Produces novel operational capabilities and research.
+    &
+
+    % Decision Making / Supervision
+    Wide latitude in determining objectives and approaches to critical
+    assignments.
+    &
+
+    % Communication / Writing
+    Documents complex novel techniques and operational capabilities to both
+    internal and external parties.
+    &
+
+    % Collaboration
+    Collaborates with industry peers to advance the capabilities of the broader
+    security community.
+    &
+
+    % Adversary Emulation and Tradecraft
+    &
+
+    % Application and Cloud Security
+    &
+
+    % Research and Tooling
+    Develops novel techniques against hardened targets that advance the state
+    of the industry.
+    \\ [13em]
+  \hline
+\end{tabular}
+\end{center}
+
+% End renewcommand wrapping.
+}
+
+\end{document}
